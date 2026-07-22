@@ -1,41 +1,61 @@
-# SAMT Digital Design and Motion System — Phase 1
+# SAMT Digital Design and Motion System v2.0
 
-## Strategic idea
+## Creative principle
 
-The website expresses **Strategic Ascent** and the journey **From Potential to Command**. Motion should communicate increasing responsibility, clarity and readiness rather than decoration.
+The digital experience expresses **Strategic Ascent**: selected potential is progressively aligned, elevated and resolved into command readiness.
 
 ## Visual hierarchy
 
-- Near-black and deep navy establish authority and restraint.
-- Champagne gold marks selection, progress and command states.
-- Silver supports technical and institutional information.
-- White is reserved for primary communication.
+- Near-black and deep navy create institutional authority and cinematic depth.
+- Champagne gold indicates selection, active progression, achievement and command readiness.
+- Silver supports technical precision, secondary information and neutral states.
+- White is reserved for primary messaging and decisive moments.
 
 ## Typography
 
-- Cinzel: English ceremonial and editorial display text.
-- Montserrat: English interface and body text.
-- Tajawal: Arabic display, interface and body text.
+- English display: Cinzel
+- English body and interface: Montserrat
+- Arabic: Tajawal with DIN Next Arabic and Noto Sans Arabic fallbacks
+
+Minimum intended readable sizes:
+
+- Desktop body: 14–17 px depending on hierarchy
+- Mobile body: 14–16 px
+- Supporting UI labels: not below approximately 10 px except non-essential micro-labels
+- Modal body: approximately 16 px where the copy is substantive
 
 ## Motion principles
 
-1. **Ascent** — trajectories rise and converge toward the command star.
-2. **Selection** — active states are isolated with gold light.
-3. **Formation** — elements align progressively rather than appearing at once.
-4. **Exposure** — movement expands horizontally and spatially.
-5. **Command readiness** — movement resolves into stable, decisive compositions.
+### Ascent
+Elements rise, align and converge rather than bounce or scatter.
 
-## Core timing
+### Precision
+Motion uses controlled paths, restrained easing and deliberate timing.
 
-- Microinteractions: 200–400 ms
-- Interface reveals: 600–900 ms
-- Section choreography: 900–1400 ms
-- Ambient loops: 8–20 seconds
+### Selection
+Active states are isolated through gold illumination and contrast.
 
-## Accessibility
+### Formation
+Content fragments enter as ordered systems and resolve into coherent structures.
 
-- Native semantic sections and headings
-- Keyboard-accessible buttons and dialogs
-- Escape closes menus and dialogs
-- `prefers-reduced-motion` disables nonessential movement
-- Body content remains readable without animation
+### Command readiness
+Final sequences settle into stability and visual confidence.
+
+## Primary animation systems
+
+- Loader: brand mark, progress line and controlled reveal
+- Hero: trajectory drawing, command-star emergence, parallax Earth horizon
+- Journey: scroll-pinned horizontal progression on desktop; stacked narrative on mobile
+- Selection: counter-rotating orbital rings and evidence gates
+- Stations: fluid crossfade and vertical movement between four animated SVG scenes
+- Competencies: hover elevation, cursor state and modal detail disclosure
+- Assessment: evidence-flow reveal and governance orbit
+- Command: architectural geometry, vertical light and human silhouette
+
+## Performance rules
+
+- Animate transforms and opacity wherever possible.
+- Keep canvas particle count responsive to viewport width.
+- Pause station autoplay when the tab is hidden or the user is interacting.
+- Disable intensive motion when reduced-motion is requested.
+- Avoid continuous layout-affecting animations.

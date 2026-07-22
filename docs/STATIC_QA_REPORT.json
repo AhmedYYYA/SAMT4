@@ -1,0 +1,33 @@
+{
+  "duplicate_ids": [],
+  "missing_asset_references": [
+    "%23n"
+  ],
+  "html_translation_keys": 162,
+  "missing_english_keys": [],
+  "missing_arabic_keys": [],
+  "english_arabic_key_mismatch": [],
+  "css_braces_balanced": true,
+  "css_parens_balanced": true,
+  "sections": [
+    "hero",
+    "programme",
+    "journey",
+    "selection",
+    "stations",
+    "competencies",
+    "assessment",
+    "impact",
+    "admission",
+    "command"
+  ],
+  "dialogs": [
+    "programme-modal",
+    "selection-modal",
+    "station-modal",
+    "competency-modal",
+    "assessment-modal",
+    "impact-modal",
+    "admission-modal"
+  ]
+}
