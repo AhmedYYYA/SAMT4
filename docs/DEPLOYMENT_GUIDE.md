@@ -1,56 +1,26 @@
-# GitHub Pages Deployment Guide
+# Phase 3 Deployment Guide
 
-## 1. Repository structure
+1. Back up the current `SAMT4` repository.
+2. Upload every file and folder from the Phase 3 package to the repository root.
+3. Confirm that GitHub Pages publishes from the `main` branch and `/root`.
+4. Wait for the Pages workflow to complete successfully.
+5. Open `https://ahmedyyya.github.io/SAMT4/` in a private browser window.
+6. Hard-refresh once to clear cached CSS and JavaScript.
 
-Place these files in the repository root:
+## Required paths
 
 ```text
-index.html
-styles.css
-app.js
-manifest.webmanifest
-robots.txt
-404.html
-assets/
-docs/
-preview/
+assets/brand/samt-symbol.svg
+assets/brand/samt-arabic-wordmark.svg
+assets/icons/samt-icons.svg
+assets/stations/uae-animated.svg
+assets/stations/uk-animated.svg
+assets/stations/france-animated.svg
+assets/stations/usa-animated.svg
 ```
 
-## 2. Commit and publish
+GitHub Pages is case-sensitive. Do not change capitalization or add `(1)` to filenames.
 
-1. Open the repository on GitHub.
-2. Upload the complete package contents.
-3. Confirm `index.html` is in the repository root.
-4. Open **Settings → Pages**.
-5. Select the intended branch and `/root` folder.
-6. Save and wait for the Pages workflow to complete successfully.
+## Cache troubleshooting
 
-## 3. Verify
-
-Check:
-
-- The SAMT logo loads in the header.
-- The UAE animated station loads first.
-- UK, France and USA load when their route nodes are selected.
-- English/Arabic switching changes direction and content.
-- Pop-ups open and close using the mouse, keyboard and Escape key.
-- The mobile menu opens and closes correctly.
-- The exact GSAP, ScrollTrigger and Lenis CDN resources load.
-
-## 4. Cache refresh
-
-After replacing a previous version, use a hard refresh or open the site in a private browser window. GitHub Pages and browser caching may temporarily display older assets.
-
-## 5. Common failure modes
-
-### Missing animated stations
-The `assets/stations` directory was not uploaded or its path changed.
-
-### Missing brand logo
-The `assets/brand` directory was omitted.
-
-### No animation
-A CDN may be blocked. The content remains visible, but GSAP/Lenis motion requires the external libraries.
-
-### Oversized interface
-Confirm the viewport contains a valid meta tag and that `styles.css` is the Phase 2 file.
+If an older version appears, use a hard refresh or append a temporary query string such as `?v=3`.

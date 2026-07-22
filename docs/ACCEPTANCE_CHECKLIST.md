@@ -1,65 +1,48 @@
-# SAMT Website Phase 2 — Acceptance Checklist
+# SAMT Phase 3 Acceptance Checklist
 
 ## Brand
 
-- [x] Approved Strategic Ascent symbol used
-- [x] Approved deep navy, sovereign blue, silver and gold palette used
-- [x] Approved English and Arabic descriptors used
-- [x] “From Potential to Command” retained
-- [x] Arabic descriptor uses **برنامج**
+- [x] Strategic Ascent symbol visible in every required location
+- [x] Arabic wordmark visible in the hero
+- [x] Approved navy, silver and champagne-gold palette retained
+- [x] Approved identity wording retained
 
-## Content
+## Content and language
 
-- [x] Programme definition
-- [x] Selection framework
-- [x] Six-stage leadership journey
-- [x] Four international preparation stations
-- [x] Six command-oriented competencies
-- [x] Continuous assessment model
-- [x] Governance structure
-- [x] Institutional impact model
-- [x] Admission and nomination logic
-- [x] Illustrative-partner disclaimer
+- [x] English and Arabic translation keys match
+- [x] RTL behavior retained
+- [x] Programme narrative retained
+- [x] Station details retained
 
-## Interaction
+## Readability
 
-- [x] Branded loader
-- [x] Lenis smooth scrolling
-- [x] ScrollTrigger section choreography
-- [x] Animated hero trajectories
-- [x] Pinned journey on desktop
-- [x] Responsive journey fallback on mobile
-- [x] Animated country-station carousel
-- [x] Custom cursor states
-- [x] Magnetic buttons
-- [x] Hover elevation and tilt
-- [x] Custom native dialogs
-- [x] English/Arabic switch
-- [x] Keyboard-close and Escape handling
-- [x] Reduced-motion fallback
+- [x] Header and navigation increased
+- [x] Card descriptions increased
+- [x] Station metadata increased
+- [x] Modal and pop-up copy increased
+- [x] Footer disclaimer increased
 
-## Responsive
+## Stations
 
-- [x] Desktop layout
-- [x] Tablet layout
-- [x] Mobile layout
-- [x] RTL responsive rules
-- [x] Station media ratio preserved
-- [x] No forced desktop viewport height on information-heavy sections
+- [x] UAE SVG included
+- [x] UK SVG included
+- [x] France SVG included
+- [x] USA SVG included
+- [x] Artwork not cropped
+- [x] Autoplay pause control included
+- [x] Keyboard navigation included
+- [x] Missing-asset fallback included
 
-## Technical static validation
+## Technical
 
-- [x] JavaScript syntax validation completed with Node
-- [x] HTML IDs checked for duplicates
-- [x] Local asset references checked
-- [x] Translation key parity checked between English and Arabic
-- [x] CSS opening and closing braces balanced
-
-## Remaining before public launch
-
-- [ ] Stakeholder review of final programme wording
-- [ ] Confirmed host and partner names, if any
-- [ ] Legal/privacy review
-- [ ] Live cross-browser QA after deployment
-- [ ] Real-device performance testing
-- [ ] Analytics and consent configuration, if authorised
+- [x] GSAP 3.12.5 included
+- [x] ScrollTrigger 3.12.5 included
+- [x] Lenis 1.0.42 included
+- [x] Reduced-motion support retained
+- [x] GitHub Pages support files included
+- [x] Static QA passed
+- [ ] Live Safari validation after deployment
+- [ ] Live Chrome validation after deployment
+- [ ] Live Edge validation after deployment
+- [ ] Live Firefox validation after deployment
+- [ ] Real iOS and Android validation after deployment

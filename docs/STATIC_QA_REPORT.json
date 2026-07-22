@@ -1,33 +1,12 @@
 {
   "duplicate_ids": [],
-  "missing_asset_references": [
-    "%23n"
-  ],
-  "html_translation_keys": 162,
-  "missing_english_keys": [],
-  "missing_arabic_keys": [],
-  "english_arabic_key_mismatch": [],
-  "css_braces_balanced": true,
-  "css_parens_balanced": true,
-  "sections": [
-    "hero",
-    "programme",
-    "journey",
-    "selection",
-    "stations",
-    "competencies",
-    "assessment",
-    "impact",
-    "admission",
-    "command"
-  ],
-  "dialogs": [
-    "programme-modal",
-    "selection-modal",
-    "station-modal",
-    "competency-modal",
-    "assessment-modal",
-    "impact-modal",
-    "admission-modal"
-  ]
+  "missing_local_assets": [],
+  "local_asset_count": 22,
+  "svg_count": 10,
+  "translation_keys_en": 167,
+  "translation_keys_ar": 167,
+  "translation_only_en": [],
+  "translation_only_ar": [],
+  "dialogs": 7,
+  "sections": 14
 }

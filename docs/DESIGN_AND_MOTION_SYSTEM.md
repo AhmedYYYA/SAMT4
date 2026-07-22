@@ -1,4 +1,4 @@
-# SAMT Digital Design and Motion System v2.0
+# SAMT Digital Design and Motion System v3.0
 
 ## Creative principle
 
@@ -59,3 +59,14 @@ Final sequences settle into stability and visual confidence.
 - Pause station autoplay when the tab is hidden or the user is interacting.
 - Disable intensive motion when reduced-motion is requested.
 - Avoid continuous layout-affecting animations.
+
+
+## Phase 3 production refinements
+
+- All brand assets are locally packaged and referenced through stable relative paths.
+- Preparation-station artwork uses the approved 1672 × 941 animated SVG format.
+- Station scenes preserve the full composition with `object-fit: contain`.
+- Station autoplay can be paused and resumed.
+- Keyboard navigation supports Arrow keys, Home and End.
+- Content typography uses a practical readability floor across desktop and mobile.
+- Modal typography and scrolling are optimized for normal laptop viewports.

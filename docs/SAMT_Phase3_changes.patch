@@ -1,0 +1,1993 @@
+diff -ruN '--exclude=preview' '--exclude=docs' /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/404.html /mnt/data/SAMT_Website_Phase3_v3.0/404.html
+--- /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/404.html	1970-01-01 00:00:00.000000000 +0000
++++ /mnt/data/SAMT_Website_Phase3_v3.0/404.html	2026-07-22 12:42:41.172402818 +0000
+@@ -0,0 +1,22 @@
++<!doctype html>
++<html lang="en" dir="ltr">
++<head>
++  <meta charset="utf-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1" />
++  <meta name="theme-color" content="#03070d" />
++  <title>Page Not Found — SAMT</title>
++  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
++  <style>
++    :root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;min-height:100svh;display:grid;place-items:center;padding:2rem;color:#fff;background:radial-gradient(circle at 50% 20%,#142c4d 0,transparent 38rem),#03070d;font-family:Montserrat,Arial,sans-serif}.card{width:min(92vw,760px);padding:clamp(2rem,7vw,5rem);border:1px solid rgba(241,217,154,.2);border-radius:28px;background:rgba(8,29,51,.48);text-align:center;box-shadow:0 35px 120px rgba(0,0,0,.5)}img{width:7rem;height:auto;margin:0 auto 1.5rem}small{color:#d4af37;letter-spacing:.18em;text-transform:uppercase}h1{margin:1rem 0;font-family:Georgia,serif;font-size:clamp(3rem,9vw,6rem);font-weight:500}p{margin:0 auto 2rem;max-width:38rem;color:#c0c6cf;font-size:1.05rem;line-height:1.7}a{display:inline-flex;min-height:3.25rem;align-items:center;padding:.85rem 1.35rem;border-radius:999px;color:#07111e;background:linear-gradient(135deg,#f1d99a,#d4af37);font-weight:700;text-decoration:none}
++  </style>
++</head>
++<body>
++  <main class="card">
++    <img src="assets/brand/samt-symbol.svg" alt="SAMT Strategic Ascent symbol" />
++    <small>From Potential to Command</small>
++    <h1>404</h1>
++    <p>The requested page is not available. Return to the SAMT leadership experience.</p>
++    <a href="./">Return to SAMT</a>
++  </main>
++</body>
++</html>
+diff -ruN '--exclude=preview' '--exclude=docs' /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/IMPLEMENTATION_STATUS.md /mnt/data/SAMT_Website_Phase3_v3.0/IMPLEMENTATION_STATUS.md
+--- /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/IMPLEMENTATION_STATUS.md	2026-07-22 11:57:48.956433130 +0000
++++ /mnt/data/SAMT_Website_Phase3_v3.0/IMPLEMENTATION_STATUS.md	2026-07-22 12:46:50.420400011 +0000
+@@ -1,25 +1,30 @@
+-# Implementation Status — Phase 2 v2.0
++# SAMT Phase 3 Implementation Status
+ 
+-## Completed
++## Release status
++
++**Status:** Final production candidate  
++**Version:** 3.0  
++**Date:** 22 July 2026
+ 
+-The Phase 1 hero and journey prototype has been expanded into the complete public-facing programme experience:
++## Completed
+ 
+-- full information architecture
+-- all core programme sections
+-- all four animated preparation stations
+-- competencies, assessment, governance, impact and admission
+-- seven custom branded dialogs
+-- complete Arabic and English interface content
+-- responsive rules and accessibility fallbacks
+-- deployment and QA documentation
+-
+-## Recommended next phase
+-
+-Phase 3 should focus on stakeholder refinement and production hardening:
+-
+-1. Validate final programme facts, durations and nomination authority.
+-2. Confirm whether specific host institutions can be named publicly.
+-3. Conduct live Safari, Chrome, Edge and mobile-device QA.
+-4. Optimise station SVG payloads for final production.
+-5. Add authorised analytics, privacy and legal pages.
+-6. Integrate an approved CMS or nomination workflow only if required.
++- Approved SAMT Strategic Ascent identity integrated
++- Missing logo and icon assets restored
++- Four approved animated station SVGs integrated
++- Bilingual English/Arabic interface retained
++- RTL and LTR layouts supported
++- Typography readability patch applied globally
++- Station artwork protected from cropping
++- Station keyboard navigation implemented
++- Station autoplay pause/resume implemented
++- Station image failure fallback implemented
++- Modal and pop-up readability increased
++- GitHub Pages support files added
++- Static asset-path, translation-key, SVG and JavaScript checks passed
++
++## Post-deployment validation
++
++- Verify the live GitHub Pages build on Safari, Chrome, Edge and Firefox
++- Verify iPhone and Android viewport behavior
++- Confirm CDN accessibility in the target operating environment
++- Confirm final programme dates and partner references before public launch
+diff -ruN '--exclude=preview' '--exclude=docs' /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/README.md /mnt/data/SAMT_Website_Phase3_v3.0/README.md
+--- /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/README.md	2026-07-22 11:59:15.624432154 +0000
++++ /mnt/data/SAMT_Website_Phase3_v3.0/README.md	2026-07-22 12:46:50.420400011 +0000
+@@ -1,101 +1,64 @@
+-# SAMT Website — Phase 2 v2.0
++# SAMT Website Phase 3 — Final Production Release
+ 
+ **SAMT — Strategic Advancement, Management & Transformation**  
+ **برنامج سَمْت للتقدم الاستراتيجي والإدارة والتحول**  
+ **From Potential to Command | من الإمكانات إلى القيادة**
+ 
+-This package advances the approved Phase 1 prototype into a complete bilingual leadership-programme website. It uses the approved Strategic Ascent brand identity and the approved cinematic near-black, deep-navy and champagne-gold creative direction.
++## Purpose
+ 
+-## Main files
++This release consolidates the approved SAMT brand identity, programme narrative, animated preparation stations and premium motion system into a GitHub Pages-ready bilingual website.
+ 
+-- `index.html` — semantic page architecture and all website sections
+-- `styles.css` — complete responsive visual system
+-- `app.js` — GSAP, ScrollTrigger, Lenis, bilingual content, station carousel, dialogs and interaction logic
+-- `assets/brand/` — approved SAMT production logo assets
+-- `assets/stations/` — approved animated UAE, UK, France and USA station scenes
+-- `assets/icons/samt-icons.svg` — custom line-icon sprite
+-- `docs/` — deployment, motion, content and QA documentation
+-- `preview/approved-creative-reference.png` — approved aesthetic reference; not loaded by the production website
+-
+-## Implemented sections
+-
+-1. Strategic Ascent hero
+-2. Programme proposition and metrics
+-3. Six-stage leadership journey
+-4. Selective admission framework
+-5. Four animated international preparation stations
+-6. Command-oriented competency framework
+-7. Continuous assessment and governance model
+-8. Institutional impact framework
+-9. Nomination and admission section
+-10. Final command-readiness statement
++## Main improvements in Phase 3
+ 
+-## Interaction system
++- Restored the validated Strategic Ascent symbol, Arabic wordmark, favicon and icon sprite.
++- Integrated the four approved animated SVG preparation stations.
++- Corrected station artwork scaling to preserve the complete SVG composition without cropping.
++- Raised typography sizes across navigation, cards, station panels, modals, pop-ups and footers.
++- Added Arabic-specific readability refinements and complete RTL behavior.
++- Added station autoplay pause/resume, keyboard navigation and resilient asset fallbacks.
++- Added asset preloading and smoother station transitions.
++- Added deployment support files: manifest, 404 page, robots.txt, sitemap.xml and .nojekyll.
++- Preserved GSAP, ScrollTrigger and Lenis integration with reduced-motion fallbacks.
+ 
+-- GSAP 3.12.5
+-- GSAP ScrollTrigger 3.12.5
+-- Lenis 1.0.42
+-- Canvas particles
+-- Animated SVG trajectories
+-- Custom cursor states
+-- Magnetic buttons
+-- Card tilt and hover responses
+-- Scroll-pinned leadership journey
+-- Animated station carousel with keyboard-accessible controls
+-- Native accessible dialogs with custom branded presentation
+-- English LTR and Arabic RTL language switching
+-- Reduced-motion support
+-
+-## Run locally
+-
+-Use a local web server rather than opening the file directly:
+-
+-```bash
+-python3 -m http.server 8000
+-```
+-
+-Then open:
+-
+-```text
+-http://localhost:8000
+-```
+-
+-The exact CDN libraries and Google Fonts require an internet connection.
+-
+-## Deploy to GitHub Pages
+-
+-Upload the complete contents of this folder to the repository root. Do not upload only `index.html`; the `assets` directory, `styles.css` and `app.js` are required.
++## Deployment
+ 
+-Recommended repository root:
++Upload the **contents** of this folder to the repository root. Keep the folder structure unchanged.
+ 
+ ```text
+ index.html
+ styles.css
+ app.js
+-assets/
+-docs/
+ manifest.webmanifest
+-robots.txt
+ 404.html
++robots.txt
++sitemap.xml
++.nojekyll
++assets/
++  brand/
++  icons/
++  stations/
++preview/
++docs/
+ ```
+ 
+-See `docs/DEPLOYMENT_GUIDE.md` for the full procedure.
++The production URL is configured as:
++
++```text
++https://ahmedyyya.github.io/SAMT4/
++```
+ 
+-## Important content boundary
++## External libraries
+ 
+-The host categories, preparation activities and programme arrangements are illustrative and subject to formal approval, coordination and agreement. The website does not claim confirmed partnerships.
++The page loads these exact versions from jsDelivr:
+ 
+-## v2.1 station asset correction
++- GSAP 3.12.5
++- GSAP ScrollTrigger 3.12.5
++- Lenis 1.0.42
+ 
+-The four approved animated SVG files are included using the exact filenames already referenced by `index.html` and `app.js`:
++## Browser support
+ 
+-```text
+-assets/stations/uae-animated.svg
+-assets/stations/uk-animated.svg
+-assets/stations/france-animated.svg
+-assets/stations/usa-animated.svg
+-```
++Designed for current versions of Safari, Chrome, Edge and Firefox. Real-device validation is still recommended after deployment, particularly on iOS Safari.
+ 
+-GitHub Pages paths and filenames are case-sensitive. Upload the full `assets` directory and do not rename it to `Assets` or `Stations`.
++## Governance note
+ 
+-Use `station-assets-test.html` after deployment to verify the four files independently.
++The website is a programme concept and brand implementation. Proposed partners, dates, host categories and programme arrangements remain subject to formal approval and agreement.
+diff -ruN '--exclude=preview' '--exclude=docs' /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/acceptance-matrix.json /mnt/data/SAMT_Website_Phase3_v3.0/acceptance-matrix.json
+--- /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/acceptance-matrix.json	2026-07-22 11:57:49.240433126 +0000
++++ /mnt/data/SAMT_Website_Phase3_v3.0/acceptance-matrix.json	2026-07-22 12:46:50.420400011 +0000
+@@ -1,43 +1,24 @@
+ {
+-  "version": "2.0",
+-  "project": "SAMT Website Phase 2",
+-  "status": "prototype-complete",
+-  "brand": {
+-    "strategic_ascent_identity": true,
+-    "approved_palette": true,
+-    "approved_bilingual_descriptor": true,
+-    "arabic_uses_programme_not_system": true
++  "release": "SAMT Website Phase 3 — Final Production Release",
++  "version": "3.0",
++  "status": "production-candidate",
++  "mandatory_fixes": {
++    "missing_brand_assets": "completed",
++    "typography_readability": "completed",
++    "station_svg_scaling": "completed",
++    "station_assets": "completed",
++    "rtl_ltr": "completed",
++    "modal_readability": "completed",
++    "keyboard_access": "completed",
++    "autoplay_control": "completed",
++    "github_pages_support": "completed"
+   },
+-  "sections": {
+-    "hero": true,
+-    "programme": true,
+-    "journey": true,
+-    "selection": true,
+-    "stations": 4,
+-    "competencies": 6,
+-    "assessment": true,
+-    "governance": true,
+-    "impact": true,
+-    "admission": true,
+-    "command_readiness": true
+-  },
+-  "interaction": {
+-    "gsap": "3.12.5",
+-    "scroll_trigger": "3.12.5",
+-    "lenis": "1.0.42",
+-    "custom_cursor": true,
+-    "magnetic_controls": true,
+-    "animated_station_svg": true,
+-    "custom_dialogs": 7,
+-    "rtl_ltr_switch": true,
+-    "reduced_motion": true
+-  },
+-  "validation": {
+-    "javascript_syntax": "pass",
+-    "duplicate_html_ids": "pass",
+-    "local_asset_references": "pass",
+-    "translation_key_parity": "pass",
+-    "css_brace_balance": "pass",
+-    "live_browser_qa": "required_after_deployment"
+-  }
+-}
++  "post_deployment_checks": [
++    "Safari",
++    "Chrome",
++    "Edge",
++    "Firefox",
++    "iOS Safari",
++    "Android Chrome"
++  ]
++}
+\ No newline at end of file
+diff -ruN '--exclude=preview' '--exclude=docs' /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/app.js /mnt/data/SAMT_Website_Phase3_v3.0/app.js
+--- /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/app.js	2026-07-22 11:57:49.232433127 +0000
++++ /mnt/data/SAMT_Website_Phase3_v3.0/app.js	2026-07-22 12:40:12.384404493 +0000
+@@ -12,6 +12,8 @@
+   let currentLanguage = "en";
+   let stationIndex = 0;
+   let stationTimer = 0;
++  let stationAutoplayPaused = false;
++  let stationLoadToken = 0;
+   let lastFocusedElement = null;
+ 
+   const stationOrder = ["uae", "uk", "france", "usa"];
+@@ -90,6 +92,11 @@
+       "station.durationLabel": "Duration",
+       "station.focusLabel": "Primary focus",
+       "station.details": "View Station Details",
++      "station.previous": "Previous station",
++      "station.next": "Next station",
++      "station.pause": "Pause station autoplay",
++      "station.play": "Resume station autoplay",
++      "station.unavailable": "Station artwork is temporarily unavailable.",
+       "station.modal.hosts": "Proposed host categories",
+       "station.modal.learning": "Learning focus",
+       "station.modal.outcomes": "Expected outcomes",
+@@ -254,6 +261,11 @@
+       "station.durationLabel": "المدة",
+       "station.focusLabel": "التركيز الرئيس",
+       "station.details": "عرض تفاصيل المحطة",
++      "station.previous": "المحطة السابقة",
++      "station.next": "المحطة التالية",
++      "station.pause": "إيقاف التنقل التلقائي بين المحطات",
++      "station.play": "استئناف التنقل التلقائي بين المحطات",
++      "station.unavailable": "يتعذر عرض المشهد المتحرك للمحطة مؤقتاً.",
+       "station.modal.hosts": "فئات الجهات المستضيفة المقترحة",
+       "station.modal.learning": "محاور التعلم",
+       "station.modal.outcomes": "المخرجات المتوقعة",
+@@ -518,6 +530,9 @@
+     });
+ 
+     updateStation(stationOrder[stationIndex], false);
++    updateStationControlLabels();
++    const languageToggle = q(".language-toggle");
++    if (languageToggle) languageToggle.setAttribute("aria-label", currentLanguage === "ar" ? "Switch to English" : "التبديل إلى العربية");
+     if (persist) {
+       try { localStorage.setItem("samt-language", currentLanguage); } catch (_) {}
+     }
+@@ -531,28 +546,58 @@
+     q(".language-toggle")?.addEventListener("click", () => setLanguage(currentLanguage === "en" ? "ar" : "en"));
+   }
+ 
++  function updateStationControlLabels() {
++    const previous = q("[data-station-prev]");
++    const next = q("[data-station-next]");
++    const pause = q("[data-station-pause]");
++    const dictionary = translations[currentLanguage];
++    previous?.setAttribute("aria-label", dictionary["station.previous"]);
++    next?.setAttribute("aria-label", dictionary["station.next"]);
++    if (pause) {
++      pause.setAttribute("aria-label", dictionary[stationAutoplayPaused ? "station.play" : "station.pause"]);
++      pause.setAttribute("aria-pressed", String(stationAutoplayPaused));
++      const icon = q("span", pause);
++      if (icon) icon.textContent = stationAutoplayPaused ? "▶" : "Ⅱ";
++      pause.classList.toggle("is-paused", stationAutoplayPaused);
++    }
++  }
++
++  function preloadRemainingStationAssets() {
++    const paths = stationOrder.slice(1).map((key) => stationData.en[key].image);
++    const load = () => paths.forEach((src) => {
++      const image = new Image();
++      image.decoding = "async";
++      image.src = src;
++    });
++    if ("requestIdleCallback" in window) requestIdleCallback(load, { timeout: 2500 });
++    else setTimeout(load, 1200);
++  }
++
+   function updateStation(key, animate = true) {
+     const data = stationData[currentLanguage][key];
+     if (!data) return;
+     stationIndex = stationOrder.indexOf(key);
++    const token = ++stationLoadToken;
+ 
++    const stage = q(".station-stage");
+     const visual = q(".station-stage__visual");
+     const content = q(".station-stage__content");
+-    const apply = () => {
+-      const image = q("#station-image");
+-      image.src = data.image;
+-      image.alt = `${data.title} preparation station`;
++    const image = q("#station-image");
++    const fallback = q("#station-fallback");
++
++    const applyContent = () => {
+       q("#station-title").textContent = data.title;
+       q("#station-subtitle").textContent = data.subtitle;
+       q("#station-body").textContent = data.body;
+       q("#station-duration").textContent = data.duration;
+       q("#station-focus").textContent = data.focus;
+-      q(".station-stage__caption").textContent = `STATION 0${stationIndex + 1} / ${data.code}`;
++      q(".station-stage__caption").textContent = `${currentLanguage === "ar" ? "المحطة" : "STATION"} 0${stationIndex + 1} / ${data.code}`;
+       q("#station-points").innerHTML = data.points.map((item) => `<li>${item}</li>`).join("");
+ 
+       qa(".station-route__node").forEach((node, index) => {
+         const active = index === stationIndex;
+         node.classList.toggle("is-active", active);
++        node.tabIndex = active ? 0 : -1;
+         if (active) node.setAttribute("aria-current", "step");
+         else node.removeAttribute("aria-current");
+       });
+@@ -570,11 +615,41 @@
+       q("#station-modal-highlights").innerHTML = data.highlights.map((item) => `<li>${item}</li>`).join("");
+     };
+ 
++    const applyArtwork = () => {
++      if (!image) return;
++      stage?.setAttribute("aria-busy", "true");
++      const probe = new Image();
++      probe.decoding = "async";
++      probe.onload = () => {
++        if (token !== stationLoadToken) return;
++        image.src = data.image;
++        image.alt = currentLanguage === "ar" ? `مشهد متحرك لمحطة ${data.title}` : `Animated ${data.title} preparation station`;
++        image.hidden = false;
++        if (fallback) fallback.hidden = true;
++        stage?.setAttribute("aria-busy", "false");
++      };
++      probe.onerror = () => {
++        if (token !== stationLoadToken) return;
++        image.hidden = true;
++        if (fallback) {
++          fallback.textContent = translations[currentLanguage]["station.unavailable"];
++          fallback.hidden = false;
++        }
++        stage?.setAttribute("aria-busy", "false");
++      };
++      probe.src = data.image;
++    };
++
++    const apply = () => {
++      applyContent();
++      applyArtwork();
++    };
++
+     if (animate && hasGSAP && !reducedMotion) {
+       const tl = gsap.timeline();
+-      tl.to([visual, content], { autoAlpha: 0, y: 18, duration: .25, stagger: .04, ease: "power2.in" })
++      tl.to([visual, content], { autoAlpha: 0, y: 16, duration: .22, stagger: .035, ease: "power2.in" })
+         .add(apply)
+-        .fromTo([visual, content], { autoAlpha: 0, y: 18 }, { autoAlpha: 1, y: 0, duration: .55, stagger: .06, ease: "power4.out" });
++        .fromTo([visual, content], { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: .52, stagger: .055, ease: "power4.out" });
+     } else {
+       apply();
+     }
+@@ -583,17 +658,49 @@
+ 
+   function restartStationAutoplay() {
+     clearTimeout(stationTimer);
+-    if (reducedMotion || document.hidden) return;
++    if (reducedMotion || document.hidden || stationAutoplayPaused) return;
+     stationTimer = setTimeout(() => updateStation(stationOrder[(stationIndex + 1) % stationOrder.length]), 9000);
+   }
+ 
+   function initStations() {
+-    qa(".station-route__node").forEach((button) => button.addEventListener("click", () => updateStation(button.dataset.station)));
++    const nodes = qa(".station-route__node");
++    nodes.forEach((button, index) => {
++      button.tabIndex = index === 0 ? 0 : -1;
++      button.addEventListener("click", () => updateStation(button.dataset.station));
++      button.addEventListener("keydown", (event) => {
++        const isRtl = document.documentElement.dir === "rtl";
++        let target = null;
++        if (event.key === "Home") target = 0;
++        if (event.key === "End") target = nodes.length - 1;
++        if (event.key === "ArrowRight") target = (index + (isRtl ? -1 : 1) + nodes.length) % nodes.length;
++        if (event.key === "ArrowLeft") target = (index + (isRtl ? 1 : -1) + nodes.length) % nodes.length;
++        if (target === null) return;
++        event.preventDefault();
++        nodes[target].focus();
++        updateStation(nodes[target].dataset.station);
++      });
++    });
++
+     q("[data-station-prev]")?.addEventListener("click", () => updateStation(stationOrder[(stationIndex - 1 + stationOrder.length) % stationOrder.length]));
+     q("[data-station-next]")?.addEventListener("click", () => updateStation(stationOrder[(stationIndex + 1) % stationOrder.length]));
+-    q(".station-console")?.addEventListener("mouseenter", () => clearTimeout(stationTimer));
+-    q(".station-console")?.addEventListener("mouseleave", restartStationAutoplay);
++    q("[data-station-pause]")?.addEventListener("click", () => {
++      stationAutoplayPaused = !stationAutoplayPaused;
++      updateStationControlLabels();
++      if (stationAutoplayPaused) clearTimeout(stationTimer);
++      else restartStationAutoplay();
++    });
++
++    const consoleElement = q(".station-console");
++    consoleElement?.addEventListener("mouseenter", () => clearTimeout(stationTimer));
++    consoleElement?.addEventListener("mouseleave", restartStationAutoplay);
++    consoleElement?.addEventListener("focusin", () => clearTimeout(stationTimer));
++    consoleElement?.addEventListener("focusout", (event) => {
++      if (!consoleElement.contains(event.relatedTarget)) restartStationAutoplay();
++    });
++
++    updateStationControlLabels();
+     updateStation(stationOrder[0], false);
++    preloadRemainingStationAssets();
+   }
+ 
+   function populateCompetency(key) {
+diff -ruN '--exclude=preview' '--exclude=docs' /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/assets/brand/favicon.svg /mnt/data/SAMT_Website_Phase3_v3.0/assets/brand/favicon.svg
+--- /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/assets/brand/favicon.svg	1970-01-01 00:00:00.000000000 +0000
++++ /mnt/data/SAMT_Website_Phase3_v3.0/assets/brand/favicon.svg	2026-07-22 12:37:58.176406004 +0000
+@@ -0,0 +1,125 @@
++<?xml version="1.0" encoding="UTF-8" standalone="no"?>
++<svg
++   width="600"
++   height="500"
++   viewBox="0 0 600 500"
++   role="img"
++   aria-label="SAMT brand asset"
++   version="1.1"
++   id="svg13"
++   sodipodi:docname="05_strategic_ascent_symbol_fullcolor.svg"
++   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
++   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
++   xmlns="http://www.w3.org/2000/svg"
++   xmlns:svg="http://www.w3.org/2000/svg">
++  <sodipodi:namedview
++     id="namedview13"
++     pagecolor="#ffffff"
++     bordercolor="#000000"
++     borderopacity="0.25"
++     inkscape:showpageshadow="2"
++     inkscape:pageopacity="0.0"
++     inkscape:pagecheckerboard="0"
++     inkscape:deskcolor="#d1d1d1" />
++  <defs
++     id="defs11">
++    <linearGradient
++       id="silverGrad"
++       x1="0"
++       y1="0"
++       x2="1"
++       y2="1">
++      <stop
++         offset="0"
++         stop-color="#F7F8FA"
++         id="stop1" />
++      <stop
++         offset="0.45"
++         stop-color="#C0C6CF"
++         id="stop2" />
++      <stop
++         offset="1"
++         stop-color="#7D8792"
++         id="stop3" />
++    </linearGradient>
++    <linearGradient
++       id="goldGrad"
++       x1="0"
++       y1="0"
++       x2="1"
++       y2="1">
++      <stop
++         offset="0"
++         stop-color="#F1D99A"
++         id="stop4" />
++      <stop
++         offset="0.58"
++         stop-color="#D4AF37"
++         id="stop5" />
++      <stop
++         offset="1"
++         stop-color="#9B6D13"
++         id="stop6" />
++    </linearGradient>
++    <linearGradient
++       id="navyGrad"
++       x1="0"
++       y1="1"
++       x2="1"
++       y2="0">
++      <stop
++         offset="0"
++         stop-color="#142C4D"
++         id="stop7" />
++      <stop
++         offset="1"
++         stop-color="#081D33"
++         id="stop8" />
++    </linearGradient>
++    <radialGradient
++       id="navyBackground"
++       cx="55%"
++       cy="18%"
++       r="90%">
++      <stop
++         offset="0"
++         stop-color="#1B3A63"
++         id="stop9" />
++      <stop
++         offset="0.42"
++         stop-color="#081D33"
++         id="stop10" />
++      <stop
++         offset="1"
++         stop-color="#03070D"
++         id="stop11" />
++    </radialGradient>
++  </defs>
++  <g
++     transform="translate(40,35) scale(1.7)"
++     id="g13">
++    <g
++       id="strategic-ascent-symbol">
++      <path
++         d="M36 206 C 102 210 172 187 221 139 C 244 116 260 89 270 52 C 248 87 225 116 194 140 C 149 175 95 197 36 206 Z"
++         fill="url(#silverGrad)"
++         id="path11" />
++      <path
++         d="M70 221 C 129 217 186 194 226 154 C 248 132 262 101 272 54 C 255 93 235 125 207 151 C 169 187 122 210 70 221 Z"
++         fill="url(#navyGrad)"
++         id="path12" />
++      <path
++         d="M111 232 C 162 222 208 199 237 168 C 256 147 267 113 274 55 C 261 106 244 139 220 166 C 191 198 153 219 111 232 Z"
++         fill="url(#goldGrad)"
++         id="path13" />
++      <path
++         id="polygon13"
++         style="fill:url(#goldGrad)"
++         d="m 270,12 2.87,17.07 14.1,-10.04 -10.04,14.1 L 294,36 276.93,38.87 286.97,52.97 272.87,42.93 270,60 267.13,42.93 253.03,52.97 263.07,38.87 246,36 l 17.07,-2.87 -10.04,-14.1 14.1,10.04 z" />
++      <path
++         id="circle13"
++         style="fill:#ffffff"
++         d="M 272.6,36 A 2.5999999,2.5999999 0 0 1 270,38.6 2.5999999,2.5999999 0 0 1 267.4,36 2.5999999,2.5999999 0 0 1 270,33.4 2.5999999,2.5999999 0 0 1 272.6,36 Z" />
++    </g>
++  </g>
++</svg>
+diff -ruN '--exclude=preview' '--exclude=docs' /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/assets/brand/samt-arabic-wordmark.svg /mnt/data/SAMT_Website_Phase3_v3.0/assets/brand/samt-arabic-wordmark.svg
+--- /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/assets/brand/samt-arabic-wordmark.svg	1970-01-01 00:00:00.000000000 +0000
++++ /mnt/data/SAMT_Website_Phase3_v3.0/assets/brand/samt-arabic-wordmark.svg	2026-07-22 12:37:58.172406004 +0000
+@@ -0,0 +1,121 @@
++<?xml version="1.0" encoding="UTF-8" standalone="no"?>
++<svg
++   width="1000"
++   height="360"
++   viewBox="0 0 1000 360"
++   role="img"
++   aria-label="SAMT brand asset"
++   version="1.1"
++   id="svg13"
++   sodipodi:docname="11_arabic_wordmark_bespoke.svg"
++   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
++   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
++   xmlns="http://www.w3.org/2000/svg"
++   xmlns:svg="http://www.w3.org/2000/svg">
++  <sodipodi:namedview
++     id="namedview13"
++     pagecolor="#ffffff"
++     bordercolor="#000000"
++     borderopacity="0.25"
++     inkscape:showpageshadow="2"
++     inkscape:pageopacity="0.0"
++     inkscape:pagecheckerboard="0"
++     inkscape:deskcolor="#d1d1d1" />
++  <defs
++     id="defs11">
++    <linearGradient
++       id="silverGrad"
++       x1="0"
++       y1="0"
++       x2="1"
++       y2="1">
++      <stop
++         offset="0"
++         stop-color="#F7F8FA"
++         id="stop1" />
++      <stop
++         offset="0.45"
++         stop-color="#C0C6CF"
++         id="stop2" />
++      <stop
++         offset="1"
++         stop-color="#7D8792"
++         id="stop3" />
++    </linearGradient>
++    <linearGradient
++       id="goldGrad"
++       x1="0"
++       y1="0"
++       x2="1"
++       y2="1">
++      <stop
++         offset="0"
++         stop-color="#F1D99A"
++         id="stop4" />
++      <stop
++         offset="0.58"
++         stop-color="#D4AF37"
++         id="stop5" />
++      <stop
++         offset="1"
++         stop-color="#9B6D13"
++         id="stop6" />
++    </linearGradient>
++    <linearGradient
++       id="navyGrad"
++       x1="0"
++       y1="1"
++       x2="1"
++       y2="0">
++      <stop
++         offset="0"
++         stop-color="#142C4D"
++         id="stop7" />
++      <stop
++         offset="1"
++         stop-color="#081D33"
++         id="stop8" />
++    </linearGradient>
++    <radialGradient
++       id="navyBackground"
++       cx="55%"
++       cy="18%"
++       r="90%">
++      <stop
++         offset="0"
++         stop-color="#1B3A63"
++         id="stop9" />
++      <stop
++         offset="0.42"
++         stop-color="#081D33"
++         id="stop10" />
++      <stop
++         offset="1"
++         stop-color="#03070D"
++         id="stop11" />
++    </radialGradient>
++  </defs>
++  <g
++     transform="translate(500,180) scale(2.15) translate(-500,-165)"
++     id="g13">
++    <g
++       id="arabic-wordmark">
++      <path
++         d="m 654.63996,225 q -7.04,0 -13.28,-2.72 -6.08,-2.88 -12.16,-8.96 -4.16,5.6 -10.56,8.64 -6.4,3.04 -15.04,3.04 h -60.16 q -0.8,0 -0.8,-0.8 v -15.52 q 0,-0.64 0.8,-0.64 h 20.96 v -49.28 h 20.48 v 49.28 h 14.72 q 15.68,0 15.68,-18.56 v -30.72 h 20.48 v 32.32 q 0,1.6 -0.16,3.36 0,1.6 -0.16,3.2 4,5.76 8,8.16 4.16,2.24 10.88,2.24 h 9.76 v -61.76 h 20.48 V 225 Z M 460.2401,208.04 q -4.96,-11.84 -4.96,-23.84 0,-6.88 2.08,-14.4 2.08,-7.52 5.28,-13.28 7.2,-4.64 15.52,-7.04 8.32,-2.56 15.36,-2.56 10.56,0 19.2,4.48 8.48,4.64 13.12,13.12 4.64,8.32 4.64,19.36 0,9.28 -3.2,17.28 3.04,3.84 6.88,5.44 4,1.44 10.08,1.44 h 0.8 q 0.8,0 0.8,0.64 v 15.52 q 0,0.8 -0.8,0.8 h -0.8 q -8.48,0 -14.72,-2.4 -6.08,-2.4 -11.52,-8.16 -5.76,5.28 -13.28,8 -7.52,2.56 -15.52,2.56 h -47.68 q -0.8,0 -0.8,-0.8 v -15.52 q 0,-0.64 0.8,-0.64 z m 14.56,-22.56 q 0,5.28 0.96,10.88 1.12,5.44 3.52,11.68 h 7.84 q 10.08,0 16.32,-6.72 6.24,-6.72 6.24,-17.6 0,-8.96 -4.64,-14.4 -4.64,-5.6 -11.84,-5.6 -4,0 -8.16,1.44 -4.16,1.28 -8,3.84 -1.12,3.84 -1.76,8 -0.48,4.16 -0.48,8.48 z m -121.44004,-39.2 q -4.48,0 -7.36,-2.88 -2.72,-2.88 -2.72,-8 0,-5.44 2.72,-8.16 2.88,-2.72 7.36,-2.72 4.64,0 7.36,2.88 2.72,2.72 2.72,8 0,5.12 -2.72,8 -2.72,2.88 -7.36,2.88 z m 27.36,0 q -4.64,0 -7.36,-2.88 -2.72,-3.04 -2.72,-8 0,-5.28 2.72,-8 2.72,-2.88 7.36,-2.88 4.8,0 7.36,2.88 2.72,2.88 2.72,8 0,4.96 -2.72,8 -2.72,2.88 -7.36,2.88 z m -37.28,78.72 q -14.4,0 -22.88,-8.48 -8.32,-8.48 -8.32,-23.36 0,-5.76 1.28,-12.64 1.44,-6.88 3.52,-11.68 h 18.24 q -2.4,10.88 -2.4,21.6 0,7.84 4.16,12.8 4.16,4.8 10.88,4.8 h 53.92 v -61.76 h 20.32 v 61.76 h 20.96 q 0.8,0 0.8,0.64 v 15.52 q 0,0.8 -0.8,0.8 z"
++         fill="#081D33"
++         id="path11" />
++      <path
++         d="M619 122 L644 115"
++         stroke="#D4AF37"
++         stroke-width="8"
++         stroke-linecap="round"
++         id="path12" />
++      <path
++         d="m 509,113 a 12,12 0 0 1 -12,12 12,12 0 0 1 -12,-12 12,12 0 0 1 12,-12 12,12 0 0 1 12,12 z"
++         fill="none"
++         stroke="#D4AF37"
++         stroke-width="7"
++         id="path13" />
++    </g>
++  </g>
++</svg>
+diff -ruN '--exclude=preview' '--exclude=docs' /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/assets/brand/samt-monogram.svg /mnt/data/SAMT_Website_Phase3_v3.0/assets/brand/samt-monogram.svg
+--- /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/assets/brand/samt-monogram.svg	1970-01-01 00:00:00.000000000 +0000
++++ /mnt/data/SAMT_Website_Phase3_v3.0/assets/brand/samt-monogram.svg	2026-07-22 12:37:58.172406004 +0000
+@@ -0,0 +1,125 @@
++<?xml version="1.0" encoding="UTF-8" standalone="no"?>
++<svg
++   width="720"
++   height="680"
++   viewBox="0 0 720 680"
++   role="img"
++   aria-label="SAMT brand asset"
++   version="1.1"
++   id="svg12"
++   sodipodi:docname="06_samt_monogram_fullcolor.svg"
++   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
++   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
++   xmlns="http://www.w3.org/2000/svg"
++   xmlns:svg="http://www.w3.org/2000/svg">
++  <sodipodi:namedview
++     id="namedview12"
++     pagecolor="#ffffff"
++     bordercolor="#000000"
++     borderopacity="0.25"
++     inkscape:showpageshadow="2"
++     inkscape:pageopacity="0.0"
++     inkscape:pagecheckerboard="0"
++     inkscape:deskcolor="#d1d1d1" />
++  <defs
++     id="defs11">
++    <linearGradient
++       id="silverGrad"
++       x1="0"
++       y1="0"
++       x2="1"
++       y2="1">
++      <stop
++         offset="0"
++         stop-color="#F7F8FA"
++         id="stop1" />
++      <stop
++         offset="0.45"
++         stop-color="#C0C6CF"
++         id="stop2" />
++      <stop
++         offset="1"
++         stop-color="#7D8792"
++         id="stop3" />
++    </linearGradient>
++    <linearGradient
++       id="goldGrad"
++       x1="0"
++       y1="0"
++       x2="1"
++       y2="1">
++      <stop
++         offset="0"
++         stop-color="#F1D99A"
++         id="stop4" />
++      <stop
++         offset="0.58"
++         stop-color="#D4AF37"
++         id="stop5" />
++      <stop
++         offset="1"
++         stop-color="#9B6D13"
++         id="stop6" />
++    </linearGradient>
++    <linearGradient
++       id="navyGrad"
++       x1="0"
++       y1="1"
++       x2="1"
++       y2="0">
++      <stop
++         offset="0"
++         stop-color="#142C4D"
++         id="stop7" />
++      <stop
++         offset="1"
++         stop-color="#081D33"
++         id="stop8" />
++    </linearGradient>
++    <radialGradient
++       id="navyBackground"
++       cx="55%"
++       cy="18%"
++       r="90%">
++      <stop
++         offset="0"
++         stop-color="#1B3A63"
++         id="stop9" />
++      <stop
++         offset="0.42"
++         stop-color="#081D33"
++         id="stop10" />
++      <stop
++         offset="1"
++         stop-color="#03070D"
++         id="stop11" />
++    </radialGradient>
++  </defs>
++  <path
++     id="circle11"
++     style="opacity:0.55;fill:none;stroke:#c0c6cf;stroke-width:8"
++     d="M 575,300 A 215,215 0 0 1 360,515 215,215 0 0 1 145,300 215,215 0 0 1 360,85 215,215 0 0 1 575,300 Z" />
++  <path
++     d="M490 150 C370 55 205 105 220 225 C232 320 470 272 468 390 C465 500 300 525 205 440"
++     fill="none"
++     stroke="url(#navyGrad)"
++     stroke-width="58"
++     stroke-linecap="round"
++     id="path11" />
++  <path
++     d="M460 162 C350 92 247 123 254 217 C263 293 441 284 438 382 C436 462 330 489 240 430"
++     fill="none"
++     stroke="url(#goldGrad)"
++     stroke-width="26"
++     stroke-linecap="round"
++     id="path12" />
++  <path
++     id="polygon12"
++     style="fill:url(#goldGrad)"
++     d="m 470,110 3.06,17.61 14.62,-10.29 -10.29,14.62 17.61,3.06 -17.61,3.06 10.29,14.62 L 473.06,142.39 470,160 466.94,142.39 452.32,152.68 462.61,138.06 445,135 l 17.61,-3.06 -10.29,-14.62 14.62,10.29 z" />
++  <path
++     d="m 222.05094,548.698 q 5.406,0 10.302,2.652 2.856,1.53 3.06,2.958 0.408,2.142 0.408,5.814 0,2.754 -2.04,2.754 -2.142,0 -4.08,-4.692 -0.714,-1.734 -3.162,-2.652 -2.448,-1.02 -4.896,-1.02 -3.366,0 -5.916,2.346 -2.448,2.346 -2.448,5.712 0,4.182 5.202,8.568 l 14.382,12.138 q 4.896,4.08 4.896,10.404 0,7.242 -6.324,12.342 -6.222,5.1 -14.178,5.1 -5.814,0 -10.71,-2.244 -2.958,-1.326 -3.876,-1.938 -0.816,-0.714 -0.816,-1.734 0,-3.06 0.612,-7.038 0.408,-2.448 1.938,-2.448 2.04,0 3.468,4.794 0.918,2.856 3.774,4.794 2.958,1.836 7.242,1.836 3.774,0 6.324,-2.958 2.55,-2.958 2.55,-6.834 0,-4.692 -4.08,-8.16 l -13.77,-11.628 q -6.018,-4.998 -6.018,-11.73 0,-7.14 5.304,-12.138 5.304,-4.998 12.852,-4.998 z m 66.33004,33.558 q -0.612,1.224 -0.51,1.734 0.204,0.408 1.428,0.408 h 12.444 q 1.53,0 1.734,-0.612 0.204,-0.612 -0.612,-3.06 l -6.222,-19.074 q -0.408,-1.428 -1.122,0.306 z m 29.07,27.336 q -3.774,0 -8.16,0.306 -4.386,0.306 -5.508,0.306 -1.122,0 -2.244,-0.408 -1.02,-0.51 -1.02,-1.326 0,-0.714 0.714,-1.122 0.816,-0.51 2.448,-1.02 1.734,-0.612 2.346,-0.918 3.978,-1.836 2.958,-5.406 l -2.958,-9.69 q -0.408,-1.224 -1.632,-1.224 h -17.034 q -1.224,0 -1.632,1.122 l -3.876,11.118 q -1.122,3.366 2.244,4.284 3.774,1.02 3.774,2.856 0,1.734 -3.57,1.734 -1.02,0 -4.284,-0.306 -3.162,-0.306 -4.08,-0.306 -1.428,0 -3.672,0.306 -2.142,0.306 -2.754,0.306 -3.366,0 -3.366,-1.734 0,-0.714 0.816,-1.122 0.816,-0.51 2.448,-1.02 1.734,-0.612 2.346,-0.918 0.51,-0.204 0.918,-0.408 0.408,-0.204 0.714,-0.408 0.306,-0.204 0.612,-0.408 0.306,-0.306 0.408,-0.408 0.204,-0.102 0.408,-0.51 0.204,-0.408 0.306,-0.51 0.102,-0.102 0.306,-0.612 0.306,-0.612 0.306,-0.816 0.102,-0.204 0.408,-0.918 0.306,-0.816 0.408,-1.224 l 15.606,-43.146 q 0.408,-1.122 0.816,-2.244 0.408,-1.122 0.612,-1.632 0.204,-0.612 0.408,-1.02 0.204,-0.51 0.408,-0.714 0.306,-0.204 0.612,-0.204 1.122,-0.102 2.652,-1.53 1.53,-1.53 1.734,-1.53 0.51,0 0.918,0.408 0.408,0.306 0.714,1.122 0.408,0.714 0.612,1.428 0.306,0.714 0.714,2.142 0.51,1.428 0.816,2.244 l 13.464,38.046 q 2.448,6.732 3.978,9.18 1.53,2.346 5.1,3.672 4.08,1.428 4.08,3.162 0,1.632 -2.958,1.632 -1.02,0 -4.284,-0.306 -3.264,-0.306 -5.1,-0.306 z m 109.374,-12.75 q 0.408,6.63 4.794,8.568 0.612,0.306 2.244,0.918 1.734,0.51 2.55,1.02 0.816,0.408 0.816,1.122 0,1.428 -3.264,1.734 -0.204,0 -2.346,-0.204 -2.04,-0.102 -4.998,-0.204 -2.856,-0.204 -4.998,-0.204 -2.142,0 -4.896,0.204 -2.652,0.102 -4.59,0.204 -1.836,0.204 -2.04,0.204 -3.366,-0.306 -3.366,-1.734 0,-0.714 0.816,-1.122 0.816,-0.51 2.448,-1.02 1.734,-0.612 2.346,-0.918 5.1,-2.244 4.794,-8.568 l -1.326,-32.13 q -0.102,-1.734 -1.326,-1.224 -0.816,0.408 -1.326,1.53 l -13.77,31.62 q -0.816,1.836 -2.958,5.814 -2.04,3.876 -2.652,3.876 -0.816,0 -1.632,-1.224 -0.816,-1.224 -2.346,-5.1 l -12.546,-32.13 q -0.714,-1.836 -1.326,-2.244 -0.51,-0.408 -0.816,0.306 -0.306,0.612 -0.408,2.04 l -1.734,28.458 q -0.204,2.55 0.51,5.406 0.816,2.754 2.652,3.57 0.612,0.306 2.244,0.918 1.734,0.51 2.55,1.02 0.816,0.408 0.816,1.122 0,1.428 -3.264,1.734 -0.204,0 -1.734,-0.204 -1.53,-0.102 -3.876,-0.204 -2.346,-0.204 -4.488,-0.204 -2.142,0 -4.284,0.204 -2.142,0.102 -3.57,0.204 -1.326,0.204 -1.53,0.204 -3.366,-0.306 -3.366,-1.734 0,-0.714 0.714,-1.122 0.816,-0.51 2.55,-1.02 1.734,-0.612 2.346,-0.918 4.692,-2.04 5.916,-10.71 l 3.468,-27.132 q 0.612,-4.998 -0.204,-7.242 -0.816,-2.244 -3.06,-4.284 -0.612,-0.612 -2.142,-1.53 -1.53,-1.02 -2.448,-1.836 -0.918,-0.816 -0.918,-1.53 0,-1.428 3.468,-1.428 1.734,0 5.304,0.306 3.57,0.204 6.018,0.204 2.04,0 3.468,1.53 1.53,1.428 2.958,4.896 l 11.934,29.274 q 0.408,1.122 0.612,1.428 0.204,0.306 0.51,0.714 0.408,0.306 0.918,-0.204 0.51,-0.612 1.122,-2.04 l 16.014,-33.252 q 0.816,-1.632 1.836,-1.938 1.02,-0.408 3.366,-0.408 1.224,0 6.222,-0.51 4.998,-0.51 6.732,-0.51 1.632,0 1.632,1.734 0,0.714 -0.816,1.224 -0.714,0.408 -4.08,1.836 -2.448,1.02 -3.366,2.958 -0.816,1.938 -0.612,6.222 z m 61.536,-38.352 q 0,-3.162 -1.632,-3.162 h -12.444 q -1.836,0 -2.652,0.714 -0.816,0.714 -1.734,2.346 -0.306,0.51 -0.816,1.632 -0.408,1.02 -0.714,1.632 -0.306,0.612 -0.816,1.122 -0.408,0.51 -0.918,0.51 -1.836,0 -1.836,-2.346 0,-1.02 0.204,-2.856 0.306,-1.836 0.306,-3.57 0,-0.918 -0.102,-2.55 -0.102,-1.632 -0.102,-2.04 0,-1.02 0.51,-1.734 0.51,-0.816 1.224,-0.816 0.306,0 3.366,1.53 3.06,1.53 6.324,1.53 h 35.598 q 3.978,0 7.14,-1.734 0.408,-0.204 0.918,-0.612 0.612,-0.51 1.02,-0.714 0.51,-0.204 1.02,-0.204 0.816,0 1.326,0.612 0.51,0.51 0.51,1.224 0,0.306 -0.204,1.734 -0.204,1.326 -0.204,2.652 0,1.428 0.102,4.08 0.102,2.55 0.102,2.958 0,2.346 -1.428,2.346 -1.02,0 -3.672,-4.59 -1.734,-2.856 -3.672,-2.856 h -15.81 q -1.224,0 -1.224,3.162 v 39.576 q 0,2.856 1.122,4.59 1.122,1.632 3.672,2.754 0.612,0.306 2.244,0.918 1.734,0.51 2.55,1.02 0.816,0.408 0.816,1.122 0,1.428 -3.264,1.734 -0.204,0 -2.346,-0.204 -2.04,-0.102 -4.998,-0.204 -2.856,-0.204 -4.998,-0.204 -2.142,0 -4.896,0.204 -2.652,0.102 -4.59,0.204 -1.836,0.204 -2.04,0.204 -3.366,-0.306 -3.366,-1.734 0,-0.714 0.816,-1.122 0.816,-0.51 2.448,-1.02 1.734,-0.612 2.346,-0.918 2.55,-1.122 3.672,-2.754 1.122,-1.734 1.122,-4.59 z"
++     id="text12"
++     style="font-weight:500;font-size:102px;font-family:'EB Garamond';letter-spacing:24;text-anchor:middle;fill:#081d33"
++     aria-label="SAMT" />
++</svg>
+diff -ruN '--exclude=preview' '--exclude=docs' /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/assets/brand/samt-primary-bilingual.svg /mnt/data/SAMT_Website_Phase3_v3.0/assets/brand/samt-primary-bilingual.svg
+--- /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/assets/brand/samt-primary-bilingual.svg	1970-01-01 00:00:00.000000000 +0000
++++ /mnt/data/SAMT_Website_Phase3_v3.0/assets/brand/samt-primary-bilingual.svg	2026-07-22 12:37:58.176406004 +0000
+@@ -0,0 +1,191 @@
++<?xml version="1.0" encoding="UTF-8" standalone="no"?>
++<svg
++   width="1200"
++   height="1110"
++   viewBox="0 0 1200 1110"
++   role="img"
++   aria-label="SAMT brand asset"
++   version="1.1"
++   id="svg19"
++   sodipodi:docname="01_primary_bilingual_vertical_endorsed_fullcolor.svg"
++   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
++   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
++   xmlns="http://www.w3.org/2000/svg"
++   xmlns:svg="http://www.w3.org/2000/svg">
++  <sodipodi:namedview
++     id="namedview19"
++     pagecolor="#ffffff"
++     bordercolor="#000000"
++     borderopacity="0.25"
++     inkscape:showpageshadow="2"
++     inkscape:pageopacity="0.0"
++     inkscape:pagecheckerboard="0"
++     inkscape:deskcolor="#d1d1d1" />
++  <defs
++     id="defs11">
++    <linearGradient
++       id="silverGrad"
++       x1="0"
++       y1="0"
++       x2="1"
++       y2="1">
++      <stop
++         offset="0"
++         stop-color="#F7F8FA"
++         id="stop1" />
++      <stop
++         offset="0.45"
++         stop-color="#C0C6CF"
++         id="stop2" />
++      <stop
++         offset="1"
++         stop-color="#7D8792"
++         id="stop3" />
++    </linearGradient>
++    <linearGradient
++       id="goldGrad"
++       x1="0"
++       y1="0"
++       x2="1"
++       y2="1">
++      <stop
++         offset="0"
++         stop-color="#F1D99A"
++         id="stop4" />
++      <stop
++         offset="0.58"
++         stop-color="#D4AF37"
++         id="stop5" />
++      <stop
++         offset="1"
++         stop-color="#9B6D13"
++         id="stop6" />
++    </linearGradient>
++    <linearGradient
++       id="navyGrad"
++       x1="0"
++       y1="1"
++       x2="1"
++       y2="0">
++      <stop
++         offset="0"
++         stop-color="#142C4D"
++         id="stop7" />
++      <stop
++         offset="1"
++         stop-color="#081D33"
++         id="stop8" />
++    </linearGradient>
++    <radialGradient
++       id="navyBackground"
++       cx="55%"
++       cy="18%"
++       r="90%">
++      <stop
++         offset="0"
++         stop-color="#1B3A63"
++         id="stop9" />
++      <stop
++         offset="0.42"
++         stop-color="#081D33"
++         id="stop10" />
++      <stop
++         offset="1"
++         stop-color="#03070D"
++         id="stop11" />
++    </radialGradient>
++  </defs>
++  <g
++     transform="translate(423,62) scale(1.12)"
++     id="g13">
++    <g
++       id="strategic-ascent-symbol">
++      <path
++         d="M36 206 C 102 210 172 187 221 139 C 244 116 260 89 270 52 C 248 87 225 116 194 140 C 149 175 95 197 36 206 Z"
++         fill="url(#silverGrad)"
++         id="path11" />
++      <path
++         d="M70 221 C 129 217 186 194 226 154 C 248 132 262 101 272 54 C 255 93 235 125 207 151 C 169 187 122 210 70 221 Z"
++         fill="url(#navyGrad)"
++         id="path12" />
++      <path
++         d="M111 232 C 162 222 208 199 237 168 C 256 147 267 113 274 55 C 261 106 244 139 220 166 C 191 198 153 219 111 232 Z"
++         fill="url(#goldGrad)"
++         id="path13" />
++      <path
++         id="polygon13"
++         style="fill:url(#goldGrad)"
++         d="m 270,12 2.87,17.07 14.1,-10.04 -10.04,14.1 L 294,36 276.93,38.87 286.97,52.97 272.87,42.93 270,60 267.13,42.93 253.03,52.97 263.07,38.87 246,36 l 17.07,-2.87 -10.04,-14.1 14.1,10.04 z" />
++      <path
++         id="circle13"
++         style="fill:#ffffff"
++         d="M 272.6,36 A 2.5999999,2.5999999 0 0 1 270,38.6 2.5999999,2.5999999 0 0 1 267.4,36 2.5999999,2.5999999 0 0 1 270,33.4 2.5999999,2.5999999 0 0 1 272.6,36 Z" />
++    </g>
++  </g>
++  <path
++     d="m 406.57491,407.85 q 7.95,0 15.15,3.9 4.2,2.25 4.5,4.35 0.6,3.15 0.6,8.55 0,4.05 -3,4.05 -3.15,0 -6,-6.9 -1.05,-2.55 -4.65,-3.9 -3.6,-1.5 -7.2,-1.5 -4.95,0 -8.7,3.45 -3.6,3.45 -3.6,8.4 0,6.15 7.65,12.6 l 21.15,17.85 q 7.2,6 7.2,15.3 0,10.65 -9.3,18.15 -9.15,7.5 -20.85,7.5 -8.55,0 -15.75,-3.3 -4.35,-1.95 -5.7,-2.85 -1.2,-1.05 -1.2,-2.55 0,-4.5 0.9,-10.35 0.6,-3.6 2.85,-3.6 3,0 5.1,7.05 1.35,4.2 5.55,7.05 4.35,2.7 10.65,2.7 5.55,0 9.3,-4.35 3.75,-4.35 3.75,-10.05 0,-6.9 -6,-12 l -20.25,-17.1 q -8.85,-7.35 -8.85,-17.25 0,-10.5 7.8,-17.85 7.8,-7.35 18.9,-7.35 z m 91.25006,49.35 q -0.9,1.8 -0.75,2.55 0.3,0.6 2.1,0.6 h 18.3 q 2.25,0 2.55,-0.9 0.3,-0.9 -0.9,-4.5 l -9.15,-28.05 q -0.6,-2.1 -1.65,0.45 z m 42.75,40.2 q -5.55,0 -12,0.45 -6.45,0.45 -8.1,0.45 -1.65,0 -3.3,-0.6 -1.5,-0.75 -1.5,-1.95 0,-1.05 1.05,-1.65 1.2,-0.75 3.6,-1.5 2.55,-0.9 3.45,-1.35 5.85,-2.7 4.35,-7.95 l -4.35,-14.25 q -0.6,-1.8 -2.4,-1.8 h -25.05 q -1.8,0 -2.4,1.65 l -5.7,16.35 q -1.65,4.95 3.3,6.3 5.55,1.5 5.55,4.2 0,2.55 -5.25,2.55 -1.5,0 -6.3,-0.45 -4.65,-0.45 -6,-0.45 -2.1,0 -5.4,0.45 -3.15,0.45 -4.05,0.45 -4.95,0 -4.95,-2.55 0,-1.05 1.2,-1.65 1.2,-0.75 3.6,-1.5 2.55,-0.9 3.45,-1.35 0.75,-0.3 1.35,-0.6 0.6,-0.3 1.05,-0.6 0.45,-0.3 0.9,-0.6 0.45,-0.45 0.6,-0.6 0.3,-0.15 0.6,-0.75 0.3,-0.6 0.45,-0.75 0.15,-0.15 0.45,-0.9 0.45,-0.9 0.45,-1.2 0.15,-0.3 0.6,-1.35 0.45,-1.2 0.6,-1.8 l 22.95,-63.45 q 0.6,-1.65 1.2,-3.3 0.6,-1.65 0.9,-2.4 0.3,-0.9 0.6,-1.5 0.3,-0.75 0.6,-1.05 0.45,-0.3 0.9,-0.3 1.65,-0.15 3.9,-2.25 2.25,-2.25 2.55,-2.25 0.75,0 1.35,0.6 0.6,0.45 1.05,1.65 0.6,1.05 0.9,2.1 0.45,1.05 1.05,3.15 0.75,2.1 1.2,3.3 l 19.8,55.95 q 3.6,9.9 5.85,13.5 2.25,3.45 7.5,5.4 6,2.1 6,4.65 0,2.4 -4.35,2.4 -1.5,0 -6.3,-0.45 -4.8,-0.45 -7.5,-0.45 z m 154.55001,-18.75 q 0.6,9.75 7.05,12.6 0.9,0.45 3.3,1.35 2.55,0.75 3.75,1.5 1.2,0.6 1.2,1.65 0,2.1 -4.8,2.55 -0.3,0 -3.45,-0.3 -3,-0.15 -7.35,-0.3 -4.2,-0.3 -7.35,-0.3 -3.15,0 -7.2,0.3 -3.9,0.15 -6.75,0.3 -2.7,0.3 -3,0.3 -4.95,-0.45 -4.95,-2.55 0,-1.05 1.2,-1.65 1.2,-0.75 3.6,-1.5 2.55,-0.9 3.45,-1.35 7.5,-3.3 7.05,-12.6 l -1.95,-47.25 q -0.15,-2.55 -1.95,-1.8 -1.2,0.6 -1.95,2.25 l -20.25,46.5 q -1.2,2.7 -4.35,8.55 -3,5.7 -3.9,5.7 -1.2,0 -2.4,-1.8 -1.2,-1.8 -3.45,-7.5 l -18.45,-47.25 q -1.05,-2.7 -1.95,-3.3 -0.75,-0.6 -1.2,0.45 -0.45,0.9 -0.6,3 l -2.55,41.85 q -0.3,3.75 0.75,7.95 1.2,4.05 3.9,5.25 0.9,0.45 3.3,1.35 2.55,0.75 3.75,1.5 1.2,0.6 1.2,1.65 0,2.1 -4.8,2.55 -0.3,0 -2.55,-0.3 -2.25,-0.15 -5.7,-0.3 -3.45,-0.3 -6.6,-0.3 -3.15,0 -6.3,0.3 -3.15,0.15 -5.25,0.3 -1.95,0.3 -2.25,0.3 -4.95,-0.45 -4.95,-2.55 0,-1.05 1.05,-1.65 1.2,-0.75 3.75,-1.5 2.55,-0.9 3.45,-1.35 6.9,-3 8.7,-15.75 l 5.1,-39.9 q 0.9,-7.35 -0.3,-10.65 -1.2,-3.3 -4.5,-6.3 -0.9,-0.9 -3.15,-2.25 -2.25,-1.5 -3.6,-2.7 -1.35,-1.2 -1.35,-2.25 0,-2.1 5.1,-2.1 2.55,0 7.8,0.45 5.25,0.3 8.85,0.3 3,0 5.1,2.25 2.25,2.1 4.35,7.2 l 17.55,43.05 q 0.6,1.65 0.9,2.1 0.3,0.45 0.75,1.05 0.6,0.45 1.35,-0.3 0.75,-0.9 1.65,-3 l 23.55,-48.9 q 1.2,-2.4 2.7,-2.85 1.5,-0.6 4.95,-0.6 1.8,0 9.15,-0.75 7.35,-0.75 9.9,-0.75 2.4,0 2.4,2.55 0,1.05 -1.2,1.8 -1.05,0.6 -6,2.7 -3.6,1.5 -4.95,4.35 -1.2,2.85 -0.9,9.15 z m 84.19995,-56.4 q 0,-4.65 -2.4,-4.65 h -18.3 q -2.7,0 -3.9,1.05 -1.2,1.05 -2.55,3.45 -0.45,0.75 -1.2,2.4 -0.6,1.5 -1.05,2.4 -0.45,0.9 -1.2,1.65 -0.6,0.75 -1.35,0.75 -2.7,0 -2.7,-3.45 0,-1.5 0.3,-4.2 0.45,-2.7 0.45,-5.25 0,-1.35 -0.15,-3.75 -0.15,-2.4 -0.15,-3 0,-1.5 0.75,-2.55 0.75,-1.2 1.8,-1.2 0.45,0 4.95,2.25 4.5,2.25 9.3,2.25 h 52.35 q 5.85,0 10.5,-2.55 0.6,-0.3 1.35,-0.9 0.9,-0.75 1.5,-1.05 0.75,-0.3 1.5,-0.3 1.2,0 1.95,0.9 0.75,0.75 0.75,1.8 0,0.45 -0.3,2.55 -0.3,1.95 -0.3,3.9 0,2.1 0.15,6 0.15,3.75 0.15,4.35 0,3.45 -2.1,3.45 -1.5,0 -5.4,-6.75 -2.55,-4.2 -5.4,-4.2 h -23.25 q -1.8,0 -1.8,4.65 v 58.2 q 0,4.2 1.65,6.75 1.65,2.4 5.4,4.05 0.9,0.45 3.3,1.35 2.55,0.75 3.75,1.5 1.2,0.6 1.2,1.65 0,2.1 -4.8,2.55 -0.3,0 -3.45,-0.3 -3,-0.15 -7.35,-0.3 -4.2,-0.3 -7.35,-0.3 -3.15,0 -7.2,0.3 -3.9,0.15 -6.75,0.3 -2.7,0.3 -3,0.3 -4.95,-0.45 -4.95,-2.55 0,-1.05 1.2,-1.65 1.2,-0.75 3.6,-1.5 2.55,-0.9 3.45,-1.35 3.75,-1.65 5.4,-4.05 1.65,-2.55 1.65,-6.75 z"
++     id="text13"
++     style="font-weight:500;font-size:150px;font-family:'EB Garamond';letter-spacing:29;text-anchor:middle;fill:#081d33"
++     aria-label="SAMT" />
++  <path
++     id="line13"
++     style="stroke:#d4af37;stroke-width:2"
++     d="M 265,538 H 935" />
++  <path
++     id="rect13"
++     transform="rotate(45 600 538)"
++     style="fill:#d4af37"
++     d="m 594,532 h 12 v 12 h -12 z" />
++  <path
++     d="m 402.12402,584.54 q 0,2.66 -1.932,4.2 -1.932,1.54 -5.348,1.54 -3.304,0 -5.6,-1.12 v -3.36 q 1.26,0.56 2.772,1.036 1.512,0.448 3.08,0.448 1.792,0 2.632,-0.7 0.84,-0.7 0.84,-1.848 0,-1.26 -1.064,-1.988 -1.064,-0.728 -3.108,-1.596 -1.232,-0.532 -2.352,-1.26 -1.12,-0.728 -1.848,-1.848 -0.728,-1.12 -0.728,-2.856 0,-2.576 1.792,-4.004 1.82,-1.456 4.844,-1.456 1.596,0 2.968,0.336 1.4,0.336 2.8,0.952 l -1.148,2.884 q -1.26,-0.532 -2.408,-0.84 -1.12,-0.308 -2.324,-0.308 -1.456,0 -2.212,0.672 -0.756,0.644 -0.756,1.68 0,0.84 0.42,1.4 0.42,0.56 1.288,1.036 0.896,0.476 2.296,1.092 1.596,0.7 2.744,1.456 1.148,0.756 1.736,1.82 0.616,1.064 0.616,2.632 z M 415.672,590 h -3.584 v -16.968 h -5.74 v -3.024 h 15.064 v 3.024 h -5.74 z m 17.07599,-19.992 q 3.948,0 5.824,1.456 1.904,1.456 1.904,4.424 0,1.456 -0.56,2.492 -0.532,1.036 -1.4,1.736 -0.868,0.672 -1.876,1.092 l 5.74,8.792 h -4.032 l -4.788,-7.896 h -2.912 V 590 h -3.584 v -19.992 z m -0.224,2.996 h -1.876 v 6.16 h 1.988 q 2.212,0 3.192,-0.784 1.008,-0.812 1.008,-2.38 0,-1.624 -1.064,-2.296 -1.036,-0.7 -3.248,-0.7 z m 27.57599,16.996 -1.82,-5.292 h -7.532 l -1.792,5.292 h -3.808 l 7.336,-20.076 h 4.088 l 7.336,20.076 z m -4.48,-13.524 q -0.112,-0.392 -0.336,-1.064 -0.224,-0.672 -0.448,-1.372 -0.196,-0.728 -0.308,-1.204 -0.14,0.56 -0.364,1.288 -0.196,0.728 -0.392,1.372 -0.196,0.644 -0.28,0.98 l -1.764,5.152 h 5.628 z m 18.728,13.524 h -3.584 v -16.968 h -5.74 v -3.024 h 15.064 v 3.024 h -5.74 z m 22.75999,0 h -11.368 v -19.992 h 11.368 v 2.996 h -7.784 v 5.096 h 7.28 v 2.996 h -7.28 v 5.88 h 7.784 z m 14.83602,-10.976 h 7.56 v 10.164 q -1.596,0.504 -3.276,0.812 -1.68,0.28 -3.808,0.28 -4.536,0 -6.972,-2.688 -2.436,-2.688 -2.436,-7.616 0,-3.108 1.204,-5.404 1.232,-2.324 3.556,-3.584 2.324,-1.26 5.656,-1.26 1.624,0 3.136,0.336 1.54,0.336 2.8,0.868 l -1.232,2.94 q -0.98,-0.448 -2.212,-0.784 -1.232,-0.336 -2.576,-0.336 -2.044,0 -3.528,0.896 -1.484,0.896 -2.296,2.548 -0.784,1.624 -0.784,3.836 0,2.128 0.616,3.752 0.616,1.624 1.96,2.548 1.344,0.924 3.5,0.924 1.064,0 1.792,-0.112 0.728,-0.112 1.372,-0.252 v -4.816 h -4.032 z m 21.724,10.976 h -8.4 v -2.044 l 2.408,-0.896 v -14.084 l -2.408,-0.924 v -2.044 h 8.4 v 2.044 l -2.408,0.924 v 14.084 l 2.408,0.896 z m 14.69602,-17.248 q -2.744,0 -4.256,1.96 -1.484,1.96 -1.484,5.32 0,3.388 1.4,5.32 1.4,1.904 4.312,1.904 1.26,0 2.464,-0.252 1.204,-0.28 2.52,-0.728 v 3.052 q -1.232,0.504 -2.492,0.728 -1.232,0.224 -2.856,0.224 -3.08,0 -5.096,-1.26 -2.016,-1.288 -2.996,-3.584 -0.98,-2.324 -0.98,-5.432 0,-3.024 1.092,-5.32 1.092,-2.324 3.192,-3.64 2.128,-1.316 5.18,-1.316 1.512,0 2.968,0.364 1.484,0.336 2.772,0.952 l -1.232,2.94 q -1.064,-0.476 -2.212,-0.84 -1.12,-0.392 -2.296,-0.392 z m 34.09601,17.248 -1.82,-5.292 h -7.532 l -1.792,5.292 h -3.808 l 7.336,-20.076 h 4.088 l 7.336,20.076 z m -4.48,-13.524 q -0.112,-0.392 -0.336,-1.064 -0.224,-0.672 -0.448,-1.372 -0.196,-0.728 -0.308,-1.204 -0.14,0.56 -0.364,1.288 -0.196,0.728 -0.392,1.372 -0.196,0.644 -0.28,0.98 l -1.764,5.152 h 5.628 z m 29.87198,3.332 q 0,5.068 -2.828,7.644 Q 602.196,590 597.128,590 H 591.5 v -19.992 h 6.216 q 3.08,0 5.348,1.12 2.296,1.12 3.528,3.304 1.26,2.156 1.26,5.376 z m -3.752,0.112 q 0,-3.584 -1.652,-5.264 -1.624,-1.68 -4.732,-1.68 h -2.632 v 14.028 h 2.156 q 6.86,0 6.86,-7.084 z m 25.392,-9.912 -6.916,19.992 h -3.836 l -6.916,-19.992 h 3.668 l 4.032,12.236 q 0.168,0.504 0.392,1.316 0.224,0.784 0.42,1.624 0.224,0.84 0.336,1.456 0.084,-0.616 0.28,-1.456 0.196,-0.84 0.42,-1.624 0.224,-0.812 0.42,-1.316 l 4.032,-12.236 z m 16.43199,19.992 -1.82,-5.292 h -7.532 l -1.792,5.292 h -3.808 l 7.336,-20.076 h 4.088 l 7.336,20.076 z m -4.48,-13.524 q -0.112,-0.392 -0.336,-1.064 -0.224,-0.672 -0.448,-1.372 -0.196,-0.728 -0.308,-1.204 -0.14,0.56 -0.364,1.288 -0.196,0.728 -0.392,1.372 -0.196,0.644 -0.28,0.98 l -1.764,5.152 h 5.628 z M 671.95998,590 h -4.452 l -9.464,-15.68 h -0.112 q 0.084,1.26 0.14,2.716 0.084,1.428 0.112,2.884 V 590 h -3.22 v -19.992 h 4.424 l 9.436,15.568 h 0.084 q -0.056,-1.12 -0.112,-2.576 -0.056,-1.456 -0.084,-2.828 v -10.164 h 3.248 z m 16.31998,-17.248 q -2.744,0 -4.256,1.96 -1.484,1.96 -1.484,5.32 0,3.388 1.4,5.32 1.4,1.904 4.312,1.904 1.26,0 2.464,-0.252 1.204,-0.28 2.52,-0.728 v 3.052 q -1.232,0.504 -2.492,0.728 -1.232,0.224 -2.856,0.224 -3.08,0 -5.096,-1.26 -2.016,-1.288 -2.996,-3.584 -0.98,-2.324 -0.98,-5.432 0,-3.024 1.092,-5.32 1.092,-2.324 3.192,-3.64 2.128,-1.316 5.18,-1.316 1.512,0 2.968,0.364 1.484,0.336 2.772,0.952 l -1.232,2.94 q -1.064,-0.476 -2.212,-0.84 -1.12,-0.392 -2.296,-0.392 z M 711.51597,590 h -11.368 v -19.992 h 11.368 v 2.996 h -7.784 v 5.096 h 7.28 v 2.996 h -7.28 v 5.88 h 7.784 z m 15.452,0 -5.488,-16.38 h -0.112 q 0.028,0.56 0.084,1.596 0.056,1.008 0.084,2.212 0.056,1.176 0.056,2.212 V 590 h -3.22 v -19.992 h 4.984 l 5.264,15.708 h 0.112 l 5.488,-15.708 h 4.984 V 590 h -3.416 v -10.528 q 0,-0.952 0.028,-2.072 0.056,-1.148 0.084,-2.156 0.056,-1.008 0.084,-1.596 h -0.112 l -5.712,16.352 z m 31.38403,0 h -11.368 v -19.992 h 11.368 v 2.996 h -7.784 v 5.096 h 7.28 v 2.996 h -7.28 v 5.88 h 7.784 z m 23.85203,0 h -4.452 l -9.464,-15.68 h -0.112 q 0.084,1.26 0.14,2.716 0.084,1.428 0.112,2.884 V 590 h -3.22 v -19.992 h 4.424 l 9.436,15.568 h 0.084 q -0.056,-1.12 -0.112,-2.576 -0.056,-1.456 -0.084,-2.828 v -10.164 h 3.248 z m 14.97595,0 h -3.584 v -16.968 h -5.74 v -3.024 h 15.064 v 3.024 h -5.74 z m 13.04401,-2.94 q -0.392,1.484 -1.064,3.248 -0.672,1.792 -1.344,3.304 h -2.548 q 0.392,-1.624 0.784,-3.528 0.392,-1.876 0.588,-3.332 h 3.388 z"
++     id="text14"
++     style="font-weight:600;font-size:28px;font-family:'Noto Sans';letter-spacing:2.6;text-anchor:middle;fill:#d4af37"
++     aria-label="STRATEGIC ADVANCEMENT," />
++  <path
++     d="m 329.628,628 -5.488,-16.38 h -0.112 q 0.028,0.56 0.084,1.596 0.056,1.008 0.084,2.212 0.056,1.176 0.056,2.212 V 628 h -3.22 v -19.992 h 4.984 l 5.264,15.708 h 0.112 l 5.488,-15.708 h 4.984 V 628 h -3.416 v -10.528 q 0,-0.952 0.028,-2.072 0.056,-1.148 0.084,-2.156 0.056,-1.008 0.084,-1.596 h -0.112 L 332.82,628 Z m 32.36403,0 -1.82,-5.292 h -7.532 l -1.792,5.292 h -3.808 l 7.336,-20.076 h 4.088 l 7.336,20.076 z m -4.48,-13.524 q -0.112,-0.392 -0.336,-1.064 -0.224,-0.672 -0.448,-1.372 -0.196,-0.728 -0.308,-1.204 -0.14,0.56 -0.364,1.288 -0.196,0.728 -0.392,1.372 -0.196,0.644 -0.28,0.98 l -1.764,5.152 h 5.628 z M 388.02801,628 h -4.452 l -9.464,-15.68 h -0.112 q 0.084,1.26 0.14,2.716 0.084,1.428 0.112,2.884 V 628 h -3.22 v -19.992 h 4.424 l 9.436,15.568 h 0.084 q -0.056,-1.12 -0.112,-2.576 -0.056,-1.456 -0.084,-2.828 v -10.164 h 3.248 z m 20.15599,0 -1.82,-5.292 h -7.532 L 397.04,628 h -3.808 l 7.336,-20.076 h 4.088 L 411.992,628 Z m -4.48,-13.524 q -0.112,-0.392 -0.336,-1.064 -0.224,-0.672 -0.448,-1.372 -0.196,-0.728 -0.308,-1.204 -0.14,0.56 -0.364,1.288 -0.196,0.728 -0.392,1.372 -0.196,0.644 -0.28,0.98 l -1.764,5.152 h 5.628 z m 20.93997,2.548 h 7.56 v 10.164 q -1.596,0.504 -3.276,0.812 -1.68,0.28 -3.808,0.28 -4.536,0 -6.972,-2.688 -2.436,-2.688 -2.436,-7.616 0,-3.108 1.204,-5.404 1.232,-2.324 3.556,-3.584 2.324,-1.26 5.656,-1.26 1.624,0 3.136,0.336 1.54,0.336 2.8,0.868 l -1.232,2.94 q -0.98,-0.448 -2.212,-0.784 -1.232,-0.336 -2.576,-0.336 -2.044,0 -3.528,0.896 -1.484,0.896 -2.296,2.548 -0.784,1.624 -0.784,3.836 0,2.128 0.616,3.752 0.616,1.624 1.96,2.548 1.344,0.924 3.5,0.924 1.064,0 1.792,-0.112 0.728,-0.112 1.372,-0.252 v -4.816 h -4.032 z M 450.95996,628 h -11.368 v -19.992 h 11.368 v 2.996 h -7.784 v 5.096 h 7.28 v 2.996 h -7.28 v 5.88 h 7.784 z m 15.45202,0 -5.488,-16.38 h -0.112 q 0.028,0.56 0.084,1.596 0.056,1.008 0.084,2.212 0.056,1.176 0.056,2.212 V 628 h -3.22 v -19.992 h 4.984 l 5.264,15.708 h 0.112 l 5.488,-15.708 h 4.984 V 628 h -3.416 v -10.528 q 0,-0.952 0.028,-2.072 0.056,-1.148 0.084,-2.156 0.056,-1.008 0.084,-1.596 h -0.112 l -5.712,16.352 z m 31.38402,0 h -11.368 v -19.992 h 11.368 v 2.996 h -7.784 v 5.096 h 7.28 v 2.996 h -7.28 v 5.88 h 7.784 z m 23.85201,0 h -4.452 l -9.464,-15.68 h -0.112 q 0.084,1.26 0.14,2.716 0.084,1.428 0.112,2.884 V 628 h -3.22 v -19.992 h 4.424 l 9.436,15.568 h 0.084 q -0.056,-1.12 -0.112,-2.576 -0.056,-1.456 -0.084,-2.828 v -10.164 h 3.248 z m 14.97599,0 h -3.584 v -16.968 h -5.74 v -3.024 h 15.064 v 3.024 h -5.74 z m 27.292,-20.272 q 2.352,0 3.836,1.148 1.484,1.12 1.484,3.164 0,1.876 -1.148,3.164 -1.148,1.288 -2.856,2.268 l 4.452,4.312 q 0.616,-0.896 1.036,-1.988 0.448,-1.092 0.756,-2.24 h 3.64 q -0.42,1.652 -1.204,3.36 -0.756,1.68 -1.932,3.08 l 4.088,4.004 h -4.452 l -1.904,-1.848 q -1.26,0.98 -2.8,1.568 -1.512,0.56 -3.472,0.56 -3.22,0 -5.068,-1.512 -1.82,-1.512 -1.82,-4.088 0,-2.128 1.036,-3.416 1.036,-1.288 2.884,-2.324 -1.036,-1.176 -1.596,-2.268 -0.56,-1.092 -0.56,-2.436 0,-2.1 1.54,-3.304 1.54,-1.204 4.06,-1.204 z m -0.056,2.744 q -0.868,0 -1.54,0.476 -0.672,0.448 -0.672,1.456 0,0.812 0.392,1.54 0.42,0.728 1.176,1.54 1.372,-0.756 2.016,-1.484 0.672,-0.728 0.672,-1.68 0,-0.896 -0.616,-1.372 -0.616,-0.476 -1.428,-0.476 z m -1.316,8.596 q -1.064,0.7 -1.68,1.456 -0.616,0.756 -0.616,1.876 0,1.316 0.952,2.1 0.952,0.784 2.436,0.784 1.26,0 2.212,-0.364 0.98,-0.364 1.708,-0.924 z M 598.34801,628 h -3.584 v -16.968 h -5.74 v -3.024 h 15.064 v 3.024 h -5.74 z m 17.07597,-19.992 q 3.948,0 5.824,1.456 1.904,1.456 1.904,4.424 0,1.456 -0.56,2.492 -0.532,1.036 -1.4,1.736 -0.868,0.672 -1.876,1.092 l 5.74,8.792 h -4.032 l -4.788,-7.896 h -2.912 V 628 h -3.584 v -19.992 z m -0.224,2.996 h -1.876 v 6.16 h 1.988 q 2.212,0 3.192,-0.784 1.008,-0.812 1.008,-2.38 0,-1.624 -1.064,-2.296 -1.036,-0.7 -3.248,-0.7 z M 642.776,628 l -1.82,-5.292 h -7.532 L 631.632,628 h -3.808 l 7.336,-20.076 h 4.088 L 646.584,628 Z m -4.48,-13.524 q -0.112,-0.392 -0.336,-1.064 -0.224,-0.672 -0.448,-1.372 -0.196,-0.728 -0.308,-1.204 -0.14,0.56 -0.364,1.288 -0.196,0.728 -0.392,1.372 -0.196,0.644 -0.28,0.98 l -1.764,5.152 h 5.628 z M 668.81197,628 h -4.452 l -9.464,-15.68 h -0.112 q 0.084,1.26 0.14,2.716 0.084,1.428 0.112,2.884 V 628 h -3.22 v -19.992 h 4.424 l 9.436,15.568 h 0.084 q -0.056,-1.12 -0.112,-2.576 -0.056,-1.456 -0.084,-2.828 v -10.164 h 3.248 z m 19.42798,-5.46 q 0,2.66 -1.932,4.2 -1.932,1.54 -5.348,1.54 -3.304,0 -5.6,-1.12 v -3.36 q 1.26,0.56 2.772,1.036 1.512,0.448 3.08,0.448 1.792,0 2.632,-0.7 0.84,-0.7 0.84,-1.848 0,-1.26 -1.064,-1.988 -1.064,-0.728 -3.108,-1.596 -1.232,-0.532 -2.352,-1.26 -1.12,-0.728 -1.848,-1.848 -0.728,-1.12 -0.728,-2.856 0,-2.576 1.792,-4.004 1.82,-1.456 4.844,-1.456 1.596,0 2.968,0.336 1.4,0.336 2.8,0.952 l -1.148,2.884 q -1.26,-0.532 -2.408,-0.84 -1.12,-0.308 -2.324,-0.308 -1.456,0 -2.212,0.672 -0.756,0.644 -0.756,1.68 0,0.84 0.42,1.4 0.42,0.56 1.288,1.036 0.896,0.476 2.296,1.092 1.596,0.7 2.744,1.456 1.148,0.756 1.736,1.82 0.616,1.064 0.616,2.632 z m 9.90797,5.46 h -3.528 v -19.992 h 11.34 v 2.996 h -7.812 v 5.88 h 7.28 v 2.996 h -7.28 z m 32,-10.024 q 0,3.108 -1.036,5.432 -1.008,2.296 -3.108,3.584 -2.1,1.288 -5.264,1.288 -3.192,0 -5.292,-1.288 -2.072,-1.288 -3.108,-3.612 -1.008,-2.324 -1.008,-5.432 0,-3.08 1.008,-5.376 1.036,-2.324 3.108,-3.584 2.1,-1.288 5.32,-1.288 3.164,0 5.236,1.288 2.1,1.26 3.108,3.584 1.036,2.296 1.036,5.404 z m -15.036,0 q 0,3.388 1.344,5.32 1.344,1.932 4.284,1.932 2.968,0 4.284,-1.932 1.344,-1.932 1.344,-5.32 0,-3.388 -1.316,-5.32 -1.316,-1.932 -4.284,-1.932 -2.94,0 -4.312,1.932 -1.344,1.932 -1.344,5.32 z m 27.57604,-9.968 q 3.948,0 5.824,1.456 1.904,1.456 1.904,4.424 0,1.456 -0.56,2.492 -0.532,1.036 -1.4,1.736 -0.868,0.672 -1.876,1.092 l 5.74,8.792 h -4.032 l -4.788,-7.896 h -2.912 V 628 h -3.584 v -19.992 z m -0.224,2.996 h -1.876 v 6.16 h 1.988 q 2.212,0 3.192,-0.784 1.008,-0.812 1.008,-2.38 0,-1.624 -1.064,-2.296 -1.036,-0.7 -3.248,-0.7 z m 23.82398,16.996 -5.488,-16.38 h -0.112 q 0.028,0.56 0.084,1.596 0.056,1.008 0.084,2.212 0.056,1.176 0.056,2.212 V 628 h -3.22 v -19.992 h 4.984 l 5.264,15.708 h 0.112 l 5.488,-15.708 h 4.984 V 628 h -3.416 v -10.528 q 0,-0.952 0.028,-2.072 0.056,-1.148 0.084,-2.156 0.056,-1.008 0.084,-1.596 h -0.112 l -5.712,16.352 z m 32.36403,0 -1.82,-5.292 h -7.532 l -1.792,5.292 h -3.808 l 7.336,-20.076 h 4.088 l 7.336,20.076 z m -4.48,-13.524 q -0.112,-0.392 -0.336,-1.064 -0.224,-0.672 -0.448,-1.372 -0.196,-0.728 -0.308,-1.204 -0.14,0.56 -0.364,1.288 -0.196,0.728 -0.392,1.372 -0.196,0.644 -0.28,0.98 l -1.764,5.152 h 5.628 z M 812.89998,628 h -3.584 v -16.968 h -5.74 v -3.024 h 15.064 v 3.024 h -5.74 z m 18.168,0 h -8.4 v -2.044 l 2.408,-0.896 v -14.084 l -2.408,-0.924 v -2.044 h 8.4 v 2.044 l -2.408,0.924 v 14.084 l 2.408,0.896 z m 24.04799,-10.024 q 0,3.108 -1.036,5.432 -1.008,2.296 -3.108,3.584 -2.1,1.288 -5.264,1.288 -3.192,0 -5.292,-1.288 -2.072,-1.288 -3.108,-3.612 -1.008,-2.324 -1.008,-5.432 0,-3.08 1.008,-5.376 1.036,-2.324 3.108,-3.584 2.1,-1.288 5.32,-1.288 3.164,0 5.236,1.288 2.1,1.26 3.108,3.584 1.036,2.296 1.036,5.404 z m -15.036,0 q 0,3.388 1.344,5.32 1.344,1.932 4.284,1.932 2.968,0 4.284,-1.932 1.344,-1.932 1.344,-5.32 0,-3.388 -1.316,-5.32 -1.316,-1.932 -4.284,-1.932 -2.94,0 -4.312,1.932 -1.344,1.932 -1.344,5.32 z M 878.968,628 h -4.452 l -9.464,-15.68 h -0.112 q 0.084,1.26 0.14,2.716 0.084,1.428 0.112,2.884 V 628 h -3.22 v -19.992 h 4.424 l 9.436,15.568 h 0.084 q -0.056,-1.12 -0.112,-2.576 -0.056,-1.456 -0.084,-2.828 v -10.164 h 3.248 z"
++     id="text15"
++     style="font-weight:600;font-size:28px;font-family:'Noto Sans';letter-spacing:2.6;text-anchor:middle;fill:#d4af37"
++     aria-label="MANAGEMENT &amp; TRANSFORMATION" />
++  <g
++     transform="translate(600,760) scale(1.45) translate(-500,-165)"
++     id="g17">
++    <g
++       id="arabic-wordmark">
++      <path
++         d="m 654.63996,225 q -7.04,0 -13.28,-2.72 -6.08,-2.88 -12.16,-8.96 -4.16,5.6 -10.56,8.64 -6.4,3.04 -15.04,3.04 h -60.16 q -0.8,0 -0.8,-0.8 v -15.52 q 0,-0.64 0.8,-0.64 h 20.96 v -49.28 h 20.48 v 49.28 h 14.72 q 15.68,0 15.68,-18.56 v -30.72 h 20.48 v 32.32 q 0,1.6 -0.16,3.36 0,1.6 -0.16,3.2 4,5.76 8,8.16 4.16,2.24 10.88,2.24 h 9.76 v -61.76 h 20.48 V 225 Z M 460.2401,208.04 q -4.96,-11.84 -4.96,-23.84 0,-6.88 2.08,-14.4 2.08,-7.52 5.28,-13.28 7.2,-4.64 15.52,-7.04 8.32,-2.56 15.36,-2.56 10.56,0 19.2,4.48 8.48,4.64 13.12,13.12 4.64,8.32 4.64,19.36 0,9.28 -3.2,17.28 3.04,3.84 6.88,5.44 4,1.44 10.08,1.44 h 0.8 q 0.8,0 0.8,0.64 v 15.52 q 0,0.8 -0.8,0.8 h -0.8 q -8.48,0 -14.72,-2.4 -6.08,-2.4 -11.52,-8.16 -5.76,5.28 -13.28,8 -7.52,2.56 -15.52,2.56 h -47.68 q -0.8,0 -0.8,-0.8 v -15.52 q 0,-0.64 0.8,-0.64 z m 14.56,-22.56 q 0,5.28 0.96,10.88 1.12,5.44 3.52,11.68 h 7.84 q 10.08,0 16.32,-6.72 6.24,-6.72 6.24,-17.6 0,-8.96 -4.64,-14.4 -4.64,-5.6 -11.84,-5.6 -4,0 -8.16,1.44 -4.16,1.28 -8,3.84 -1.12,3.84 -1.76,8 -0.48,4.16 -0.48,8.48 z m -121.44004,-39.2 q -4.48,0 -7.36,-2.88 -2.72,-2.88 -2.72,-8 0,-5.44 2.72,-8.16 2.88,-2.72 7.36,-2.72 4.64,0 7.36,2.88 2.72,2.72 2.72,8 0,5.12 -2.72,8 -2.72,2.88 -7.36,2.88 z m 27.36,0 q -4.64,0 -7.36,-2.88 -2.72,-3.04 -2.72,-8 0,-5.28 2.72,-8 2.72,-2.88 7.36,-2.88 4.8,0 7.36,2.88 2.72,2.88 2.72,8 0,4.96 -2.72,8 -2.72,2.88 -7.36,2.88 z m -37.28,78.72 q -14.4,0 -22.88,-8.48 -8.32,-8.48 -8.32,-23.36 0,-5.76 1.28,-12.64 1.44,-6.88 3.52,-11.68 h 18.24 q -2.4,10.88 -2.4,21.6 0,7.84 4.16,12.8 4.16,4.8 10.88,4.8 h 53.92 v -61.76 h 20.32 v 61.76 h 20.96 q 0.8,0 0.8,0.64 v 15.52 q 0,0.8 -0.8,0.8 z"
++         fill="#081D33"
++         id="path15" />
++      <path
++         d="M619 122 L644 115"
++         stroke="#D4AF37"
++         stroke-width="8"
++         stroke-linecap="round"
++         id="path16" />
++      <path
++         d="m 509,113 a 12,12 0 0 1 -12,12 12,12 0 0 1 -12,-12 12,12 0 0 1 12,-12 12,12 0 0 1 12,12 z"
++         fill="none"
++         stroke="#D4AF37"
++         stroke-width="7"
++         id="path17" />
++    </g>
++  </g>
++  <path
++     d="m 934.45815,910.17 0.34,-4.012 q 2.312,0 3.23,-0.51 0.952,-0.51 0.952,-2.21 0,-0.918 -0.272,-2.176 -0.272,-1.292 -0.68,-2.652 -0.408,-1.394 -0.85,-2.618 l 3.944,-1.19 q 0.408,1.122 0.816,2.618 0.442,1.462 0.714,2.992 0.272,1.53 0.272,2.822 0,2.788 -1.088,4.284 -1.088,1.496 -2.992,2.074 -1.904,0.578 -4.386,0.578 z m 3.978,7.242 q -0.884,0 -1.496,-0.612 -0.612,-0.612 -0.612,-1.462 0,-0.884 0.612,-1.53 0.612,-0.646 1.496,-0.646 0.884,0 1.496,0.646 0.646,0.646 0.646,1.53 0,0.85 -0.646,1.462 -0.612,0.612 -1.496,0.612 z m -18.22393,0.442 -1.428,-3.604 q 4.114,-1.394 6.222,-3.57 2.142,-2.142 2.142,-4.726 0,-1.496 -0.68,-3.196 -0.646,-1.734 -1.564,-3.4 l 3.706,-1.802 q 0.612,1.122 1.088,2.312 0.476,1.156 0.816,2.142 0.34,0.986 0.51,1.496 0.476,1.564 1.258,2.108 0.816,0.544 2.482,0.544 1.054,0 1.53,0.578 0.476,0.544 0.476,1.36 0,0.884 -0.612,1.496 -0.612,0.578 -1.734,0.578 -1.292,0 -2.244,-0.374 -0.952,-0.408 -1.53,-1.054 -0.442,1.7 -1.496,3.162 -1.054,1.462 -2.516,2.618 -1.462,1.19 -3.128,2.006 -1.632,0.85 -3.298,1.326 z m -9.52006,-7.684 0.34,-4.012 q 2.312,0 3.23,-0.51 0.952,-0.51 0.952,-2.21 0,-0.918 -0.272,-2.176 -0.272,-1.292 -0.68,-2.652 -0.408,-1.394 -0.85,-2.618 l 3.944,-1.19 q 0.408,1.122 0.816,2.618 0.442,1.462 0.714,2.992 0.272,1.53 0.272,2.822 0,2.788 -1.088,4.284 -1.088,1.496 -2.992,2.074 -1.904,0.578 -4.386,0.578 z m 4.692,-18.462 q -0.918,0 -1.564,-0.612 -0.646,-0.646 -0.646,-1.564 0,-0.918 0.646,-1.564 0.646,-0.68 1.564,-0.68 0.884,0 1.53,0.68 0.646,0.646 0.646,1.564 0,0.918 -0.646,1.564 -0.646,0.612 -1.53,0.612 z m -4.72598,18.462 q -2.992,0 -4.624,-0.646 -1.598,-0.646 -2.244,-1.972 -0.612,-1.326 -0.68,-3.434 l -0.714,-18.768 h 4.012 l 0.714,16.966 q 0.068,1.598 0.306,2.448 0.272,0.816 1.088,1.122 0.816,0.272 2.482,0.272 1.054,0 1.53,0.578 0.51,0.544 0.51,1.36 0,0.884 -0.646,1.496 -0.612,0.578 -1.734,0.578 z m -29.51204,0 0.34,-4.012 q 0.816,0 1.428,-0.374 0.612,-0.408 1.19,-1.326 0.612,-0.952 1.428,-2.584 0.986,-2.074 2.04,-3.23 1.054,-1.156 2.142,-1.598 1.122,-0.476 2.21,-0.476 1.836,0 3.298,1.088 1.462,1.088 2.312,2.788 0.85,1.7 0.85,3.502 0,1.904 -0.748,3.264 -0.748,1.36 -2.006,2.074 -1.258,0.714 -2.788,0.714 -1.19,0 -2.788,-0.374 -1.598,-0.374 -3.604,-1.632 -1.054,1.326 -2.278,1.768 -1.224,0.408 -3.026,0.408 z m 10.608,-9.588 q -0.986,0 -1.7,1.054 -0.68,1.02 -1.7,3.128 1.224,0.646 2.244,0.952 1.02,0.272 1.734,0.272 1.19,0 1.7,-0.442 0.544,-0.442 0.544,-1.326 0,-0.782 -0.408,-1.632 -0.374,-0.85 -1.02,-1.428 -0.612,-0.578 -1.394,-0.578 z m -21.96397,22.814 q -3.366,0 -6.12,-1.088 -2.754,-1.088 -4.386,-3.264 -1.632,-2.176 -1.632,-5.44 0,-3.468 1.632,-6.222 1.666,-2.754 4.59,-4.692 2.924,-1.972 6.664,-3.026 -1.564,-0.51 -3.536,-1.02 -1.938,-0.51 -4.284,-0.51 -1.156,0 -2.108,0.17 -0.952,0.17 -1.734,0.34 l -0.612,-3.808 q 0.918,-0.34 2.04,-0.544 1.156,-0.204 2.346,-0.204 2.176,0 3.876,0.476 1.734,0.442 3.264,1.054 1.564,0.612 3.162,1.088 1.632,0.442 3.604,0.476 h 0.986 l 0.306,4.216 q -1.326,0 -2.924,0.306 0.374,2.006 1.292,2.958 0.918,0.952 2.244,1.224 1.326,0.272 3.026,0.272 1.054,0 1.53,0.578 0.476,0.544 0.476,1.36 0,0.884 -0.612,1.496 -0.612,0.578 -1.734,0.578 -1.7,0 -3.264,-0.238 -1.564,-0.238 -2.822,-0.986 -1.258,-0.782 -2.074,-2.312 -0.816,-1.564 -1.054,-4.148 -1.904,0.612 -3.74,1.632 -1.802,0.986 -3.298,2.312 -1.462,1.326 -2.346,2.992 -0.884,1.666 -0.884,3.638 0,2.278 1.156,3.638 1.156,1.394 3.094,2.006 1.938,0.646 4.25,0.646 3.604,0 7.344,-1.462 l 1.258,3.434 q -2.312,1.088 -4.624,1.564 -2.312,0.51 -4.352,0.51 z m -0.374,-8.534 q -0.918,0 -1.564,-0.646 -0.646,-0.612 -0.646,-1.53 0,-0.918 0.646,-1.598 0.646,-0.646 1.564,-0.646 0.884,0 1.53,0.646 0.646,0.68 0.646,1.598 0,0.918 -0.646,1.53 -0.646,0.646 -1.53,0.646 z m -51.23799,-4.692 0.34,-4.012 q 1.122,0 1.802,-0.17 0.714,-0.204 1.156,-0.816 0.476,-0.646 0.85,-2.006 0.374,-1.36 0.85,-3.74 l 3.706,0.782 q -0.17,0.816 -0.408,1.972 -0.204,1.122 -0.204,2.006 0,0.918 0.612,1.462 0.612,0.51 2.312,0.51 0.918,0 1.53,-0.17 0.646,-0.204 1.088,-0.85 0.476,-0.68 0.816,-2.074 0.34,-1.394 0.714,-3.876 l 3.774,0.646 q -0.136,0.714 -0.272,1.598 -0.136,0.884 -0.238,1.7 -0.102,0.782 -0.102,1.292 0,0.68 0.578,1.224 0.612,0.51 2.584,0.51 1.394,0 2.21,-0.544 0.85,-0.578 0.85,-2.074 0,-1.258 -0.612,-3.264 -0.578,-2.04 -1.326,-4.182 l 4.012,-1.258 q 0.51,1.326 0.918,2.89 0.408,1.564 0.646,3.026 0.272,1.462 0.272,2.584 0,3.366 -1.87,5.1 -1.87,1.734 -4.93,1.734 -2.176,0 -3.434,-0.51 -1.224,-0.544 -1.768,-1.87 -0.612,1.054 -1.394,1.564 -0.748,0.51 -1.768,0.646 -1.02,0.17 -2.482,0.17 -0.85,0 -1.734,-0.17 -0.85,-0.136 -1.632,-0.612 -0.782,-0.51 -1.292,-1.564 -1.054,1.53 -2.584,1.938 -1.53,0.408 -3.57,0.408 z m 12.24001,-17.33999 v -2.176 l 7.854,-2.346 v 2.278 z m -32.87801,17.33999 0.34,-4.012 q 0.884,0 1.36,-0.374 0.51,-0.374 0.986,-1.224 0.476,-0.884 1.258,-2.414 1.122,-2.176 2.312,-3.4 1.19,-1.224 2.346,-1.7 1.156,-0.51 2.21,-0.51 1.802,0 3.23,1.224 1.428,1.19 2.788,4.42 0.68,1.666 1.326,2.516 0.646,0.85 1.326,1.156 0.68,0.306 1.496,0.306 1.054,0 1.496,0.578 0.476,0.544 0.476,1.36 0,0.884 -0.612,1.496 -0.612,0.578 -1.7,0.578 -1.428,0 -2.618,-0.408 -1.19,-0.442 -1.972,-1.326 -0.612,0.918 -1.598,1.564 -0.952,0.612 -2.312,0.612 -1.428,0 -3.264,-0.85 -1.836,-0.884 -3.264,-2.788 -0.714,1.326 -1.496,2.04 -0.782,0.68 -1.768,0.918 -0.986,0.238 -2.346,0.238 z m 7.344,-6.664 q 0.85,1.36 2.142,2.244 1.292,0.884 2.55,0.884 0.85,0 1.326,-0.646 0.51,-0.646 0.034,-1.87 -0.306,-0.748 -0.748,-1.598 -0.408,-0.85 -0.986,-1.428 -0.544,-0.612 -1.224,-0.612 -0.68,0 -1.462,0.68 -0.782,0.68 -1.632,2.346 z m 2.68597,-12.512 q -1.564,0 -2.38,-0.952 -0.782,-0.952 -0.782,-2.244 0,-1.564 0.918,-2.686 0.952,-1.156 2.414,-1.156 1.36,0 2.244,1.122 0.884,1.122 0.884,2.55 0,1.394 -0.918,2.38 -0.918,0.986 -2.38,0.986 z m -0.034,-2.006 q 0.612,0 1.02,-0.374 0.408,-0.374 0.408,-0.986 0,-0.646 -0.442,-1.054 -0.442,-0.442 -0.952,-0.442 -0.612,0 -0.986,0.442 -0.374,0.442 -0.374,1.02 0,0.612 0.374,1.02 0.374,0.374 0.952,0.374 z m -34.23797,21.726 q -6.834,0 -9.894,-1.938 -3.026,-1.972 -3.026,-5.44 0,-1.462 0.374,-3.026 0.374,-1.598 0.748,-2.89 l 3.604,0.884 q -0.238,0.85 -0.476,1.972 -0.238,1.088 -0.238,1.938 0,1.462 0.884,2.482 0.918,0.986 3.06,1.496 2.142,0.51 5.848,0.51 l 0.034,0.034 v -0.034 q 2.278,0 4.556,-0.238 2.312,-0.272 4.454,-0.952 2.142,-0.68 4.046,-1.972 1.904,-1.326 3.4,-3.468 l 3.196,1.564 q -0.51,1.394 -0.51,2.176 0,1.02 0.918,1.7 0.918,0.646 3.604,0.646 1.054,0 1.496,0.578 0.476,0.544 0.476,1.36 0,0.884 -0.612,1.496 -0.612,0.578 -1.7,0.578 -3.06,0 -4.998,-0.986 -1.938,-1.02 -2.38,-2.856 -2.686,2.244 -7.106,3.332 -4.386,1.054 -9.724,1.054 v -0.034 z m 0.68,-15.13 q -0.884,0 -1.53,-0.612 -0.612,-0.612 -0.612,-1.462 0,-0.884 0.612,-1.496 0.646,-0.646 1.53,-0.646 0.85,0 1.462,0.646 0.612,0.612 0.612,1.496 0,0.85 -0.612,1.462 -0.612,0.612 -1.462,0.612 z m 5.406,0.034 q -0.884,0 -1.496,-0.612 -0.612,-0.612 -0.612,-1.496 0,-0.85 0.612,-1.496 0.612,-0.646 1.496,-0.646 0.85,0 1.462,0.646 0.612,0.646 0.612,1.496 0,0.884 -0.612,1.496 -0.612,0.612 -1.462,0.612 z m -38.52207,14.552 0.34,-4.012 q 1.7,0 2.414,-0.34 0.714,-0.34 0.85,-1.258 0.136,-0.918 0.068,-2.652 l -0.646,-16.558 h 4.046 l 0.68,16.66 q 0.068,1.904 -0.17,3.434 -0.204,1.496 -0.986,2.55 -0.782,1.054 -2.38,1.632 -1.564,0.544 -4.216,0.544 z m -11.11798,0 0.34,-4.012 q 1.7,0 2.414,-0.34 0.714,-0.34 0.816,-1.258 0.136,-0.918 0.102,-2.652 l -0.578,-16.558 h 4.08 l 0.578,16.524 q 0.034,1.7 0.442,2.652 0.408,0.918 1.224,1.292 0.816,0.34 2.04,0.34 1.088,0 1.53,0.578 0.476,0.544 0.476,1.36 0,0.884 -0.646,1.496 -0.612,0.578 -1.7,0.578 -1.734,0 -3.026,-0.544 -1.292,-0.544 -1.938,-1.802 -0.85,1.326 -2.346,1.836 -1.462,0.51 -3.808,0.51 z m -8.63602,-14.382 q -0.884,0 -1.496,-0.612 -0.612,-0.612 -0.612,-1.462 0,-0.884 0.612,-1.496 0.612,-0.646 1.496,-0.646 0.85,0 1.462,0.646 0.612,0.612 0.612,1.496 0,0.85 -0.612,1.462 -0.612,0.612 -1.462,0.612 z m 5.44,0.034 q -0.884,0 -1.53,-0.612 -0.612,-0.612 -0.612,-1.496 0,-0.85 0.612,-1.496 0.646,-0.646 1.53,-0.646 0.85,0 1.428,0.646 0.612,0.646 0.612,1.496 0,0.884 -0.612,1.496 -0.578,0.612 -1.428,0.612 z m -10.234,14.348 0.34,-4.012 q 1.394,0 2.312,-0.238 0.918,-0.272 1.462,-0.986 0.578,-0.748 0.952,-2.142 0.408,-1.428 0.782,-3.74 l 3.774,0.646 q -0.17,0.85 -0.374,1.972 -0.204,1.122 -0.204,2.006 0,0.748 0.34,1.326 0.34,0.544 1.36,0.85 1.02,0.306 3.026,0.306 1.088,0 1.53,0.578 0.476,0.544 0.476,1.36 0,0.884 -0.612,1.496 -0.612,0.578 -1.734,0.578 -2.72,0 -4.25,-0.578 -1.496,-0.612 -2.108,-2.006 -1.258,1.666 -3.094,2.142 -1.802,0.442 -3.978,0.442 z m -17.54404,0 0.34,-4.012 q 1.122,0.034 2.108,0 1.02,-0.068 1.904,-0.17 -0.748,-0.816 -1.36,-1.938 -0.578,-1.156 -0.578,-2.652 0,-2.006 0.952,-3.536 0.986,-1.53 2.516,-2.414 1.53,-0.884 3.162,-0.884 1.904,0 3.298,0.952 1.428,0.918 2.21,2.414 0.782,1.496 0.782,3.196 0,1.496 -0.544,2.72 -0.544,1.19 -1.428,2.142 1.156,0.068 2.312,0.136 1.19,0.034 2.21,0.034 1.054,0 1.53,0.578 0.476,0.544 0.476,1.36 0,0.884 -0.646,1.496 -0.612,0.578 -1.7,0.578 -2.38,0 -4.726,-0.34 -2.346,-0.34 -4.08,-0.918 -0.17,0.068 -0.374,0.136 -1.36,0.51 -3.604,0.816 -2.21,0.306 -4.76,0.306 z m 6.392,-8.534 q 0,1.02 0.612,1.87 0.612,0.85 1.53,1.496 1.258,-0.578 2.04,-1.462 0.782,-0.884 0.782,-2.04 0,-0.68 -0.306,-1.36 -0.306,-0.714 -0.85,-1.19 -0.544,-0.476 -1.258,-0.476 -1.054,0 -1.802,0.952 -0.748,0.952 -0.748,2.21 z m -0.102,-10.336 q -0.884,0 -1.53,-0.612 -0.612,-0.612 -0.612,-1.462 0,-0.884 0.612,-1.496 0.646,-0.646 1.53,-0.646 0.85,0 1.462,0.646 0.612,0.612 0.612,1.496 0,0.85 -0.612,1.462 -0.612,0.612 -1.462,0.612 z m 5.406,0.034 q -0.884,0 -1.496,-0.612 -0.612,-0.612 -0.612,-1.496 0,-0.85 0.612,-1.496 0.612,-0.646 1.496,-0.646 0.85,0 1.462,0.646 0.612,0.646 0.612,1.496 0,0.884 -0.612,1.496 -0.612,0.612 -1.462,0.612 z m -23.22196,14.824 q 2.346,0 3.196,-0.646 0.884,-0.68 0.884,-1.666 0,-0.986 -0.714,-2.482 -0.68,-1.496 -1.7,-3.094 -1.02,-1.632 -1.938,-2.992 l 3.4,-2.244 q 2.108,2.992 3.366,5.678 1.292,2.652 1.768,4.488 0.34,1.258 0.918,1.904 0.578,0.612 1.258,0.85 0.714,0.204 1.394,0.204 1.088,0 1.564,0.578 0.476,0.544 0.476,1.36 0,0.884 -0.612,1.496 -0.612,0.578 -1.734,0.578 -1.53,0 -2.754,-0.51 -1.19,-0.544 -1.972,-1.7 -0.816,0.952 -2.38,1.598 -1.564,0.646 -4.012,0.646 -1.666,0 -3.468,-0.408 -1.802,-0.408 -3.128,-1.224 l 1.564,-3.57 q 1.02,0.51 2.21,0.85 1.19,0.306 2.414,0.306 z m -22.74601,17.204 q -0.952,-3.468 -1.428,-6.426 -0.442,-2.924 -0.442,-4.658 0,-2.278 0.782,-3.774 0.782,-1.53 2.074,-2.414 1.326,-0.884 2.89,-1.258 1.598,-0.374 3.196,-0.34 1.632,0.034 3.06,0.34 0.102,-2.176 -0.85,-3.638 -0.918,-1.496 -2.516,-1.496 -2.244,0 -3.842,3.06 l -3.094,-1.734 q 1.36,-2.958 3.298,-4.148 1.972,-1.19 3.842,-1.19 1.938,0 3.298,0.816 1.36,0.816 2.21,2.142 0.85,1.292 1.224,2.788 0.408,1.462 0.408,2.822 0,1.496 -0.442,2.924 -0.442,1.428 -0.85,2.04 -3.094,-0.884 -5.508,-0.918 -2.414,-0.068 -3.808,0.918 -1.36,0.986 -1.36,3.23 0,1.904 0.442,4.624 0.442,2.72 1.19,5.338 z M 647.26008,910 l -0.714,-24.65 h 4.012 l 0.68,24.65 z m -10.33604,-18.224 q 0,-1.462 -0.238,-3.128 -0.238,-1.7 -0.442,-2.822 l 4.046,-0.578 q 0.136,0.714 0.238,1.836 0.136,1.088 0.238,2.278 0.102,1.19 0.102,2.142 0,4.182 -1.666,7.48 1.802,1.938 2.516,3.434 0.714,1.496 0.714,2.754 0,1.156 -0.544,2.278 -0.51,1.122 -1.768,1.836 -1.258,0.714 -3.502,0.714 h -9.146 v -3.876 q 4.726,-3.4 6.936,-6.528 -1.836,-1.598 -4.318,-3.366 -2.448,-1.802 -5.202,-3.604 l 2.142,-3.128 q 2.958,1.938 5.202,3.604 2.278,1.666 3.978,3.094 0.714,-2.04 0.714,-4.42 z m -4.114,14.314 h 2.992 q 1.734,0 2.278,-0.408 0.544,-0.442 0.544,-1.088 0,-0.816 -1.496,-2.448 -1.734,2.108 -4.318,3.944 z m -39.43996,4.08 0.34,-4.012 q 1.122,0 1.802,-0.17 0.714,-0.204 1.156,-0.816 0.476,-0.646 0.85,-2.006 0.374,-1.36 0.85,-3.74 l 3.706,0.782 q -0.17,0.816 -0.408,1.972 -0.204,1.122 -0.204,2.006 0,0.918 0.612,1.462 0.612,0.51 2.312,0.51 0.918,0 1.53,-0.17 0.646,-0.204 1.088,-0.85 0.476,-0.68 0.816,-2.074 0.34,-1.394 0.714,-3.876 l 3.774,0.646 q -0.136,0.714 -0.272,1.598 -0.136,0.884 -0.238,1.7 -0.102,0.782 -0.102,1.292 0,0.68 0.578,1.224 0.612,0.51 2.584,0.51 1.394,0 2.21,-0.544 0.85,-0.578 0.85,-2.074 0,-1.258 -0.612,-3.264 -0.578,-2.04 -1.326,-4.182 l 4.012,-1.258 q 0.51,1.326 0.918,2.89 0.408,1.564 0.646,3.026 0.272,1.462 0.272,2.584 0,3.366 -1.87,5.1 -1.87,1.734 -4.93,1.734 -2.176,0 -3.434,-0.51 -1.224,-0.544 -1.768,-1.87 -0.612,1.054 -1.394,1.564 -0.748,0.51 -1.768,0.646 -1.02,0.17 -2.482,0.17 -0.85,0 -1.734,-0.17 -0.85,-0.136 -1.632,-0.612 -0.782,-0.51 -1.292,-1.564 -1.054,1.53 -2.584,1.938 -1.53,0.408 -3.57,0.408 z m -8.63602,-14.382 q -0.884,0 -1.496,-0.612 -0.612,-0.612 -0.612,-1.462 0,-0.884 0.612,-1.496 0.612,-0.646 1.496,-0.646 0.85,0 1.462,0.646 0.612,0.612 0.612,1.496 0,0.85 -0.612,1.462 -0.612,0.612 -1.462,0.612 z m 5.44,0.034 q -0.884,0 -1.53,-0.612 -0.612,-0.612 -0.612,-1.496 0,-0.85 0.612,-1.496 0.646,-0.646 1.53,-0.646 0.85,0 1.428,0.646 0.612,0.646 0.612,1.496 0,0.884 -0.612,1.496 -0.578,0.612 -1.428,0.612 z m -10.234,14.348 0.34,-4.012 q 1.394,0 2.312,-0.238 0.918,-0.272 1.462,-0.986 0.578,-0.748 0.952,-2.142 0.408,-1.428 0.782,-3.74 l 3.774,0.646 q -0.17,0.85 -0.374,1.972 -0.204,1.122 -0.204,2.006 0,0.748 0.34,1.326 0.34,0.544 1.36,0.85 1.02,0.306 3.026,0.306 1.088,0 1.53,0.578 0.476,0.544 0.476,1.36 0,0.884 -0.612,1.496 -0.612,0.578 -1.734,0.578 -2.72,0 -4.25,-0.578 -1.496,-0.612 -2.108,-2.006 -1.258,1.666 -3.094,2.142 -1.802,0.442 -3.978,0.442 z m -14.24603,7.684 -1.428,-3.604 q 4.114,-1.394 6.222,-3.57 2.142,-2.142 2.142,-4.726 0,-1.496 -0.68,-3.196 -0.646,-1.734 -1.564,-3.4 l 3.706,-1.802 q 0.612,1.122 1.088,2.312 0.476,1.156 0.816,2.142 0.34,0.986 0.51,1.496 0.476,1.564 1.258,2.108 0.816,0.544 2.482,0.544 1.054,0 1.53,0.578 0.476,0.544 0.476,1.36 0,0.884 -0.612,1.496 -0.612,0.578 -1.734,0.578 -1.292,0 -2.244,-0.374 -0.952,-0.408 -1.53,-1.054 -0.442,1.7 -1.496,3.162 -1.054,1.462 -2.516,2.618 -1.462,1.19 -3.128,2.006 -1.632,0.85 -3.298,1.326 z m -5.47399,-7.854 -0.714,-24.65 h 4.012 l 0.68,24.65 z m -11.18601,-18.292 q -0.918,0 -1.53,-0.612 -0.612,-0.612 -0.612,-1.462 0,-0.884 0.612,-1.496 0.612,-0.646 1.53,-0.646 0.85,0 1.428,0.646 0.612,0.612 0.612,1.496 0,0.85 -0.612,1.462 -0.578,0.612 -1.428,0.612 z m 5.406,0.034 q -0.884,0 -1.496,-0.612 -0.612,-0.612 -0.612,-1.462 0,-0.884 0.612,-1.496 0.612,-0.646 1.496,-0.646 0.85,0 1.462,0.646 0.612,0.612 0.612,1.496 0,0.85 -0.612,1.462 -0.612,0.612 -1.462,0.612 z m -8.534,18.428 0.34,-4.012 q 2.006,0 3.128,-0.17 1.122,-0.204 1.564,-0.782 0.442,-0.578 0.442,-1.768 0,-0.918 -0.272,-2.176 -0.272,-1.292 -0.68,-2.652 -0.408,-1.394 -0.884,-2.618 l 3.978,-1.19 q 0.408,1.122 0.816,2.618 0.408,1.462 0.68,2.992 0.272,1.53 0.272,2.822 0,2.788 -1.122,4.284 -1.122,1.496 -3.23,2.074 -2.074,0.578 -5.032,0.578 z m -13.43002,0 0.34,-4.012 q 1.394,0 2.312,-0.238 0.918,-0.272 1.462,-0.986 0.578,-0.748 0.952,-2.142 0.408,-1.428 0.782,-3.74 l 3.774,0.646 q -0.17,0.85 -0.374,1.972 -0.204,1.122 -0.204,2.006 0,0.748 0.34,1.326 0.34,0.544 1.36,0.85 1.02,0.306 3.026,0.306 1.088,0 1.53,0.578 0.476,0.544 0.476,1.36 0,0.884 -0.612,1.496 -0.612,0.578 -1.734,0.578 -2.72,0 -4.25,-0.578 -1.496,-0.612 -2.108,-2.006 -1.258,1.666 -3.094,2.142 -1.802,0.442 -3.978,0.442 z m 9.146,7.344 q -0.884,0 -1.53,-0.612 -0.612,-0.612 -0.612,-1.496 0,-0.884 0.612,-1.53 0.646,-0.612 1.53,-0.612 0.85,0 1.462,0.612 0.612,0.646 0.612,1.53 0,0.884 -0.612,1.496 -0.612,0.612 -1.462,0.612 z m -5.44,0 q -0.884,0 -1.496,-0.612 -0.612,-0.612 -0.612,-1.496 0,-0.884 0.612,-1.53 0.612,-0.612 1.496,-0.612 0.85,0 1.462,0.612 0.612,0.646 0.612,1.53 0,0.884 -0.612,1.496 -0.612,0.612 -1.462,0.612 z m -25.73803,-7.344 0.34,-4.012 q 3.604,0 7.004,-0.884 3.4,-0.918 6.086,-2.754 -1.462,-1.02 -3.366,-1.598 -1.904,-0.578 -4.182,-0.578 -0.816,0 -1.632,0.102 -0.816,0.068 -1.734,0.272 l -0.612,-3.876 q 0.952,-0.272 1.972,-0.408 1.02,-0.136 1.904,-0.136 2.278,0 4.046,0.612 1.768,0.612 3.23,1.428 1.462,0.816 2.72,1.462 1.292,0.612 2.584,0.612 h 1.054 l 0.408,3.74 q -0.714,0 -1.394,0.136 -0.646,0.136 -1.292,0.374 0.816,0.884 2.074,1.19 1.258,0.306 3.162,0.306 1.054,0 1.496,0.578 0.476,0.544 0.476,1.36 0,0.884 -0.612,1.496 -0.612,0.578 -1.7,0.578 -1.836,0 -3.366,-0.306 -1.496,-0.34 -2.652,-1.224 -1.122,-0.918 -1.836,-2.584 -1.19,0.68 -2.55,1.394 -1.326,0.714 -2.992,1.326 -1.632,0.612 -3.774,1.02 -2.108,0.374 -4.862,0.374 z m 9.316,7.072 q -0.884,0 -1.496,-0.612 -0.612,-0.612 -0.612,-1.462 0,-0.884 0.612,-1.53 0.612,-0.646 1.496,-0.646 0.884,0 1.496,0.646 0.646,0.646 0.646,1.53 0,0.85 -0.646,1.462 -0.612,0.612 -1.496,0.612 z m -34.74804,-7.82 q 0,-1.19 0.306,-2.856 0.34,-1.7 1.326,-3.91 l 3.536,1.258 q -0.578,1.53 -0.884,2.686 -0.272,1.156 -0.272,2.21 0,2.482 2.074,3.774 2.108,1.292 5.576,1.292 2.55,0 4.454,-0.442 1.938,-0.408 3.026,-1.19 1.088,-0.748 1.088,-1.768 0,-0.714 -1.122,-1.292 -1.088,-0.612 -3.4,-1.394 l 0.918,-4.046 q 3.162,1.292 5.372,1.87 2.244,0.544 3.774,0.544 1.054,0 1.53,0.578 0.476,0.544 0.476,1.36 0,0.884 -0.646,1.496 -0.612,0.578 -1.7,0.578 h -1.462 q 0.102,0.578 0.102,1.054 0,1.53 -1.462,3.06 -1.428,1.564 -4.318,2.55 -2.856,1.02 -7.174,1.02 -3.332,0 -5.848,-0.918 -2.482,-0.884 -3.876,-2.754 -1.394,-1.87 -1.394,-4.76 z m 14.11,15.776 q -0.884,0 -1.496,-0.612 -0.612,-0.612 -0.612,-1.496 0,-0.884 0.612,-1.53 0.612,-0.612 1.496,-0.612 0.85,0 1.462,0.612 0.612,0.646 0.612,1.53 0,0.884 -0.612,1.496 -0.612,0.612 -1.462,0.612 z m -5.406,0 q -0.884,0 -1.53,-0.612 -0.612,-0.612 -0.612,-1.496 0,-0.884 0.612,-1.53 0.646,-0.612 1.53,-0.612 0.85,0 1.462,0.612 0.612,0.646 0.612,1.53 0,0.884 -0.612,1.496 -0.612,0.612 -1.462,0.612 z m -32.84402,-7.378 -0.816,-4.012 q 3.298,-0.442 5.542,-1.258 2.278,-0.782 3.264,-2.754 -1.156,0.408 -2.448,0.408 -2.482,0 -4.08,-1.156 -1.598,-1.156 -1.598,-3.672 0,-1.53 0.476,-2.992 0.51,-1.462 1.394,-2.652 0.884,-1.19 2.074,-1.87 1.19,-0.714 2.584,-0.714 1.564,0 2.754,0.816 1.19,0.782 1.972,2.074 0.782,1.292 1.19,2.856 0.408,1.564 0.408,3.094 0,5.406 -3.332,8.364 -3.332,2.992 -9.384,3.468 z m 3.808,-13.294 q 0,1.768 2.482,1.768 1.258,0 2.414,-0.34 0,-1.122 -0.306,-2.176 -0.306,-1.088 -0.884,-1.768 -0.544,-0.68 -1.36,-0.68 -0.68,0 -1.224,0.51 -0.51,0.476 -0.816,1.224 -0.306,0.714 -0.306,1.462 z m -11.69601,5.474 -0.714,-24.65 h 4.012 l 0.68,24.65 z M 442.6479,891.776 q 0,-1.462 -0.238,-3.128 -0.238,-1.7 -0.442,-2.822 l 4.046,-0.578 q 0.136,0.714 0.238,1.836 0.136,1.088 0.238,2.278 0.102,1.19 0.102,2.142 0,4.182 -1.666,7.48 1.802,1.938 2.516,3.434 0.714,1.496 0.714,2.754 0,1.156 -0.544,2.278 -0.51,1.122 -1.768,1.836 -1.258,0.714 -3.502,0.714 h -9.146 v -3.876 q 4.726,-3.4 6.936,-6.528 -1.836,-1.598 -4.318,-3.366 -2.448,-1.802 -5.202,-3.604 l 2.142,-3.128 q 2.958,1.938 5.202,3.604 2.278,1.666 3.978,3.094 0.714,-2.04 0.714,-4.42 z m -4.114,14.314 h 2.992 q 1.734,0 2.278,-0.408 0.544,-0.442 0.544,-1.088 0,-0.816 -1.496,-2.448 -1.734,2.108 -4.318,3.944 z m -5.882,14.348 -0.51,-2.176 q 1.02,-0.204 1.666,-0.34 -0.612,-0.476 -1.088,-1.19 -0.442,-0.714 -0.442,-1.564 0,-1.7 1.122,-2.482 1.156,-0.782 2.516,-0.782 0.918,0 1.734,0.272 l -0.272,2.142 q -0.34,-0.068 -0.68,-0.136 -0.34,-0.068 -0.714,-0.068 -0.578,0 -0.986,0.306 -0.374,0.306 -0.374,0.782 0,0.748 0.578,1.258 0.612,0.544 1.224,0.748 1.19,-0.34 2.108,-0.714 l 0.646,2.074 q -1.292,0.476 -3.128,0.986 -1.802,0.544 -3.4,0.884 z m -19.27804,-11.866 1.564,-3.57 q 1.02,0.51 2.176,0.85 1.19,0.306 2.55,0.306 2.04,0 2.992,-0.578 0.986,-0.612 0.986,-1.734 0,-0.612 -0.34,-1.598 -0.306,-1.02 -1.258,-2.686 -0.918,-1.7 -2.754,-4.284 l 3.4,-2.244 q 2.516,3.604 3.842,6.528 1.326,2.924 1.326,4.896 0,1.598 -0.85,2.924 -0.85,1.292 -2.584,2.074 -1.734,0.748 -4.454,0.748 -1.598,0 -3.434,-0.408 -1.836,-0.408 -3.162,-1.224 z m -7.14001,1.428 -0.714,-24.65 h 4.012 l 0.68,24.65 z m -15.87797,7.82 -1.428,-3.672 q 3.094,-1.054 4.93,-2.414 1.836,-1.326 2.618,-2.788 0.816,-1.496 0.816,-2.992 0,-1.428 -0.578,-2.958 -0.544,-1.53 -1.666,-3.638 l 3.706,-1.802 q 2.482,4.59 2.482,7.99 0,3.094 -1.428,5.474 -1.428,2.38 -3.876,4.08 -2.448,1.7 -5.576,2.72 z m -6.86795,-7.752 q -2.72,0 -4.556,-1.428 -1.802,-1.428 -1.802,-4.352 0,-1.53 0.918,-3.502 0.952,-2.006 3.128,-4.148 l -1.19,-0.952 2.652,-3.23 q 2.278,1.734 3.978,3.502 1.734,1.768 2.686,3.638 0.952,1.87 0.952,4.012 0,0.952 -0.306,2.074 -0.306,1.122 -1.054,2.108 -0.748,0.986 -2.074,1.632 -1.326,0.646 -3.332,0.646 z m 0.238,-3.978 q 1.428,0 2.108,-0.782 0.714,-0.782 0.714,-1.904 0,-0.918 -0.544,-2.04 -0.51,-1.122 -2.278,-2.652 -1.394,1.326 -2.04,2.618 -0.646,1.292 -0.646,2.312 0,1.224 0.748,1.836 0.782,0.612 1.938,0.612 z m -2.686,-16.422 q -0.884,0 -1.53,-0.612 -0.612,-0.612 -0.612,-1.462 0,-0.884 0.612,-1.496 0.646,-0.646 1.53,-0.646 0.85,0 1.462,0.646 0.612,0.612 0.612,1.496 0,0.85 -0.612,1.462 -0.612,0.612 -1.462,0.612 z m 5.406,0.034 q -0.884,0 -1.496,-0.612 -0.612,-0.612 -0.612,-1.496 0,-0.85 0.612,-1.496 0.612,-0.646 1.496,-0.646 0.85,0 1.462,0.646 0.612,0.646 0.612,1.496 0,0.884 -0.612,1.496 -0.612,0.612 -1.462,0.612 z m -33.45601,28.118 -0.816,-4.012 q 3.298,-0.442 5.542,-1.258 2.278,-0.782 3.264,-2.754 -1.156,0.408 -2.448,0.408 -2.482,0 -4.08,-1.156 -1.598,-1.156 -1.598,-3.672 0,-1.53 0.476,-2.992 0.51,-1.462 1.394,-2.652 0.884,-1.19 2.074,-1.87 1.19,-0.714 2.584,-0.714 1.564,0 2.754,0.816 1.19,0.782 1.972,2.074 0.782,1.292 1.19,2.856 0.408,1.564 0.408,3.094 0,5.406 -3.332,8.364 -3.332,2.992 -9.384,3.468 z m 3.808,-13.294 q 0,1.768 2.482,1.768 1.258,0 2.414,-0.34 0,-1.122 -0.306,-2.176 -0.306,-1.088 -0.884,-1.768 -0.544,-0.68 -1.36,-0.68 -0.68,0 -1.224,0.51 -0.51,0.476 -0.816,1.224 -0.306,0.714 -0.306,1.462 z m -11.69601,5.474 -0.714,-24.65 h 4.012 l 0.68,24.65 z m -12.51204,0.17 0.34,-4.012 q 1.7,0 2.414,-0.34 0.714,-0.34 0.85,-1.258 0.136,-0.918 0.068,-2.652 l -0.646,-16.558 h 4.046 l 0.68,16.66 q 0.068,1.904 -0.17,3.434 -0.204,1.496 -0.986,2.55 -0.782,1.054 -2.38,1.632 -1.564,0.544 -4.216,0.544 z m -8.636,-14.382 q -0.884,0 -1.496,-0.612 -0.612,-0.612 -0.612,-1.462 0,-0.884 0.612,-1.496 0.612,-0.646 1.496,-0.646 0.85,0 1.462,0.646 0.612,0.612 0.612,1.496 0,0.85 -0.612,1.462 -0.612,0.612 -1.462,0.612 z m 5.44,0.034 q -0.884,0 -1.53,-0.612 -0.612,-0.612 -0.612,-1.496 0,-0.85 0.612,-1.496 0.646,-0.646 1.53,-0.646 0.85,0 1.428,0.646 0.612,0.646 0.612,1.496 0,0.884 -0.612,1.496 -0.578,0.612 -1.428,0.612 z m -10.234,14.348 0.34,-4.012 q 1.394,0 2.312,-0.238 0.918,-0.272 1.462,-0.986 0.578,-0.748 0.952,-2.142 0.408,-1.428 0.782,-3.74 l 3.774,0.646 q -0.17,0.85 -0.374,1.972 -0.204,1.122 -0.204,2.006 0,0.748 0.34,1.326 0.34,0.544 1.36,0.85 1.02,0.306 3.026,0.306 1.088,0 1.53,0.578 0.476,0.544 0.476,1.36 0,0.884 -0.612,1.496 -0.612,0.578 -1.734,0.578 -2.72,0 -4.25,-0.578 -1.496,-0.612 -2.108,-2.006 -1.258,1.666 -3.094,2.142 -1.802,0.442 -3.978,0.442 z m -22.03203,0 0.34,-4.012 q 3.604,0 7.004,-0.884 3.4,-0.918 6.086,-2.754 -1.462,-1.02 -3.366,-1.598 -1.904,-0.578 -4.182,-0.578 -0.816,0 -1.632,0.102 -0.816,0.068 -1.734,0.272 l -0.612,-3.876 q 0.952,-0.272 1.972,-0.408 1.02,-0.136 1.904,-0.136 2.278,0 4.046,0.612 1.768,0.612 3.23,1.428 1.462,0.816 2.72,1.462 1.292,0.612 2.584,0.612 h 1.054 l 0.408,3.74 q -0.714,0 -1.394,0.136 -0.646,0.136 -1.292,0.374 0.816,0.884 2.074,1.19 1.258,0.306 3.162,0.306 1.054,0 1.496,0.578 0.476,0.544 0.476,1.36 0,0.884 -0.612,1.496 -0.612,0.578 -1.7,0.578 -1.836,0 -3.366,-0.306 -1.496,-0.34 -2.652,-1.224 -1.122,-0.918 -1.836,-2.584 -1.19,0.68 -2.55,1.394 -1.326,0.714 -2.992,1.326 -1.632,0.612 -3.774,1.02 -2.108,0.374 -4.862,0.374 z m -15.19799,7.65 -0.816,-4.012 q 3.128,-0.408 5.304,-1.156 2.21,-0.714 3.298,-2.482 h -1.496 q -2.856,0 -4.658,-1.088 -1.768,-1.122 -1.768,-3.774 0,-1.462 0.476,-2.924 0.51,-1.462 1.394,-2.618 0.884,-1.19 2.074,-1.904 1.19,-0.714 2.584,-0.714 1.836,0 3.264,1.122 1.428,1.122 2.244,3.128 0.816,1.972 0.816,4.59 v 0.17 h 2.822 q 1.054,0 1.53,0.578 0.476,0.544 0.476,1.36 0,0.884 -0.646,1.496 -0.612,0.578 -1.7,0.578 h -3.128 q -1.156,3.434 -4.25,5.338 -3.06,1.938 -7.82,2.312 z m 3.842,-13.226 q 0,0.544 0.34,0.986 0.34,0.408 1.394,0.612 1.054,0.17 3.128,0 v -0.102 q 0,-2.142 -0.714,-3.434 -0.68,-1.326 -1.836,-1.326 -0.714,0 -1.258,0.51 -0.51,0.51 -0.782,1.292 -0.272,0.748 -0.272,1.462 z m -29.44403,4.828 q 0,-1.19 0.306,-2.856 0.34,-1.7 1.326,-3.91 l 3.536,1.258 q -0.578,1.53 -0.884,2.686 -0.272,1.156 -0.272,2.21 0,2.55 1.734,3.842 1.768,1.326 4.658,1.326 2.482,0 3.978,-0.782 1.496,-0.782 2.244,-2.244 0.748,-1.428 0.952,-3.468 0.204,-2.04 0.102,-4.556 l -0.646,-17.578 h 4.08 l 0.578,17.646 q 0.068,2.244 -0.204,4.42 -0.238,2.142 -0.952,4.012 -0.68,1.904 -1.972,3.332 -1.292,1.462 -3.332,2.278 -2.006,0.816 -4.93,0.816 -2.754,0 -5.1,-0.884 -2.346,-0.884 -3.774,-2.754 -1.428,-1.87 -1.428,-4.794 z"
++     id="text17"
++     style="font-weight:600;font-size:34px;font-family:'Noto Sans Arabic';direction:rtl;text-anchor:middle;fill:#d4af37"
++     aria-label="برنامج سَمْت للتقدم الاستراتيجي والإدارة والتحول" />
++  <path
++     id="line17"
++     style="stroke:#c0c6cf"
++     d="M 330,950 H 870" />
++  <path
++     d="m 729.92999,996.15 0.3,-2.97 q 0.78,0 1.35,-0.36 0.57,-0.36 1.08,-1.17 0.54,-0.84 1.2,-2.28 0.87,-1.86 1.77,-2.85 0.9,-1.02 1.8,-1.38 0.9,-0.39 1.8,-0.39 1.47,0 2.64,0.93 1.2,0.9 1.89,2.34 0.72,1.41 0.72,2.91 0,1.74 -0.66,2.88 -0.63,1.11 -1.68,1.65 -1.02,0.54 -2.22,0.54 -0.96,0 -2.34,-0.3 -1.38,-0.33 -3.24,-1.5 -0.93,1.26 -1.98,1.62 -1.02,0.33 -2.43,0.33 z m 5.94,-4.68 q -0.09,0.18 -0.15,0.36 1.2,0.66 2.16,0.93 0.99,0.27 1.68,0.27 1.17,0 1.68,-0.48 0.51,-0.51 0.51,-1.35 0,-0.78 -0.39,-1.59 -0.36,-0.81 -0.99,-1.35 -0.6,-0.54 -1.29,-0.54 -0.87,0 -1.56,0.81 -0.69,0.81 -1.65,2.94 z m -27.63,4.29 q 0,-1.05 0.3,-2.43 0.3,-1.41 1.05,-3.18 l 2.61,0.96 q -0.48,1.32 -0.75,2.37 -0.24,1.02 -0.24,1.92 0,2.37 1.65,3.48 1.68,1.11 4.26,1.11 2.64,0 4.11,-0.75 1.5,-0.75 2.1,-1.95 0.63,-1.17 0.63,-2.55 0,-1.77 -0.45,-3.45 -0.42,-1.68 -0.99,-3.54 l 2.97,-0.78 q 0.45,1.71 0.66,2.55 0.21,0.81 0.36,1.29 0.48,1.56 1.44,1.98 0.96,0.39 2.28,0.39 0.78,0 1.11,0.42 0.36,0.42 0.36,0.99 0,0.63 -0.48,1.11 -0.48,0.45 -1.29,0.45 -0.96,0 -1.74,-0.24 -0.78,-0.27 -1.32,-0.75 -0.21,2.13 -1.23,3.9 -1.02,1.77 -3.12,2.82 -2.1,1.08 -5.49,1.08 -2.4,0 -4.41,-0.78 -1.98,-0.75 -3.18,-2.34 -1.2,-1.59 -1.2,-4.08 z m 9.27,-11.79 q -0.72,0 -1.23,-0.48 -0.48,-0.48 -0.48,-1.2 0,-0.69 0.48,-1.2 0.51,-0.51 1.23,-0.51 0.69,0 1.17,0.51 0.51,0.51 0.51,1.2 0,0.72 -0.51,1.2 -0.48,0.48 -1.17,0.48 z M 694.77,996 l -0.6,-21.57 h 2.97 l 0.6,21.57 z m -8.76,-16.08 q 0,-0.75 -0.09,-1.68 -0.09,-0.96 -0.24,-1.89 -0.12,-0.93 -0.24,-1.59 l 3.06,-0.36 q 0.09,0.6 0.21,1.59 0.12,0.96 0.18,1.98 0.09,0.99 0.09,1.71 0,1.89 -0.36,3.6 -0.36,1.71 -1.14,3.27 1.5,1.59 2.13,2.88 0.66,1.26 0.66,2.4 0,0.96 -0.45,1.92 -0.42,0.96 -1.53,1.62 -1.11,0.63 -3.15,0.63 h -7.47 v -2.91 q 4.35,-3.12 6.3,-6.06 -1.65,-1.47 -3.87,-3.12 -2.22,-1.65 -4.68,-3.33 l 1.65,-2.34 q 5.28,3.66 8.19,6.21 0.39,-1.05 0.57,-2.19 0.18,-1.14 0.18,-2.34 z m -4.23,13.14 h 3.24 q 1.53,0 2.01,-0.45 0.48,-0.48 0.48,-1.11 0,-0.48 -0.39,-1.11 -0.39,-0.63 -1.08,-1.41 -1.65,2.22 -4.26,4.08 z m -4.62,12.09 -0.39,-1.77 q 0.9,-0.18 1.44,-0.33 -0.57,-0.39 -0.99,-1.02 -0.39,-0.63 -0.39,-1.38 0,-1.41 0.96,-2.1 0.96,-0.69 2.19,-0.69 0.75,0 1.47,0.24 l -0.24,1.68 q -0.3,-0.06 -0.6,-0.12 -0.27,-0.06 -0.6,-0.06 -0.63,0 -0.99,0.27 -0.36,0.27 -0.36,0.75 0,0.72 0.54,1.2 0.57,0.48 1.11,0.66 1.11,-0.3 1.95,-0.63 l 0.54,1.65 q -1.14,0.42 -2.73,0.87 -1.59,0.48 -2.91,0.78 z m -19.2,-9 0.3,-2.97 q 0.78,0 1.35,-0.36 0.57,-0.36 1.08,-1.17 0.54,-0.84 1.2,-2.28 0.87,-1.86 1.77,-2.85 0.9,-1.02 1.8,-1.38 0.9,-0.39 1.8,-0.39 1.47,0 2.64,0.93 1.2,0.9 1.89,2.34 0.72,1.41 0.72,2.91 0,1.74 -0.66,2.88 -0.63,1.11 -1.68,1.65 -1.02,0.54 -2.22,0.54 -0.96,0 -2.34,-0.3 -1.38,-0.33 -3.24,-1.5 -0.93,1.26 -1.98,1.62 -1.02,0.33 -2.43,0.33 z m 5.94,-4.68 q -0.09,0.18 -0.15,0.36 1.2,0.66 2.16,0.93 0.99,0.27 1.68,0.27 1.17,0 1.68,-0.48 0.51,-0.51 0.51,-1.35 0,-0.78 -0.39,-1.59 -0.36,-0.81 -0.99,-1.35 -0.6,-0.54 -1.29,-0.54 -0.87,0 -1.56,0.81 -0.69,0.81 -1.65,2.94 z m -21.17997,4.68 0.3,-2.97 h 2.88 q 2.04,0 3.06,-0.21 1.02,-0.24 1.32,-0.63 0.33,-0.39 0.33,-0.84 0,-0.66 -0.51,-1.47 -0.51,-0.84 -1.32,-1.71 -0.81,-0.9 -1.71,-1.74 -0.9,-0.87 -1.71,-1.62 -0.81,-0.75 -1.35,-1.29 -0.51,-0.54 -0.51,-0.78 0,-1.65 0.66,-2.34 0.78,-0.81 2.34,-1.74 1.59,-0.93 3.66,-1.95 2.07,-1.05 4.35,-2.13 l 1.23,2.64 q -2.79,1.32 -5.16,2.49 -2.37,1.17 -4.11,2.31 1.56,1.35 2.88,2.61 1.35,1.26 2.46,2.7 1.14,1.41 2.13,3.18 0.63,1.11 1.41,1.65 0.81,0.54 1.59,0.72 0.78,0.15 1.32,0.15 0.78,0 1.11,0.42 0.36,0.42 0.36,0.99 0,0.63 -0.48,1.11 -0.48,0.45 -1.29,0.45 -0.75,0 -1.71,-0.18 -0.93,-0.21 -1.86,-0.75 -0.9,-0.54 -1.59,-1.53 -0.9,1.26 -2.52,1.86 -1.62,0.6 -4.56,0.6 z m 0,0 q -2.55,0 -3.9,-0.54 -1.32,-0.57 -1.83,-1.71 -0.51,-1.17 -0.6,-3 l -0.6,-16.47 h 2.97 l 0.63,15.21 q 0.06,1.44 0.27,2.22 0.24,0.75 0.99,1.05 0.75,0.27 2.37,0.27 0.78,0 1.11,0.42 0.36,0.42 0.36,0.99 0,0.63 -0.48,1.11 -0.48,0.45 -1.29,0.45 z m -17.46002,0 0.3,-2.97 q 2.13,0 2.97,-0.45 0.87,-0.45 0.87,-2.04 0,-0.78 -0.24,-1.86 -0.24,-1.08 -0.63,-2.25 -0.36,-1.2 -0.78,-2.34 l 2.94,-0.96 q 0.36,0.99 0.72,2.25 0.36,1.26 0.6,2.55 0.24,1.26 0.24,2.28 0,2.22 -0.84,3.48 -0.81,1.26 -2.37,1.8 -1.56,0.51 -3.78,0.51 z m 3.99,-15.81 q -0.72,0 -1.23,-0.48 -0.48,-0.48 -0.48,-1.2 0,-0.69 0.48,-1.2 0.51,-0.51 1.23,-0.51 0.69,0 1.17,0.51 0.51,0.51 0.51,1.2 0,0.72 -0.51,1.2 -0.48,0.48 -1.17,0.48 z m -3.99,15.81 q -2.55,0 -3.9,-0.54 -1.32,-0.57 -1.83,-1.71 -0.51,-1.17 -0.6,-3 l -0.6,-16.47 h 2.97 l 0.63,15.21 q 0.06,1.44 0.27,2.22 0.24,0.75 0.99,1.05 0.75,0.27 2.37,0.27 0.78,0 1.11,0.42 0.36,0.42 0.36,0.99 0,0.63 -0.48,1.11 -0.48,0.45 -1.29,0.45 z m -27.03003,0.48 q -5.67,0 -8.37,-1.56 -2.7,-1.56 -2.7,-4.71 0,-1.2 0.27,-2.52 0.3,-1.32 0.63,-2.43 l 2.67,0.63 q -0.18,0.75 -0.39,1.74 -0.21,0.96 -0.21,1.71 0,1.44 0.78,2.37 0.81,0.9 2.73,1.35 1.95,0.45 5.37,0.45 v 0 0 q 6.66,0 9.75,-0.72 3.12,-0.75 3.12,-2.7 0,-1.11 -0.42,-2.61 -0.39,-1.5 -1.02,-3.18 l 2.79,-0.9 q 0.57,1.47 1.05,3.24 0.51,1.74 0.51,3.15 0,1.8 -0.81,3.09 -0.81,1.26 -2.7,2.07 -1.86,0.78 -5.07,1.14 -3.18,0.39 -7.98,0.39 v 0 z m 0.54,-12.96 q -0.69,0 -1.17,-0.48 -0.48,-0.48 -0.48,-1.17 0,-0.69 0.48,-1.17 0.48,-0.51 1.17,-0.51 0.69,0 1.17,0.51 0.48,0.48 0.48,1.17 0,0.69 -0.48,1.17 -0.48,0.48 -1.17,0.48 z m 4.44,0 q -0.69,0 -1.2,-0.48 -0.48,-0.48 -0.48,-1.17 0,-0.69 0.48,-1.17 0.51,-0.51 1.2,-0.51 0.69,0 1.17,0.51 0.48,0.48 0.48,1.17 0,0.69 -0.48,1.17 -0.48,0.48 -1.17,0.48 z M 573.63,996 573.03,974.43 H 576 l 0.6,21.57 z m -0.63,9.15 -0.39,-1.77 q 0.9,-0.18 1.44,-0.33 -0.57,-0.39 -0.99,-1.02 -0.39,-0.63 -0.39,-1.38 0,-1.41 0.96,-2.1 0.96,-0.69 2.19,-0.69 0.75,0 1.47,0.24 l -0.24,1.68 q -0.3,-0.06 -0.6,-0.12 -0.27,-0.06 -0.6,-0.06 -0.63,0 -0.99,0.27 -0.36,0.27 -0.36,0.75 0,0.72 0.54,1.2 0.57,0.48 1.11,0.66 1.11,-0.3 1.95,-0.63 l 0.54,1.65 q -1.14,0.42 -2.73,0.87 -1.59,0.48 -2.91,0.78 z m -10.14003,-9 0.27,-2.97 q 1.62,0 2.28,-0.3 0.66,-0.33 0.78,-1.14 0.12,-0.84 0.06,-2.37 l -0.57,-14.94 h 2.97 l 0.6,14.85 q 0.06,1.65 -0.12,2.94 -0.18,1.26 -0.84,2.13 -0.66,0.87 -1.98,1.35 -1.29,0.45 -3.45,0.45 z m -21.78,-0.39 q 0,-1.05 0.3,-2.43 0.3,-1.41 1.05,-3.18 l 2.61,0.96 q -0.48,1.32 -0.75,2.37 -0.24,1.02 -0.24,1.92 0,1.59 0.9,2.58 0.9,1.02 2.46,1.5 1.59,0.51 3.57,0.51 2.28,0 4.08,-0.45 1.83,-0.45 2.88,-1.26 1.05,-0.78 1.05,-1.77 0,-0.72 -1.11,-1.26 -1.08,-0.54 -3.21,-1.17 l 0.72,-3 q 2.94,1.17 4.77,1.65 1.86,0.45 3,0.45 0.78,0 1.11,0.42 0.36,0.42 0.36,0.99 0,0.63 -0.48,1.11 -0.48,0.45 -1.29,0.45 h -1.2 q 0.06,0.27 0.09,0.45 0.03,0.21 0.03,0.45 0,1.41 -1.32,2.76 -1.32,1.38 -3.87,2.25 -2.52,0.9 -6.18,0.9 -2.64,0 -4.77,-0.78 -2.1,-0.78 -3.33,-2.37 -1.23,-1.59 -1.23,-4.05 z m -13.46999,0.24 -0.6,-21.57 h 2.97 l 0.6,21.57 z m -10.76999,0.15 0.27,-2.97 q 1.62,0 2.28,-0.3 0.66,-0.33 0.78,-1.14 0.12,-0.84 0.06,-2.37 l -0.57,-14.94 h 2.97 l 0.6,14.85 q 0.06,1.65 -0.12,2.94 -0.18,1.26 -0.84,2.13 -0.66,0.87 -1.98,1.35 -1.29,0.45 -3.45,0.45 z m -15.14997,0 0.3,-2.97 q 1.02,0 2.01,-0.03 0.99,-0.03 1.89,-0.15 -0.72,-0.69 -1.32,-1.71 -0.6,-1.05 -0.6,-2.43 0,-1.68 0.78,-3 0.81,-1.32 2.07,-2.07 1.29,-0.78 2.7,-0.78 1.56,0 2.73,0.81 1.17,0.81 1.8,2.1 0.66,1.29 0.66,2.7 0,1.35 -0.51,2.46 -0.51,1.08 -1.38,1.92 1.11,0.09 2.25,0.15 1.14,0.03 2.07,0.03 0.78,0 1.11,0.42 0.36,0.42 0.36,0.99 0,0.63 -0.48,1.11 -0.48,0.45 -1.29,0.45 -1.95,0 -3.99,-0.27 -2.04,-0.3 -3.54,-0.78 -0.33,0.12 -0.66,0.24 -1.29,0.42 -3.18,0.63 -1.86,0.18 -3.78,0.18 z m 5.25,-7.17 q 0,1.05 0.63,1.89 0.63,0.81 1.5,1.35 1.17,-0.51 1.92,-1.35 0.78,-0.87 0.78,-2.01 0,-0.63 -0.3,-1.32 -0.3,-0.69 -0.84,-1.14 -0.51,-0.48 -1.2,-0.48 -0.69,0 -1.26,0.45 -0.54,0.42 -0.9,1.14 -0.33,0.69 -0.33,1.47 z m 0.21,-8.97 q -0.69,0 -1.17,-0.48 -0.48,-0.48 -0.48,-1.17 0,-0.69 0.48,-1.17 0.48,-0.51 1.17,-0.51 0.69,0 1.17,0.51 0.48,0.48 0.48,1.17 0,0.69 -0.48,1.17 -0.48,0.48 -1.17,0.48 z m 4.44,0 q -0.69,0 -1.2,-0.48 -0.48,-0.48 -0.48,-1.17 0,-0.69 0.48,-1.17 0.51,-0.51 1.2,-0.51 0.69,0 1.17,0.51 0.48,0.48 0.48,1.17 0,0.69 -0.48,1.17 -0.48,0.48 -1.17,0.48 z m -21.42003,16.14 0.3,-2.97 q 1.38,0 2.19,-0.21 0.81,-0.24 1.26,-0.87 0.48,-0.66 0.78,-1.89 0.33,-1.23 0.69,-3.27 l 2.82,0.51 q -0.18,0.78 -0.39,1.83 -0.18,1.02 -0.18,1.74 0,0.66 0.21,1.14 0.24,0.48 1.14,0.75 0.93,0.27 3,0.27 0.75,0 1.08,0.42 0.36,0.42 0.36,0.99 0,0.63 -0.48,1.11 -0.48,0.45 -1.26,0.45 -2.67,0 -3.9,-0.51 -1.2,-0.51 -1.62,-1.62 -0.99,1.35 -2.43,1.74 -1.44,0.39 -3.57,0.39 z m 7.8,6.06 q -0.69,0 -1.2,-0.51 -0.48,-0.48 -0.48,-1.14 0,-0.69 0.48,-1.2 0.51,-0.48 1.2,-0.48 0.66,0 1.14,0.48 0.51,0.51 0.51,1.2 0,0.66 -0.51,1.14 -0.48,0.51 -1.14,0.51 z m -4.44,0 q -0.69,0 -1.2,-0.51 -0.48,-0.48 -0.48,-1.14 0,-0.69 0.48,-1.2 0.51,-0.48 1.2,-0.48 0.69,0 1.17,0.48 0.48,0.51 0.48,1.2 0,0.66 -0.48,1.14 -0.48,0.51 -1.17,0.51 z M 490.17,996.15 q -2.55,0 -3.9,-0.54 -1.32,-0.57 -1.83,-1.71 -0.51,-1.17 -0.6,-3 l -0.6,-16.47 h 2.97 l 0.63,15.21 q 0.06,1.44 0.27,2.22 0.24,0.75 0.99,1.05 0.75,0.27 2.37,0.27 0.78,0 1.11,0.42 0.36,0.42 0.36,0.99 0,0.63 -0.48,1.11 -0.48,0.45 -1.29,0.45 z m -22.59001,-1.47 1.29,-2.58 q 0.75,0.45 1.8,0.78 1.05,0.3 2.37,0.3 2.04,0 2.94,-0.6 0.9,-0.63 0.9,-1.71 0,-0.57 -0.3,-1.44 -0.27,-0.9 -1.11,-2.4 -0.81,-1.5 -2.49,-3.87 l 2.49,-1.65 q 2.34,3.24 3.39,5.7 1.05,2.43 1.05,3.99 0,1.32 -0.69,2.46 -0.66,1.11 -2.13,1.83 -1.47,0.69 -3.9,0.69 -1.56,0 -3.06,-0.39 -1.5,-0.39 -2.55,-1.11 z m -7.52999,1.35 q -2.28,0 -3.84,-1.2 -1.53,-1.2 -1.53,-3.72 0,-1.26 0.84,-3.03 0.84,-1.77 2.88,-3.72 l -0.96,-0.81 1.92,-2.34 q 1.77,1.38 3.18,2.88 1.44,1.47 2.25,3.09 0.84,1.62 0.84,3.45 0,0.75 -0.27,1.68 -0.24,0.93 -0.87,1.77 -0.63,0.84 -1.71,1.41 -1.08,0.54 -2.73,0.54 z m 0.09,-2.97 q 1.41,0 2.1,-0.72 0.72,-0.72 0.72,-1.86 0,-0.93 -0.51,-2.01 -0.51,-1.11 -2.25,-2.61 -1.32,1.29 -1.98,2.58 -0.66,1.29 -0.66,2.28 0,1.17 0.72,1.77 0.75,0.57 1.86,0.57 z m -2.1,-14.37 q -0.69,0 -1.17,-0.48 -0.48,-0.48 -0.48,-1.17 0,-0.69 0.48,-1.17 0.48,-0.51 1.17,-0.51 0.69,0 1.17,0.51 0.48,0.48 0.48,1.17 0,0.69 -0.48,1.17 -0.48,0.48 -1.17,0.48 z m 4.44,0 q -0.69,0 -1.2,-0.48 -0.48,-0.48 -0.48,-1.17 0,-0.69 0.48,-1.17 0.51,-0.51 1.2,-0.51 0.69,0 1.17,0.51 0.48,0.48 0.48,1.17 0,0.69 -0.48,1.17 -0.48,0.48 -1.17,0.48 z"
++     id="text18"
++     style="font-weight:500;font-size:30px;font-family:'Noto Sans Arabic';direction:rtl;text-anchor:middle;fill:#081d33"
++     aria-label="من الإمكانات إلى القيادة" />
++  <path
++     d="m 376.60097,1042 h -2.772 v -15.708 h 8.91 v 2.354 h -6.138 v 4.62 h 5.72 v 2.354 h -5.72 z m 17.93,-15.708 q 3.102,0 4.576,1.144 1.496,1.144 1.496,3.476 0,1.144 -0.44,1.958 -0.418,0.814 -1.1,1.364 -0.682,0.528 -1.474,0.858 l 4.51,6.908 h -3.168 l -3.762,-6.204 h -2.288 V 1042 h -2.816 v -15.708 z m -0.176,2.354 h -1.474 v 4.84 h 1.562 q 1.738,0 2.508,-0.616 0.792,-0.638 0.792,-1.87 0,-1.276 -0.836,-1.804 -0.814,-0.55 -2.552,-0.55 z m 28.358,5.478 q 0,2.442 -0.814,4.268 -0.792,1.804 -2.442,2.816 -1.65,1.012 -4.136,1.012 -2.508,0 -4.158,-1.012 -1.628,-1.012 -2.442,-2.838 -0.792,-1.826 -0.792,-4.268 0,-2.42 0.792,-4.224 0.814,-1.826 2.442,-2.816 1.65,-1.012 4.18,-1.012 2.486,0 4.114,1.012 1.65,0.99 2.442,2.816 0.814,1.804 0.814,4.246 z m -11.814,0 q 0,2.662 1.056,4.18 1.056,1.518 3.366,1.518 2.332,0 3.366,-1.518 1.056,-1.518 1.056,-4.18 0,-2.662 -1.034,-4.18 -1.034,-1.518 -3.366,-1.518 -2.31,0 -3.388,1.518 -1.056,1.518 -1.056,4.18 z m 26.31202,7.876 -4.312,-12.87 h -0.088 q 0.022,0.44 0.066,1.254 0.044,0.792 0.066,1.738 0.044,0.924 0.044,1.738 v 8.14 h -2.53 v -15.708 h 3.916 l 4.136,12.342 h 0.088 l 4.312,-12.342 h 3.916 V 1042 h -2.684 v -8.272 q 0,-0.748 0.022,-1.628 0.044,-0.902 0.066,-1.694 0.044,-0.792 0.066,-1.254 h -0.088 l -4.488,12.848 z m 32.89003,-15.708 q 3.058,0 4.444,1.276 1.408,1.276 1.408,3.52 0,1.342 -0.572,2.53 -0.572,1.166 -1.936,1.892 -1.342,0.704 -3.652,0.704 h -1.562 V 1042 h -2.816 v -15.708 z m -0.176,2.332 h -1.694 v 5.258 h 1.276 q 1.716,0 2.64,-0.616 0.946,-0.638 0.946,-2.068 0,-1.298 -0.77,-1.936 -0.77,-0.638 -2.398,-0.638 z m 27.54399,5.5 q 0,2.442 -0.814,4.268 -0.792,1.804 -2.442,2.816 -1.65,1.012 -4.136,1.012 -2.508,0 -4.158,-1.012 -1.628,-1.012 -2.442,-2.838 -0.792,-1.826 -0.792,-4.268 0,-2.42 0.792,-4.224 0.814,-1.826 2.442,-2.816 1.65,-1.012 4.18,-1.012 2.486,0 4.114,1.012 1.65,0.99 2.442,2.816 0.814,1.804 0.814,4.246 z m -11.814,0 q 0,2.662 1.056,4.18 1.056,1.518 3.366,1.518 2.332,0 3.366,-1.518 1.056,-1.518 1.056,-4.18 0,-2.662 -1.034,-4.18 -1.034,-1.518 -3.366,-1.518 -2.31,0 -3.388,1.518 -1.056,1.518 -1.056,4.18 z m 24.53001,7.876 h -2.816 v -13.332 h -4.51 v -2.376 h 11.836 v 2.376 h -4.51 z m 20.23998,0 h -8.932 v -15.708 h 8.932 v 2.354 h -6.116 v 4.004 h 5.72 v 2.354 h -5.72 v 4.62 h 6.116 z m 21.09801,0 h -3.498 l -7.436,-12.32 h -0.088 q 0.066,0.99 0.11,2.134 0.066,1.122 0.088,2.266 v 7.92 h -2.53 v -15.708 h 3.476 l 7.414,12.232 h 0.066 q -0.044,-0.88 -0.088,-2.024 -0.044,-1.144 -0.066,-2.222 v -7.986 h 2.552 z m 14.124,0 h -2.816 v -13.332 h -4.51 v -2.376 h 11.836 v 2.376 h -4.51 z m 16.63198,0 h -6.6 v -1.606 l 1.892,-0.704 v -11.066 l -1.892,-0.726 v -1.606 h 6.6 v 1.606 l -1.892,0.726 v 11.066 l 1.892,0.704 z m 16.91803,0 -1.43,-4.158 h -5.918 l -1.408,4.158 h -2.992 l 5.764,-15.774 h 3.212 l 5.764,15.774 z m -3.52,-10.626 q -0.088,-0.308 -0.264,-0.836 -0.176,-0.528 -0.352,-1.078 -0.154,-0.572 -0.242,-0.946 -0.11,0.44 -0.286,1.012 -0.154,0.572 -0.308,1.078 -0.154,0.506 -0.22,0.77 l -1.386,4.048 h 4.422 z M 608.65701,1042 v -15.708 h 2.816 v 13.332 h 6.556 V 1042 Z m 32.25199,0 h -2.816 v -13.332 h -4.51 v -2.376 h 11.836 v 2.376 h -4.51 z m 24.90397,-7.876 q 0,2.442 -0.814,4.268 -0.792,1.804 -2.442,2.816 -1.65,1.012 -4.136,1.012 -2.508,0 -4.158,-1.012 -1.628,-1.012 -2.442,-2.838 -0.792,-1.826 -0.792,-4.268 0,-2.42 0.792,-4.224 0.814,-1.826 2.442,-2.816 1.65,-1.012 4.18,-1.012 2.486,0 4.114,1.012 1.65,0.99 2.442,2.816 0.814,1.804 0.814,4.246 z m -11.814,0 q 0,2.662 1.056,4.18 1.056,1.518 3.366,1.518 2.332,0 3.366,-1.518 1.056,-1.518 1.056,-4.18 0,-2.662 -1.034,-4.18 -1.034,-1.518 -3.366,-1.518 -2.31,0 -3.388,1.518 -1.056,1.518 -1.056,4.18 z m 36.36602,-5.676 q -2.156,0 -3.344,1.54 -1.166,1.54 -1.166,4.18 0,2.662 1.1,4.18 1.1,1.496 3.388,1.496 0.99,0 1.936,-0.198 0.946,-0.22 1.98,-0.572 v 2.398 q -0.968,0.396 -1.958,0.572 -0.968,0.176 -2.244,0.176 -2.42,0 -4.004,-0.99 -1.584,-1.012 -2.354,-2.816 -0.77,-1.826 -0.77,-4.268 0,-2.376 0.858,-4.18 0.858,-1.826 2.508,-2.86 1.672,-1.034 4.07,-1.034 1.188,0 2.332,0.286 1.166,0.264 2.178,0.748 l -0.968,2.31 q -0.836,-0.374 -1.738,-0.66 -0.88,-0.308 -1.804,-0.308 z m 25.278,5.676 q 0,2.442 -0.814,4.268 -0.792,1.804 -2.442,2.816 -1.65,1.012 -4.136,1.012 -2.508,0 -4.158,-1.012 -1.628,-1.012 -2.442,-2.838 -0.792,-1.826 -0.792,-4.268 0,-2.42 0.792,-4.224 0.814,-1.826 2.442,-2.816 1.65,-1.012 4.18,-1.012 2.486,0 4.114,1.012 1.65,0.99 2.442,2.816 0.814,1.804 0.814,4.246 z m -11.814,0 q 0,2.662 1.056,4.18 1.056,1.518 3.366,1.518 2.332,0 3.366,-1.518 1.056,-1.518 1.056,-4.18 0,-2.662 -1.034,-4.18 -1.034,-1.518 -3.366,-1.518 -2.31,0 -3.388,1.518 -1.056,1.518 -1.056,4.18 z m 26.31203,7.876 -4.312,-12.87 h -0.088 q 0.022,0.44 0.066,1.254 0.044,0.792 0.066,1.738 0.044,0.924 0.044,1.738 v 8.14 h -2.53 v -15.708 h 3.916 l 4.136,12.342 h 0.088 l 4.312,-12.342 h 3.916 V 1042 h -2.684 v -8.272 q 0,-0.748 0.022,-1.628 0.044,-0.902 0.066,-1.694 0.044,-0.792 0.066,-1.254 h -0.088 l -4.488,12.848 z m 24.83801,0 -4.312,-12.87 h -0.088 q 0.022,0.44 0.066,1.254 0.044,0.792 0.066,1.738 0.044,0.924 0.044,1.738 v 8.14 h -2.53 v -15.708 h 3.916 l 4.136,12.342 h 0.088 l 4.312,-12.342 h 3.916 V 1042 h -2.684 v -8.272 q 0,-0.748 0.022,-1.628 0.044,-0.902 0.066,-1.694 0.044,-0.792 0.066,-1.254 h -0.088 l -4.488,12.848 z m 27.78601,0 -1.43,-4.158 h -5.918 l -1.408,4.158 h -2.992 l 5.764,-15.774 h 3.212 l 5.764,15.774 z m -3.52,-10.626 q -0.088,-0.308 -0.264,-0.836 -0.176,-0.528 -0.352,-1.078 -0.154,-0.572 -0.242,-0.946 -0.11,0.44 -0.286,1.012 -0.154,0.572 -0.308,1.078 -0.154,0.506 -0.22,0.77 l -1.386,4.048 h 4.422 z M 805.57903,1042 h -3.498 l -7.436,-12.32 h -0.088 q 0.066,0.99 0.11,2.134 0.066,1.122 0.088,2.266 v 7.92 h -2.53 v -15.708 h 3.476 l 7.414,12.232 h 0.066 q -0.044,-0.88 -0.088,-2.024 -0.044,-1.144 -0.066,-2.222 v -7.986 h 2.552 z m 21.34001,-8.008 q 0,3.982 -2.222,6.006 -2.222,2.002 -6.204,2.002 h -4.422 v -15.708 h 4.884 q 2.42,0 4.202,0.88 1.804,0.88 2.772,2.596 0.99,1.694 0.99,4.224 z m -2.948,0.088 q 0,-2.816 -1.298,-4.136 -1.276,-1.32 -3.718,-1.32 h -2.068 v 11.022 h 1.694 q 5.39,0 5.39,-5.566 z"
++     id="text19"
++     style="font-weight:600;font-size:22px;font-family:'Noto Sans';letter-spacing:4.4;text-anchor:middle;fill:#081d33"
++     aria-label="FROM POTENTIAL TO COMMAND" />
++</svg>
+diff -ruN '--exclude=preview' '--exclude=docs' /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/assets/brand/samt-symbol.svg /mnt/data/SAMT_Website_Phase3_v3.0/assets/brand/samt-symbol.svg
+--- /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/assets/brand/samt-symbol.svg	1970-01-01 00:00:00.000000000 +0000
++++ /mnt/data/SAMT_Website_Phase3_v3.0/assets/brand/samt-symbol.svg	2026-07-22 12:37:58.172406004 +0000
+@@ -0,0 +1,125 @@
++<?xml version="1.0" encoding="UTF-8" standalone="no"?>
++<svg
++   width="600"
++   height="500"
++   viewBox="0 0 600 500"
++   role="img"
++   aria-label="SAMT brand asset"
++   version="1.1"
++   id="svg13"
++   sodipodi:docname="05_strategic_ascent_symbol_fullcolor.svg"
++   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
++   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
++   xmlns="http://www.w3.org/2000/svg"
++   xmlns:svg="http://www.w3.org/2000/svg">
++  <sodipodi:namedview
++     id="namedview13"
++     pagecolor="#ffffff"
++     bordercolor="#000000"
++     borderopacity="0.25"
++     inkscape:showpageshadow="2"
++     inkscape:pageopacity="0.0"
++     inkscape:pagecheckerboard="0"
++     inkscape:deskcolor="#d1d1d1" />
++  <defs
++     id="defs11">
++    <linearGradient
++       id="silverGrad"
++       x1="0"
++       y1="0"
++       x2="1"
++       y2="1">
++      <stop
++         offset="0"
++         stop-color="#F7F8FA"
++         id="stop1" />
++      <stop
++         offset="0.45"
++         stop-color="#C0C6CF"
++         id="stop2" />
++      <stop
++         offset="1"
++         stop-color="#7D8792"
++         id="stop3" />
++    </linearGradient>
++    <linearGradient
++       id="goldGrad"
++       x1="0"
++       y1="0"
++       x2="1"
++       y2="1">
++      <stop
++         offset="0"
++         stop-color="#F1D99A"
++         id="stop4" />
++      <stop
++         offset="0.58"
++         stop-color="#D4AF37"
++         id="stop5" />
++      <stop
++         offset="1"
++         stop-color="#9B6D13"
++         id="stop6" />
++    </linearGradient>
++    <linearGradient
++       id="navyGrad"
++       x1="0"
++       y1="1"
++       x2="1"
++       y2="0">
++      <stop
++         offset="0"
++         stop-color="#142C4D"
++         id="stop7" />
++      <stop
++         offset="1"
++         stop-color="#081D33"
++         id="stop8" />
++    </linearGradient>
++    <radialGradient
++       id="navyBackground"
++       cx="55%"
++       cy="18%"
++       r="90%">
++      <stop
++         offset="0"
++         stop-color="#1B3A63"
++         id="stop9" />
++      <stop
++         offset="0.42"
++         stop-color="#081D33"
++         id="stop10" />
++      <stop
++         offset="1"
++         stop-color="#03070D"
++         id="stop11" />
++    </radialGradient>
++  </defs>
++  <g
++     transform="translate(40,35) scale(1.7)"
++     id="g13">
++    <g
++       id="strategic-ascent-symbol">
++      <path
++         d="M36 206 C 102 210 172 187 221 139 C 244 116 260 89 270 52 C 248 87 225 116 194 140 C 149 175 95 197 36 206 Z"
++         fill="url(#silverGrad)"
++         id="path11" />
++      <path
++         d="M70 221 C 129 217 186 194 226 154 C 248 132 262 101 272 54 C 255 93 235 125 207 151 C 169 187 122 210 70 221 Z"
++         fill="url(#navyGrad)"
++         id="path12" />
++      <path
++         d="M111 232 C 162 222 208 199 237 168 C 256 147 267 113 274 55 C 261 106 244 139 220 166 C 191 198 153 219 111 232 Z"
++         fill="url(#goldGrad)"
++         id="path13" />
++      <path
++         id="polygon13"
++         style="fill:url(#goldGrad)"
++         d="m 270,12 2.87,17.07 14.1,-10.04 -10.04,14.1 L 294,36 276.93,38.87 286.97,52.97 272.87,42.93 270,60 267.13,42.93 253.03,52.97 263.07,38.87 246,36 l 17.07,-2.87 -10.04,-14.1 14.1,10.04 z" />
++      <path
++         id="circle13"
++         style="fill:#ffffff"
++         d="M 272.6,36 A 2.5999999,2.5999999 0 0 1 270,38.6 2.5999999,2.5999999 0 0 1 267.4,36 2.5999999,2.5999999 0 0 1 270,33.4 2.5999999,2.5999999 0 0 1 272.6,36 Z" />
++    </g>
++  </g>
++</svg>
+diff -ruN '--exclude=preview' '--exclude=docs' /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/assets/icons/samt-icons.svg /mnt/data/SAMT_Website_Phase3_v3.0/assets/icons/samt-icons.svg
+--- /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/assets/icons/samt-icons.svg	1970-01-01 00:00:00.000000000 +0000
++++ /mnt/data/SAMT_Website_Phase3_v3.0/assets/icons/samt-icons.svg	2026-07-22 12:37:58.176406004 +0000
+@@ -0,0 +1,17 @@
++<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
++  <symbol id="potential" viewBox="0 0 48 48"><circle cx="24" cy="24" r="8"/><circle cx="24" cy="24" r="17" stroke-dasharray="4 5"/><path d="M24 4v7M24 37v7M4 24h7M37 24h7"/></symbol>
++  <symbol id="selection" viewBox="0 0 48 48"><path d="M24 4 39 11v11c0 10-6 18-15 22C15 40 9 32 9 22V11Z"/><path d="m17 24 5 5 10-11"/></symbol>
++  <symbol id="formation" viewBox="0 0 48 48"><path d="M24 5 42 15 24 25 6 15Z"/><path d="M12 20v11l12 7 12-7V20"/><path d="M42 15v14"/></symbol>
++  <symbol id="exposure" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19"/><path d="M5 24h38M24 5c6 6 9 12 9 19s-3 13-9 19c-6-6-9-12-9-19s3-13 9-19Z"/></symbol>
++  <symbol id="transformation" viewBox="0 0 48 48"><path d="M8 36 18 26l7 7 15-20"/><path d="M31 13h9v9"/><path d="M7 42h35"/></symbol>
++  <symbol id="command" viewBox="0 0 48 48"><path d="m24 4 3.5 13 12.5-5-9.5 9 11 7-13-2L24 44l-4.5-18-13 2 11-7-9.5-9 12.5 5Z"/></symbol>
++  <symbol id="judgement" viewBox="0 0 48 48"><path d="M24 6v36M11 13h26M15 13 8 27h14ZM33 13l-7 14h14Z"/><path d="M17 42h14"/></symbol>
++  <symbol id="systems" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6"/><circle cx="9" cy="12" r="4"/><circle cx="39" cy="12" r="4"/><circle cx="10" cy="38" r="4"/><circle cx="38" cy="38" r="4"/><path d="m13 14 7 7m15-7-7 7m-14 14 7-7m14 7-7-7"/></symbol>
++  <symbol id="decision" viewBox="0 0 48 48"><path d="M8 8h12v12H8ZM28 8h12v12H28ZM18 28h12v12H18Z"/><path d="M20 14h8M14 20v8m20-8v8"/></symbol>
++  <symbol id="institution" viewBox="0 0 48 48"><path d="M5 18 24 7l19 11ZM9 22h30M12 22v16m8-16v16m8-16v16m8-16v16M6 42h36"/></symbol>
++  <symbol id="innovation" viewBox="0 0 48 48"><path d="M17 32c-5-3-8-8-8-14 0-8 7-14 15-14s15 6 15 14c0 6-3 11-8 14"/><path d="M18 32h12M18 37h12M20 42h8M24 8v6m-12-1 5 4m19-4-5 4"/></symbol>
++  <symbol id="international" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19"/><path d="M5 24h38M24 5c6 6 9 12 9 19s-3 13-9 19c-6-6-9-12-9-19s3-13 9-19Z"/><path d="M9 13c9 5 21 5 30 0M9 35c9-5 21-5 30 0"/></symbol>
++  <symbol id="evidence" viewBox="0 0 48 48"><path d="M10 6h22l6 6v30H10Z"/><path d="M32 6v8h8M16 21h16M16 28h16M16 35h10"/></symbol>
++  <symbol id="governance" viewBox="0 0 48 48"><circle cx="24" cy="24" r="8"/><circle cx="24" cy="24" r="18"/><path d="M24 6v10M24 32v10M6 24h10M32 24h10"/></symbol>
++  <symbol id="impact" viewBox="0 0 48 48"><path d="M8 40V27h7v13M20 40V19h7v21M32 40V8h7v32M5 40h38"/><path d="m9 20 10-8 8 4 12-11"/></symbol>
++</svg>
+diff -ruN '--exclude=preview' '--exclude=docs' /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/index.html /mnt/data/SAMT_Website_Phase3_v3.0/index.html
+--- /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/index.html	2026-07-22 11:57:48.956433130 +0000
++++ /mnt/data/SAMT_Website_Phase3_v3.0/index.html	2026-07-22 12:38:39.608405538 +0000
+@@ -1,15 +1,25 @@
+ <!doctype html>
+-<html lang="en" dir="ltr">
++<html lang="en" dir="ltr" class="no-js">
+ <head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="theme-color" content="#03070d" />
++  <meta name="color-scheme" content="dark" />
++  <meta name="robots" content="index,follow,max-image-preview:large" />
++  <link rel="canonical" href="https://ahmedyyya.github.io/SAMT4/" />
+   <meta name="description" content="SAMT — an elite leadership programme that selects exceptional potential and prepares future commanders and strategic leaders." />
+   <meta property="og:title" content="SAMT — From Potential to Command" />
+   <meta property="og:description" content="Selected for potential. Shaped for command." />
++  <meta property="og:type" content="website" />
++  <meta property="og:url" content="https://ahmedyyya.github.io/SAMT4/" />
++  <meta property="og:image" content="https://ahmedyyya.github.io/SAMT4/preview/approved-creative-reference.png" />
++  <meta name="twitter:card" content="summary_large_image" />
+   <title>SAMT — From Potential to Command</title>
+   <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
+   <link rel="manifest" href="manifest.webmanifest" />
++  <link rel="preload" href="assets/brand/samt-symbol.svg" as="image" type="image/svg+xml" />
++  <link rel="preload" href="assets/brand/samt-arabic-wordmark.svg" as="image" type="image/svg+xml" />
++  <link rel="preload" href="assets/stations/uae-animated.svg" as="image" type="image/svg+xml" />
+ 
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+@@ -19,14 +29,15 @@
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+ 
++  <script>document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
+   <link rel="stylesheet" href="styles.css" />
+ </head>
+-<body class="is-loading">
++<body class="is-loading" data-build="phase3-v3.0">
+   <a class="skip-link" href="#main-scroll-container">Skip to content</a>
+   <noscript><div class="noscript">JavaScript is required to view the SAMT motion experience.</div></noscript>
+ 
+   <div class="loader" aria-hidden="true">
+-    <div class="loader__mark"><img src="assets/brand/samt-symbol.svg" alt="" /></div>
++    <div class="loader__mark"><img src="assets/brand/samt-symbol.svg" width="600" height="500" alt="" decoding="async" /></div>
+     <div class="loader__name">SAMT</div>
+     <div class="loader__message" data-i18n="loader.message">Preparing the ascent</div>
+     <div class="loader__track"><span class="loader__bar"></span></div>
+@@ -49,7 +60,7 @@
+   <header class="site-header" id="site-header">
+     <div class="site-header__inner">
+       <a class="brand-lockup" href="#hero" aria-label="SAMT home" data-cursor="link">
+-        <img class="brand-lockup__symbol" src="assets/brand/samt-symbol.svg" alt="" />
++        <img class="brand-lockup__symbol" src="assets/brand/samt-symbol.svg" width="600" height="500" alt="" decoding="async" />
+         <span class="brand-lockup__text">
+           <strong>SAMT</strong>
+           <small>Strategic Advancement,<br />Management &amp; Transformation</small>
+@@ -81,7 +92,7 @@
+     <div class="mobile-menu__backdrop"></div>
+     <div class="mobile-menu__panel">
+       <div class="mobile-menu__top">
+-        <img src="assets/brand/samt-symbol.svg" alt="" />
++        <img src="assets/brand/samt-symbol.svg" width="600" height="500" alt="" decoding="async" />
+         <span>SAMT / NAVIGATION</span>
+       </div>
+       <nav aria-label="Mobile navigation">
+@@ -156,7 +167,7 @@
+         </div>
+ 
+         <aside class="hero__identity" aria-label="SAMT bilingual identity">
+-          <img class="hero__arabic-wordmark" src="assets/brand/samt-arabic-wordmark.svg" alt="سَمْت" />
++          <img class="hero__arabic-wordmark" src="assets/brand/samt-arabic-wordmark.svg" width="1000" height="360" alt="سَمْت" decoding="async" />
+           <p class="hero__identity-ar">برنامج سَمْت للتقدم الاستراتيجي والإدارة والتحول</p>
+           <span class="hero__identity-line"></span>
+           <strong>SAMT</strong>
+@@ -277,18 +288,19 @@
+ 
+       <div class="section-shell station-console">
+         <nav class="station-route" aria-label="Preparation stations">
+-          <button class="station-route__node is-active" type="button" data-station="uae" aria-current="step"><span>01</span><strong>UAE</strong></button>
++          <button class="station-route__node is-active" type="button" data-station="uae" aria-label="United Arab Emirates preparation station" aria-current="step"><span>01</span><strong>UAE</strong></button>
+           <span class="station-route__line"><i></i></span>
+-          <button class="station-route__node" type="button" data-station="uk"><span>02</span><strong>UK</strong></button>
++          <button class="station-route__node" type="button" data-station="uk" aria-label="United Kingdom preparation station"><span>02</span><strong>UK</strong></button>
+           <span class="station-route__line"><i></i></span>
+-          <button class="station-route__node" type="button" data-station="france"><span>03</span><strong>FRANCE</strong></button>
++          <button class="station-route__node" type="button" data-station="france" aria-label="France preparation station"><span>03</span><strong>FRANCE</strong></button>
+           <span class="station-route__line"><i></i></span>
+-          <button class="station-route__node" type="button" data-station="usa"><span>04</span><strong>USA</strong></button>
++          <button class="station-route__node" type="button" data-station="usa" aria-label="United States preparation station"><span>04</span><strong>USA</strong></button>
+         </nav>
+ 
+         <div class="station-stage" aria-live="polite">
+           <div class="station-stage__visual" data-cursor="view">
+-            <img id="station-image" src="assets/stations/uae-animated.svg" alt="Animated UAE preparation station" />
++            <img id="station-image" src="assets/stations/uae-animated.svg" width="1672" height="941" alt="Animated United Arab Emirates preparation station" decoding="async" fetchpriority="high" draggable="false" />
++            <div class="station-stage__fallback" id="station-fallback" role="status" hidden>Station artwork is temporarily unavailable.</div>
+             <div class="station-stage__visual-overlay"></div>
+             <span class="station-stage__caption">STATION 01 / UAE</span>
+           </div>
+@@ -298,6 +310,7 @@
+               <p class="micro-label" data-i18n="station.current">Current station</p>
+               <div class="station-controls">
+                 <button type="button" data-station-prev aria-label="Previous station" data-cursor="link">←</button>
++                <button type="button" data-station-pause aria-label="Pause station autoplay" aria-pressed="false" data-cursor="link"><span aria-hidden="true">Ⅱ</span></button>
+                 <button type="button" data-station-next aria-label="Next station" data-cursor="link">→</button>
+               </div>
+             </div>
+@@ -444,7 +457,7 @@
+   <footer class="site-footer">
+     <div class="section-shell site-footer__top">
+       <a class="brand-lockup brand-lockup--footer" href="#hero">
+-        <img class="brand-lockup__symbol" src="assets/brand/samt-symbol.svg" alt="" />
++        <img class="brand-lockup__symbol" src="assets/brand/samt-symbol.svg" width="600" height="500" alt="" decoding="async" />
+         <span class="brand-lockup__text"><strong>SAMT</strong><small>Strategic Advancement,<br />Management &amp; Transformation</small></span>
+       </a>
+       <div class="site-footer__statement"><strong>From Potential to Command</strong><span>من الإمكانات إلى القيادة</span></div>
+@@ -458,13 +471,13 @@
+         <a href="#hero" data-i18n="footer.top">Back to top</a>
+       </nav>
+     </div>
+-    <p class="site-footer__disclaimer" data-i18n="footer.disclaimer">Concept website. Proposed partners and programme arrangements are subject to formal approval and agreement.</p>
++    <p class="section-shell site-footer__disclaimer" data-i18n="footer.disclaimer">Concept website. Proposed partners and programme arrangements are subject to formal approval and agreement.</p>
+   </footer>
+ 
+   <dialog class="modal" id="programme-modal" aria-labelledby="programme-modal-title">
+     <div class="modal__shell modal__shell--wide">
+       <button class="modal__close" type="button" data-modal-close aria-label="Close" data-cursor="link">×</button>
+-      <div class="modal__brand"><img src="assets/brand/samt-symbol.svg" alt="" /><span>FROM POTENTIAL TO COMMAND</span></div>
++      <div class="modal__brand"><img src="assets/brand/samt-symbol.svg" width="600" height="500" alt="" decoding="async" /><span>FROM POTENTIAL TO COMMAND</span></div>
+       <p class="eyebrow" data-i18n="modal.programme.kicker">Programme overview</p>
+       <h2 id="programme-modal-title" data-i18n-html="modal.programme.title">Selected for potential.<br /><em>Shaped for command.</em></h2>
+       <div class="modal__grid modal__grid--programme">
+@@ -574,6 +587,7 @@
+     </div>
+   </dialog>
+ 
+-  <script src="app.js"></script>
++  <!-- SAMT Website Phase 3 — Final Production Release -->
++  <script src="app.js" defer></script>
+ </body>
+ </html>
+diff -ruN '--exclude=preview' '--exclude=docs' /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/manifest.webmanifest /mnt/data/SAMT_Website_Phase3_v3.0/manifest.webmanifest
+--- /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/manifest.webmanifest	1970-01-01 00:00:00.000000000 +0000
++++ /mnt/data/SAMT_Website_Phase3_v3.0/manifest.webmanifest	2026-07-22 12:42:41.168402818 +0000
+@@ -0,0 +1,18 @@
++{
++  "name": "SAMT — From Potential to Command",
++  "short_name": "SAMT",
++  "start_url": "./",
++  "scope": "./",
++  "display": "standalone",
++  "background_color": "#03070d",
++  "theme_color": "#03070d",
++  "description": "Strategic Advancement, Management & Transformation — an elite leadership programme preparing future commanders and strategic leaders.",
++  "icons": [
++    {
++      "src": "assets/brand/favicon.svg",
++      "sizes": "any",
++      "type": "image/svg+xml",
++      "purpose": "any maskable"
++    }
++  ]
++}
+diff -ruN '--exclude=preview' '--exclude=docs' /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/robots.txt /mnt/data/SAMT_Website_Phase3_v3.0/robots.txt
+--- /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/robots.txt	1970-01-01 00:00:00.000000000 +0000
++++ /mnt/data/SAMT_Website_Phase3_v3.0/robots.txt	2026-07-22 12:42:41.172402818 +0000
+@@ -0,0 +1,4 @@
++User-agent: *
++Allow: /
++
++Sitemap: https://ahmedyyya.github.io/SAMT4/sitemap.xml
+diff -ruN '--exclude=preview' '--exclude=docs' /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/sitemap.xml /mnt/data/SAMT_Website_Phase3_v3.0/sitemap.xml
+--- /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/sitemap.xml	1970-01-01 00:00:00.000000000 +0000
++++ /mnt/data/SAMT_Website_Phase3_v3.0/sitemap.xml	2026-07-22 12:42:41.172402818 +0000
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
++  <url>
++    <loc>https://ahmedyyya.github.io/SAMT4/</loc>
++    <changefreq>monthly</changefreq>
++    <priority>1.0</priority>
++  </url>
++</urlset>
+diff -ruN '--exclude=preview' '--exclude=docs' /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/styles.css /mnt/data/SAMT_Website_Phase3_v3.0/styles.css
+--- /mnt/data/SAMT_Website_Phase2_v2.1_station_fix/styles.css	2026-07-22 11:57:49.232433127 +0000
++++ /mnt/data/SAMT_Website_Phase3_v3.0/styles.css	2026-07-22 12:41:59.884403283 +0000
+@@ -3144,3 +3144,574 @@
+     display: none !important;
+   }
+ }
++
++/* ========================================================================== 
++   PHASE 3 — FINAL PRODUCTION READABILITY, ASSET & VIEWPORT PATCH
++   ========================================================================== */
++:root {
++  --text-xs: .75rem;
++  --text-sm: .875rem;
++  --text-base: 1rem;
++  --text-lg: 1.125rem;
++  --text-xl: 1.25rem;
++  --content-leading: 1.72;
++}
++
++body {
++  font-size: var(--text-base);
++  line-height: 1.55;
++}
++
++html[dir="rtl"] body {
++  font-size: 1.035rem;
++  line-height: 1.7;
++}
++
++.sr-only {
++  position: absolute !important;
++  width: 1px !important;
++  height: 1px !important;
++  padding: 0 !important;
++  margin: -1px !important;
++  overflow: hidden !important;
++  clip: rect(0, 0, 0, 0) !important;
++  white-space: nowrap !important;
++  border: 0 !important;
++}
++
++/* Brand assets */
++.loader__mark img,
++.brand-lockup__symbol,
++.mobile-menu__top img,
++.modal__brand img {
++  object-fit: contain;
++  object-position: center;
++}
++
++.brand-lockup__symbol {
++  width: 3.55rem;
++  height: 3rem;
++  flex: 0 0 auto;
++}
++
++.brand-lockup__text strong {
++  font-size: 1.15rem;
++}
++
++.brand-lockup__text small {
++  font-size: .68rem;
++  line-height: 1.4;
++  letter-spacing: .025em;
++}
++
++.desktop-nav a {
++  font-size: .72rem;
++  letter-spacing: .105em;
++}
++
++/* Global typography floor */
++.eyebrow,
++.micro-label {
++  font-size: clamp(.72rem, .76vw, .82rem);
++  line-height: 1.45;
++}
++
++.button {
++  min-height: 3.45rem;
++  padding: .95rem 1.4rem;
++  font-size: .76rem;
++  line-height: 1.2;
++}
++
++html[dir="rtl"] .button {
++  font-size: .94rem;
++}
++
++.text-link {
++  font-size: .78rem;
++  line-height: 1.35;
++}
++
++.loader__message,
++.loader__value,
++.cursor-label,
++.section-rail__current,
++.scroll-cue {
++  font-size: .75rem;
++}
++
++.hero__summary,
++.programme__statement > p,
++.stations__header > p,
++.competencies__header > p,
++.assessment__intro > p:not(.eyebrow),
++.impact__header > p,
++.admission__copy > p {
++  font-size: clamp(1rem, 1.12vw, 1.14rem);
++  line-height: var(--content-leading);
++}
++
++.programme__statement blockquote {
++  font-size: clamp(1.05rem, 1.35vw, 1.3rem);
++  line-height: 1.7;
++}
++
++.programme__metrics article span,
++.admission__criteria span {
++  font-size: .82rem;
++  line-height: 1.45;
++}
++
++.journey-card h3 {
++  font-size: clamp(1.35rem, 2vw, 2rem);
++}
++
++.journey-card p {
++  font-size: .94rem;
++  line-height: 1.65;
++}
++
++.selection-orbit__core span {
++  font-size: .78rem;
++  line-height: 1.45;
++}
++
++.selection-orbit__item {
++  font-size: .76rem;
++  line-height: 1.25;
++}
++
++.selection-gates h3 {
++  font-size: .92rem;
++}
++
++.selection-gates p {
++  font-size: .92rem;
++  line-height: 1.68;
++}
++
++/* Preparation stations — preserve complete approved SVG artwork */
++.station-console {
++  padding: 1.05rem;
++}
++
++.station-route__node {
++  min-width: 4.4rem;
++  min-height: 3.75rem;
++}
++
++.station-route__node span {
++  width: 2rem;
++  height: 2rem;
++  font-size: .66rem;
++}
++
++.station-route__node strong {
++  font-size: .7rem;
++  letter-spacing: .09em;
++}
++
++.station-stage {
++  grid-template-columns: minmax(0, 1.58fr) minmax(21rem, .78fr);
++  align-items: stretch;
++}
++
++.station-stage__visual {
++  aspect-ratio: 1672 / 941;
++  min-height: 0;
++  display: grid;
++  place-items: center;
++  isolation: isolate;
++  background:
++    radial-gradient(circle at 50% 45%, rgba(20, 44, 77, .34), transparent 65%),
++    #020711;
++}
++
++.station-stage__visual img {
++  width: 100%;
++  height: 100%;
++  object-fit: contain;
++  object-position: center;
++  background: #020711;
++}
++
++.station-stage__visual-overlay {
++  background:
++    linear-gradient(90deg, transparent 74%, rgba(3, 7, 13, .28)),
++    linear-gradient(0deg, rgba(3, 7, 13, .24), transparent 22%);
++}
++
++.station-stage__fallback {
++  position: absolute;
++  inset: 0;
++  z-index: 3;
++  display: grid;
++  place-items: center;
++  padding: 2rem;
++  color: var(--samt-silver);
++  background:
++    radial-gradient(circle at 50% 40%, rgba(212,175,55,.09), transparent 18rem),
++    #040916;
++  font-size: 1rem;
++  text-align: center;
++}
++
++.station-stage__fallback[hidden] {
++  display: none;
++}
++
++.station-stage__caption {
++  font-size: .72rem;
++}
++
++.station-controls button {
++  width: 2.45rem;
++  height: 2.45rem;
++  font-size: .9rem;
++}
++
++.station-controls button.is-paused {
++  color: #07111e;
++  border-color: var(--samt-light-gold);
++  background: var(--samt-light-gold);
++}
++
++.station-stage__subtitle {
++  font-size: .84rem;
++  line-height: 1.55;
++}
++
++.station-stage__body {
++  font-size: 1rem;
++  line-height: 1.72;
++}
++
++.station-stage__meta span {
++  font-size: .74rem;
++  line-height: 1.35;
++}
++
++.station-stage__meta strong {
++  font-size: .9rem;
++  line-height: 1.35;
++}
++
++.station-stage__content li {
++  font-size: .9rem;
++  line-height: 1.55;
++}
++
++/* Competencies, assessment, governance and impact */
++.competency-card > span {
++  font-size: .9rem;
++}
++
++.competency-card p,
++.assessment-flow p,
++.impact-card p {
++  font-size: .9rem;
++  line-height: 1.65;
++}
++
++.assessment-flow h3,
++.impact-card h3,
++.impact-projects__list strong {
++  font-size: .88rem;
++  line-height: 1.4;
++}
++
++.assessment-flow article > span,
++.impact-projects__list span {
++  font-size: .8rem;
++}
++
++.governance-map__core strong {
++  font-size: 1rem;
++  line-height: 1.35;
++}
++
++.governance-map__core span {
++  font-size: .78rem;
++  line-height: 1.4;
++}
++
++.governance-map__node {
++  min-width: 12rem;
++  padding: .78rem 1.1rem;
++  font-size: .82rem;
++  line-height: 1.35;
++}
++
++.impact-projects__intro span {
++  font-size: .74rem;
++}
++
++/* Footer */
++.site-footer__statement span,
++.site-footer__bottom,
++.site-footer__disclaimer {
++  font-size: .8rem;
++  line-height: 1.6;
++}
++
++.site-footer__disclaimer {
++  color: #8792a2;
++}
++
++/* Dialogs and custom pop-ups */
++dialog.modal {
++  width: min(96vw, 1200px);
++  max-height: 92svh;
++  overflow: hidden;
++}
++
++.modal__shell {
++  max-height: 92svh;
++  padding: clamp(1.75rem, 4vw, 3.5rem);
++  scrollbar-gutter: stable;
++}
++
++.modal__shell--wide {
++  width: min(96vw, 1200px);
++}
++
++.modal__close {
++  width: 3rem;
++  height: 3rem;
++  font-size: 1.55rem;
++}
++
++.modal__brand {
++  font-size: .78rem;
++  line-height: 1.4;
++}
++
++.modal__brand img {
++  width: 3.8rem;
++  height: 3.2rem;
++}
++
++.modal__lead,
++.modal__grid--programme p,
++.admission-modal__grid > div > p {
++  font-size: 1rem;
++  line-height: 1.78;
++}
++
++.modal__grid--programme blockquote {
++  font-size: 1.05rem;
++}
++
++.modal__grid--programme li span,
++.admission-modal__grid li span {
++  font-size: .82rem;
++}
++
++.modal__grid--programme li strong,
++.admission-modal__grid li strong {
++  font-size: .88rem;
++  line-height: 1.4;
++}
++
++.selection-modal__grid h3,
++.station-modal__grid h3,
++.assessment-modal__grid h3 {
++  font-size: .9rem;
++  line-height: 1.4;
++}
++
++.selection-modal__grid p,
++.assessment-modal__grid p,
++.station-modal__grid li,
++.impact-modal__list li,
++.competency-modal__evidence li {
++  font-size: .94rem;
++  line-height: 1.65;
++}
++
++.modal__disclaimer {
++  font-size: .8rem;
++  line-height: 1.65;
++}
++
++.competency-modal__evidence > span {
++  font-size: .78rem;
++}
++
++.admission-modal__notice {
++  font-size: .9rem;
++  line-height: 1.68;
++}
++
++/* Laptop viewport refinement */
++@media (min-width: 1181px) and (max-height: 820px) {
++  :root {
++    --header-h: 72px;
++  }
++
++  .section-pad {
++    padding: clamp(4.8rem, 7vw, 7rem) 0;
++  }
++
++  .site-header__inner {
++    min-height: 72px;
++  }
++
++  .hero {
++    min-height: 100svh;
++    padding-top: calc(var(--header-h) + 1.75rem);
++  }
++
++  .hero__title {
++    font-size: clamp(3.8rem, 7.2vw, 7rem);
++  }
++
++  .station-console {
++    margin-top: 2rem;
++  }
++
++  .station-route {
++    padding-bottom: .75rem;
++  }
++
++  .station-stage__content {
++    padding: 1.45rem 1.7rem;
++  }
++
++  .station-stage__content h3 {
++    font-size: clamp(2rem, 3.1vw, 3.45rem);
++  }
++
++  .station-stage__body {
++    margin: .75rem 0 .9rem;
++  }
++
++  .station-stage__content ul {
++    gap: .35rem;
++    margin-bottom: .9rem;
++  }
++}
++
++@media (max-width: 1180px) {
++  .brand-lockup__text small {
++    font-size: .66rem;
++  }
++
++  .station-stage {
++    grid-template-columns: 1fr;
++  }
++
++  .station-stage__visual {
++    aspect-ratio: 1672 / 941;
++  }
++
++  .station-stage__content {
++    padding: clamp(1.4rem, 5vw, 2.4rem);
++  }
++
++  .station-route__node {
++    min-width: 3.4rem;
++  }
++}
++
++@media (max-width: 680px) {
++  .brand-lockup__symbol {
++    width: 3rem;
++    height: 2.55rem;
++  }
++
++  .hero__summary,
++  .programme__statement > p,
++  .stations__header > p,
++  .competencies__header > p,
++  .assessment__intro > p:not(.eyebrow),
++  .impact__header > p,
++  .admission__copy > p {
++    font-size: 1rem;
++  }
++
++  .selection-orbit__item {
++    font-size: .68rem;
++  }
++
++  .station-console {
++    width: calc(100vw - 1rem);
++  }
++
++  .station-route {
++    gap: .15rem;
++    overflow-x: auto;
++    scrollbar-width: none;
++  }
++
++  .station-route::-webkit-scrollbar {
++    display: none;
++  }
++
++  .station-route__node {
++    min-width: 3rem;
++  }
++
++  .station-route__node strong {
++    font-size: .64rem;
++  }
++
++  .station-route__line {
++    min-width: 1rem;
++  }
++
++  .station-stage__caption {
++    left: .7rem;
++    bottom: .65rem;
++    font-size: .66rem;
++  }
++
++  html[dir="rtl"] .station-stage__caption {
++    left: auto;
++    right: .7rem;
++  }
++
++  .station-stage__content h3 {
++    font-size: clamp(2.1rem, 10vw, 3rem);
++  }
++
++  .station-stage__body,
++  .station-stage__content li,
++  .competency-card p,
++  .assessment-flow p,
++  .impact-card p {
++    font-size: .94rem;
++  }
++
++  .governance-map__node {
++    min-width: 9.5rem;
++    font-size: .76rem;
++  }
++
++  dialog.modal,
++  .modal__shell,
++  .modal__shell--wide {
++    width: calc(100vw - .75rem);
++    max-height: 94svh;
++  }
++
++  .modal__shell {
++    padding: 1.35rem;
++  }
++
++  .modal__lead,
++  .modal__grid--programme p,
++  .admission-modal__grid > div > p,
++  .selection-modal__grid p,
++  .assessment-modal__grid p,
++  .station-modal__grid li,
++  .impact-modal__list li,
++  .competency-modal__evidence li {
++    font-size: .96rem;
++  }
++
++  .site-footer__bottom,
++  .site-footer__disclaimer {
++    font-size: .78rem;
++  }
++}
