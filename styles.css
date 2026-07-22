@@ -3739,3 +3739,108 @@ dialog.modal {
 @media(max-width:900px){.hero{min-height:auto;padding-top:calc(var(--header-h) + 5rem);padding-bottom:7rem}.hero::before{background:linear-gradient(180deg,rgba(2,5,10,.94) 0%,rgba(2,5,10,.74) 42%,rgba(2,5,10,.52) 72%,rgba(2,5,10,.88) 100%),linear-gradient(90deg,rgba(2,5,10,.9),rgba(2,5,10,.2))}.hero__earth{background-position:66% center;transform:scale(1.05)}.hero-routes{opacity:.64;transform:translateX(-8%) scale(1.08)}.hero__inner{grid-template-columns:1fr;gap:3.5rem}.hero__copy{max-width:43rem}.hero__title{max-width:9ch;font-size:clamp(3.4rem,11vw,6.3rem)}.hero__identity{justify-self:start;width:min(100%,31rem)}}
 @media(max-width:680px){.hero{padding-top:calc(var(--header-h) + 3.5rem)}.hero__earth{background-position:72% center;opacity:.82}.hero__earth-surface{opacity:.66}.hero-routes{opacity:.46;transform:translateX(-18%) scale(1.18)}.hero__title{font-size:clamp(3rem,15vw,4.7rem);line-height:.95}.hero__summary{max-width:34rem}.hero__identity{padding:1.8rem 1.25rem 2rem}.hero__identity::before{top:1.8rem;width:73%;height:5.2rem}.hero__arabic-wordmark{height:5.2rem}}
 @media(prefers-reduced-motion:reduce){.hero__earth-surface,.hero__earth-lines,.hero__earth-glow,.hero__identity::after{animation:none!important;transform:none!important}.hero__earth-surface{opacity:.72}.hero__earth-lines{opacity:.16}.hero__earth-glow{opacity:.54}}
+
+/* ========================================================================== 
+   PHASE 3.3 — APPROVED EARTH-HORIZON HERO CORRECTION
+   Replaces the rejected abstract globe with the approved cinematic Earth,
+   illuminated cities, sunrise, global network and command-ascent composition.
+   ========================================================================== */
+.hero__earth {
+  background-image: url("assets/hero/hero-earth-approved.jpg") !important;
+  background-image: image-set(
+    url("assets/hero/hero-earth-approved.webp") type("image/webp") 1x,
+    url("assets/hero/hero-earth-approved.jpg") type("image/jpeg") 1x
+  ) !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  opacity: 1 !important;
+}
+
+/* The approved artwork already contains the visual network. Keep only a
+   restrained animated overlay to preserve depth without obscuring the Earth. */
+.hero__earth-surface {
+  opacity: .24 !important;
+  mix-blend-mode: screen;
+}
+
+.hero__earth-lines {
+  opacity: .10 !important;
+}
+
+.hero__earth-glow {
+  opacity: .48 !important;
+}
+
+.hero-routes {
+  opacity: .72;
+}
+
+.hero-route {
+  opacity: .18 !important;
+}
+
+.hero-route--strong {
+  opacity: .42 !important;
+}
+
+.hero-route--fine {
+  opacity: .10 !important;
+}
+
+/* Align the live identity panel with the approved composition and make it
+   sufficiently opaque to prevent any underlying artwork from ghosting. */
+.hero__identity {
+  width: min(100%, 25rem) !important;
+  min-height: 27.5rem;
+  transform: translateY(1rem);
+  padding: 2.5rem 2rem !important;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.065), transparent 38%),
+    radial-gradient(circle at 25% 0%, rgba(241,217,154,.075), transparent 15rem),
+    rgba(3,8,15,.95) !important;
+  backdrop-filter: blur(20px) saturate(1.08);
+}
+
+.hero::before {
+  background:
+    linear-gradient(90deg,
+      rgba(2,5,10,1) 0%,
+      rgba(2,5,10,.985) 29%,
+      rgba(2,5,10,.78) 43%,
+      rgba(2,5,10,.18) 59%,
+      rgba(2,5,10,.02) 74%,
+      rgba(2,5,10,.10) 100%),
+    linear-gradient(180deg, rgba(2,5,10,.16), transparent 22%, transparent 76%, rgba(2,5,10,.38));
+}
+
+@media (max-width: 1180px) {
+  .hero__identity {
+    width: min(100%, 23rem) !important;
+    min-height: 25rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero__earth {
+    background-position: 70% center !important;
+  }
+
+  .hero__identity {
+    width: min(100%, 30rem) !important;
+    min-height: auto;
+    transform: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero__earth {
+    background-position: 74% center !important;
+    opacity: .88 !important;
+  }
+
+  .hero::before {
+    background:
+      linear-gradient(180deg, rgba(2,5,10,.97) 0%, rgba(2,5,10,.76) 38%, rgba(2,5,10,.58) 68%, rgba(2,5,10,.93) 100%),
+      linear-gradient(90deg, rgba(2,5,10,.96), rgba(2,5,10,.18));
+  }
+}

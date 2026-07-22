@@ -1,4 +1,4 @@
-# SAMT Website Phase 3.2 — Final Production Release
+# SAMT Website Phase 3.3 — Final Production Release
 
 **SAMT — Strategic Advancement, Management & Transformation**  
 **برنامج سَمْت للتقدم الاستراتيجي والإدارة والتحول**  
@@ -64,12 +64,12 @@ Designed for current versions of Safari, Chrome, Edge and Firefox. Real-device v
 The website is a programme concept and brand implementation. Proposed partners, dates, host categories and programme arrangements remain subject to formal approval and agreement.
 
 
-## Phase 3.2 hero upgrade
+## Phase 3.3 hero upgrade
 
-The approved cinematic Earth-horizon hero is implemented as layered AVIF/WebP/SVG assets with animated ascent trajectories, atmospheric motion, responsive layouts and a reduced-motion fallback. See `docs/HERO_IMPLEMENTATION_v3.2.md`.
+The approved cinematic Earth-horizon hero is implemented as layered AVIF/WebP/SVG assets with animated ascent trajectories, atmospheric motion, responsive layouts and a reduced-motion fallback. See `docs/HERO_IMPLEMENTATION_v3.3.md`.
 
 
-## Phase 3.2 station programme update
+## Phase 3.3 station programme update
 
 The preparation-station schedule is now 16 weeks in total:
 

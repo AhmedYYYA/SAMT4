@@ -30,7 +30,7 @@
 - Confirm final programme dates and partner references before public launch
 
 
-## Phase 3.2 approved hero
+## Phase 3.3 approved hero
 
 - [x] Layered Earth horizon background
 - [x] Animated global network SVG overlay
