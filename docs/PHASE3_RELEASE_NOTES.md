@@ -33,3 +33,19 @@ The station control system now includes:
 ## Deployment
 
 The package includes a web manifest, branded 404 page, robots.txt, sitemap.xml and `.nojekyll` for GitHub Pages.
+
+
+## v3.3 Approved Hero Visual Upgrade
+- Replaced the procedural planet with a responsive layered Earth-horizon composition.
+- Added AVIF, WebP and SVG Earth assets plus an animated SVG network overlay.
+- Re-routed ascent trajectories to preserve headline legibility and converge at the command star.
+- Strengthened the identity glass panel while retaining the validated Arabic wordmark geometry.
+- Added pointer parallax and reduced-motion fallbacks.
+
+
+## Phase 3.3 — Preparation station schedule
+
+- Replaced generic `3+ weeks` values with the approved 3 / 6 / 3 / 4-week station structure.
+- Added the named proposed UAE, UK, France and U.S. host organisations and programme categories.
+- Updated English and Arabic station summaries, focus areas, learning content, outcomes and highlights.
+- Total full-time international and national station duration remains 16 weeks.
