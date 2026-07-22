@@ -2,8 +2,17 @@
   "name": "SAMT — From Potential to Command",
   "short_name": "SAMT",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#03070d",
   "theme_color": "#03070d",
-  "description": "Strategic Advancement, Management & Transformation"
+  "description": "Strategic Advancement, Management & Transformation — an elite leadership programme preparing future commanders and strategic leaders.",
+  "icons": [
+    {
+      "src": "assets/brand/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
 }

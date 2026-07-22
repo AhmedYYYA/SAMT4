@@ -1,15 +1,25 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="no-js">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#03070d" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://ahmedyyya.github.io/SAMT4/" />
   <meta name="description" content="SAMT — an elite leadership programme that selects exceptional potential and prepares future commanders and strategic leaders." />
   <meta property="og:title" content="SAMT — From Potential to Command" />
   <meta property="og:description" content="Selected for potential. Shaped for command." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ahmedyyya.github.io/SAMT4/" />
+  <meta property="og:image" content="https://ahmedyyya.github.io/SAMT4/preview/approved-creative-reference.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <title>SAMT — From Potential to Command</title>
   <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="preload" href="assets/brand/samt-symbol.svg" as="image" type="image/svg+xml" />
+  <link rel="preload" href="assets/brand/samt-arabic-wordmark.svg" as="image" type="image/svg+xml" />
+  <link rel="preload" href="assets/stations/uae-animated.svg" as="image" type="image/svg+xml" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,14 +29,15 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
+  <script>document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="is-loading">
+<body class="is-loading" data-build="phase3-v3.0">
   <a class="skip-link" href="#main-scroll-container">Skip to content</a>
   <noscript><div class="noscript">JavaScript is required to view the SAMT motion experience.</div></noscript>
 
   <div class="loader" aria-hidden="true">
-    <div class="loader__mark"><img src="assets/brand/samt-symbol.svg" alt="" /></div>
+    <div class="loader__mark"><img src="assets/brand/samt-symbol.svg" width="600" height="500" alt="" decoding="async" /></div>
     <div class="loader__name">SAMT</div>
     <div class="loader__message" data-i18n="loader.message">Preparing the ascent</div>
     <div class="loader__track"><span class="loader__bar"></span></div>
@@ -49,7 +60,7 @@
   <header class="site-header" id="site-header">
     <div class="site-header__inner">
       <a class="brand-lockup" href="#hero" aria-label="SAMT home" data-cursor="link">
-        <img class="brand-lockup__symbol" src="assets/brand/samt-symbol.svg" alt="" />
+        <img class="brand-lockup__symbol" src="assets/brand/samt-symbol.svg" width="600" height="500" alt="" decoding="async" />
         <span class="brand-lockup__text">
           <strong>SAMT</strong>
           <small>Strategic Advancement,<br />Management &amp; Transformation</small>
@@ -81,7 +92,7 @@
     <div class="mobile-menu__backdrop"></div>
     <div class="mobile-menu__panel">
       <div class="mobile-menu__top">
-        <img src="assets/brand/samt-symbol.svg" alt="" />
+        <img src="assets/brand/samt-symbol.svg" width="600" height="500" alt="" decoding="async" />
         <span>SAMT / NAVIGATION</span>
       </div>
       <nav aria-label="Mobile navigation">
@@ -156,7 +167,7 @@
         </div>
 
         <aside class="hero__identity" aria-label="SAMT bilingual identity">
-          <img class="hero__arabic-wordmark" src="assets/brand/samt-arabic-wordmark.svg" alt="سَمْت" />
+          <img class="hero__arabic-wordmark" src="assets/brand/samt-arabic-wordmark.svg" width="1000" height="360" alt="سَمْت" decoding="async" />
           <p class="hero__identity-ar">برنامج سَمْت للتقدم الاستراتيجي والإدارة والتحول</p>
           <span class="hero__identity-line"></span>
           <strong>SAMT</strong>
@@ -277,18 +288,19 @@
 
       <div class="section-shell station-console">
         <nav class="station-route" aria-label="Preparation stations">
-          <button class="station-route__node is-active" type="button" data-station="uae" aria-current="step"><span>01</span><strong>UAE</strong></button>
+          <button class="station-route__node is-active" type="button" data-station="uae" aria-label="United Arab Emirates preparation station" aria-current="step"><span>01</span><strong>UAE</strong></button>
           <span class="station-route__line"><i></i></span>
-          <button class="station-route__node" type="button" data-station="uk"><span>02</span><strong>UK</strong></button>
+          <button class="station-route__node" type="button" data-station="uk" aria-label="United Kingdom preparation station"><span>02</span><strong>UK</strong></button>
           <span class="station-route__line"><i></i></span>
-          <button class="station-route__node" type="button" data-station="france"><span>03</span><strong>FRANCE</strong></button>
+          <button class="station-route__node" type="button" data-station="france" aria-label="France preparation station"><span>03</span><strong>FRANCE</strong></button>
           <span class="station-route__line"><i></i></span>
-          <button class="station-route__node" type="button" data-station="usa"><span>04</span><strong>USA</strong></button>
+          <button class="station-route__node" type="button" data-station="usa" aria-label="United States preparation station"><span>04</span><strong>USA</strong></button>
         </nav>
 
         <div class="station-stage" aria-live="polite">
           <div class="station-stage__visual" data-cursor="view">
-            <img id="station-image" src="assets/stations/uae-animated.svg" alt="Animated UAE preparation station" />
+            <img id="station-image" src="assets/stations/uae-animated.svg" width="1672" height="941" alt="Animated United Arab Emirates preparation station" decoding="async" fetchpriority="high" draggable="false" />
+            <div class="station-stage__fallback" id="station-fallback" role="status" hidden>Station artwork is temporarily unavailable.</div>
             <div class="station-stage__visual-overlay"></div>
             <span class="station-stage__caption">STATION 01 / UAE</span>
           </div>
@@ -298,6 +310,7 @@
               <p class="micro-label" data-i18n="station.current">Current station</p>
               <div class="station-controls">
                 <button type="button" data-station-prev aria-label="Previous station" data-cursor="link">←</button>
+                <button type="button" data-station-pause aria-label="Pause station autoplay" aria-pressed="false" data-cursor="link"><span aria-hidden="true">Ⅱ</span></button>
                 <button type="button" data-station-next aria-label="Next station" data-cursor="link">→</button>
               </div>
             </div>
@@ -444,7 +457,7 @@
   <footer class="site-footer">
     <div class="section-shell site-footer__top">
       <a class="brand-lockup brand-lockup--footer" href="#hero">
-        <img class="brand-lockup__symbol" src="assets/brand/samt-symbol.svg" alt="" />
+        <img class="brand-lockup__symbol" src="assets/brand/samt-symbol.svg" width="600" height="500" alt="" decoding="async" />
         <span class="brand-lockup__text"><strong>SAMT</strong><small>Strategic Advancement,<br />Management &amp; Transformation</small></span>
       </a>
       <div class="site-footer__statement"><strong>From Potential to Command</strong><span>من الإمكانات إلى القيادة</span></div>
@@ -458,13 +471,13 @@
         <a href="#hero" data-i18n="footer.top">Back to top</a>
       </nav>
     </div>
-    <p class="site-footer__disclaimer" data-i18n="footer.disclaimer">Concept website. Proposed partners and programme arrangements are subject to formal approval and agreement.</p>
+    <p class="section-shell site-footer__disclaimer" data-i18n="footer.disclaimer">Concept website. Proposed partners and programme arrangements are subject to formal approval and agreement.</p>
   </footer>
 
   <dialog class="modal" id="programme-modal" aria-labelledby="programme-modal-title">
     <div class="modal__shell modal__shell--wide">
       <button class="modal__close" type="button" data-modal-close aria-label="Close" data-cursor="link">×</button>
-      <div class="modal__brand"><img src="assets/brand/samt-symbol.svg" alt="" /><span>FROM POTENTIAL TO COMMAND</span></div>
+      <div class="modal__brand"><img src="assets/brand/samt-symbol.svg" width="600" height="500" alt="" decoding="async" /><span>FROM POTENTIAL TO COMMAND</span></div>
       <p class="eyebrow" data-i18n="modal.programme.kicker">Programme overview</p>
       <h2 id="programme-modal-title" data-i18n-html="modal.programme.title">Selected for potential.<br /><em>Shaped for command.</em></h2>
       <div class="modal__grid modal__grid--programme">
@@ -574,6 +587,7 @@
     </div>
   </dialog>
 
-  <script src="app.js"></script>
+  <!-- SAMT Website Phase 3 — Final Production Release -->
+  <script src="app.js" defer></script>
 </body>
 </html>

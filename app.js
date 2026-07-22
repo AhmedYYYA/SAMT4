@@ -12,6 +12,8 @@
   let currentLanguage = "en";
   let stationIndex = 0;
   let stationTimer = 0;
+  let stationAutoplayPaused = false;
+  let stationLoadToken = 0;
   let lastFocusedElement = null;
 
   const stationOrder = ["uae", "uk", "france", "usa"];
@@ -90,6 +92,11 @@
       "station.durationLabel": "Duration",
       "station.focusLabel": "Primary focus",
       "station.details": "View Station Details",
+      "station.previous": "Previous station",
+      "station.next": "Next station",
+      "station.pause": "Pause station autoplay",
+      "station.play": "Resume station autoplay",
+      "station.unavailable": "Station artwork is temporarily unavailable.",
       "station.modal.hosts": "Proposed host categories",
       "station.modal.learning": "Learning focus",
       "station.modal.outcomes": "Expected outcomes",
@@ -254,6 +261,11 @@
       "station.durationLabel": "المدة",
       "station.focusLabel": "التركيز الرئيس",
       "station.details": "عرض تفاصيل المحطة",
+      "station.previous": "المحطة السابقة",
+      "station.next": "المحطة التالية",
+      "station.pause": "إيقاف التنقل التلقائي بين المحطات",
+      "station.play": "استئناف التنقل التلقائي بين المحطات",
+      "station.unavailable": "يتعذر عرض المشهد المتحرك للمحطة مؤقتاً.",
       "station.modal.hosts": "فئات الجهات المستضيفة المقترحة",
       "station.modal.learning": "محاور التعلم",
       "station.modal.outcomes": "المخرجات المتوقعة",
@@ -372,7 +384,7 @@
         title: "United Kingdom",
         subtitle: "Strategy, governance and professional military education",
         body: "An intensive station focused on strategic studies, governance, executive education and the relationship between policy, institutions, capability and command.",
-        duration: "6+ weeks",
+        duration: "3+ weeks",
         focus: "Strategy & governance",
         points: ["Strategic studies and command education", "Governance, policy and institutional decision-making", "Aerospace, engineering and leadership ecosystems"],
         hosts: ["Defence and staff institutions", "Executive education and research centres", "Aerospace and engineering partners"],
@@ -397,10 +409,10 @@
       },
       usa: {
         code: "USA",
-        title: "USA",
+        title: "United States of America",
         subtitle: "Innovation, integration and strategic transformation",
         body: "An advanced station focused on innovation ecosystems, defence and aerospace best practice, strategic integration, acquisition and the leadership of large-scale transformation.",
-        duration: "4+ weeks",
+        duration: "3+ weeks",
         focus: "Innovation & integration",
         points: ["Innovation and emerging technologies", "Defence, aerospace and acquisition ecosystems", "Strategic integration and transformation models"],
         hosts: ["Defence and strategic institutions", "Innovation laboratories and research universities", "Aerospace, technology and integration partners"],
@@ -518,6 +530,9 @@
     });
 
     updateStation(stationOrder[stationIndex], false);
+    updateStationControlLabels();
+    const languageToggle = q(".language-toggle");
+    if (languageToggle) languageToggle.setAttribute("aria-label", currentLanguage === "ar" ? "Switch to English" : "التبديل إلى العربية");
     if (persist) {
       try { localStorage.setItem("samt-language", currentLanguage); } catch (_) {}
     }
@@ -531,28 +546,58 @@
     q(".language-toggle")?.addEventListener("click", () => setLanguage(currentLanguage === "en" ? "ar" : "en"));
   }
 
+  function updateStationControlLabels() {
+    const previous = q("[data-station-prev]");
+    const next = q("[data-station-next]");
+    const pause = q("[data-station-pause]");
+    const dictionary = translations[currentLanguage];
+    previous?.setAttribute("aria-label", dictionary["station.previous"]);
+    next?.setAttribute("aria-label", dictionary["station.next"]);
+    if (pause) {
+      pause.setAttribute("aria-label", dictionary[stationAutoplayPaused ? "station.play" : "station.pause"]);
+      pause.setAttribute("aria-pressed", String(stationAutoplayPaused));
+      const icon = q("span", pause);
+      if (icon) icon.textContent = stationAutoplayPaused ? "▶" : "Ⅱ";
+      pause.classList.toggle("is-paused", stationAutoplayPaused);
+    }
+  }
+
+  function preloadRemainingStationAssets() {
+    const paths = stationOrder.slice(1).map((key) => stationData.en[key].image);
+    const load = () => paths.forEach((src) => {
+      const image = new Image();
+      image.decoding = "async";
+      image.src = src;
+    });
+    if ("requestIdleCallback" in window) requestIdleCallback(load, { timeout: 2500 });
+    else setTimeout(load, 1200);
+  }
+
   function updateStation(key, animate = true) {
     const data = stationData[currentLanguage][key];
     if (!data) return;
     stationIndex = stationOrder.indexOf(key);
+    const token = ++stationLoadToken;
 
+    const stage = q(".station-stage");
     const visual = q(".station-stage__visual");
     const content = q(".station-stage__content");
-    const apply = () => {
-      const image = q("#station-image");
-      image.src = data.image;
-      image.alt = `${data.title} preparation station`;
+    const image = q("#station-image");
+    const fallback = q("#station-fallback");
+
+    const applyContent = () => {
       q("#station-title").textContent = data.title;
       q("#station-subtitle").textContent = data.subtitle;
       q("#station-body").textContent = data.body;
       q("#station-duration").textContent = data.duration;
       q("#station-focus").textContent = data.focus;
-      q(".station-stage__caption").textContent = `STATION 0${stationIndex + 1} / ${data.code}`;
+      q(".station-stage__caption").textContent = `${currentLanguage === "ar" ? "المحطة" : "STATION"} 0${stationIndex + 1} / ${data.code}`;
       q("#station-points").innerHTML = data.points.map((item) => `<li>${item}</li>`).join("");
 
       qa(".station-route__node").forEach((node, index) => {
         const active = index === stationIndex;
         node.classList.toggle("is-active", active);
+        node.tabIndex = active ? 0 : -1;
         if (active) node.setAttribute("aria-current", "step");
         else node.removeAttribute("aria-current");
       });
@@ -570,11 +615,41 @@
       q("#station-modal-highlights").innerHTML = data.highlights.map((item) => `<li>${item}</li>`).join("");
     };
 
+    const applyArtwork = () => {
+      if (!image) return;
+      stage?.setAttribute("aria-busy", "true");
+      const probe = new Image();
+      probe.decoding = "async";
+      probe.onload = () => {
+        if (token !== stationLoadToken) return;
+        image.src = data.image;
+        image.alt = currentLanguage === "ar" ? `مشهد متحرك لمحطة ${data.title}` : `Animated ${data.title} preparation station`;
+        image.hidden = false;
+        if (fallback) fallback.hidden = true;
+        stage?.setAttribute("aria-busy", "false");
+      };
+      probe.onerror = () => {
+        if (token !== stationLoadToken) return;
+        image.hidden = true;
+        if (fallback) {
+          fallback.textContent = translations[currentLanguage]["station.unavailable"];
+          fallback.hidden = false;
+        }
+        stage?.setAttribute("aria-busy", "false");
+      };
+      probe.src = data.image;
+    };
+
+    const apply = () => {
+      applyContent();
+      applyArtwork();
+    };
+
     if (animate && hasGSAP && !reducedMotion) {
       const tl = gsap.timeline();
-      tl.to([visual, content], { autoAlpha: 0, y: 18, duration: .25, stagger: .04, ease: "power2.in" })
+      tl.to([visual, content], { autoAlpha: 0, y: 16, duration: .22, stagger: .035, ease: "power2.in" })
         .add(apply)
-        .fromTo([visual, content], { autoAlpha: 0, y: 18 }, { autoAlpha: 1, y: 0, duration: .55, stagger: .06, ease: "power4.out" });
+        .fromTo([visual, content], { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: .52, stagger: .055, ease: "power4.out" });
     } else {
       apply();
     }
@@ -583,17 +658,49 @@
 
   function restartStationAutoplay() {
     clearTimeout(stationTimer);
-    if (reducedMotion || document.hidden) return;
+    if (reducedMotion || document.hidden || stationAutoplayPaused) return;
     stationTimer = setTimeout(() => updateStation(stationOrder[(stationIndex + 1) % stationOrder.length]), 9000);
   }
 
   function initStations() {
-    qa(".station-route__node").forEach((button) => button.addEventListener("click", () => updateStation(button.dataset.station)));
+    const nodes = qa(".station-route__node");
+    nodes.forEach((button, index) => {
+      button.tabIndex = index === 0 ? 0 : -1;
+      button.addEventListener("click", () => updateStation(button.dataset.station));
+      button.addEventListener("keydown", (event) => {
+        const isRtl = document.documentElement.dir === "rtl";
+        let target = null;
+        if (event.key === "Home") target = 0;
+        if (event.key === "End") target = nodes.length - 1;
+        if (event.key === "ArrowRight") target = (index + (isRtl ? -1 : 1) + nodes.length) % nodes.length;
+        if (event.key === "ArrowLeft") target = (index + (isRtl ? 1 : -1) + nodes.length) % nodes.length;
+        if (target === null) return;
+        event.preventDefault();
+        nodes[target].focus();
+        updateStation(nodes[target].dataset.station);
+      });
+    });
+
     q("[data-station-prev]")?.addEventListener("click", () => updateStation(stationOrder[(stationIndex - 1 + stationOrder.length) % stationOrder.length]));
     q("[data-station-next]")?.addEventListener("click", () => updateStation(stationOrder[(stationIndex + 1) % stationOrder.length]));
-    q(".station-console")?.addEventListener("mouseenter", () => clearTimeout(stationTimer));
-    q(".station-console")?.addEventListener("mouseleave", restartStationAutoplay);
+    q("[data-station-pause]")?.addEventListener("click", () => {
+      stationAutoplayPaused = !stationAutoplayPaused;
+      updateStationControlLabels();
+      if (stationAutoplayPaused) clearTimeout(stationTimer);
+      else restartStationAutoplay();
+    });
+
+    const consoleElement = q(".station-console");
+    consoleElement?.addEventListener("mouseenter", () => clearTimeout(stationTimer));
+    consoleElement?.addEventListener("mouseleave", restartStationAutoplay);
+    consoleElement?.addEventListener("focusin", () => clearTimeout(stationTimer));
+    consoleElement?.addEventListener("focusout", (event) => {
+      if (!consoleElement.contains(event.relatedTarget)) restartStationAutoplay();
+    });
+
+    updateStationControlLabels();
     updateStation(stationOrder[0], false);
+    preloadRemainingStationAssets();
   }
 
   function populateCompetency(key) {

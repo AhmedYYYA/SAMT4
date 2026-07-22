@@ -3144,3 +3144,574 @@ html[dir="rtl"] .admission-modal__notice {
     display: none !important;
   }
 }
+
+/* ========================================================================== 
+   PHASE 3 — FINAL PRODUCTION READABILITY, ASSET & VIEWPORT PATCH
+   ========================================================================== */
+:root {
+  --text-xs: .75rem;
+  --text-sm: .875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --content-leading: 1.72;
+}
+
+body {
+  font-size: var(--text-base);
+  line-height: 1.55;
+}
+
+html[dir="rtl"] body {
+  font-size: 1.035rem;
+  line-height: 1.7;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Brand assets */
+.loader__mark img,
+.brand-lockup__symbol,
+.mobile-menu__top img,
+.modal__brand img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.brand-lockup__symbol {
+  width: 3.55rem;
+  height: 3rem;
+  flex: 0 0 auto;
+}
+
+.brand-lockup__text strong {
+  font-size: 1.15rem;
+}
+
+.brand-lockup__text small {
+  font-size: .68rem;
+  line-height: 1.4;
+  letter-spacing: .025em;
+}
+
+.desktop-nav a {
+  font-size: .72rem;
+  letter-spacing: .105em;
+}
+
+/* Global typography floor */
+.eyebrow,
+.micro-label {
+  font-size: clamp(.72rem, .76vw, .82rem);
+  line-height: 1.45;
+}
+
+.button {
+  min-height: 3.45rem;
+  padding: .95rem 1.4rem;
+  font-size: .76rem;
+  line-height: 1.2;
+}
+
+html[dir="rtl"] .button {
+  font-size: .94rem;
+}
+
+.text-link {
+  font-size: .78rem;
+  line-height: 1.35;
+}
+
+.loader__message,
+.loader__value,
+.cursor-label,
+.section-rail__current,
+.scroll-cue {
+  font-size: .75rem;
+}
+
+.hero__summary,
+.programme__statement > p,
+.stations__header > p,
+.competencies__header > p,
+.assessment__intro > p:not(.eyebrow),
+.impact__header > p,
+.admission__copy > p {
+  font-size: clamp(1rem, 1.12vw, 1.14rem);
+  line-height: var(--content-leading);
+}
+
+.programme__statement blockquote {
+  font-size: clamp(1.05rem, 1.35vw, 1.3rem);
+  line-height: 1.7;
+}
+
+.programme__metrics article span,
+.admission__criteria span {
+  font-size: .82rem;
+  line-height: 1.45;
+}
+
+.journey-card h3 {
+  font-size: clamp(1.35rem, 2vw, 2rem);
+}
+
+.journey-card p {
+  font-size: .94rem;
+  line-height: 1.65;
+}
+
+.selection-orbit__core span {
+  font-size: .78rem;
+  line-height: 1.45;
+}
+
+.selection-orbit__item {
+  font-size: .76rem;
+  line-height: 1.25;
+}
+
+.selection-gates h3 {
+  font-size: .92rem;
+}
+
+.selection-gates p {
+  font-size: .92rem;
+  line-height: 1.68;
+}
+
+/* Preparation stations — preserve complete approved SVG artwork */
+.station-console {
+  padding: 1.05rem;
+}
+
+.station-route__node {
+  min-width: 4.4rem;
+  min-height: 3.75rem;
+}
+
+.station-route__node span {
+  width: 2rem;
+  height: 2rem;
+  font-size: .66rem;
+}
+
+.station-route__node strong {
+  font-size: .7rem;
+  letter-spacing: .09em;
+}
+
+.station-stage {
+  grid-template-columns: minmax(0, 1.58fr) minmax(21rem, .78fr);
+  align-items: stretch;
+}
+
+.station-stage__visual {
+  aspect-ratio: 1672 / 941;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(20, 44, 77, .34), transparent 65%),
+    #020711;
+}
+
+.station-stage__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: #020711;
+}
+
+.station-stage__visual-overlay {
+  background:
+    linear-gradient(90deg, transparent 74%, rgba(3, 7, 13, .28)),
+    linear-gradient(0deg, rgba(3, 7, 13, .24), transparent 22%);
+}
+
+.station-stage__fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  color: var(--samt-silver);
+  background:
+    radial-gradient(circle at 50% 40%, rgba(212,175,55,.09), transparent 18rem),
+    #040916;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.station-stage__fallback[hidden] {
+  display: none;
+}
+
+.station-stage__caption {
+  font-size: .72rem;
+}
+
+.station-controls button {
+  width: 2.45rem;
+  height: 2.45rem;
+  font-size: .9rem;
+}
+
+.station-controls button.is-paused {
+  color: #07111e;
+  border-color: var(--samt-light-gold);
+  background: var(--samt-light-gold);
+}
+
+.station-stage__subtitle {
+  font-size: .84rem;
+  line-height: 1.55;
+}
+
+.station-stage__body {
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.station-stage__meta span {
+  font-size: .74rem;
+  line-height: 1.35;
+}
+
+.station-stage__meta strong {
+  font-size: .9rem;
+  line-height: 1.35;
+}
+
+.station-stage__content li {
+  font-size: .9rem;
+  line-height: 1.55;
+}
+
+/* Competencies, assessment, governance and impact */
+.competency-card > span {
+  font-size: .9rem;
+}
+
+.competency-card p,
+.assessment-flow p,
+.impact-card p {
+  font-size: .9rem;
+  line-height: 1.65;
+}
+
+.assessment-flow h3,
+.impact-card h3,
+.impact-projects__list strong {
+  font-size: .88rem;
+  line-height: 1.4;
+}
+
+.assessment-flow article > span,
+.impact-projects__list span {
+  font-size: .8rem;
+}
+
+.governance-map__core strong {
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.governance-map__core span {
+  font-size: .78rem;
+  line-height: 1.4;
+}
+
+.governance-map__node {
+  min-width: 12rem;
+  padding: .78rem 1.1rem;
+  font-size: .82rem;
+  line-height: 1.35;
+}
+
+.impact-projects__intro span {
+  font-size: .74rem;
+}
+
+/* Footer */
+.site-footer__statement span,
+.site-footer__bottom,
+.site-footer__disclaimer {
+  font-size: .8rem;
+  line-height: 1.6;
+}
+
+.site-footer__disclaimer {
+  color: #8792a2;
+}
+
+/* Dialogs and custom pop-ups */
+dialog.modal {
+  width: min(96vw, 1200px);
+  max-height: 92svh;
+  overflow: hidden;
+}
+
+.modal__shell {
+  max-height: 92svh;
+  padding: clamp(1.75rem, 4vw, 3.5rem);
+  scrollbar-gutter: stable;
+}
+
+.modal__shell--wide {
+  width: min(96vw, 1200px);
+}
+
+.modal__close {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.55rem;
+}
+
+.modal__brand {
+  font-size: .78rem;
+  line-height: 1.4;
+}
+
+.modal__brand img {
+  width: 3.8rem;
+  height: 3.2rem;
+}
+
+.modal__lead,
+.modal__grid--programme p,
+.admission-modal__grid > div > p {
+  font-size: 1rem;
+  line-height: 1.78;
+}
+
+.modal__grid--programme blockquote {
+  font-size: 1.05rem;
+}
+
+.modal__grid--programme li span,
+.admission-modal__grid li span {
+  font-size: .82rem;
+}
+
+.modal__grid--programme li strong,
+.admission-modal__grid li strong {
+  font-size: .88rem;
+  line-height: 1.4;
+}
+
+.selection-modal__grid h3,
+.station-modal__grid h3,
+.assessment-modal__grid h3 {
+  font-size: .9rem;
+  line-height: 1.4;
+}
+
+.selection-modal__grid p,
+.assessment-modal__grid p,
+.station-modal__grid li,
+.impact-modal__list li,
+.competency-modal__evidence li {
+  font-size: .94rem;
+  line-height: 1.65;
+}
+
+.modal__disclaimer {
+  font-size: .8rem;
+  line-height: 1.65;
+}
+
+.competency-modal__evidence > span {
+  font-size: .78rem;
+}
+
+.admission-modal__notice {
+  font-size: .9rem;
+  line-height: 1.68;
+}
+
+/* Laptop viewport refinement */
+@media (min-width: 1181px) and (max-height: 820px) {
+  :root {
+    --header-h: 72px;
+  }
+
+  .section-pad {
+    padding: clamp(4.8rem, 7vw, 7rem) 0;
+  }
+
+  .site-header__inner {
+    min-height: 72px;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding-top: calc(var(--header-h) + 1.75rem);
+  }
+
+  .hero__title {
+    font-size: clamp(3.8rem, 7.2vw, 7rem);
+  }
+
+  .station-console {
+    margin-top: 2rem;
+  }
+
+  .station-route {
+    padding-bottom: .75rem;
+  }
+
+  .station-stage__content {
+    padding: 1.45rem 1.7rem;
+  }
+
+  .station-stage__content h3 {
+    font-size: clamp(2rem, 3.1vw, 3.45rem);
+  }
+
+  .station-stage__body {
+    margin: .75rem 0 .9rem;
+  }
+
+  .station-stage__content ul {
+    gap: .35rem;
+    margin-bottom: .9rem;
+  }
+}
+
+@media (max-width: 1180px) {
+  .brand-lockup__text small {
+    font-size: .66rem;
+  }
+
+  .station-stage {
+    grid-template-columns: 1fr;
+  }
+
+  .station-stage__visual {
+    aspect-ratio: 1672 / 941;
+  }
+
+  .station-stage__content {
+    padding: clamp(1.4rem, 5vw, 2.4rem);
+  }
+
+  .station-route__node {
+    min-width: 3.4rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .brand-lockup__symbol {
+    width: 3rem;
+    height: 2.55rem;
+  }
+
+  .hero__summary,
+  .programme__statement > p,
+  .stations__header > p,
+  .competencies__header > p,
+  .assessment__intro > p:not(.eyebrow),
+  .impact__header > p,
+  .admission__copy > p {
+    font-size: 1rem;
+  }
+
+  .selection-orbit__item {
+    font-size: .68rem;
+  }
+
+  .station-console {
+    width: calc(100vw - 1rem);
+  }
+
+  .station-route {
+    gap: .15rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .station-route::-webkit-scrollbar {
+    display: none;
+  }
+
+  .station-route__node {
+    min-width: 3rem;
+  }
+
+  .station-route__node strong {
+    font-size: .64rem;
+  }
+
+  .station-route__line {
+    min-width: 1rem;
+  }
+
+  .station-stage__caption {
+    left: .7rem;
+    bottom: .65rem;
+    font-size: .66rem;
+  }
+
+  html[dir="rtl"] .station-stage__caption {
+    left: auto;
+    right: .7rem;
+  }
+
+  .station-stage__content h3 {
+    font-size: clamp(2.1rem, 10vw, 3rem);
+  }
+
+  .station-stage__body,
+  .station-stage__content li,
+  .competency-card p,
+  .assessment-flow p,
+  .impact-card p {
+    font-size: .94rem;
+  }
+
+  .governance-map__node {
+    min-width: 9.5rem;
+    font-size: .76rem;
+  }
+
+  dialog.modal,
+  .modal__shell,
+  .modal__shell--wide {
+    width: calc(100vw - .75rem);
+    max-height: 94svh;
+  }
+
+  .modal__shell {
+    padding: 1.35rem;
+  }
+
+  .modal__lead,
+  .modal__grid--programme p,
+  .admission-modal__grid > div > p,
+  .selection-modal__grid p,
+  .assessment-modal__grid p,
+  .station-modal__grid li,
+  .impact-modal__list li,
+  .competency-modal__evidence li {
+    font-size: .96rem;
+  }
+
+  .site-footer__bottom,
+  .site-footer__disclaimer {
+    font-size: .78rem;
+  }
+}

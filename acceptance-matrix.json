@@ -1,43 +1,24 @@
 {
-  "version": "2.0",
-  "project": "SAMT Website Phase 2",
-  "status": "prototype-complete",
-  "brand": {
-    "strategic_ascent_identity": true,
-    "approved_palette": true,
-    "approved_bilingual_descriptor": true,
-    "arabic_uses_programme_not_system": true
+  "release": "SAMT Website Phase 3 — Final Production Release",
+  "version": "3.0",
+  "status": "production-candidate",
+  "mandatory_fixes": {
+    "missing_brand_assets": "completed",
+    "typography_readability": "completed",
+    "station_svg_scaling": "completed",
+    "station_assets": "completed",
+    "rtl_ltr": "completed",
+    "modal_readability": "completed",
+    "keyboard_access": "completed",
+    "autoplay_control": "completed",
+    "github_pages_support": "completed"
   },
-  "sections": {
-    "hero": true,
-    "programme": true,
-    "journey": true,
-    "selection": true,
-    "stations": 4,
-    "competencies": 6,
-    "assessment": true,
-    "governance": true,
-    "impact": true,
-    "admission": true,
-    "command_readiness": true
-  },
-  "interaction": {
-    "gsap": "3.12.5",
-    "scroll_trigger": "3.12.5",
-    "lenis": "1.0.42",
-    "custom_cursor": true,
-    "magnetic_controls": true,
-    "animated_station_svg": true,
-    "custom_dialogs": 7,
-    "rtl_ltr_switch": true,
-    "reduced_motion": true
-  },
-  "validation": {
-    "javascript_syntax": "pass",
-    "duplicate_html_ids": "pass",
-    "local_asset_references": "pass",
-    "translation_key_parity": "pass",
-    "css_brace_balance": "pass",
-    "live_browser_qa": "required_after_deployment"
-  }
+  "post_deployment_checks": [
+    "Safari",
+    "Chrome",
+    "Edge",
+    "Firefox",
+    "iOS Safari",
+    "Android Chrome"
+  ]
 }
