@@ -1,0 +1,9 @@
+{
+  "name": "SAMT — From Potential to Command",
+  "short_name": "SAMT",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#03070d",
+  "theme_color": "#03070d",
+  "description": "Strategic Advancement, Management & Transformation"
+}

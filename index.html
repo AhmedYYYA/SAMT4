@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#03070d" />
   <meta name="description" content="SAMT — an elite leadership programme that selects exceptional potential and prepares future commanders and strategic leaders." />
+  <meta property="og:title" content="SAMT — From Potential to Command" />
+  <meta property="og:description" content="Selected for potential. Shaped for command." />
   <title>SAMT — From Potential to Command</title>
   <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.webmanifest" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,13 +22,12 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="is-loading">
+  <a class="skip-link" href="#main-scroll-container">Skip to content</a>
   <noscript><div class="noscript">JavaScript is required to view the SAMT motion experience.</div></noscript>
 
   <div class="loader" aria-hidden="true">
-    <div class="loader__brand">
-      <img src="assets/brand/samt-symbol.svg" alt="" />
-      <span>SAMT</span>
-    </div>
+    <div class="loader__mark"><img src="assets/brand/samt-symbol.svg" alt="" /></div>
+    <div class="loader__name">SAMT</div>
     <div class="loader__message" data-i18n="loader.message">Preparing the ascent</div>
     <div class="loader__track"><span class="loader__bar"></span></div>
     <div class="loader__value">0%</div>
@@ -33,6 +35,7 @@
 
   <div class="cursor cursor--ring" aria-hidden="true"></div>
   <div class="cursor cursor--dot" aria-hidden="true"></div>
+  <div class="cursor-label" aria-hidden="true"></div>
 
   <div class="ambient" aria-hidden="true">
     <canvas id="particle-canvas"></canvas>
@@ -41,6 +44,7 @@
     <div class="ambient__grid"></div>
   </div>
   <div class="grain" aria-hidden="true"></div>
+  <div class="page-transition" aria-hidden="true"><span></span></div>
 
   <header class="site-header" id="site-header">
     <div class="site-header__inner">
@@ -54,9 +58,11 @@
 
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="#programme" data-i18n="nav.programme" data-cursor="link">Programme</a>
-        <a href="#journey" data-i18n="nav.journey" data-cursor="link">The Journey</a>
-        <a href="#stations" data-i18n="nav.stations" data-cursor="link">Preparation Stations</a>
-        <a href="#command" data-i18n="nav.command" data-cursor="link">Command Readiness</a>
+        <a href="#journey" data-i18n="nav.journey" data-cursor="link">Journey</a>
+        <a href="#selection" data-i18n="nav.selection" data-cursor="link">Selection</a>
+        <a href="#stations" data-i18n="nav.stations" data-cursor="link">Stations</a>
+        <a href="#competencies" data-i18n="nav.competencies" data-cursor="link">Competencies</a>
+        <a href="#impact" data-i18n="nav.impact" data-cursor="link">Impact</a>
       </nav>
 
       <div class="header-actions">
@@ -74,12 +80,19 @@
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <div class="mobile-menu__backdrop"></div>
     <div class="mobile-menu__panel">
-      <p class="micro-label">SAMT / NAVIGATION</p>
+      <div class="mobile-menu__top">
+        <img src="assets/brand/samt-symbol.svg" alt="" />
+        <span>SAMT / NAVIGATION</span>
+      </div>
       <nav aria-label="Mobile navigation">
         <a href="#programme" data-i18n="nav.programme">Programme</a>
-        <a href="#journey" data-i18n="nav.journey">The Journey</a>
+        <a href="#journey" data-i18n="nav.journey">Journey</a>
+        <a href="#selection" data-i18n="nav.selection">Selection</a>
         <a href="#stations" data-i18n="nav.stations">Preparation Stations</a>
-        <a href="#command" data-i18n="nav.command">Command Readiness</a>
+        <a href="#competencies" data-i18n="nav.competencies">Competencies</a>
+        <a href="#assessment" data-i18n="nav.assessment">Assessment</a>
+        <a href="#impact" data-i18n="nav.impact">Impact</a>
+        <a href="#admission" data-i18n="nav.admission">Admission</a>
       </nav>
       <div class="mobile-menu__footer">
         <span>From Potential to Command</span>
@@ -89,11 +102,16 @@
   </div>
 
   <div class="page-progress" aria-hidden="true"><span></span></div>
+  <aside class="section-rail" aria-hidden="true">
+    <span class="section-rail__current">01</span>
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </aside>
 
   <main id="main-scroll-container">
-    <section class="hero" id="hero" aria-labelledby="hero-title">
+    <section class="hero" id="hero" data-section="01" aria-labelledby="hero-title">
       <div class="hero__earth" aria-hidden="true">
         <div class="hero__earth-surface"></div>
+        <div class="hero__earth-lines"></div>
         <div class="hero__earth-glow"></div>
       </div>
 
@@ -109,10 +127,10 @@
             <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
           </filter>
         </defs>
-        <path id="route-1" class="hero-route hero-route--strong" d="M400 935 C 660 760, 990 540, 1174 88" />
-        <path id="route-2" class="hero-route" d="M530 960 C 760 700, 1020 480, 1174 88" />
-        <path id="route-3" class="hero-route" d="M610 965 C 850 690, 1080 390, 1174 88" />
-        <path id="route-4" class="hero-route hero-route--fine" d="M275 900 C 610 690, 920 420, 1174 88" />
+        <path id="route-1" class="hero-route hero-route--strong" d="M360 950 C 650 760, 945 535, 1174 88" />
+        <path id="route-2" class="hero-route" d="M505 965 C 760 720, 1010 460, 1174 88" />
+        <path id="route-3" class="hero-route" d="M620 965 C 855 690, 1075 380, 1174 88" />
+        <path id="route-4" class="hero-route hero-route--fine" d="M220 925 C 570 700, 900 430, 1174 88" />
         <circle class="route-follower route-follower--1" r="4" />
         <circle class="route-follower route-follower--2" r="3" />
         <circle class="route-follower route-follower--3" r="2.5" />
@@ -127,7 +145,7 @@
           <p class="eyebrow hero__eyebrow" data-i18n="hero.kicker">From Potential to Command</p>
           <h1 id="hero-title" class="hero__title">
             <span data-i18n="hero.line1">Prepared to Lead.</span>
-            <span data-i18n="hero.line2">Ready to <em>Command.</em></span>
+            <span data-i18n-html="hero.line2">Ready to <em>Command.</em></span>
           </h1>
           <p class="hero__arabic" data-i18n="hero.arabic">من الإمكانات إلى القيادة</p>
           <p class="hero__summary" data-i18n="hero.summary">SAMT identifies exceptional talent and prepares selected individuals for future command, strategic leadership and greater institutional responsibility.</p>
@@ -138,16 +156,12 @@
         </div>
 
         <aside class="hero__identity" aria-label="SAMT bilingual identity">
-          <img class="hero__arabic-wordmark" src="assets/brand/samt-arabic-gold.svg" alt="سَمْت" />
+          <img class="hero__arabic-wordmark" src="assets/brand/samt-arabic-wordmark.svg" alt="سَمْت" />
           <p class="hero__identity-ar">برنامج سَمْت للتقدم الاستراتيجي والإدارة والتحول</p>
           <span class="hero__identity-line"></span>
           <strong>SAMT</strong>
           <p>Strategic Advancement,<br />Management &amp; Transformation</p>
         </aside>
-      </div>
-
-      <div class="hero__section-index" aria-hidden="true">
-        <span>01</span><i></i><i></i><i></i><i></i>
       </div>
 
       <a class="scroll-cue" href="#programme" aria-label="Scroll to programme" data-cursor="link">
@@ -156,29 +170,32 @@
       </a>
     </section>
 
-    <section class="programme" id="programme" aria-labelledby="programme-title">
+    <section class="programme section-pad" id="programme" data-section="02" aria-labelledby="programme-title">
       <div class="section-shell programme__grid">
         <div class="programme__intro">
           <p class="eyebrow" data-i18n="programme.kicker">An elite leadership programme</p>
-          <h2 class="section-title" id="programme-title" data-i18n="programme.title">Selection is earned.<br /><em>Leadership is formed.</em></h2>
+          <h2 class="section-title" id="programme-title" data-i18n-html="programme.title">Selection is earned.<br /><em>Leadership is formed.</em></h2>
+          <button class="text-link" type="button" data-modal-open="programme-modal" data-cursor="view"><span data-i18n="programme.explore">Explore the programme</span><i>↗</i></button>
         </div>
         <div class="programme__statement">
           <p data-i18n="programme.copy">SAMT is designed for exceptional professionals who demonstrate the character, intellect, judgement, discipline and ambition required to assume future command and senior leadership responsibilities.</p>
+          <blockquote data-i18n="programme.quote">Entry is earned. Development is demanding. Readiness is evidenced.</blockquote>
           <div class="programme__metrics">
-            <article><strong>10</strong><span data-i18n="programme.metric1">Selected fellows</span></article>
-            <article><strong>4</strong><span data-i18n="programme.metric2">International stations</span></article>
-            <article><strong>1</strong><span data-i18n="programme.metric3">Command standard</span></article>
+            <article><strong data-counter="10">0</strong><span data-i18n="programme.metric1">Selected fellows</span></article>
+            <article><strong data-counter="4">0</strong><span data-i18n="programme.metric2">International stations</span></article>
+            <article><strong data-counter="16">0</strong><span data-i18n="programme.metric3">Full-time weeks</span></article>
+            <article><strong data-counter="1">0</strong><span data-i18n="programme.metric4">Command standard</span></article>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="journey" id="journey" aria-labelledby="journey-title">
+    <section class="journey" id="journey" data-section="03" aria-labelledby="journey-title">
       <div class="journey__sticky">
         <div class="section-shell journey__header">
           <div>
             <p class="eyebrow" data-i18n="journey.kicker">The leadership journey</p>
-            <h2 class="section-title" id="journey-title" data-i18n="journey.title">A disciplined path from <em>potential to command.</em></h2>
+            <h2 class="section-title" id="journey-title" data-i18n-html="journey.title">A disciplined path from <em>potential to command.</em></h2>
           </div>
           <p class="journey__note" data-i18n="journey.note">Every stage raises the standard of judgement, character, exposure and responsibility.</p>
         </div>
@@ -187,27 +204,27 @@
           <div class="journey__progress" aria-hidden="true"><span></span></div>
           <div class="journey__track">
             <article class="journey-card" data-stage="01">
-              <span class="journey-card__number">01</span><i class="journey-card__icon icon-potential"></i>
+              <span class="journey-card__number">01</span><svg><use href="assets/icons/samt-icons.svg#potential"></use></svg>
               <h3 data-i18n="journey.s1.title">Potential</h3><p data-i18n="journey.s1.copy">Exceptional potential is identified.</p>
             </article>
             <article class="journey-card" data-stage="02">
-              <span class="journey-card__number">02</span><i class="journey-card__icon icon-selection"></i>
+              <span class="journey-card__number">02</span><svg><use href="assets/icons/samt-icons.svg#selection"></use></svg>
               <h3 data-i18n="journey.s2.title">Selection</h3><p data-i18n="journey.s2.copy">A rigorous and selective admission process.</p>
             </article>
             <article class="journey-card" data-stage="03">
-              <span class="journey-card__number">03</span><i class="journey-card__icon icon-formation"></i>
+              <span class="journey-card__number">03</span><svg><use href="assets/icons/samt-icons.svg#formation"></use></svg>
               <h3 data-i18n="journey.s3.title">Formation</h3><p data-i18n="journey.s3.copy">Core capability and leadership judgement are developed.</p>
             </article>
             <article class="journey-card" data-stage="04">
-              <span class="journey-card__number">04</span><i class="journey-card__icon icon-exposure"></i>
+              <span class="journey-card__number">04</span><svg><use href="assets/icons/samt-icons.svg#exposure"></use></svg>
               <h3 data-i18n="journey.s4.title">Exposure</h3><p data-i18n="journey.s4.copy">National and international environments broaden perspective.</p>
             </article>
             <article class="journey-card" data-stage="05">
-              <span class="journey-card__number">05</span><i class="journey-card__icon icon-transformation"></i>
+              <span class="journey-card__number">05</span><svg><use href="assets/icons/samt-icons.svg#transformation"></use></svg>
               <h3 data-i18n="journey.s5.title">Transformation</h3><p data-i18n="journey.s5.copy">Leadership readiness is measured and strengthened.</p>
             </article>
             <article class="journey-card journey-card--command" data-stage="06">
-              <span class="journey-card__number">06</span><i class="journey-card__icon icon-command"></i>
+              <span class="journey-card__number">06</span><svg><use href="assets/icons/samt-icons.svg#command"></use></svg>
               <h3 data-i18n="journey.s6.title">Command Readiness</h3><p data-i18n="journey.s6.copy">Prepared to lead. Ready to command.</p>
             </article>
           </div>
@@ -215,49 +232,88 @@
       </div>
     </section>
 
-    <section class="stations" id="stations" aria-labelledby="stations-title">
-      <div class="stations__backdrop" aria-hidden="true"></div>
+    <section class="selection section-pad" id="selection" data-section="04" aria-labelledby="selection-title">
+      <div class="selection__halo" aria-hidden="true"></div>
+      <div class="section-shell selection__layout">
+        <div class="selection__copy">
+          <p class="eyebrow" data-i18n="selection.kicker">Selecting the elite of the elite</p>
+          <h2 class="section-title" id="selection-title" data-i18n-html="selection.title">A leadership privilege.<br /><em>Not a training seat.</em></h2>
+          <p data-i18n="selection.copy">SAMT selects high-potential professionals through evidence, assessment and independent judgement. The standard is deliberately demanding because future responsibility is significant.</p>
+          <button class="button button--outline magnetic" type="button" data-modal-open="selection-modal" data-i18n="selection.cta" data-cursor="cta">View Selection Framework</button>
+        </div>
+
+        <div class="selection-orbit" aria-label="SAMT selection dimensions">
+          <div class="selection-orbit__ring selection-orbit__ring--outer"></div>
+          <div class="selection-orbit__ring selection-orbit__ring--inner"></div>
+          <div class="selection-orbit__core"><strong>10</strong><span data-i18n="selection.core">future leaders</span></div>
+          <span class="selection-orbit__item item-1" data-i18n="selection.d1">Judgement</span>
+          <span class="selection-orbit__item item-2" data-i18n="selection.d2">Character</span>
+          <span class="selection-orbit__item item-3" data-i18n="selection.d3">Learning agility</span>
+          <span class="selection-orbit__item item-4" data-i18n="selection.d4">Command presence</span>
+          <span class="selection-orbit__item item-5" data-i18n="selection.d5">Institutional impact</span>
+          <span class="selection-orbit__item item-6" data-i18n="selection.d6">Strategic thinking</span>
+        </div>
+      </div>
+
+      <div class="section-shell selection-gates">
+        <article><span>01</span><h3 data-i18n="selection.g1.title">Eligibility</h3><p data-i18n="selection.g1.copy">Minimum experience and documented performance.</p></article>
+        <article><span>02</span><h3 data-i18n="selection.g2.title">Assessment Centre</h3><p data-i18n="selection.g2.copy">Analysis, collaboration and decision under pressure.</p></article>
+        <article><span>03</span><h3 data-i18n="selection.g3.title">Executive Interview</h3><p data-i18n="selection.g3.copy">Motivation, humility, judgement and leadership potential.</p></article>
+        <article><span>04</span><h3 data-i18n="selection.g4.title">Independent Endorsement</h3><p data-i18n="selection.g4.copy">Final decision by a multidisciplinary panel.</p></article>
+      </div>
+    </section>
+
+    <section class="stations section-pad" id="stations" data-section="05" aria-labelledby="stations-title">
+      <div class="stations__globe" aria-hidden="true">
+        <span class="globe-line globe-line--one"></span><span class="globe-line globe-line--two"></span><span class="globe-line globe-line--three"></span>
+      </div>
       <div class="section-shell stations__header">
         <div>
           <p class="eyebrow" data-i18n="stations.kicker">Preparation stations</p>
-          <h2 class="section-title" id="stations-title" data-i18n="stations.title">Global exposure.<br /><em>Strategic perspective.</em></h2>
+          <h2 class="section-title" id="stations-title" data-i18n-html="stations.title">Global exposure.<br /><em>Strategic perspective.</em></h2>
         </div>
         <p data-i18n="stations.copy">Participants engage with leading institutions, sectors and operating environments that shape global leadership.</p>
       </div>
 
       <div class="section-shell station-console">
         <nav class="station-route" aria-label="Preparation stations">
-          <button class="station-route__node is-active" type="button" aria-current="step"><span>01</span><strong>UAE</strong></button>
-          <span class="station-route__line"></span>
-          <button class="station-route__node" type="button" disabled><span>02</span><strong>UK</strong></button>
-          <span class="station-route__line"></span>
-          <button class="station-route__node" type="button" disabled><span>03</span><strong>FRANCE</strong></button>
-          <span class="station-route__line"></span>
-          <button class="station-route__node" type="button" disabled><span>04</span><strong>USA</strong></button>
+          <button class="station-route__node is-active" type="button" data-station="uae" aria-current="step"><span>01</span><strong>UAE</strong></button>
+          <span class="station-route__line"><i></i></span>
+          <button class="station-route__node" type="button" data-station="uk"><span>02</span><strong>UK</strong></button>
+          <span class="station-route__line"><i></i></span>
+          <button class="station-route__node" type="button" data-station="france"><span>03</span><strong>FRANCE</strong></button>
+          <span class="station-route__line"><i></i></span>
+          <button class="station-route__node" type="button" data-station="usa"><span>04</span><strong>USA</strong></button>
         </nav>
 
-        <div class="station-stage">
+        <div class="station-stage" aria-live="polite">
           <div class="station-stage__visual" data-cursor="view">
-            <object data="assets/stations/uae-animated.svg" type="image/svg+xml" aria-label="Animated UAE preparation station"></object>
+            <img id="station-image" src="assets/stations/uae-animated.svg" alt="Animated UAE preparation station" />
             <div class="station-stage__visual-overlay"></div>
             <span class="station-stage__caption">STATION 01 / UAE</span>
           </div>
 
           <article class="station-stage__content">
-            <p class="micro-label" data-i18n="station.current">Current station</p>
-            <h3 data-i18n="station.title">United Arab Emirates</h3>
-            <p class="station-stage__subtitle" data-i18n="station.subtitle">Foundation, strategic orientation and national context</p>
-            <p class="station-stage__body" data-i18n="station.body">The national foundation phase builds a common understanding of the state, leadership expectations, strategic priorities and the institutional environment in which future responsibility will be exercised.</p>
+            <div class="station-stage__topline">
+              <p class="micro-label" data-i18n="station.current">Current station</p>
+              <div class="station-controls">
+                <button type="button" data-station-prev aria-label="Previous station" data-cursor="link">←</button>
+                <button type="button" data-station-next aria-label="Next station" data-cursor="link">→</button>
+              </div>
+            </div>
+            <h3 id="station-title">United Arab Emirates</h3>
+            <p class="station-stage__subtitle" id="station-subtitle">Foundation, strategic orientation and national context</p>
+            <p class="station-stage__body" id="station-body">The national foundation phase builds a common understanding of the state, leadership expectations, strategic priorities and the institutional environment in which future responsibility will be exercised.</p>
 
             <div class="station-stage__meta">
-              <div><span data-i18n="station.durationLabel">Duration</span><strong>3+ weeks</strong></div>
-              <div><span data-i18n="station.focusLabel">Primary focus</span><strong data-i18n="station.focus">Leadership foundation</strong></div>
+              <div><span data-i18n="station.durationLabel">Duration</span><strong id="station-duration">3+ weeks</strong></div>
+              <div><span data-i18n="station.focusLabel">Primary focus</span><strong id="station-focus">Leadership foundation</strong></div>
             </div>
 
-            <ul>
-              <li data-i18n="station.point1">Strategic leadership and national vision</li>
-              <li data-i18n="station.point2">Defence, aviation and institutional ecosystems</li>
-              <li data-i18n="station.point3">Capability development and transformation frameworks</li>
+            <ul id="station-points">
+              <li>Strategic leadership and national vision</li>
+              <li>Defence, aviation and institutional ecosystems</li>
+              <li>Capability development and transformation frameworks</li>
             </ul>
 
             <button class="button button--outline magnetic" type="button" data-modal-open="station-modal" data-i18n="station.details" data-cursor="cta">View Station Details</button>
@@ -266,38 +322,156 @@
       </div>
     </section>
 
-    <section class="command" id="command" aria-labelledby="command-title">
+    <section class="competencies section-pad" id="competencies" data-section="06" aria-labelledby="competencies-title">
+      <div class="section-shell competencies__header">
+        <div>
+          <p class="eyebrow" data-i18n="competencies.kicker">Leadership maturity competencies</p>
+          <h2 class="section-title" id="competencies-title" data-i18n-html="competencies.title">Built for command.<br /><em>Trusted to decide.</em></h2>
+        </div>
+        <p data-i18n="competencies.copy">The framework integrates strategic judgement, systems awareness, institutional leadership and the ability to act under complexity.</p>
+      </div>
+
+      <div class="section-shell competency-grid">
+        <button class="competency-card" type="button" data-competency="judgement" data-cursor="view">
+          <svg><use href="assets/icons/samt-icons.svg#judgement"></use></svg><span>01</span><h3 data-i18n="competencies.c1">Strategic Judgement</h3><p data-i18n="competencies.c1s">Read context, consequence and long-term institutional direction.</p><i>↗</i>
+        </button>
+        <button class="competency-card" type="button" data-competency="systems" data-cursor="view">
+          <svg><use href="assets/icons/samt-icons.svg#systems"></use></svg><span>02</span><h3 data-i18n="competencies.c2">Systems Thinking</h3><p data-i18n="competencies.c2s">Understand interdependence across people, capability and mission.</p><i>↗</i>
+        </button>
+        <button class="competency-card" type="button" data-competency="decision" data-cursor="view">
+          <svg><use href="assets/icons/samt-icons.svg#decision"></use></svg><span>03</span><h3 data-i18n="competencies.c3">Decision-Making Under Complexity</h3><p data-i18n="competencies.c3s">Balance mission, risk, time and incomplete information.</p><i>↗</i>
+        </button>
+        <button class="competency-card" type="button" data-competency="institution" data-cursor="view">
+          <svg><use href="assets/icons/samt-icons.svg#institution"></use></svg><span>04</span><h3 data-i18n="competencies.c4">Institutional Leadership</h3><p data-i18n="competencies.c4s">Align strategy, people and governance toward sustained impact.</p><i>↗</i>
+        </button>
+        <button class="competency-card" type="button" data-competency="innovation" data-cursor="view">
+          <svg><use href="assets/icons/samt-icons.svg#innovation"></use></svg><span>05</span><h3 data-i18n="competencies.c5">Innovation & Transformation</h3><p data-i18n="competencies.c5s">Convert emerging possibilities into executable institutional change.</p><i>↗</i>
+        </button>
+        <button class="competency-card" type="button" data-competency="international" data-cursor="view">
+          <svg><use href="assets/icons/samt-icons.svg#international"></use></svg><span>06</span><h3 data-i18n="competencies.c6">International Engagement</h3><p data-i18n="competencies.c6s">Build trust, perspective and strategic partnerships across cultures.</p><i>↗</i>
+        </button>
+      </div>
+    </section>
+
+    <section class="assessment section-pad" id="assessment" data-section="07" aria-labelledby="assessment-title">
+      <div class="section-shell assessment__grid">
+        <div class="assessment__intro">
+          <p class="eyebrow" data-i18n="assessment.kicker">Assessment and governance</p>
+          <h2 class="section-title" id="assessment-title" data-i18n-html="assessment.title">No progression without evidence.<br /><em>No execution without governance.</em></h2>
+          <p data-i18n="assessment.copy">Development is measured continuously and governed through clear authority, independent evidence and disciplined decision points.</p>
+          <button class="text-link" type="button" data-modal-open="assessment-modal" data-cursor="view"><span data-i18n="assessment.cta">Open assessment model</span><i>↗</i></button>
+        </div>
+
+        <div class="assessment-flow" aria-label="Continuous assessment model">
+          <article><span>01</span><svg><use href="assets/icons/samt-icons.svg#evidence"></use></svg><h3 data-i18n="assessment.a1">Baseline</h3><p data-i18n="assessment.a1s">Pre-programme capability profile</p></article>
+          <article><span>02</span><svg><use href="assets/icons/samt-icons.svg#evidence"></use></svg><h3 data-i18n="assessment.a2">Daily Evidence</h3><p data-i18n="assessment.a2s">Tasks, conduct and reflection</p></article>
+          <article><span>03</span><svg><use href="assets/icons/samt-icons.svg#evidence"></use></svg><h3 data-i18n="assessment.a3">Host Assessment</h3><p data-i18n="assessment.a3s">Independent observations</p></article>
+          <article><span>04</span><svg><use href="assets/icons/samt-icons.svg#evidence"></use></svg><h3 data-i18n="assessment.a4">Maturity Challenge</h3><p data-i18n="assessment.a4s">Decision and executive briefing</p></article>
+          <article><span>05</span><svg><use href="assets/icons/samt-icons.svg#impact"></use></svg><h3 data-i18n="assessment.a5">Impact Project</h3><p data-i18n="assessment.a5s">Institutional result and follow-through</p></article>
+        </div>
+      </div>
+
+      <div class="section-shell governance-map">
+        <div class="governance-map__core"><svg><use href="assets/icons/samt-icons.svg#governance"></use></svg><strong data-i18n="assessment.gov">Programme Governance</strong><span data-i18n="assessment.govs">Decision · Control · Impact</span></div>
+        <div class="governance-map__node node-a" data-i18n="assessment.g1">Executive Sponsor</div>
+        <div class="governance-map__node node-b" data-i18n="assessment.g2">Steering Committee</div>
+        <div class="governance-map__node node-c" data-i18n="assessment.g3">Programme Director</div>
+        <div class="governance-map__node node-d" data-i18n="assessment.g4">Independent Reviewer</div>
+      </div>
+    </section>
+
+    <section class="impact section-pad" id="impact" data-section="08" aria-labelledby="impact-title">
+      <div class="impact__beam" aria-hidden="true"></div>
+      <div class="section-shell impact__header">
+        <div>
+          <p class="eyebrow" data-i18n="impact.kicker">Institutional impact</p>
+          <h2 class="section-title" id="impact-title" data-i18n-html="impact.title">Stronger leadership.<br /><em>Stronger institutions.</em></h2>
+        </div>
+        <p data-i18n="impact.copy">SAMT is measured by what changes after participants return: better judgement, stronger networks, executable transformation and sustained institutional value.</p>
+      </div>
+
+      <div class="section-shell impact-grid">
+        <article class="impact-card" data-cursor="view"><svg><use href="assets/icons/samt-icons.svg#judgement"></use></svg><strong data-counter="6">0</strong><h3 data-i18n="impact.i1">Measurable leadership growth</h3><p data-i18n="impact.i1s">Evidence across six command-oriented competencies.</p></article>
+        <article class="impact-card" data-cursor="view"><svg><use href="assets/icons/samt-icons.svg#international"></use></svg><strong data-counter="4">0</strong><h3 data-i18n="impact.i2">Strategic networks</h3><p data-i18n="impact.i2s">National and international relationships built with purpose.</p></article>
+        <article class="impact-card" data-cursor="view"><svg><use href="assets/icons/samt-icons.svg#transformation"></use></svg><strong data-counter="3">0</strong><h3 data-i18n="impact.i3">Transformation assignments</h3><p data-i18n="impact.i3s">Priority challenges converted into owned delivery plans.</p></article>
+        <article class="impact-card" data-cursor="view"><svg><use href="assets/icons/samt-icons.svg#impact"></use></svg><strong data-counter="12">0</strong><h3 data-i18n="impact.i4">Sustained institutional value</h3><p data-i18n="impact.i4s">Follow-up and impact measurement over twelve months.</p></article>
+      </div>
+
+      <div class="section-shell impact-projects">
+        <div class="impact-projects__intro"><span>IMPACT / 01</span><h3 data-i18n="impact.projectTitle">The programme concludes. Capability begins.</h3></div>
+        <div class="impact-projects__list">
+          <button type="button" data-modal-open="impact-modal" data-impact="readiness" data-cursor="view"><span>01</span><strong data-i18n="impact.p1">Readiness and decision quality</strong><i>↗</i></button>
+          <button type="button" data-modal-open="impact-modal" data-impact="capability" data-cursor="view"><span>02</span><strong data-i18n="impact.p2">Capability and transformation</strong><i>↗</i></button>
+          <button type="button" data-modal-open="impact-modal" data-impact="people" data-cursor="view"><span>03</span><strong data-i18n="impact.p3">People and institutional learning</strong><i>↗</i></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="admission section-pad" id="admission" data-section="09" aria-labelledby="admission-title">
+      <div class="section-shell admission__panel">
+        <div class="admission__copy">
+          <p class="eyebrow" data-i18n="admission.kicker">Admission</p>
+          <h2 id="admission-title" data-i18n-html="admission.title">Selected for potential.<br /><em>Shaped for command.</em></h2>
+          <p data-i18n="admission.copy">Participation is by institutional nomination and a rigorous selection process. Admission is not open enrolment.</p>
+          <div class="admission__actions">
+            <button class="button button--primary magnetic" type="button" data-modal-open="admission-modal" data-i18n="admission.cta" data-cursor="cta">View Nomination Process</button>
+            <a class="button button--ghost magnetic" href="#command" data-i18n="admission.next" data-cursor="cta">Continue to Command</a>
+          </div>
+        </div>
+        <div class="admission__criteria">
+          <article><strong>5+</strong><span data-i18n="admission.c1">Years of practical experience</span></article>
+          <article><strong>10</strong><span data-i18n="admission.c2">Fellows selected per cohort</span></article>
+          <article><strong>100%</strong><span data-i18n="admission.c3">Full-time commitment</span></article>
+          <article><strong>1</strong><span data-i18n="admission.c4">Independent final endorsement</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="command" id="command" data-section="10" aria-labelledby="command-title">
+      <div class="command__architecture" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
       <div class="command__light" aria-hidden="true"></div>
       <div class="section-shell command__inner">
         <p class="eyebrow" data-i18n="command.kicker">The standard ahead</p>
-        <h2 id="command-title" data-i18n="command.title">The future needs leaders.<br /><em>Are you ready?</em></h2>
+        <h2 id="command-title" data-i18n-html="command.title">The future needs leaders.<br /><em>Are you ready?</em></h2>
         <p data-i18n="command.arabic">المستقبل يحتاج قادة، هل أنت مستعد؟</p>
         <span>FROM POTENTIAL TO COMMAND</span>
-        <button class="button button--primary magnetic" type="button" data-modal-open="programme-modal" data-i18n="command.cta" data-cursor="cta">Learn About Admission</button>
+        <button class="button button--primary magnetic" type="button" data-modal-open="admission-modal" data-i18n="command.cta" data-cursor="cta">Learn About Admission</button>
       </div>
       <div class="command__figure" aria-hidden="true"><span></span></div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="section-shell site-footer__inner">
+    <div class="section-shell site-footer__top">
       <a class="brand-lockup brand-lockup--footer" href="#hero">
         <img class="brand-lockup__symbol" src="assets/brand/samt-symbol.svg" alt="" />
         <span class="brand-lockup__text"><strong>SAMT</strong><small>Strategic Advancement,<br />Management &amp; Transformation</small></span>
       </a>
-      <p>© 2026 SAMT. <span data-i18n="footer.rights">All rights reserved.</span></p>
-      <a href="#hero" data-i18n="footer.top">Back to top</a>
+      <div class="site-footer__statement"><strong>From Potential to Command</strong><span>من الإمكانات إلى القيادة</span></div>
     </div>
+    <div class="section-shell site-footer__bottom">
+      <p>© 2026 SAMT. <span data-i18n="footer.rights">All rights reserved.</span></p>
+      <nav aria-label="Footer navigation">
+        <a href="#programme" data-i18n="nav.programme">Programme</a>
+        <a href="#stations" data-i18n="nav.stations">Stations</a>
+        <a href="#impact" data-i18n="nav.impact">Impact</a>
+        <a href="#hero" data-i18n="footer.top">Back to top</a>
+      </nav>
+    </div>
+    <p class="site-footer__disclaimer" data-i18n="footer.disclaimer">Concept website. Proposed partners and programme arrangements are subject to formal approval and agreement.</p>
   </footer>
 
   <dialog class="modal" id="programme-modal" aria-labelledby="programme-modal-title">
-    <div class="modal__shell">
+    <div class="modal__shell modal__shell--wide">
       <button class="modal__close" type="button" data-modal-close aria-label="Close" data-cursor="link">×</button>
       <div class="modal__brand"><img src="assets/brand/samt-symbol.svg" alt="" /><span>FROM POTENTIAL TO COMMAND</span></div>
       <p class="eyebrow" data-i18n="modal.programme.kicker">Programme overview</p>
-      <h2 id="programme-modal-title" data-i18n="modal.programme.title">Selected for potential.<br /><em>Shaped for command.</em></h2>
-      <div class="modal__grid">
-        <p data-i18n="modal.programme.copy">SAMT is a highly selective leadership programme for exceptional professionals who demonstrate the judgement, character, discipline and ambition required for future command and senior strategic responsibility.</p>
+      <h2 id="programme-modal-title" data-i18n-html="modal.programme.title">Selected for potential.<br /><em>Shaped for command.</em></h2>
+      <div class="modal__grid modal__grid--programme">
+        <div>
+          <p data-i18n="modal.programme.copy">SAMT is a highly selective leadership programme for exceptional professionals who demonstrate the judgement, character, discipline and ambition required for future command and senior strategic responsibility.</p>
+          <blockquote data-i18n="modal.programme.promise">The programme does not reward attendance. It evidences readiness.</blockquote>
+        </div>
         <ol>
           <li><span>01</span><strong data-i18n="journey.s1.title">Potential</strong></li>
           <li><span>02</span><strong data-i18n="journey.s2.title">Selection</strong></li>
@@ -310,15 +484,92 @@
     </div>
   </dialog>
 
+  <dialog class="modal" id="selection-modal" aria-labelledby="selection-modal-title">
+    <div class="modal__shell modal__shell--wide">
+      <button class="modal__close" type="button" data-modal-close aria-label="Close">×</button>
+      <p class="eyebrow" data-i18n="selection.kicker">Selecting the elite of the elite</p>
+      <h2 id="selection-modal-title" data-i18n-html="selection.modalTitle">Four gates.<br /><em>One standard.</em></h2>
+      <div class="selection-modal__grid">
+        <article><span>01</span><h3 data-i18n="selection.g1.title">Eligibility</h3><p data-i18n="selection.g1.long">Institutional nomination, minimum experience and a documented performance record.</p></article>
+        <article><span>02</span><h3 data-i18n="selection.g2.title">Assessment Centre</h3><p data-i18n="selection.g2.long">Group exercises, analytical tasks and decision-making under pressure.</p></article>
+        <article><span>03</span><h3 data-i18n="selection.g3.title">Executive Interview</h3><p data-i18n="selection.g3.long">A structured examination of judgement, humility, motivation and learning agility.</p></article>
+        <article><span>04</span><h3 data-i18n="selection.g4.title">Independent Endorsement</h3><p data-i18n="selection.g4.long">Final cohort selection by an authorised multidisciplinary panel.</p></article>
+      </div>
+    </div>
+  </dialog>
+
   <dialog class="modal modal--station" id="station-modal" aria-labelledby="station-modal-title">
-    <div class="modal__shell">
+    <div class="modal__shell modal__shell--wide">
       <button class="modal__close" type="button" data-modal-close aria-label="Close" data-cursor="link">×</button>
       <p class="eyebrow" data-i18n="station.current">Current station</p>
-      <h2 id="station-modal-title" data-i18n="station.title">United Arab Emirates</h2>
+      <h2 id="station-modal-title">United Arab Emirates</h2>
+      <p class="modal__lead" id="station-modal-lead">Foundation, strategic orientation and national context.</p>
       <div class="station-modal__grid">
-        <section><span>01</span><h3 data-i18n="station.modal.hosts">Proposed hosts</h3><p data-i18n="station.modal.hostsCopy">Selected national leadership, defence, aviation, technology and institutional partners.</p></section>
-        <section><span>02</span><h3 data-i18n="station.modal.learning">Learning focus</h3><p data-i18n="station.modal.learningCopy">Strategic leadership, institutional awareness, capability development and national security context.</p></section>
-        <section><span>03</span><h3 data-i18n="station.modal.outcomes">Expected outcomes</h3><p data-i18n="station.modal.outcomesCopy">A common leadership foundation, stronger strategic judgement and readiness for international exposure.</p></section>
+        <section><span>01</span><h3 data-i18n="station.modal.hosts">Proposed host categories</h3><ul id="station-modal-hosts"></ul></section>
+        <section><span>02</span><h3 data-i18n="station.modal.learning">Learning focus</h3><ul id="station-modal-learning"></ul></section>
+        <section><span>03</span><h3 data-i18n="station.modal.outcomes">Expected outcomes</h3><ul id="station-modal-outcomes"></ul></section>
+        <section><span>04</span><h3 data-i18n="station.modal.highlights">Key experiences</h3><ul id="station-modal-highlights"></ul></section>
+      </div>
+      <p class="modal__disclaimer" data-i18n="station.modal.disclaimer">Illustrative host categories and activities are subject to formal coordination, approval and agreement.</p>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="competency-modal" aria-labelledby="competency-modal-title">
+    <div class="modal__shell">
+      <button class="modal__close" type="button" data-modal-close aria-label="Close">×</button>
+      <div class="competency-modal__icon"><svg><use id="competency-modal-icon" href="assets/icons/samt-icons.svg#judgement"></use></svg></div>
+      <p class="eyebrow" data-i18n="competencies.kicker">Leadership maturity competencies</p>
+      <h2 id="competency-modal-title">Strategic Judgement</h2>
+      <p class="modal__lead" id="competency-modal-copy"></p>
+      <div class="competency-modal__evidence">
+        <span data-i18n="competencies.evidence">Evidence of maturity</span>
+        <ul id="competency-modal-evidence"></ul>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="assessment-modal" aria-labelledby="assessment-modal-title">
+    <div class="modal__shell modal__shell--wide">
+      <button class="modal__close" type="button" data-modal-close aria-label="Close">×</button>
+      <p class="eyebrow" data-i18n="assessment.kicker">Assessment and governance</p>
+      <h2 id="assessment-modal-title" data-i18n-html="assessment.modalTitle">Readiness is built.<br /><em>Evidence proves it.</em></h2>
+      <div class="assessment-modal__grid">
+        <article><strong>01</strong><h3 data-i18n="assessment.a1">Baseline</h3><p data-i18n="assessment.m1">A pre-programme profile establishes strengths, risks and targeted growth priorities.</p></article>
+        <article><strong>02</strong><h3 data-i18n="assessment.a2">Daily Evidence</h3><p data-i18n="assessment.m2">Assignments, conduct, reflection and mentor observations generate continuous evidence.</p></article>
+        <article><strong>03</strong><h3 data-i18n="assessment.a3">Host Assessment</h3><p data-i18n="assessment.m3">Independent host feedback provides external validation of performance and behaviour.</p></article>
+        <article><strong>04</strong><h3 data-i18n="assessment.a4">Maturity Challenge</h3><p data-i18n="assessment.m4">Complex scenarios test judgement, rationale, command presence and executive communication.</p></article>
+        <article><strong>05</strong><h3 data-i18n="assessment.a5">Impact Project</h3><p data-i18n="assessment.m5">Institutional assignments demonstrate whether learning converts into sustainable value.</p></article>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="impact-modal" aria-labelledby="impact-modal-title">
+    <div class="modal__shell">
+      <button class="modal__close" type="button" data-modal-close aria-label="Close">×</button>
+      <p class="eyebrow" data-i18n="impact.kicker">Institutional impact</p>
+      <h2 id="impact-modal-title">Readiness and decision quality</h2>
+      <p class="modal__lead" id="impact-modal-copy"></p>
+      <ul class="impact-modal__list" id="impact-modal-list"></ul>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="admission-modal" aria-labelledby="admission-modal-title">
+    <div class="modal__shell modal__shell--wide">
+      <button class="modal__close" type="button" data-modal-close aria-label="Close">×</button>
+      <p class="eyebrow" data-i18n="admission.kicker">Admission</p>
+      <h2 id="admission-modal-title" data-i18n-html="admission.modalTitle">Nomination first.<br /><em>Selection by evidence.</em></h2>
+      <div class="admission-modal__grid">
+        <ol>
+          <li><span>01</span><strong data-i18n="admission.m1">Institutional nomination</strong></li>
+          <li><span>02</span><strong data-i18n="admission.m2">Eligibility and record review</strong></li>
+          <li><span>03</span><strong data-i18n="admission.m3">Assessment centre</strong></li>
+          <li><span>04</span><strong data-i18n="admission.m4">Structured executive interview</strong></li>
+          <li><span>05</span><strong data-i18n="admission.m5">Final endorsement</strong></li>
+        </ol>
+        <div>
+          <p data-i18n="admission.modalCopy">SAMT is not an open-enrolment programme. Candidates are nominated by authorised institutions and progress through a competitive, evidence-based process.</p>
+          <div class="admission-modal__notice" data-i18n="admission.notice">Programme dates, eligibility parameters and nomination authority will be confirmed in the approved execution plan.</div>
+        </div>
       </div>
     </div>
   </dialog>

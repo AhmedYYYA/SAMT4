@@ -1,0 +1,43 @@
+{
+  "version": "2.0",
+  "project": "SAMT Website Phase 2",
+  "status": "prototype-complete",
+  "brand": {
+    "strategic_ascent_identity": true,
+    "approved_palette": true,
+    "approved_bilingual_descriptor": true,
+    "arabic_uses_programme_not_system": true
+  },
+  "sections": {
+    "hero": true,
+    "programme": true,
+    "journey": true,
+    "selection": true,
+    "stations": 4,
+    "competencies": 6,
+    "assessment": true,
+    "governance": true,
+    "impact": true,
+    "admission": true,
+    "command_readiness": true
+  },
+  "interaction": {
+    "gsap": "3.12.5",
+    "scroll_trigger": "3.12.5",
+    "lenis": "1.0.42",
+    "custom_cursor": true,
+    "magnetic_controls": true,
+    "animated_station_svg": true,
+    "custom_dialogs": 7,
+    "rtl_ltr_switch": true,
+    "reduced_motion": true
+  },
+  "validation": {
+    "javascript_syntax": "pass",
+    "duplicate_html_ids": "pass",
+    "local_asset_references": "pass",
+    "translation_key_parity": "pass",
+    "css_brace_balance": "pass",
+    "live_browser_qa": "required_after_deployment"
+  }
+}

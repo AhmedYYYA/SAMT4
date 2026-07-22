@@ -1,47 +1,86 @@
-# SAMT Website — Phase 1 Production Prototype v1.0
+# SAMT Website — Phase 2 v2.0
 
-A brand-led working prototype for the approved SAMT identity and homepage direction.
+**SAMT — Strategic Advancement, Management & Transformation**  
+**برنامج سَمْت للتقدم الاستراتيجي والإدارة والتحول**  
+**From Potential to Command | من الإمكانات إلى القيادة**
 
-## Included in this phase
+This package advances the approved Phase 1 prototype into a complete bilingual leadership-programme website. It uses the approved Strategic Ascent brand identity and the approved cinematic near-black, deep-navy and champagne-gold creative direction.
 
-- Approved Strategic Ascent brand identity
-- Bilingual English and Arabic interface
-- Cinematic loading sequence
-- Fixed branded header and responsive menu
-- Custom cursor and magnetic controls
-- GSAP, ScrollTrigger and Lenis integration
-- Strategic Ascent hero with animated trajectory paths, command star and Earth horizon
-- Programme proposition and key metrics
-- Pinned six-stage leadership journey
-- UAE preparation-station prototype using the approved animated SVG
-- Custom programme and station modal interfaces
-- Command-readiness closing sequence
-- Canvas particles, ambient lighting and parallax
-- Responsive layouts and reduced-motion support
+## Main files
 
-## Required CDN scripts
+- `index.html` — semantic page architecture and all website sections
+- `styles.css` — complete responsive visual system
+- `app.js` — GSAP, ScrollTrigger, Lenis, bilingual content, station carousel, dialogs and interaction logic
+- `assets/brand/` — approved SAMT production logo assets
+- `assets/stations/` — approved animated UAE, UK, France and USA station scenes
+- `assets/icons/samt-icons.svg` — custom line-icon sprite
+- `docs/` — deployment, motion, content and QA documentation
+- `preview/approved-creative-reference.png` — approved aesthetic reference; not loaded by the production website
 
-The exact approved library versions are included in `index.html`:
+## Implemented sections
+
+1. Strategic Ascent hero
+2. Programme proposition and metrics
+3. Six-stage leadership journey
+4. Selective admission framework
+5. Four animated international preparation stations
+6. Command-oriented competency framework
+7. Continuous assessment and governance model
+8. Institutional impact framework
+9. Nomination and admission section
+10. Final command-readiness statement
+
+## Interaction system
 
 - GSAP 3.12.5
 - GSAP ScrollTrigger 3.12.5
 - Lenis 1.0.42
-
-An internet connection is required for these libraries and Google Fonts.
+- Canvas particles
+- Animated SVG trajectories
+- Custom cursor states
+- Magnetic buttons
+- Card tilt and hover responses
+- Scroll-pinned leadership journey
+- Animated station carousel with keyboard-accessible controls
+- Native accessible dialogs with custom branded presentation
+- English LTR and Arabic RTL language switching
+- Reduced-motion support
 
 ## Run locally
 
+Use a local web server rather than opening the file directly:
+
 ```bash
-cd SAMT_Website_Phase1_v1.0
-python3 -m http.server 8080
+python3 -m http.server 8000
 ```
 
-Open `http://localhost:8080`.
+Then open:
 
-## GitHub Pages
+```text
+http://localhost:8000
+```
 
-Upload the complete contents of this directory to the repository root. Preserve the `assets` directory structure.
+The exact CDN libraries and Google Fonts require an internet connection.
 
-## Phase boundary
+## Deploy to GitHub Pages
 
-This is the approved Phase 1 browser prototype. The next production stage should complete the UK, France, USA and Return & Impact station environments, competencies, selection and assessment modules, institutional impact, admissions workflow, final mobile choreography and full QA.
+Upload the complete contents of this folder to the repository root. Do not upload only `index.html`; the `assets` directory, `styles.css` and `app.js` are required.
+
+Recommended repository root:
+
+```text
+index.html
+styles.css
+app.js
+assets/
+docs/
+manifest.webmanifest
+robots.txt
+404.html
+```
+
+See `docs/DEPLOYMENT_GUIDE.md` for the full procedure.
+
+## Important content boundary
+
+The host categories, preparation activities and programme arrangements are illustrative and subject to formal approval, coordination and agreement. The website does not claim confirmed partnerships.
