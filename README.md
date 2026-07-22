@@ -84,3 +84,18 @@ See `docs/DEPLOYMENT_GUIDE.md` for the full procedure.
 ## Important content boundary
 
 The host categories, preparation activities and programme arrangements are illustrative and subject to formal approval, coordination and agreement. The website does not claim confirmed partnerships.
+
+## v2.1 station asset correction
+
+The four approved animated SVG files are included using the exact filenames already referenced by `index.html` and `app.js`:
+
+```text
+assets/stations/uae-animated.svg
+assets/stations/uk-animated.svg
+assets/stations/france-animated.svg
+assets/stations/usa-animated.svg
+```
+
+GitHub Pages paths and filenames are case-sensitive. Upload the full `assets` directory and do not rename it to `Assets` or `Stations`.
+
+Use `station-assets-test.html` after deployment to verify the four files independently.
