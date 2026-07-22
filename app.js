@@ -364,61 +364,61 @@
       uae: {
         code: "UAE",
         title: "United Arab Emirates",
-        subtitle: "Foundation, strategic orientation and national context",
-        body: "The national foundation phase establishes a common understanding of leadership expectations, strategic priorities and the institutional environment in which future responsibility will be exercised.",
-        duration: "3+ weeks",
-        focus: "Leadership foundation",
+        subtitle: "National foundation, sovereign capability and transformation",
+        body: "A three-week national foundation station connecting leadership formation with the UAE defence, aviation, advanced-technology and sustainability ecosystems.",
+        duration: "3 weeks",
+        focus: "National capability & transformation",
         points: [
-          "Strategic leadership and national vision",
-          "Defence, aviation and institutional ecosystems",
-          "Capability development and transformation frameworks"
+          "Tawazun and national capability governance",
+          "EDGE and GAL defence and aviation ecosystems",
+          "TII, Masdar, emerging technology and sustainability"
         ],
-        hosts: ["National leadership and government institutions", "Defence and staff-development organisations", "Technology, industry and engineering partners"],
-        learning: ["Strategic leadership and national direction", "Capability development and institutional readiness", "National security, technology and transformation context"],
-        outcomes: ["Common strategic foundation", "Stronger judgement in national context", "Readiness for international exposure"],
-        highlights: ["Executive briefings", "Institutional and facility visits", "Mentoring and daily reflection"],
+        hosts: ["Tawazun Council", "EDGE Group", "Global Aerospace Logistics — GAL", "Technology Innovation Institute — TII", "Masdar"],
+        learning: ["National capability governance and strategic alignment", "Defence and aviation industrial development", "Advanced technology, innovation and sustainability"],
+        outcomes: ["Common national strategic foundation", "Stronger understanding of the UAE capability ecosystem", "Readiness for international comparative exposure"],
+        highlights: ["Executive and technical briefings", "Institutional, industrial and laboratory visits", "Leadership reflection and applied assignments"],
         image: "assets/stations/uae-animated.svg"
       },
       uk: {
         code: "UK",
         title: "United Kingdom",
-        subtitle: "Strategy, governance and professional military education",
-        body: "An intensive station focused on strategic studies, governance, executive education and the relationship between policy, institutions, capability and command.",
-        duration: "3+ weeks",
-        focus: "Strategy & governance",
-        points: ["Strategic studies and command education", "Governance, policy and institutional decision-making", "Aerospace, engineering and leadership ecosystems"],
-        hosts: ["Defence and staff institutions", "Executive education and research centres", "Aerospace and engineering partners"],
-        learning: ["Strategic studies and command judgement", "Governance and institutional leadership", "Professional military and executive education"],
-        outcomes: ["Broader strategic perspective", "Improved policy-to-execution understanding", "Stronger executive communication"],
-        highlights: ["Seminars and decision exercises", "Senior-leader engagement", "Institutional and industry visits"],
+        subtitle: "Professional military education, governance and defence programmes",
+        body: "A six-week station combining professional military education, leadership formation and exposure to organisations and leading companies supporting United Kingdom Ministry of Defence programmes.",
+        duration: "6 weeks",
+        focus: "Military education & defence programmes",
+        points: ["RAF Cosford and air-power professional education", "Royal Military Academy Sandhurst leadership formation", "Leading companies supporting UK MOD programmes"],
+        hosts: ["RAF Cosford", "Royal Military Academy Sandhurst", "Leading companies associated with UK Ministry of Defence programmes"],
+        learning: ["Strategic studies, command judgement and air-power context", "Leadership, discipline and professional military ethos", "Defence programme governance, industry and delivery"],
+        outcomes: ["Broader strategic and military perspective", "Stronger leadership and command understanding", "Improved policy, programme and industry integration"],
+        highlights: ["Professional military education", "Senior-leader and institutional engagement", "Defence-industry and programme visits"],
         image: "assets/stations/uk-animated.svg"
       },
       france: {
         code: "FRANCE",
         title: "France",
-        subtitle: "Industrial excellence, engineering and strategic autonomy",
-        body: "A station centred on engineering excellence, industrial strategy, advanced manufacturing, supply networks and the translation of national capability into global influence.",
-        duration: "3+ weeks",
-        focus: "Industry & engineering",
-        points: ["Industrial strategy and national capability", "Engineering, manufacturing and supply networks", "Government relations and international partnerships"],
-        hosts: ["National industrial institutions", "Aerospace and advanced-manufacturing organisations", "Executive education and strategy partners"],
-        learning: ["Industrial strategy and lifecycle thinking", "Engineering leadership and supply resilience", "International business and government relations"],
-        outcomes: ["Understanding of industrial ecosystems", "Stronger lifecycle and sustainment thinking", "Improved partnership and negotiation perspective"],
-        highlights: ["Production-line and laboratory visits", "Engineering and executive workshops", "Industry strategy assignments"],
+        subtitle: "European industry, partnerships and strategic engagement",
+        body: "A three-week European station centred on EDGE Europe, its offices and relevant companies connected through approved memoranda of understanding or contractual relationships.",
+        duration: "3 weeks",
+        focus: "European partnerships & industry",
+        points: ["EDGE Europe strategy and operating model", "European offices and affiliated industrial companies", "Engagement with companies covered by MoUs or contracts"],
+        hosts: ["EDGE Europe", "Relevant EDGE Europe offices", "Companies connected through approved MoUs or contracts"],
+        learning: ["European defence-industry engagement", "Partnership, contract and stakeholder management", "Industrial cooperation and international business development"],
+        outcomes: ["Understanding of the European partner ecosystem", "Stronger commercial and government-relations perspective", "Improved partnership and negotiation capability"],
+        highlights: ["Executive and partner-company briefings", "Office, facility and industrial visits", "Partnership and contract case studies"],
         image: "assets/stations/france-animated.svg"
       },
       usa: {
         code: "USA",
         title: "United States of America",
-        subtitle: "Innovation, integration and strategic transformation",
-        body: "An advanced station focused on innovation ecosystems, defence and aerospace best practice, strategic integration, acquisition and the leadership of large-scale transformation.",
-        duration: "3+ weeks",
-        focus: "Innovation & integration",
-        points: ["Innovation and emerging technologies", "Defence, aerospace and acquisition ecosystems", "Strategic integration and transformation models"],
-        hosts: ["Defence and strategic institutions", "Innovation laboratories and research universities", "Aerospace, technology and integration partners"],
-        learning: ["Innovation leadership and emerging technology", "Acquisition, programme and contract management", "Strategic integration across complex ecosystems"],
-        outcomes: ["Understanding of innovation ecosystems", "Access to defence and aerospace best practice", "Stronger transformation and integration capability"],
-        highlights: ["High-level briefings and roundtables", "Innovation-hub and laboratory visits", "Exposure to future-ready capabilities"],
+        subtitle: "Defence cooperation, acquisition and strategic education",
+        body: "A four-week station focused on the United States Department of Defense, government-to-government cooperation, Foreign Military Sales, strategic education and defence acquisition ecosystems.",
+        duration: "4 weeks",
+        focus: "Defence cooperation & acquisition",
+        points: ["U.S. Department of Defense and government-to-government programmes", "Foreign Military Sales and security-cooperation processes", "Naval Postgraduate School, War College and strategic education"],
+        hosts: ["United States Department of Defense", "Government-to-government and Foreign Military Sales programme stakeholders", "Naval Postgraduate School — NPS", "War College institutions and related strategic-education organisations"],
+        learning: ["Security cooperation, G-to-G and FMS governance", "Acquisition, programme and stakeholder management", "Strategic studies, innovation and defence transformation"],
+        outcomes: ["Improved understanding of U.S. defence-cooperation mechanisms", "Stronger acquisition and programme-management perspective", "Expanded strategic-education and transformation capability"],
+        highlights: ["DoD and programme briefings", "NPS and War College engagements", "Security-cooperation, acquisition and innovation visits"],
         image: "assets/stations/usa-animated.svg"
       }
     },
@@ -426,57 +426,57 @@
       uae: {
         code: "الإمارات",
         title: "دولة الإمارات العربية المتحدة",
-        subtitle: "التأسيس والتوجيه الاستراتيجي والسياق الوطني",
-        body: "تبني مرحلة التأسيس الوطني فهماً مشتركاً لتوقعات القيادة والأولويات الاستراتيجية والبيئة المؤسسية التي ستُمارس فيها المسؤوليات المستقبلية.",
-        duration: "3+ أسابيع",
-        focus: "التأسيس القيادي",
-        points: ["القيادة الاستراتيجية والرؤية الوطنية", "منظومات الدفاع والطيران والمؤسسات", "أطر تطوير القدرات والتحول"],
-        hosts: ["مؤسسات القيادة والحكومة الوطنية", "مؤسسات الدفاع وإعداد القيادات", "شركاء التقنية والصناعة والهندسة"],
-        learning: ["القيادة الاستراتيجية والاتجاه الوطني", "تطوير القدرات والجاهزية المؤسسية", "سياق الأمن الوطني والتقنية والتحول"],
-        outcomes: ["أساس استراتيجي مشترك", "تعزيز الحكم في السياق الوطني", "الجاهزية للتعرض الدولي"],
-        highlights: ["إحاطات تنفيذية", "زيارات مؤسسية وميدانية", "توجيه وتأمل يومي"],
+        subtitle: "التأسيس الوطني والقدرات السيادية والتحول",
+        body: "محطة تأسيس وطنية لمدة ثلاثة أسابيع تربط إعداد القيادة بمنظومات الدفاع والطيران والتقنيات المتقدمة والاستدامة في دولة الإمارات.",
+        duration: "3 أسابيع",
+        focus: "القدرات الوطنية والتحول",
+        points: ["مجلس التوازن وحوكمة القدرات الوطنية", "منظومات إيدج وGAL في الدفاع والطيران", "معهد الابتكار التكنولوجي TII ومصدر والتقنيات الناشئة والاستدامة"],
+        hosts: ["مجلس التوازن", "مجموعة إيدج", "جلوبال إيروسبيس لوجستكس — GAL", "معهد الابتكار التكنولوجي — TII", "مصدر"],
+        learning: ["حوكمة القدرات الوطنية والمواءمة الاستراتيجية", "تطوير الصناعات الدفاعية والجوية", "التقنيات المتقدمة والابتكار والاستدامة"],
+        outcomes: ["أساس استراتيجي وطني مشترك", "فهم أعمق لمنظومة القدرات في دولة الإمارات", "الجاهزية للمقارنة والتعرض الدولي"],
+        highlights: ["إحاطات تنفيذية وفنية", "زيارات مؤسسية وصناعية ومختبرية", "تأملات قيادية ومهام تطبيقية"],
         image: "assets/stations/uae-animated.svg"
       },
       uk: {
         code: "المملكة المتحدة",
         title: "المملكة المتحدة",
-        subtitle: "الاستراتيجية والحوكمة والتعليم القيادي المهني",
-        body: "محطة مكثفة تركز على الدراسات الاستراتيجية والحوكمة والتعليم التنفيذي والعلاقة بين السياسة والمؤسسات والقدرة والقيادة.",
-        duration: "3+ أسابيع",
-        focus: "الاستراتيجية والحوكمة",
-        points: ["الدراسات الاستراتيجية والتعليم القيادي", "الحوكمة والسياسة وصناعة القرار المؤسسي", "منظومات الطيران والهندسة والقيادة"],
-        hosts: ["مؤسسات الدفاع والأركان", "مراكز التعليم التنفيذي والبحث", "شركاء الطيران والهندسة"],
-        learning: ["الدراسات الاستراتيجية والحكم القيادي", "الحوكمة والقيادة المؤسسية", "التعليم العسكري المهني والتنفيذي"],
-        outcomes: ["منظور استراتيجي أوسع", "فهم أفضل للرابط بين السياسة والتنفيذ", "تواصل تنفيذي أقوى"],
-        highlights: ["ندوات وتمارين قرار", "تفاعل مع قيادات عليا", "زيارات مؤسسية وصناعية"],
+        subtitle: "التعليم العسكري المهني والحوكمة والبرامج الدفاعية",
+        body: "محطة لمدة ستة أسابيع تجمع بين التعليم العسكري المهني وصقل القيادة والتعرض للمؤسسات والشركات الرائدة الداعمة لبرامج وزارة الدفاع البريطانية.",
+        duration: "6 أسابيع",
+        focus: "التعليم العسكري والبرامج الدفاعية",
+        points: ["RAF Cosford والتعليم المهني للقوة الجوية", "الأكاديمية العسكرية الملكية ساندهيرست وصقل القيادة", "الشركات الرائدة الداعمة لبرامج وزارة الدفاع البريطانية"],
+        hosts: ["RAF Cosford", "الأكاديمية العسكرية الملكية ساندهيرست", "الشركات الرائدة المرتبطة ببرامج وزارة الدفاع البريطانية"],
+        learning: ["الدراسات الاستراتيجية والحكم القيادي وسياق القوة الجوية", "القيادة والانضباط والقيم العسكرية المهنية", "حوكمة البرامج الدفاعية والصناعة والتنفيذ"],
+        outcomes: ["منظور استراتيجي وعسكري أوسع", "فهم أقوى للقيادة وتحمل المسؤولية", "تحسين التكامل بين السياسة والبرامج والصناعة"],
+        highlights: ["تعليم عسكري مهني", "تفاعل مع القيادات والمؤسسات", "زيارات للبرامج والصناعات الدفاعية"],
         image: "assets/stations/uk-animated.svg"
       },
       france: {
         code: "فرنسا",
         title: "الجمهورية الفرنسية",
-        subtitle: "التميز الصناعي والهندسة والاستقلالية الاستراتيجية",
-        body: "محطة تتمحور حول التميز الهندسي والاستراتيجية الصناعية والتصنيع المتقدم وشبكات الإمداد وتحويل القدرة الوطنية إلى تأثير عالمي.",
-        duration: "3+ أسابيع",
-        focus: "الصناعة والهندسة",
-        points: ["الاستراتيجية الصناعية والقدرة الوطنية", "الهندسة والتصنيع وشبكات الإمداد", "العلاقات الحكومية والشراكات الدولية"],
-        hosts: ["مؤسسات صناعية وطنية", "منظمات الطيران والتصنيع المتقدم", "شركاء التعليم التنفيذي والاستراتيجية"],
-        learning: ["الاستراتيجية الصناعية والتفكير عبر دورة الحياة", "القيادة الهندسية ومرونة الإمداد", "الأعمال الدولية والعلاقات الحكومية"],
-        outcomes: ["فهم المنظومات الصناعية", "تعزيز التفكير في دورة الحياة والاستدامة", "منظور أفضل للشراكات والتفاوض"],
-        highlights: ["زيارات خطوط الإنتاج والمختبرات", "ورش هندسية وتنفيذية", "مهام في الاستراتيجية الصناعية"],
+        subtitle: "الصناعة الأوروبية والشراكات والتفاعل الاستراتيجي",
+        body: "محطة أوروبية لمدة ثلاثة أسابيع تتمحور حول إيدج أوروبا ومكاتبها والشركات ذات الصلة المرتبطة بمذكرات تفاهم أو عقود معتمدة.",
+        duration: "3 أسابيع",
+        focus: "الشراكات والصناعة الأوروبية",
+        points: ["استراتيجية إيدج أوروبا ونموذج عملها", "المكاتب الأوروبية والشركات الصناعية المرتبطة", "التفاعل مع الشركات المشمولة بمذكرات تفاهم أو عقود"],
+        hosts: ["إيدج أوروبا", "مكاتب إيدج أوروبا ذات الصلة", "الشركات المرتبطة بمذكرات تفاهم أو عقود معتمدة"],
+        learning: ["التفاعل مع الصناعات الدفاعية الأوروبية", "إدارة الشراكات والعقود وأصحاب المصلحة", "التعاون الصناعي وتطوير الأعمال الدولية"],
+        outcomes: ["فهم منظومة الشركاء الأوروبيين", "تعزيز منظور العلاقات التجارية والحكومية", "تحسين قدرات الشراكة والتفاوض"],
+        highlights: ["إحاطات تنفيذية مع الشركات الشريكة", "زيارات للمكاتب والمنشآت والمواقع الصناعية", "دراسات حالة في الشراكات والعقود"],
         image: "assets/stations/france-animated.svg"
       },
       usa: {
         code: "الولايات المتحدة",
         title: "الولايات المتحدة الأمريكية",
-        subtitle: "الابتكار والتكامل والتحول الاستراتيجي",
-        body: "محطة متقدمة تركز على منظومات الابتكار وأفضل الممارسات الدفاعية والجوية والتكامل الاستراتيجي والاستحواذ وقيادة التحول واسع النطاق.",
-        duration: "3+ أسابيع",
-        focus: "الابتكار والتكامل",
-        points: ["الابتكار والتقنيات الناشئة", "منظومات الدفاع والطيران والاستحواذ", "نماذج التكامل والتحول الاستراتيجي"],
-        hosts: ["مؤسسات الدفاع والاستراتيجية", "مختبرات الابتكار والجامعات البحثية", "شركاء الطيران والتقنية والتكامل"],
-        learning: ["قيادة الابتكار والتقنيات الناشئة", "إدارة الاستحواذ والبرامج والعقود", "التكامل الاستراتيجي عبر منظومات معقدة"],
-        outcomes: ["فهم منظومات الابتكار", "التعرف إلى أفضل الممارسات الدفاعية والجوية", "تعزيز القدرة على التحول والتكامل"],
-        highlights: ["إحاطات وطاولات مستديرة رفيعة المستوى", "زيارات مراكز الابتكار والمختبرات", "التعرض لقدرات مستقبلية"],
+        subtitle: "التعاون الدفاعي والاستحواذ والتعليم الاستراتيجي",
+        body: "محطة لمدة أربعة أسابيع تركز على وزارة الدفاع الأمريكية وبرامج التعاون الحكومي بين الدول والمبيعات العسكرية الأجنبية والتعليم الاستراتيجي ومنظومات الاستحواذ الدفاعي.",
+        duration: "4 أسابيع",
+        focus: "التعاون الدفاعي والاستحواذ",
+        points: ["وزارة الدفاع الأمريكية وبرامج التعاون الحكومي بين الدول", "المبيعات العسكرية الأجنبية وإجراءات التعاون الأمني", "كلية الدراسات العليا البحرية NPS وكليات الحرب والتعليم الاستراتيجي"],
+        hosts: ["وزارة الدفاع الأمريكية", "أصحاب المصلحة في برامج التعاون الحكومي والمبيعات العسكرية الأجنبية", "كلية الدراسات العليا البحرية — NPS", "كليات الحرب ومؤسسات التعليم الاستراتيجي ذات الصلة"],
+        learning: ["حوكمة التعاون الأمني وبرامج G-to-G وFMS", "إدارة الاستحواذ والبرامج وأصحاب المصلحة", "الدراسات الاستراتيجية والابتكار والتحول الدفاعي"],
+        outcomes: ["فهم أفضل لآليات التعاون الدفاعي الأمريكية", "تعزيز منظور الاستحواذ وإدارة البرامج", "توسيع قدرات التعليم الاستراتيجي والتحول"],
+        highlights: ["إحاطات وزارة الدفاع والبرامج", "تفاعلات مع NPS وكليات الحرب", "زيارات في التعاون الأمني والاستحواذ والابتكار"],
         image: "assets/stations/usa-animated.svg"
       }
     }
@@ -937,6 +937,29 @@
     });
   }
 
+  function initHeroParallax() {
+    if (reducedMotion || !hasGSAP || !matchMedia("(pointer:fine)").matches) return;
+    const hero = q(".hero");
+    const earth = q(".hero__earth");
+    const network = q(".hero__earth-surface");
+    const glow = q(".hero__earth-glow");
+    if (!hero || !earth || !network || !glow) return;
+    const reset = () => {
+      gsap.to(earth, { x: 0, y: 0, duration: 1.1, ease: "power3.out", overwrite: "auto" });
+      gsap.to(network, { x: 0, y: 0, duration: 1.2, ease: "power3.out", overwrite: "auto" });
+      gsap.to(glow, { x: 0, y: 0, duration: 1.35, ease: "power3.out", overwrite: "auto" });
+    };
+    hero.addEventListener("pointermove", (event) => {
+      const rect = hero.getBoundingClientRect();
+      const px = (event.clientX - rect.left) / rect.width - .5;
+      const py = (event.clientY - rect.top) / rect.height - .5;
+      gsap.to(earth, { x: px * -10, y: py * -7, duration: 1.1, ease: "power3.out", overwrite: "auto" });
+      gsap.to(network, { x: px * 15, y: py * 10, duration: .95, ease: "power3.out", overwrite: "auto" });
+      gsap.to(glow, { x: px * 22, y: py * 16, duration: 1.2, ease: "power3.out", overwrite: "auto" });
+    });
+    hero.addEventListener("pointerleave", reset);
+  }
+
   function initLoader() {
     const loader = q(".loader");
     const bar = q(".loader__bar");
@@ -1036,7 +1059,9 @@
     gsap.to(".hero__copy", { yPercent: 15, autoAlpha: .12, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: 1 } });
     gsap.to(".hero__identity", { yPercent: -11, autoAlpha: .18, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: 1 } });
     gsap.to(".hero-routes", { yPercent: 10, scale: 1.04, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: 1 } });
-    gsap.to(".hero__earth", { yPercent: 16, scale: 1.06, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: 1.2 } });
+    gsap.to(".hero__earth", { yPercent: 6, scale: 1.025, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: 1.2 } });
+    gsap.to(".hero__earth-surface", { yPercent: 4, xPercent: -1.4, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: 1.35 } });
+    gsap.to(".hero__earth-lines", { yPercent: 2, xPercent: 1.2, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: 1.5 } });
 
     const revealSelectors = [
       ".programme__intro", ".programme__statement", ".selection__copy", ".selection-orbit",
@@ -1147,6 +1172,7 @@
     initCursor();
     initMagnetic();
     initCardTilt();
+    initHeroParallax();
     initParticles();
     initMotion();
     initLoader();

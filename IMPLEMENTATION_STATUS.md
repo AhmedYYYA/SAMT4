@@ -28,3 +28,16 @@
 - Verify iPhone and Android viewport behavior
 - Confirm CDN accessibility in the target operating environment
 - Confirm final programme dates and partner references before public launch
+
+
+## Phase 3.2 approved hero
+
+- [x] Layered Earth horizon background
+- [x] Animated global network SVG overlay
+- [x] Repositioned ascent trajectories
+- [x] Strengthened headline and identity contrast
+- [x] Responsive desktop/tablet/mobile rules
+- [x] Reduced-motion fallback
+- [x] AVIF/WebP/SVG asset set
+
+- [x] Approved 3 / 6 / 3 / 4-week station durations and host categories integrated in English and Arabic.
