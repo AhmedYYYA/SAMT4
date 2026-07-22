@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#03070d" />
+  <meta name="description" content="SAMT — an elite leadership programme that selects exceptional potential and prepares future commanders and strategic leaders." />
+  <title>SAMT — From Potential to Command</title>
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="is-loading">
+  <noscript><div class="noscript">JavaScript is required to view the SAMT motion experience.</div></noscript>
+
+  <div class="loader" aria-hidden="true">
+    <div class="loader__brand">
+      <img src="assets/brand/samt-symbol.svg" alt="" />
+      <span>SAMT</span>
+    </div>
+    <div class="loader__message" data-i18n="loader.message">Preparing the ascent</div>
+    <div class="loader__track"><span class="loader__bar"></span></div>
+    <div class="loader__value">0%</div>
+  </div>
+
+  <div class="cursor cursor--ring" aria-hidden="true"></div>
+  <div class="cursor cursor--dot" aria-hidden="true"></div>
+
+  <div class="ambient" aria-hidden="true">
+    <canvas id="particle-canvas"></canvas>
+    <div class="ambient__aurora ambient__aurora--gold"></div>
+    <div class="ambient__aurora ambient__aurora--blue"></div>
+    <div class="ambient__grid"></div>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="site-header__inner">
+      <a class="brand-lockup" href="#hero" aria-label="SAMT home" data-cursor="link">
+        <img class="brand-lockup__symbol" src="assets/brand/samt-symbol.svg" alt="" />
+        <span class="brand-lockup__text">
+          <strong>SAMT</strong>
+          <small>Strategic Advancement,<br />Management &amp; Transformation</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#programme" data-i18n="nav.programme" data-cursor="link">Programme</a>
+        <a href="#journey" data-i18n="nav.journey" data-cursor="link">The Journey</a>
+        <a href="#stations" data-i18n="nav.stations" data-cursor="link">Preparation Stations</a>
+        <a href="#command" data-i18n="nav.command" data-cursor="link">Command Readiness</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="language-toggle" type="button" aria-label="Switch language" data-cursor="link">
+          <span class="language-toggle__en">ع</span>
+          <span class="language-toggle__ar">EN</span>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-cursor="link">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__backdrop"></div>
+    <div class="mobile-menu__panel">
+      <p class="micro-label">SAMT / NAVIGATION</p>
+      <nav aria-label="Mobile navigation">
+        <a href="#programme" data-i18n="nav.programme">Programme</a>
+        <a href="#journey" data-i18n="nav.journey">The Journey</a>
+        <a href="#stations" data-i18n="nav.stations">Preparation Stations</a>
+        <a href="#command" data-i18n="nav.command">Command Readiness</a>
+      </nav>
+      <div class="mobile-menu__footer">
+        <span>From Potential to Command</span>
+        <span>من الإمكانات إلى القيادة</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-progress" aria-hidden="true"><span></span></div>
+
+  <main id="main-scroll-container">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero__earth" aria-hidden="true">
+        <div class="hero__earth-surface"></div>
+        <div class="hero__earth-glow"></div>
+      </div>
+
+      <svg class="hero-routes" viewBox="0 0 1600 960" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="routeGold" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0" stop-color="#8a5d11" stop-opacity="0" />
+            <stop offset="0.38" stop-color="#d4af37" stop-opacity=".7" />
+            <stop offset="1" stop-color="#f1d99a" stop-opacity="1" />
+          </linearGradient>
+          <filter id="goldGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="6" result="blur" />
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <path id="route-1" class="hero-route hero-route--strong" d="M400 935 C 660 760, 990 540, 1174 88" />
+        <path id="route-2" class="hero-route" d="M530 960 C 760 700, 1020 480, 1174 88" />
+        <path id="route-3" class="hero-route" d="M610 965 C 850 690, 1080 390, 1174 88" />
+        <path id="route-4" class="hero-route hero-route--fine" d="M275 900 C 610 690, 920 420, 1174 88" />
+        <circle class="route-follower route-follower--1" r="4" />
+        <circle class="route-follower route-follower--2" r="3" />
+        <circle class="route-follower route-follower--3" r="2.5" />
+        <g class="command-star" transform="translate(1174 88)" filter="url(#goldGlow)">
+          <circle r="18" fill="#f1d99a" opacity=".16" />
+          <path d="M0-22 4-5 20-11 7 2 20 12 4 7 0 24-4 7-20 12-7 2-20-11-4-5Z" fill="#f1d99a" />
+        </g>
+      </svg>
+
+      <div class="hero__inner section-shell">
+        <div class="hero__copy">
+          <p class="eyebrow hero__eyebrow" data-i18n="hero.kicker">From Potential to Command</p>
+          <h1 id="hero-title" class="hero__title">
+            <span data-i18n="hero.line1">Prepared to Lead.</span>
+            <span data-i18n="hero.line2">Ready to <em>Command.</em></span>
+          </h1>
+          <p class="hero__arabic" data-i18n="hero.arabic">من الإمكانات إلى القيادة</p>
+          <p class="hero__summary" data-i18n="hero.summary">SAMT identifies exceptional talent and prepares selected individuals for future command, strategic leadership and greater institutional responsibility.</p>
+          <div class="hero__actions">
+            <a class="button button--primary magnetic" href="#programme" data-i18n="hero.discover" data-cursor="cta">Discover SAMT</a>
+            <button class="button button--ghost magnetic" type="button" data-modal-open="programme-modal" data-i18n="hero.overview" data-cursor="cta">Programme Overview</button>
+          </div>
+        </div>
+
+        <aside class="hero__identity" aria-label="SAMT bilingual identity">
+          <img class="hero__arabic-wordmark" src="assets/brand/samt-arabic-gold.svg" alt="سَمْت" />
+          <p class="hero__identity-ar">برنامج سَمْت للتقدم الاستراتيجي والإدارة والتحول</p>
+          <span class="hero__identity-line"></span>
+          <strong>SAMT</strong>
+          <p>Strategic Advancement,<br />Management &amp; Transformation</p>
+        </aside>
+      </div>
+
+      <div class="hero__section-index" aria-hidden="true">
+        <span>01</span><i></i><i></i><i></i><i></i>
+      </div>
+
+      <a class="scroll-cue" href="#programme" aria-label="Scroll to programme" data-cursor="link">
+        <span class="scroll-cue__mouse"><i></i></span>
+        <span data-i18n="hero.scroll">Scroll to explore</span>
+      </a>
+    </section>
+
+    <section class="programme" id="programme" aria-labelledby="programme-title">
+      <div class="section-shell programme__grid">
+        <div class="programme__intro">
+          <p class="eyebrow" data-i18n="programme.kicker">An elite leadership programme</p>
+          <h2 class="section-title" id="programme-title" data-i18n="programme.title">Selection is earned.<br /><em>Leadership is formed.</em></h2>
+        </div>
+        <div class="programme__statement">
+          <p data-i18n="programme.copy">SAMT is designed for exceptional professionals who demonstrate the character, intellect, judgement, discipline and ambition required to assume future command and senior leadership responsibilities.</p>
+          <div class="programme__metrics">
+            <article><strong>10</strong><span data-i18n="programme.metric1">Selected fellows</span></article>
+            <article><strong>4</strong><span data-i18n="programme.metric2">International stations</span></article>
+            <article><strong>1</strong><span data-i18n="programme.metric3">Command standard</span></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="journey" id="journey" aria-labelledby="journey-title">
+      <div class="journey__sticky">
+        <div class="section-shell journey__header">
+          <div>
+            <p class="eyebrow" data-i18n="journey.kicker">The leadership journey</p>
+            <h2 class="section-title" id="journey-title" data-i18n="journey.title">A disciplined path from <em>potential to command.</em></h2>
+          </div>
+          <p class="journey__note" data-i18n="journey.note">Every stage raises the standard of judgement, character, exposure and responsibility.</p>
+        </div>
+
+        <div class="journey__track-wrap">
+          <div class="journey__progress" aria-hidden="true"><span></span></div>
+          <div class="journey__track">
+            <article class="journey-card" data-stage="01">
+              <span class="journey-card__number">01</span><i class="journey-card__icon icon-potential"></i>
+              <h3 data-i18n="journey.s1.title">Potential</h3><p data-i18n="journey.s1.copy">Exceptional potential is identified.</p>
+            </article>
+            <article class="journey-card" data-stage="02">
+              <span class="journey-card__number">02</span><i class="journey-card__icon icon-selection"></i>
+              <h3 data-i18n="journey.s2.title">Selection</h3><p data-i18n="journey.s2.copy">A rigorous and selective admission process.</p>
+            </article>
+            <article class="journey-card" data-stage="03">
+              <span class="journey-card__number">03</span><i class="journey-card__icon icon-formation"></i>
+              <h3 data-i18n="journey.s3.title">Formation</h3><p data-i18n="journey.s3.copy">Core capability and leadership judgement are developed.</p>
+            </article>
+            <article class="journey-card" data-stage="04">
+              <span class="journey-card__number">04</span><i class="journey-card__icon icon-exposure"></i>
+              <h3 data-i18n="journey.s4.title">Exposure</h3><p data-i18n="journey.s4.copy">National and international environments broaden perspective.</p>
+            </article>
+            <article class="journey-card" data-stage="05">
+              <span class="journey-card__number">05</span><i class="journey-card__icon icon-transformation"></i>
+              <h3 data-i18n="journey.s5.title">Transformation</h3><p data-i18n="journey.s5.copy">Leadership readiness is measured and strengthened.</p>
+            </article>
+            <article class="journey-card journey-card--command" data-stage="06">
+              <span class="journey-card__number">06</span><i class="journey-card__icon icon-command"></i>
+              <h3 data-i18n="journey.s6.title">Command Readiness</h3><p data-i18n="journey.s6.copy">Prepared to lead. Ready to command.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stations" id="stations" aria-labelledby="stations-title">
+      <div class="stations__backdrop" aria-hidden="true"></div>
+      <div class="section-shell stations__header">
+        <div>
+          <p class="eyebrow" data-i18n="stations.kicker">Preparation stations</p>
+          <h2 class="section-title" id="stations-title" data-i18n="stations.title">Global exposure.<br /><em>Strategic perspective.</em></h2>
+        </div>
+        <p data-i18n="stations.copy">Participants engage with leading institutions, sectors and operating environments that shape global leadership.</p>
+      </div>
+
+      <div class="section-shell station-console">
+        <nav class="station-route" aria-label="Preparation stations">
+          <button class="station-route__node is-active" type="button" aria-current="step"><span>01</span><strong>UAE</strong></button>
+          <span class="station-route__line"></span>
+          <button class="station-route__node" type="button" disabled><span>02</span><strong>UK</strong></button>
+          <span class="station-route__line"></span>
+          <button class="station-route__node" type="button" disabled><span>03</span><strong>FRANCE</strong></button>
+          <span class="station-route__line"></span>
+          <button class="station-route__node" type="button" disabled><span>04</span><strong>USA</strong></button>
+        </nav>
+
+        <div class="station-stage">
+          <div class="station-stage__visual" data-cursor="view">
+            <object data="assets/stations/uae-animated.svg" type="image/svg+xml" aria-label="Animated UAE preparation station"></object>
+            <div class="station-stage__visual-overlay"></div>
+            <span class="station-stage__caption">STATION 01 / UAE</span>
+          </div>
+
+          <article class="station-stage__content">
+            <p class="micro-label" data-i18n="station.current">Current station</p>
+            <h3 data-i18n="station.title">United Arab Emirates</h3>
+            <p class="station-stage__subtitle" data-i18n="station.subtitle">Foundation, strategic orientation and national context</p>
+            <p class="station-stage__body" data-i18n="station.body">The national foundation phase builds a common understanding of the state, leadership expectations, strategic priorities and the institutional environment in which future responsibility will be exercised.</p>
+
+            <div class="station-stage__meta">
+              <div><span data-i18n="station.durationLabel">Duration</span><strong>3+ weeks</strong></div>
+              <div><span data-i18n="station.focusLabel">Primary focus</span><strong data-i18n="station.focus">Leadership foundation</strong></div>
+            </div>
+
+            <ul>
+              <li data-i18n="station.point1">Strategic leadership and national vision</li>
+              <li data-i18n="station.point2">Defence, aviation and institutional ecosystems</li>
+              <li data-i18n="station.point3">Capability development and transformation frameworks</li>
+            </ul>
+
+            <button class="button button--outline magnetic" type="button" data-modal-open="station-modal" data-i18n="station.details" data-cursor="cta">View Station Details</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="command" id="command" aria-labelledby="command-title">
+      <div class="command__light" aria-hidden="true"></div>
+      <div class="section-shell command__inner">
+        <p class="eyebrow" data-i18n="command.kicker">The standard ahead</p>
+        <h2 id="command-title" data-i18n="command.title">The future needs leaders.<br /><em>Are you ready?</em></h2>
+        <p data-i18n="command.arabic">المستقبل يحتاج قادة، هل أنت مستعد؟</p>
+        <span>FROM POTENTIAL TO COMMAND</span>
+        <button class="button button--primary magnetic" type="button" data-modal-open="programme-modal" data-i18n="command.cta" data-cursor="cta">Learn About Admission</button>
+      </div>
+      <div class="command__figure" aria-hidden="true"><span></span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell site-footer__inner">
+      <a class="brand-lockup brand-lockup--footer" href="#hero">
+        <img class="brand-lockup__symbol" src="assets/brand/samt-symbol.svg" alt="" />
+        <span class="brand-lockup__text"><strong>SAMT</strong><small>Strategic Advancement,<br />Management &amp; Transformation</small></span>
+      </a>
+      <p>© 2026 SAMT. <span data-i18n="footer.rights">All rights reserved.</span></p>
+      <a href="#hero" data-i18n="footer.top">Back to top</a>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="programme-modal" aria-labelledby="programme-modal-title">
+    <div class="modal__shell">
+      <button class="modal__close" type="button" data-modal-close aria-label="Close" data-cursor="link">×</button>
+      <div class="modal__brand"><img src="assets/brand/samt-symbol.svg" alt="" /><span>FROM POTENTIAL TO COMMAND</span></div>
+      <p class="eyebrow" data-i18n="modal.programme.kicker">Programme overview</p>
+      <h2 id="programme-modal-title" data-i18n="modal.programme.title">Selected for potential.<br /><em>Shaped for command.</em></h2>
+      <div class="modal__grid">
+        <p data-i18n="modal.programme.copy">SAMT is a highly selective leadership programme for exceptional professionals who demonstrate the judgement, character, discipline and ambition required for future command and senior strategic responsibility.</p>
+        <ol>
+          <li><span>01</span><strong data-i18n="journey.s1.title">Potential</strong></li>
+          <li><span>02</span><strong data-i18n="journey.s2.title">Selection</strong></li>
+          <li><span>03</span><strong data-i18n="journey.s3.title">Formation</strong></li>
+          <li><span>04</span><strong data-i18n="journey.s4.title">Exposure</strong></li>
+          <li><span>05</span><strong data-i18n="journey.s5.title">Transformation</strong></li>
+          <li><span>06</span><strong data-i18n="journey.s6.title">Command Readiness</strong></li>
+        </ol>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal modal--station" id="station-modal" aria-labelledby="station-modal-title">
+    <div class="modal__shell">
+      <button class="modal__close" type="button" data-modal-close aria-label="Close" data-cursor="link">×</button>
+      <p class="eyebrow" data-i18n="station.current">Current station</p>
+      <h2 id="station-modal-title" data-i18n="station.title">United Arab Emirates</h2>
+      <div class="station-modal__grid">
+        <section><span>01</span><h3 data-i18n="station.modal.hosts">Proposed hosts</h3><p data-i18n="station.modal.hostsCopy">Selected national leadership, defence, aviation, technology and institutional partners.</p></section>
+        <section><span>02</span><h3 data-i18n="station.modal.learning">Learning focus</h3><p data-i18n="station.modal.learningCopy">Strategic leadership, institutional awareness, capability development and national security context.</p></section>
+        <section><span>03</span><h3 data-i18n="station.modal.outcomes">Expected outcomes</h3><p data-i18n="station.modal.outcomesCopy">A common leadership foundation, stronger strategic judgement and readiness for international exposure.</p></section>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
