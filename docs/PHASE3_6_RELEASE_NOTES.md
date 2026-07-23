@@ -28,7 +28,7 @@ The Phase 3.5 stylesheet is treated as a frozen compatibility base. Phase 3.6 ad
 - `experience.v3.6.js`
 - `tools/quality-check.mjs`
 
-The Phase 3.5 homepage and Story controllers are loaded from an immutable, commit-pinned source before the Phase 3.6 modules initialise. This prevents recursive loading, preserves the approved behaviour and establishes a controlled modular extension boundary.
+The approved homepage controller remains available locally as `app.js`. The approved Story controller is preserved locally as `story.core.v3.5.js`. The existing HTML entry points load small Phase 3.6 bootstraps, which initialise the local core first and then the shared navigation and premium-experience modules. No external core dependency is introduced.
 
 ## Acceptance thresholds
 
