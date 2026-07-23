@@ -8,7 +8,7 @@
         "http://localhost/story-of-samt.html",
         "http://localhost/story-of-samt-ar.html"
       ],
-      "numberOfRuns": 1,
+      "numberOfRuns": 3,
       "settings": {
         "chromeFlags": "--no-sandbox --headless --disable-gpu"
       }
