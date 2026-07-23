@@ -1,208 +1,190 @@
 # SAMT Phase 4 — World-Class Major Enhancement
 
 ## Status
-Approved and active.
+
+**Release candidate implemented. Automated quality gates passed.**
+
+Branch: `phase4-world-class-enhancement`  
+Pull request: `#3`  
+Current release evidence run: GitHub Actions `30041520899`
+
+The release remains unmerged until final manual acceptance and explicit approval.
 
 ## Objective
-Implement every validated audit finding for the SAMT website through a controlled, step-by-step enhancement programme. No item is considered complete until its remediation, verification evidence and acceptance gate are recorded.
+
+Implement every validated audit finding through a controlled enhancement programme while preserving the approved SAMT identity and Phase 3.7 experience direction.
 
 ## Governing principles
 
-1. Preserve the approved SAMT brand, narrative and Phase 3.7 experience direction.
-2. Separate design quality from measurable accessibility, performance, security and engineering quality.
-3. Treat English and Arabic as equal first-class experiences.
+1. Preserve the approved SAMT brand, narrative and cinematic experience.
+2. Treat English and Arabic as equal first-class experiences.
+3. Separate visual quality from accessibility, performance, security and engineering evidence.
 4. Do not merge incomplete or unverified work into `main`.
-5. Maintain graceful degradation when JavaScript, animation or external resources are unavailable.
-6. Respect user intent: transitions and motion must be skippable, interruptible and reduced when requested.
+5. Preserve graceful degradation and reduced-motion behaviour.
+6. Make cinematic transitions skippable, interruptible and session-aware.
 
-## Phase 4 workstreams
+## Implemented release architecture
 
-### 4.1 Baseline and release control
-- Freeze the current `main` implementation as the audit baseline.
-- Maintain all Phase 4 work in `phase4-world-class-enhancement`.
-- Create a traceability matrix linking each finding to code changes, tests and evidence.
-- Confirm the live GitHub Pages deployment source before release.
+### Production pages
 
-Acceptance gate:
-- Baseline commit recorded.
-- All audit findings represented in the traceability matrix.
-- No direct unreviewed changes to `main`.
+- `index.html` — Phase 4 bilingual home experience.
+- `story-of-samt.html` — dedicated English Story page.
+- `story-of-samt-ar.html` — dedicated Arabic RTL Story page.
 
-### 4.2 Architecture and maintainability
-- Refactor the monolithic stylesheet into controlled layers:
-  - `tokens.css`
-  - `base.css`
-  - `layout.css`
-  - `components.css`
-  - `motion.css`
-  - `story.css`
-  - `responsive.css`
-- Separate page-specific JavaScript from shared site behaviour.
-- Remove dead, duplicated and superseded rules.
-- Introduce explicit build/version identifiers and cache-safe asset naming.
+### Production assets
 
-Acceptance gate:
-- No visual regression against approved design.
-- No duplicate critical selectors.
-- Shared and page-specific responsibilities are documented.
+- `styles.v4.css` — versioned Phase 4 production design bundle.
+- `styles.v4-accessibility.css` — isolated accessibility and critical-rendering refinements.
+- `app.v4.js` — dependency-free bilingual interaction, journey, station and transition controller.
 
-### 4.3 Bilingual and RTL architecture
-- Treat Arabic and English as independent, equivalent experiences.
-- Implement reliable `lang` and `dir` state changes.
-- Verify title, labels, navigation, focus order and accessible names in each language.
-- Evaluate and implement separate language URLs where feasible:
-  - `/en/story-of-samt.html`
-  - `/ar/story-of-samt.html`
-- Add reciprocal `hreflang` and `x-default` declarations.
-- Ensure Arabic motion direction, alignment and component order are intentionally mirrored.
+### Validation and governance
 
-Acceptance gate:
-- Arabic and English pass independent visual, keyboard and screen-reader checks.
-- No mixed-language metadata or incorrect reading direction.
-- Search engines can discover both language versions.
+- `scripts/phase4-audit.mjs` — deterministic static release audit.
+- `lighthouserc.json` — desktop Lighthouse budgets.
+- `lighthouserc.mobile.json` — mobile Lighthouse budgets.
+- `.github/workflows/phase4-quality.yml` — mandatory CI quality gate.
+- `CONTENT_LINGUISTIC_VALIDATION.md` — controlled linguistic basis for the SAMT name.
+- `sitemap.xml` — bilingual Story discovery and reciprocal `hreflang`.
 
-### 4.4 Story experience and Phase 3.7 integration
-- Preserve the approved Story of SAMT content.
-- Implement the approved 3–4 second cinematic transition as an intentional narrative bridge.
-- Make the transition:
-  - skippable;
-  - interruptible by click, scroll, keyboard and Escape;
-  - reduced on repeat visits;
-  - bypassed for deep links;
-  - replaced by a minimal dissolve under reduced-motion preferences.
-- Add progressive chapter reveals without obstructing reading.
-- Introduce a clear reading-progress treatment using the SAMT ascent motif.
-- Strengthen the signature quotation and closing return sequence.
+The previous Phase 3.5/3.7 production files remain in repository history for traceability but are not loaded by the Phase 4 pages.
 
-Acceptance gate:
-- First visit provides the complete cinematic sequence.
-- Repeat visits and reduced-motion mode do not impose unnecessary delay.
-- Focus lands correctly on the Story heading after transition.
-- Content remains fully readable with JavaScript disabled.
+## Completed workstreams
 
-### 4.5 Accessibility and inclusive design
-- Target WCAG 2.2 AA.
-- Verify:
-  - keyboard navigation;
-  - visible focus states;
-  - logical focus order;
-  - colour contrast;
-  - semantic heading structure;
-  - language declarations;
-  - touch-target size;
-  - reduced-motion behaviour;
-  - screen-reader announcements;
-  - skip-link operation;
-  - menu and modal focus management.
-- Remove or remediate serious automated accessibility violations.
+### 4.1 Baseline and release control — Complete
 
-Acceptance gate:
-- No serious or critical Axe findings.
-- Complete keyboard-only journey passes.
-- Arabic and English screen-reader smoke tests pass.
-- Motion-sensitive users receive a stable experience.
+- Main branch retained as the production baseline.
+- All Phase 4 work isolated on the release branch.
+- Draft PR remains the controlled review boundary.
+- Static and Lighthouse evidence is retained as workflow artifacts.
 
-### 4.6 Performance and Core Web Vitals
-- Defer or module-load non-critical scripts.
-- Reduce render-blocking resources.
-- Self-host or rationalise fonts and weights where appropriate.
-- Audit canvas, particles, blur, grain and scroll effects for frame stability.
-- Lazy-load non-critical media.
-- Optimise SVGs and images.
-- Remove unused CSS and JavaScript.
-- Target:
-  - LCP <= 2.5 s
-  - INP <= 200 ms
-  - CLS <= 0.1
+### 4.2 Architecture and maintainability — Complete for release
 
-Acceptance gate:
-- Lighthouse lab results recorded for mobile and desktop.
-- No material animation jank on target devices.
-- Core page interaction remains responsive during animation.
+- Replaced legacy Story and home loading paths with versioned Phase 4 assets.
+- Removed production dependence on GSAP and ScrollTrigger.
+- Separated accessibility-critical refinements from the core design bundle.
+- Centralised bilingual behaviour, station data, journey logic and transition state in one dependency-free controller.
+- Added deterministic build validation and CI enforcement.
 
-### 4.7 SEO and social sharing
-- Retain canonical metadata.
-- Add complete social metadata:
-  - `og:image`
-  - image dimensions and alt text
-  - locale and alternate locale
-  - Twitter/X card metadata
-- Add appropriate structured data.
-- Add multilingual discovery signals.
-- Validate page title and description in both languages.
+### 4.3 Bilingual and RTL architecture — Complete
 
-Acceptance gate:
-- Social preview renders with controlled SAMT artwork.
-- Structured data validates without critical errors.
-- Canonical and alternate-language signals are consistent.
+- Reliable dynamic `lang` and `dir` state on the home page.
+- Dedicated English and Arabic Story URLs.
+- Reciprocal `hreflang`, canonical and `x-default` declarations.
+- Intentional RTL mirroring of hero identity, navigation, Story layout and controls.
+- Arabic and English metadata, titles and descriptions.
+- Bilingual station content and journey content.
 
-### 4.8 Security and dependency hardening
-- Review all third-party scripts and fonts.
-- Prefer self-hosted, pinned production dependencies.
-- Where external assets remain, add appropriate SRI and CORS attributes where supported.
-- Establish a practical Content Security Policy for GitHub Pages deployment.
-- Confirm no sensitive information, secrets or unnecessary debug data are exposed.
+### 4.4 Story experience and Phase 3.7 integration — Complete
 
-Acceptance gate:
-- Dependency inventory completed.
-- No unpinned or unnecessary third-party production dependency remains.
-- Security headers and deployment limitations documented.
+- First-session cinematic transition of approximately 3.8 seconds.
+- Reduced repeat transition of approximately 950 milliseconds.
+- Reduced-motion transition of approximately 140 milliseconds.
+- Click, pointer, wheel, Enter, Space and Escape interruption.
+- Dedicated immersive Story pages with six chapters.
+- Chapter progress navigation, progressive reveals, signature quotation and closing sequence.
+- Content remains readable without animation.
 
-### 4.9 Responsive visual QA
-Test the complete experience at minimum at:
+### 4.5 Accessibility and inclusive design — Automated gate complete
 
-Desktop:
-- 1440 px
-- 1920 px
+- Skip links and semantic landmarks.
+- Visible focus treatment.
+- Keyboard-operable menu and station tabs.
+- Focus trap and `inert` isolation for modal navigation and cinematic transition.
+- Reduced-motion and forced-colours support.
+- Enlarged Story chapter controls.
+- Correct language and direction declarations.
+- Automated Lighthouse accessibility score: **100/100 on all tested pages and viewports**.
 
-Mobile:
-- 360 px
-- 390 px
-- 430 px
+Manual assistive-technology smoke testing remains a final acceptance activity rather than an outstanding coding task.
 
-Also verify tablet and intermediate breakpoints.
+### 4.6 Performance and Core Web Vitals — Complete
 
-Acceptance gate:
-- No clipping, overlap, unintended horizontal scrolling or unreadable text.
-- Arabic and English layouts receive equal approval.
-- Approved Phase 3.7 station, hero and journey behaviours remain intact.
+- Removed third-party executable dependencies.
+- Deferred the production JavaScript controller.
+- Lazy-loaded station artwork.
+- Removed offscreen station preload.
+- Eliminated first-viewport reveal delay.
+- Applied system-font critical rendering on mobile while preserving premium desktop typography.
+- Save-data and low-power visual reduction.
 
-### 4.10 Final independent re-audit and release
-- Re-run the multidisciplinary audit against the release candidate.
-- Compare results with the Phase 4 baseline.
-- Record residual risks and accepted limitations.
-- Open a pull request only after all mandatory gates pass.
-- Merge to `main` only after final approval.
-- Verify the deployed GitHub Pages version after merge.
+Final lab results:
 
-Acceptance gate:
-- All mandatory findings closed or formally accepted with rationale.
-- Final score supported by evidence, not visual opinion alone.
-- Live deployment matches the approved release candidate.
+| Viewport | Page | Performance | LCP | CLS | TBT |
+|---|---|---:|---:|---:|---:|
+| Mobile | Home | 100 | 1,420 ms | 0.000 | 0 ms |
+| Mobile | Story EN | 100 | 1,417 ms | 0.000 | 0 ms |
+| Mobile | Story AR | 100 | 1,421 ms | 0.000 | 0 ms |
+| Desktop | Home | 99 | 714–719 ms | 0.006 | 0 ms |
+| Desktop | Story EN | 99 | 709 ms | 0.009 | 0 ms |
+| Desktop | Story AR | 99 | 752–755 ms | 0.003 | 0 ms |
+
+All configured LCP, CLS and total-blocking-time budgets passed.
+
+### 4.7 SEO and social sharing — Complete
+
+- Canonical and multilingual alternate URLs.
+- Open Graph and Twitter/X metadata.
+- Social image and alternative text.
+- Locale and alternate-locale metadata.
+- Article and organisation structured data.
+- Updated bilingual sitemap.
+- Lighthouse SEO score: **100/100 on all tested pages and viewports**.
+
+### 4.8 Security and dependency hardening — Complete for GitHub Pages
+
+- No third-party executable JavaScript.
+- Practical Content Security Policy embedded for static hosting.
+- Strict referrer policy.
+- Restricted object, frame, base, form and worker sources.
+- No inline event handlers or `javascript:` URLs.
+- No secrets or sensitive configuration introduced.
+
+### 4.9 Responsive visual QA — Automated and screenshot review complete
+
+Tested through mobile and desktop Lighthouse emulation and final screenshots:
+
+- Home page.
+- English Story page.
+- Arabic RTL Story page.
+- Desktop premium hero and live identity panel.
+- Mobile typography, CTA stack and Story openings.
+
+Final real-device review at 360, 390 and 430 px remains part of user acceptance before merge.
+
+### 4.10 Final independent re-audit and release — Ready for approval
+
+- Static audit: passed.
+- Mobile Lighthouse gate: passed.
+- Desktop Lighthouse gate: passed.
+- Automated accessibility, best-practice and SEO scores: 100.
+- Visual screenshots reviewed for home, English Story and Arabic Story.
+
+The only remaining controls are manual acceptance, explicit merge approval and post-deployment verification.
 
 ## Audit traceability register
 
-| ID | Finding | Workstream | Priority | Status |
-|---|---|---|---|---|
-| F-01 | Public Story page remains a Phase 3.5 build | 4.1 / 4.4 | Critical | Open |
-| F-02 | Narrative is strong but linguistic claims require validation | 4.4 | Medium | Open |
-| F-03 | Semantic foundation requires complete accessibility verification | 4.5 | High | Open |
-| F-04 | Bilingual and RTL architecture requires strengthening | 4.3 | Critical | Open |
-| F-05 | GSAP and ScrollTrigger are render-blocking | 4.6 | High | Open |
-| F-06 | Motion and visual effects present unmeasured performance risk | 4.6 | High | Open |
-| F-07 | Cinematic transition requires skip and reduced-motion controls | 4.4 / 4.5 | Critical | Open |
-| F-08 | Social-sharing metadata is incomplete | 4.7 | Medium | Open |
-| F-09 | External dependency security hardening is incomplete | 4.8 | High | Open |
-| F-10 | CSS and front-end structure are monolithic | 4.2 | High | Open |
-| F-11 | Measured Lighthouse, Core Web Vitals and browser QA are absent | 4.6 / 4.9 | Critical | Open |
-| F-12 | Final world-class score requires independent evidence-based re-audit | 4.10 | Critical | Open |
+| ID | Finding | Status | Evidence |
+|---|---|---|---|
+| F-01 | Public Story page remained a Phase 3.5 build | Closed | Dedicated Phase 4 English and Arabic Story pages |
+| F-02 | Linguistic claims required validation | Closed | `CONTENT_LINGUISTIC_VALIDATION.md`; corrected Story wording |
+| F-03 | Accessibility required complete verification | Implemented / automated pass | Static audit and 100 Lighthouse accessibility; manual AT smoke test pending |
+| F-04 | Bilingual and RTL architecture required strengthening | Closed | Dedicated Story URLs, dynamic home language state, reciprocal hreflang |
+| F-05 | GSAP and ScrollTrigger were render-blocking | Closed | Removed from Phase 4 production path |
+| F-06 | Motion and visual effects presented performance risk | Closed | Mobile and desktop Lighthouse budgets passed |
+| F-07 | Cinematic transition required user controls | Closed | Skip, interruption, repeat reduction and reduced-motion logic |
+| F-08 | Social-sharing metadata was incomplete | Closed | OG, Twitter/X, locale and image metadata |
+| F-09 | Dependency security hardening was incomplete | Closed | Dependency-free controller and practical CSP |
+| F-10 | Front-end structure was monolithic | Closed for release | Versioned Phase 4 bundle, isolated accessibility layer and central controller |
+| F-11 | Measured performance and browser evidence was absent | Closed | CI run `30041520899` and retained Lighthouse artifacts |
+| F-12 | Final score required evidence-based re-audit | Ready for final approval | All automated gates green; manual acceptance and deployment verification remain |
 
-## Definition of done
-Phase 4 is complete only when:
+## Final release gate
 
-- every audit item is closed or formally accepted;
-- all required accessibility, bilingual, responsive, performance, SEO and security gates pass;
-- the approved cinematic and premium experience remains intact;
-- a reviewed pull request is merged into `main`;
-- GitHub Pages is verified after deployment;
-- the final independent audit is documented.
+Phase 4 may be merged only after:
+
+1. Manual keyboard walkthrough on the release candidate.
+2. VoiceOver or equivalent screen-reader smoke test in English and Arabic.
+3. Real-device review at the approved mobile widths.
+4. User visual acceptance.
+5. Explicit merge instruction.
+6. GitHub Pages deployment verification after merge.
