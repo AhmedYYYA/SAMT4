@@ -4,6 +4,7 @@
       "staticDistDir": ".",
       "url": [
         "http://localhost/index.html",
+        "http://localhost/index.html?lang=ar",
         "http://localhost/story-of-samt.html",
         "http://localhost/story-of-samt-ar.html"
       ],
