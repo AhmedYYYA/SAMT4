@@ -9,11 +9,15 @@ const required = [
   "styles.v4.css",
   "styles.v4-accessibility.css",
   "app.v4.js",
+  "i18n/ar.json",
+  "data/stations.en.json",
+  "data/stations.ar.json",
   "robots.txt",
   "sitemap.xml",
   "lighthouserc.json",
   "lighthouserc.mobile.json",
-  "CONTENT_LINGUISTIC_VALIDATION.md"
+  "CONTENT_LINGUISTIC_VALIDATION.md",
+  "PHASE4_RELEASE_EVIDENCE.md"
 ];
 
 const failures = [];
@@ -53,6 +57,14 @@ for (const file of ["index.html", "story-of-samt.html", "story-of-samt-ar.html"]
   }
 }
 
+for (const file of ["i18n/ar.json", "data/stations.en.json", "data/stations.ar.json", "lighthouserc.json", "lighthouserc.mobile.json"]) {
+  try {
+    JSON.parse(read(file));
+  } catch (error) {
+    fail(`${file}: invalid JSON (${error.message})`);
+  }
+}
+
 const index = read("index.html");
 assert(/data-build="phase4-v4\.0"/.test(index), "index.html: Phase 4 build marker missing");
 assert(/class="story-transition"/.test(index), "index.html: Story transition missing");
@@ -81,9 +93,19 @@ assert(/prefers-reduced-motion/.test(app), "app.v4.js: reduced-motion logic miss
 assert(/sessionStorage/.test(app), "app.v4.js: first-session transition control missing");
 assert(/inert/.test(app), "app.v4.js: focus isolation missing");
 assert(/ArrowLeft/.test(app) && /ArrowRight/.test(app), "app.v4.js: keyboard tab navigation missing");
+assert(/fetch\("i18n\/ar\.json"/.test(app), "app.v4.js: Arabic translations are not lazy loaded");
+assert(/fetch\(`data\/stations\.\$\{language\}\.json`/.test(app), "app.v4.js: station data is not lazy loaded");
+assert(!/"programme\.kicker"/.test(app), "app.v4.js: translation payload remains embedded in the critical script");
+
+const arabic = JSON.parse(read("i18n/ar.json"));
+assert(arabic["hero.line1"] && arabic["transition.title"], "i18n/ar.json: required Arabic keys missing");
+for (const file of ["data/stations.en.json", "data/stations.ar.json"]) {
+  const data = JSON.parse(read(file));
+  assert(["uae", "uk", "france", "usa"].every(key => data[key]?.title && data[key]?.image && data[key]?.points?.length === 3), `${file}: incomplete station data`);
+}
 
 notes.push(`Checked ${required.length} required release files.`);
-notes.push("Validated HTML landmarks, metadata, local references, duplicate IDs, bilingual Story architecture, linguistic controls, deferred station media, reduced motion, touch targets and key interaction controls.");
+notes.push("Validated semantics, metadata, references, bilingual Story architecture, linguistic controls, lazy data loading, reduced motion, touch targets and key interaction controls.");
 
 if (failures.length) {
   console.error("\nPhase 4 static audit FAILED\n");
