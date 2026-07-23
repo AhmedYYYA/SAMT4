@@ -6,7 +6,8 @@
 
 Branch: `phase4-world-class-enhancement`  
 Pull request: `#3`  
-Current release evidence run: GitHub Actions `30041520899`
+Tested code commit: `95c12eb8512dbd55323c028938120025dec21a5e`  
+Current release evidence run: GitHub Actions `30043805215`
 
 The release remains unmerged until final manual acceptance and explicit approval.
 
@@ -34,16 +35,19 @@ Implement every validated audit finding through a controlled enhancement program
 ### Production assets
 
 - `styles.v4.css` — versioned Phase 4 production design bundle.
-- `styles.v4-accessibility.css` — isolated accessibility and critical-rendering refinements.
-- `app.v4.js` — dependency-free bilingual interaction, journey, station and transition controller.
+- `styles.v4-accessibility.css` — accessibility, critical-rendering and mobile-containment refinements.
+- `app.v4.js` — dependency-free interaction, journey, station and transition controller.
+- `i18n/ar.json` — Arabic interface payload loaded only when Arabic is requested.
+- `data/stations.en.json` and `data/stations.ar.json` — language-specific station data loaded on demand.
 
 ### Validation and governance
 
 - `scripts/phase4-audit.mjs` — deterministic static release audit.
-- `lighthouserc.json` — desktop Lighthouse budgets.
-- `lighthouserc.mobile.json` — mobile Lighthouse budgets.
+- `lighthouserc.json` — desktop Lighthouse budgets for four language/page states.
+- `lighthouserc.mobile.json` — mobile Lighthouse budgets for four language/page states.
 - `.github/workflows/phase4-quality.yml` — mandatory CI quality gate.
 - `CONTENT_LINGUISTIC_VALIDATION.md` — controlled linguistic basis for the SAMT name.
+- `PHASE4_RELEASE_EVIDENCE.md` — measured release evidence.
 - `sitemap.xml` — bilingual Story discovery and reciprocal `hreflang`.
 
 The previous Phase 3.5/3.7 production files remain in repository history for traceability but are not loaded by the Phase 4 pages.
@@ -62,17 +66,20 @@ The previous Phase 3.5/3.7 production files remain in repository history for tra
 - Replaced legacy Story and home loading paths with versioned Phase 4 assets.
 - Removed production dependence on GSAP and ScrollTrigger.
 - Separated accessibility-critical refinements from the core design bundle.
-- Centralised bilingual behaviour, station data, journey logic and transition state in one dependency-free controller.
+- Externalised Arabic interface translations and station datasets from the critical JavaScript path.
+- Added proximity-triggered journey and station controllers.
+- Replaced JavaScript full-page progress measurement with a CSS scroll timeline.
 - Added deterministic build validation and CI enforcement.
 
 ### 4.3 Bilingual and RTL architecture — Complete
 
-- Reliable dynamic `lang` and `dir` state on the home page.
+- Measured dynamic English and Arabic states on the home page.
 - Dedicated English and Arabic Story URLs.
 - Reciprocal `hreflang`, canonical and `x-default` declarations.
 - Intentional RTL mirroring of hero identity, navigation, Story layout and controls.
 - Arabic and English metadata, titles and descriptions.
 - Bilingual station content and journey content.
+- Initial Arabic hydration is stabilised to prevent an intermediate English layout or measurable layout shift.
 
 ### 4.4 Story experience and Phase 3.7 integration — Complete
 
@@ -93,7 +100,7 @@ The previous Phase 3.5/3.7 production files remain in repository history for tra
 - Reduced-motion and forced-colours support.
 - Enlarged Story chapter controls.
 - Correct language and direction declarations.
-- Automated Lighthouse accessibility score: **100/100 on all tested pages and viewports**.
+- Automated Lighthouse accessibility score: **100/100 across all four tested states on mobile and desktop**.
 
 Manual assistive-technology smoke testing remains a final acceptance activity rather than an outstanding coding task.
 
@@ -105,18 +112,23 @@ Manual assistive-technology smoke testing remains a final acceptance activity ra
 - Removed offscreen station preload.
 - Eliminated first-viewport reveal delay.
 - Applied system-font critical rendering on mobile while preserving premium desktop typography.
-- Save-data and low-power visual reduction.
+- Added save-data and low-power visual reduction.
+- Added mobile offscreen rendering containment.
+- Removed full-document JavaScript layout measurement.
+- Lazy-loaded Arabic translations and station data.
 
 Final lab results:
 
-| Viewport | Page | Performance | LCP | CLS | TBT |
+| Viewport | Page/state | Performance | LCP | CLS | TBT |
 |---|---|---:|---:|---:|---:|
-| Mobile | Home | 100 | 1,420 ms | 0.000 | 0 ms |
-| Mobile | Story EN | 100 | 1,417 ms | 0.000 | 0 ms |
-| Mobile | Story AR | 100 | 1,421 ms | 0.000 | 0 ms |
-| Desktop | Home | 99 | 714–719 ms | 0.006 | 0 ms |
-| Desktop | Story EN | 99 | 709 ms | 0.009 | 0 ms |
-| Desktop | Story AR | 99 | 752–755 ms | 0.003 | 0 ms |
+| Mobile | English home | 100 | 1,383 ms | 0.000 | 0 ms |
+| Mobile | Arabic home | 100 | 1,381 ms | 0.000 | 0 ms |
+| Mobile | English Story | 100 | 1,380 ms | 0.000 | 0 ms |
+| Mobile | Arabic Story | 100 | 1,384 ms | 0.000 | 0 ms |
+| Desktop | English home | 99 | 703–710 ms | 0.007 | 0–36 ms |
+| Desktop | Arabic home | 99 | 779–781 ms | 0.000 | 0 ms |
+| Desktop | English Story | 99–100 | 693–697 ms | 0.009 | 0 ms |
+| Desktop | Arabic Story | 99 | 737–746 ms | 0.003 | 0 ms |
 
 All configured LCP, CLS and total-blocking-time budgets passed.
 
@@ -128,7 +140,7 @@ All configured LCP, CLS and total-blocking-time budgets passed.
 - Locale and alternate-locale metadata.
 - Article and organisation structured data.
 - Updated bilingual sitemap.
-- Lighthouse SEO score: **100/100 on all tested pages and viewports**.
+- Lighthouse SEO score: **100/100 across all tested states**.
 
 ### 4.8 Security and dependency hardening — Complete for GitHub Pages
 
@@ -143,7 +155,8 @@ All configured LCP, CLS and total-blocking-time budgets passed.
 
 Tested through mobile and desktop Lighthouse emulation and final screenshots:
 
-- Home page.
+- English home page.
+- Arabic home runtime.
 - English Story page.
 - Arabic RTL Story page.
 - Desktop premium hero and live identity panel.
@@ -157,7 +170,7 @@ Final real-device review at 360, 390 and 430 px remains part of user acceptance 
 - Mobile Lighthouse gate: passed.
 - Desktop Lighthouse gate: passed.
 - Automated accessibility, best-practice and SEO scores: 100.
-- Visual screenshots reviewed for home, English Story and Arabic Story.
+- Visual screenshots reviewed for English home, Arabic home, English Story and Arabic Story.
 
 The only remaining controls are manual acceptance, explicit merge approval and post-deployment verification.
 
@@ -168,14 +181,14 @@ The only remaining controls are manual acceptance, explicit merge approval and p
 | F-01 | Public Story page remained a Phase 3.5 build | Closed | Dedicated Phase 4 English and Arabic Story pages |
 | F-02 | Linguistic claims required validation | Closed | `CONTENT_LINGUISTIC_VALIDATION.md`; corrected Story wording |
 | F-03 | Accessibility required complete verification | Implemented / automated pass | Static audit and 100 Lighthouse accessibility; manual AT smoke test pending |
-| F-04 | Bilingual and RTL architecture required strengthening | Closed | Dedicated Story URLs, dynamic home language state, reciprocal hreflang |
+| F-04 | Bilingual and RTL architecture required strengthening | Closed | Measured Arabic/English home states, dedicated Story URLs and reciprocal `hreflang` |
 | F-05 | GSAP and ScrollTrigger were render-blocking | Closed | Removed from Phase 4 production path |
 | F-06 | Motion and visual effects presented performance risk | Closed | Mobile and desktop Lighthouse budgets passed |
 | F-07 | Cinematic transition required user controls | Closed | Skip, interruption, repeat reduction and reduced-motion logic |
 | F-08 | Social-sharing metadata was incomplete | Closed | OG, Twitter/X, locale and image metadata |
 | F-09 | Dependency security hardening was incomplete | Closed | Dependency-free controller and practical CSP |
-| F-10 | Front-end structure was monolithic | Closed for release | Versioned Phase 4 bundle, isolated accessibility layer and central controller |
-| F-11 | Measured performance and browser evidence was absent | Closed | CI run `30041520899` and retained Lighthouse artifacts |
+| F-10 | Front-end structure was monolithic | Closed for release | Versioned assets, isolated accessibility layer and externalised language/data payloads |
+| F-11 | Measured performance and browser evidence was absent | Closed | CI run `30043805215` and retained Lighthouse artifacts |
 | F-12 | Final score required evidence-based re-audit | Ready for final approval | All automated gates green; manual acceptance and deployment verification remain |
 
 ## Final release gate
