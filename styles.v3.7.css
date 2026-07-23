@@ -1,0 +1,223 @@
+/* SAMT Phase 3.7 — Cinematic Experience */
+
+/* Note 01 — station artwork fully visible beside the information panel */
+@media (min-width: 1100px) {
+  .station-console { width: min(94vw, 1440px); }
+  .station-stage {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.9fr) minmax(23rem, .86fr) !important;
+    min-height: clamp(36rem, 58vw, 49rem);
+    overflow: hidden;
+  }
+  .station-stage__visual {
+    min-width: 0;
+    height: 100%;
+    aspect-ratio: auto !important;
+    display: grid;
+    place-items: center;
+    padding: clamp(.75rem, 1.5vw, 1.35rem);
+    border-inline-end: 1px solid rgba(241,217,154,.13);
+    background: #030a13;
+  }
+  .station-stage__visual img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100%;
+    max-height: clamp(34rem, 53vw, 46rem);
+    object-fit: contain !important;
+    object-position: center !important;
+    transform: scale(.965);
+    transform-origin: center;
+  }
+  .station-stage__content {
+    display: flex !important;
+    flex-direction: column;
+    min-width: 0;
+    height: 100%;
+    padding: clamp(1.75rem, 2.5vw, 2.7rem) !important;
+    overflow-y: auto;
+    background: linear-gradient(155deg,#12243b,#071321 76%);
+  }
+  .station-stage__content h3 { font-size: clamp(2.65rem, 4.3vw, 5rem) !important; }
+  .station-stage__content .button { margin-top: auto; align-self: flex-start; }
+  html[dir="rtl"] .station-stage__content .button { align-self: flex-end; }
+}
+
+@media (max-width: 1099px) {
+  .station-stage { grid-template-columns: 1fr !important; }
+  .station-stage__visual { aspect-ratio: 1672/941 !important; }
+  .station-stage__visual img { object-fit: contain !important; }
+}
+
+/* Note 02 — live hero identity mirrors with language */
+.hero__inner { align-items: center; }
+.hero__copy { grid-column: 1; }
+.hero__identity { grid-column: 2; justify-self: end; }
+html[dir="rtl"] .hero__copy { grid-column: 2; grid-row: 1; text-align: right; }
+html[dir="rtl"] .hero__identity { grid-column: 1; grid-row: 1; justify-self: start; }
+html[dir="rtl"] .hero__actions { justify-content: flex-start; }
+@media (max-width: 900px) {
+  .hero__copy, html[dir="rtl"] .hero__copy { grid-column: 1; grid-row: 1; }
+  .hero__identity, html[dir="rtl"] .hero__identity { grid-column: 1; grid-row: 2; width: min(100%,30rem)!important; }
+}
+
+/* Note 03 — centre-stage journey */
+.journey { min-height: 650vh !important; }
+.journey__sticky { min-height: 100svh; overflow: hidden; perspective: 1800px; }
+.journey__track-wrap {
+  position: relative;
+  min-height: 56svh;
+  display: grid;
+  place-items: center;
+  overflow: visible;
+}
+.journey__track {
+  position: relative;
+  width: min(94vw, 1280px);
+  min-height: 30rem;
+  display: grid !important;
+  place-items: center;
+  transform: none !important;
+}
+.journey__progress {
+  position: absolute;
+  left: 50%;
+  bottom: 2.25rem;
+  width: min(82vw, 1060px);
+  height: 1px;
+  transform: translateX(-50%);
+  background: rgba(241,217,154,.12);
+}
+.journey__progress span { transform-origin: left; }
+html[dir="rtl"] .journey__progress span { transform-origin: right; }
+.journey-card {
+  --slot-x: 0px;
+  position: absolute !important;
+  left: 50%;
+  top: 50%;
+  width: clamp(17rem, 25vw, 24rem) !important;
+  min-height: clamp(20rem, 31vw, 28rem);
+  margin: 0 !important;
+  transform: translate(-50%,-50%) translateZ(-1100px) scale(.42) rotateX(10deg);
+  opacity: 0;
+  filter: blur(14px);
+  transform-style: preserve-3d;
+  will-change: transform, opacity, filter;
+  pointer-events: none;
+  z-index: 1;
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.055),transparent 42%),
+    radial-gradient(circle at 80% 0,rgba(212,175,55,.09),transparent 14rem),
+    rgba(8,24,42,.92) !important;
+  box-shadow: 0 35px 110px rgba(0,0,0,.5);
+}
+.journey-card.is-featured {
+  opacity: 1;
+  filter: blur(0);
+  z-index: 10;
+  pointer-events: auto;
+  box-shadow: 0 42px 140px rgba(0,0,0,.58),0 0 0 1px rgba(212,175,55,.24),0 0 65px rgba(212,175,55,.13);
+}
+.journey-card.is-settled {
+  opacity: 1;
+  filter: none;
+  pointer-events: auto;
+  z-index: 3;
+}
+.journey-card::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.08) 48%,transparent 64%);
+  transform:translateX(-130%);
+  pointer-events:none;
+}
+.journey-card.is-featured::after { animation: samt-card-sheen 1.55s .35s ease-out both; }
+@keyframes samt-card-sheen { to { transform:translateX(130%); } }
+
+.journey-stage-caption {
+  position: absolute;
+  top: .6rem;
+  left: 50%;
+  z-index: 20;
+  width: min(92vw, 56rem);
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none;
+}
+.journey-stage-caption strong {
+  display:block;
+  color:var(--samt-light-gold);
+  font-family:var(--font-display);
+  font-size:clamp(1.7rem,3vw,3.4rem);
+  font-weight:500;
+  letter-spacing:.03em;
+}
+html[dir="rtl"] .journey-stage-caption strong { font-family:var(--font-ar); }
+.journey-stage-caption span { color:#cbd2dc; font-size:clamp(.9rem,1.2vw,1.08rem); }
+
+.journey-skip {
+  position:absolute;
+  right:clamp(1rem,3vw,3rem);
+  bottom:1.2rem;
+  z-index:30;
+  min-height:44px;
+  padding:.6rem 1rem;
+  border:1px solid rgba(241,217,154,.25);
+  border-radius:999px;
+  color:var(--samt-light-gold);
+  background:rgba(3,8,15,.72);
+  cursor:pointer;
+}
+html[dir="rtl"] .journey-skip { right:auto; left:clamp(1rem,3vw,3rem); }
+
+@media (max-width: 760px) {
+  .journey { min-height:auto !important; }
+  .journey__sticky { position:relative!important; min-height:auto; padding-bottom:4rem; }
+  .journey__track-wrap { min-height:auto; display:block; }
+  .journey__track { min-height:auto; display:grid!important; gap:1rem; padding:1rem; }
+  .journey-card { position:relative!important; left:auto; top:auto; width:100%!important; min-height:16rem; transform:none!important; opacity:1!important; filter:none!important; pointer-events:auto; }
+  .journey-stage-caption,.journey-skip { display:none; }
+}
+
+/* Note 04 — cinematic Story bridge */
+.story-transition-v37 {
+  position:fixed;
+  inset:0;
+  z-index:10000;
+  display:grid;
+  place-items:center;
+  padding:2rem;
+  opacity:0;
+  visibility:hidden;
+  color:#fff;
+  background:
+    radial-gradient(circle at 50% 42%,rgba(212,175,55,.11),transparent 18rem),
+    radial-gradient(circle at 18% 82%,rgba(35,85,134,.17),transparent 32rem),
+    #02050a;
+  overflow:hidden;
+}
+.story-transition-v37.is-active { visibility:visible; }
+.story-transition-v37::before {
+  content:"";
+  position:absolute;
+  inset:-10%;
+  opacity:.55;
+  background-image:radial-gradient(circle,rgba(241,217,154,.65) 0 1px,transparent 1.5px),radial-gradient(circle,rgba(192,198,207,.35) 0 .8px,transparent 1.3px);
+  background-size:147px 147px,229px 229px;
+  animation:samt-starfield-drift 20s linear infinite alternate;
+}
+.story-transition-v37__inner { position:relative; z-index:2; width:min(92vw,48rem); text-align:center; }
+.story-transition-v37__symbol { width:clamp(5rem,10vw,8rem); margin:0 auto 1.2rem; filter:drop-shadow(0 0 28px rgba(212,175,55,.22)); }
+.story-transition-v37__word { margin:.2rem 0;color:var(--samt-light-gold);font-family:var(--font-ar);font-size:clamp(4rem,10vw,8rem);line-height:1; }
+.story-transition-v37__title { font-family:var(--font-display);font-size:clamp(1.35rem,2.6vw,2.4rem);letter-spacing:.08em;text-transform:uppercase; }
+html[dir="rtl"] .story-transition-v37__title { font-family:var(--font-ar); text-transform:none; }
+.story-transition-v37__quote { margin:1.2rem auto 0;max-width:34rem;color:#cbd2dc;font-size:clamp(1rem,1.5vw,1.25rem);line-height:1.9; }
+.story-transition-v37__line { width:min(70vw,34rem);height:1px;margin:1.6rem auto;background:linear-gradient(90deg,transparent,var(--samt-champagne-gold),transparent);transform:scaleX(0); }
+.story-transition-v37__skip { position:absolute;right:1.2rem;bottom:1.2rem;z-index:3;min-height:44px;padding:.6rem 1rem;border:1px solid rgba(241,217,154,.25);border-radius:999px;color:#e8d59a;background:rgba(255,255,255,.03); }
+html[dir="rtl"] .story-transition-v37__skip { right:auto;left:1.2rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-card,.story-transition-v37,.story-transition-v37 * { animation:none!important; transition:none!important; }
+}
