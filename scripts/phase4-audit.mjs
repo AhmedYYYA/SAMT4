@@ -7,9 +7,13 @@ const required = [
   "story-of-samt.html",
   "story-of-samt-ar.html",
   "styles.v4.css",
+  "styles.v4-accessibility.css",
   "app.v4.js",
   "robots.txt",
-  "sitemap.xml"
+  "sitemap.xml",
+  "lighthouserc.json",
+  "lighthouserc.mobile.json",
+  "CONTENT_LINGUISTIC_VALIDATION.md"
 ];
 
 const failures = [];
@@ -33,6 +37,8 @@ for (const file of ["index.html", "story-of-samt.html", "story-of-samt-ar.html"]
   assert(!/<script[^>]+src="https?:\/\//i.test(html), `${file}: contains third-party executable script`);
   assert(!/javascript:/i.test(html), `${file}: contains javascript: URL`);
   assert(!/\son[a-z]+\s*=/i.test(html), `${file}: contains inline event handler`);
+  assert(!/<a class="brand"[^>]*aria-label=/i.test(html), `${file}: brand link overrides visible text with aria-label`);
+  assert(/styles\.v4-accessibility\.css/.test(html), `${file}: accessibility stylesheet is not linked`);
 
   const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map(match => match[1]);
   const duplicates = ids.filter((id, index) => ids.indexOf(id) !== index);
@@ -51,17 +57,24 @@ const index = read("index.html");
 assert(/data-build="phase4-v4\.0"/.test(index), "index.html: Phase 4 build marker missing");
 assert(/class="story-transition"/.test(index), "index.html: Story transition missing");
 assert((index.match(/class="journey-card/g) || []).length === 6, "index.html: journey must contain six stages");
+assert(/id="station-image"[^>]+loading="lazy"/i.test(index), "index.html: offscreen station image is not lazy loaded");
+assert(!/rel="preload"[^>]+uae-animated/i.test(index), "index.html: offscreen station artwork must not be preloaded");
+assert(/data-i18n-html="programme\.story"/.test(index), "index.html: programme Story link must preserve its markup during translation");
 assert(/object-fit:contain/.test(read("styles.v4.css").replace(/\s+/g, "")), "styles.v4.css: station artwork contain rule missing");
 assert(/prefers-reduced-motion/.test(read("styles.v4.css")), "styles.v4.css: reduced-motion handling missing");
+assert(/\.story-progress a\{width:2\.25rem;height:2\.25rem/.test(read("styles.v4-accessibility.css").replace(/\s+/g, "")), "styles.v4-accessibility.css: Story progress touch target rule missing");
 
 const storyEn = read("story-of-samt.html");
 const storyAr = read("story-of-samt-ar.html");
 assert(/<html lang="en" dir="ltr"/.test(storyEn), "English Story: incorrect lang/dir");
 assert(/<html lang="ar" dir="rtl"/.test(storyAr), "Arabic Story: incorrect lang/dir");
+assert(/<body class="story-page" dir="rtl"/.test(storyAr), "Arabic Story: RTL page-specific styling control missing");
 assert((storyEn.match(/class="story-section"/g) || []).length === 6, "English Story: expected six chapters");
 assert((storyAr.match(/class="story-section"/g) || []).length === 6, "Arabic Story: expected six chapters");
 assert(storyEn.includes("story-of-samt-ar.html") && storyAr.includes("story-of-samt.html"), "Story pages: reciprocal language links missing");
 assert(/hreflang="ar"/.test(storyEn) && /hreflang="en"/.test(storyAr), "Story pages: hreflang missing");
+assert(!/direction and elevation/i.test(storyEn), "English Story: superseded lexical overstatement remains");
+assert(!/بالاتجاه والعلو/.test(storyAr), "Arabic Story: superseded lexical overstatement remains");
 
 const app = read("app.v4.js");
 assert(/prefers-reduced-motion/.test(app), "app.v4.js: reduced-motion logic missing");
@@ -70,7 +83,7 @@ assert(/inert/.test(app), "app.v4.js: focus isolation missing");
 assert(/ArrowLeft/.test(app) && /ArrowRight/.test(app), "app.v4.js: keyboard tab navigation missing");
 
 notes.push(`Checked ${required.length} required release files.`);
-notes.push("Validated HTML landmarks, metadata, local references, duplicate IDs, bilingual Story architecture, reduced motion and key interaction controls.");
+notes.push("Validated HTML landmarks, metadata, local references, duplicate IDs, bilingual Story architecture, linguistic controls, deferred station media, reduced motion, touch targets and key interaction controls.");
 
 if (failures.length) {
   console.error("\nPhase 4 static audit FAILED\n");
