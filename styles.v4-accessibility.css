@@ -4,4 +4,14 @@
 .story-progress a:hover::before,.story-progress a:focus-visible::before{transform:scale(1.35);border-color:var(--gold-light)}
 .story-progress a[aria-current=true]::before{background:var(--gold-light);box-shadow:0 0 18px rgba(241,217,154,.5)}
 .story-progress a:focus-visible{outline-offset:0}
+
+/* The first viewport must render immediately; progressive reveal begins below it. */
+.hero__copy.reveal,.hero__identity.reveal{opacity:1;transform:none}
+
 @media(max-width:1180px){.story-progress{display:none}}
+
+/* Mobile uses local system faces on the critical rendering path. The premium web faces remain on desktop. */
+@media(max-width:900px){
+  :root{--display:Georgia,"Times New Roman",serif;--body:Arial,Helvetica,sans-serif;--arabic:Tahoma,Arial,sans-serif}
+  html[dir=rtl] body{font-family:Tahoma,Arial,sans-serif}
+}
