@@ -62,7 +62,7 @@ assert(!/rel="preload"[^>]+uae-animated/i.test(index), "index.html: offscreen st
 assert(/data-i18n-html="programme\.story"/.test(index), "index.html: programme Story link must preserve its markup during translation");
 assert(/object-fit:contain/.test(read("styles.v4.css").replace(/\s+/g, "")), "styles.v4.css: station artwork contain rule missing");
 assert(/prefers-reduced-motion/.test(read("styles.v4.css")), "styles.v4.css: reduced-motion handling missing");
-assert(/\.story-progress a\{width:2\.25rem;height:2\.25rem/.test(read("styles.v4-accessibility.css").replace(/\s+/g, "")), "styles.v4-accessibility.css: Story progress touch target rule missing");
+assert(/\.story-progress\s+a\{width:2\.25rem;height:2\.25rem/.test(read("styles.v4-accessibility.css").replace(/\n/g, "")), "styles.v4-accessibility.css: Story progress touch target rule missing");
 
 const storyEn = read("story-of-samt.html");
 const storyAr = read("story-of-samt-ar.html");
