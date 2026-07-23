@@ -1,0 +1,62 @@
+{
+  "uae": {
+    "code": "UAE",
+    "title": "United Arab Emirates",
+    "subtitle": "National foundation, sovereign capability and transformation",
+    "body": "A three-week national foundation station connecting leadership formation with the UAE defence, aviation, advanced-technology and sustainability ecosystems.",
+    "duration": "3 weeks",
+    "focus": "National capability & transformation",
+    "points": [
+      "Tawazun and national capability governance",
+      "EDGE and GAL defence and aviation ecosystems",
+      "TII, Masdar, emerging technology and sustainability"
+    ],
+    "image": "assets/stations/uae-animated-v3.4.svg",
+    "alt": "Animated United Arab Emirates preparation station"
+  },
+  "uk": {
+    "code": "UK",
+    "title": "United Kingdom",
+    "subtitle": "Professional military education, governance and defence programmes",
+    "body": "A six-week station combining professional military education, leadership formation and exposure to institutions and companies supporting United Kingdom defence programmes.",
+    "duration": "6 weeks",
+    "focus": "Military education & defence programmes",
+    "points": [
+      "RAF Cosford and professional air-force education",
+      "Royal Military Academy Sandhurst and leadership formation",
+      "Prime organisations supporting UK defence programmes"
+    ],
+    "image": "assets/stations/uk-animated-v3.4.svg",
+    "alt": "Animated United Kingdom preparation station"
+  },
+  "france": {
+    "code": "FRANCE",
+    "title": "French Republic",
+    "subtitle": "European industry, partnerships and strategic engagement",
+    "body": "A three-week European station centred on industry, strategic partnerships and engagement with organisations operating through approved agreements.",
+    "duration": "3 weeks",
+    "focus": "European partnerships & industry",
+    "points": [
+      "European defence-industry engagement",
+      "Partnership, contract and stakeholder management",
+      "Industrial cooperation and international business development"
+    ],
+    "image": "assets/stations/france-animated-v3.4.svg",
+    "alt": "Animated France preparation station"
+  },
+  "usa": {
+    "code": "USA",
+    "title": "United States of America",
+    "subtitle": "Defence cooperation, acquisition and strategic education",
+    "body": "A four-week station focused on government-to-government cooperation, Foreign Military Sales, strategic education and defence acquisition ecosystems.",
+    "duration": "4 weeks",
+    "focus": "Defence cooperation & acquisition",
+    "points": [
+      "Government-to-government and security-cooperation programmes",
+      "Foreign Military Sales and acquisition processes",
+      "Strategic education and transformation institutions"
+    ],
+    "image": "assets/stations/usa-animated-v3.4.svg",
+    "alt": "Animated United States preparation station"
+  }
+}

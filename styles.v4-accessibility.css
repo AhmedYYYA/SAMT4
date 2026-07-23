@@ -1,0 +1,36 @@
+.story-progress{gap:0}
+.story-progress a{width:2.25rem;height:2.25rem;display:grid;place-items:center;border:0;border-radius:50%;background:transparent}
+.story-progress a::before{content:"";width:.58rem;height:.58rem;border:1px solid rgba(241,217,154,.52);border-radius:50%;background:transparent;transition:transform .25s,background .25s,box-shadow .25s}
+.story-progress a:hover::before,.story-progress a:focus-visible::before{transform:scale(1.35);border-color:var(--gold-light)}
+.story-progress a[aria-current=true]::before{background:var(--gold-light);box-shadow:0 0 18px rgba(241,217,154,.5)}
+.story-progress a:focus-visible{outline-offset:0}
+
+/* The first viewport must render immediately; progressive reveal begins below it. */
+.hero__copy.reveal,.hero__identity.reveal{opacity:1;transform:none}
+
+/* Prevent an intermediate English layout from painting during initial Arabic hydration. */
+.i18n-pending body{display:none}
+
+/* Scroll-linked progress is retained only where it does not enter the mobile critical path. */
+@media(min-width:901px){
+  @supports (animation-timeline:scroll()){
+    .page-progress span{animation:phase4-page-progress linear both;animation-timeline:scroll(root block)}
+  }
+}
+@keyframes phase4-page-progress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+@media(max-width:1180px){.story-progress{display:none}}
+
+/* Mobile uses local system faces on the critical rendering path. */
+@media(max-width:900px){
+  :root{--display:Georgia,"Times New Roman",serif;--body:Arial,Helvetica,sans-serif;--arabic:Tahoma,Arial,sans-serif}
+  html[dir=rtl] body{font-family:Tahoma,Arial,sans-serif}
+  .page-progress{display:none}
+
+  /* Reserve stable geometry but skip rendering distant sections until they approach the viewport. */
+  .home-page .programme,.home-page .journey,.home-page .selection,.home-page .stations,.home-page .competencies,.home-page .assessment,.home-page .impact,.home-page .admission,.home-page .site-footer{
+    content-visibility:auto;
+    contain-intrinsic-block-size:auto 900px;
+  }
+  .home-page .journey{contain-intrinsic-block-size:auto 4200px}
+}
