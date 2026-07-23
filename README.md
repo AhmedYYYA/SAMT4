@@ -1,53 +1,28 @@
-# SAMT Website Phase 3.4
+# SAMT Website — Phase 3.5
 
-**SAMT — Strategic Advancement, Management & Transformation**  
-**برنامج سَمْت للتقدم الاستراتيجي والإدارة والتحول**  
-**From Potential to Command | من الإمكانات إلى القيادة**
+Phase 3.5 adds the approved **Story of SAMT** experience and replaces the landing-page Earth photograph with a fully dynamic, language-aware Strategic Ascent composition.
 
-## Release purpose
+## Production entry points
 
-Phase 3.4 corrects the published desktop composition while preserving the approved mobile preparation-station design and the approved SAMT visual direction.
+- `index.html` — main SAMT website
+- `story-of-samt.html` — separate English and Arabic Story of SAMT versions
+- `styles.v3.5.css` — production stylesheet
+- `app.v3.5.js` — main website interaction and motion
+- `story.v3.5.js` — story-page language and motion controller
 
-## Authoritative production files
+Compatibility copies `styles.css` and `app.js` are retained for legacy pages.
 
-```text
-index.html
-styles.v3.4.css
-app.v3.4.js
-assets/
-  brand/
-  hero/
-    hero-earth-approved-v3.4.webp
-    hero-earth-approved-v3.4.jpg
-  icons/
-  stations/
-    uae-animated-v3.4.svg
-    uk-animated-v3.4.svg
-    france-animated-v3.4.svg
-    usa-animated-v3.4.svg
-```
+## Phase 3.5 approved changes
 
-`styles.css` and `app.js` are retained as synchronized compatibility copies, but `index.html` intentionally loads the versioned v3.4 files to prevent mixed browser caches.
-
-## Phase 3.4 corrections
-
-- Desktop and laptop station artwork is displayed at full width above the information panel; it is no longer cropped behind a vertical content column.
-- The approved mobile station arrangement is preserved.
-- The original placeholder logo is removed from each station scene and the validated SAMT signature is printed directly over the cleaned artwork without a hard rectangular panel.
-- Desktop hero rendering displays one identity panel only. On stacked tablet/mobile layouts, the live semantic identity panel is restored and the background crop excludes the baked reference panel.
-- Seven selection dimensions orbit the fixed “10 Future Leaders” centre while remaining upright and readable.
-- Reduced-motion mode stops orbital and decorative animation.
-- Versioned CSS, JavaScript, station SVGs and hero assets prevent stale mixed releases.
-- Station durations remain UAE 3 weeks, UK 6 weeks, France 3 weeks and USA 4 weeks, for a 16-week total.
+- No Earth photography on the landing hero.
+- No logos, titles or interface text embedded inside a background image.
+- English layout: headline left; SAMT identity right; identity enters from the right.
+- Arabic layout: headline right; SAMT identity left; identity enters from the left.
+- Dynamic gold ascent trajectories, command star, particles, atmospheric glow and geometric depth.
+- Separate Arabic and English Story of SAMT content selected by the active site language.
+- Story links in the programme section, mobile navigation and footer.
+- Approved Phase 3.4 preparation-station and orbital-motion work preserved.
 
 ## Deployment
 
-Upload the **contents of this folder** to the root of `AhmedYYYA/SAMT4`, replacing the previous release. Do not upload the outer folder itself.
-
-After GitHub Pages finishes publishing, test in a private browser window first. Safari users should also use `Command + Shift + R` once.
-
-## Validation status
-
-Static validation passed for JavaScript syntax, duplicate HTML IDs, local asset references, SVG parsing, translation keys, duration data, CSS structure and versioned production paths.
-
-Live Safari, Chrome, Edge, iOS and Android visual acceptance must be completed after deployment because the final GitHub Pages rendering cannot be fully certified from the local static checks alone.
+Upload the **contents of this folder** to the GitHub Pages repository root. Do not upload the containing folder itself. Confirm that `index.html`, `story-of-samt.html`, `styles.v3.5.css`, `app.v3.5.js`, `story.v3.5.js` and the complete `assets/` directory are present.
