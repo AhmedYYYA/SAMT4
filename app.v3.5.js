@@ -1,6 +1,6 @@
 (() => {
   "use strict";
-  const build = "3.6.0";
+  const build = "3.7.0";
   const coreModule = "app.js";
 
   function addStyle(href) {
@@ -26,15 +26,15 @@
   document.body.dataset.build = `phase3-v${build}`;
   window.SAMT_BUILD = build;
   addStyle("styles.v3.6.css");
+  addStyle("styles.v3.7.css");
 
   addScript(coreModule)
-    .then(() => {
-      window.SAMT_BUILD = build;
-      return addScript("navigation.v3.6.js");
-    })
+    .then(() => addScript("navigation.v3.6.js"))
     .then(() => addScript("experience.v3.6.js"))
+    .then(() => addScript("experience.v3.7.js"))
+    .then(() => { window.SAMT_BUILD = build; })
     .catch((error) => {
-      console.error("SAMT Phase 3.6 failed to initialise", error);
+      console.error("SAMT Phase 3.7 failed to initialise", error);
       document.body.classList.remove("is-loading");
     });
 })();

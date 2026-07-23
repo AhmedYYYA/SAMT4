@@ -2,7 +2,7 @@ name: SAMT quality gate
 
 on:
   push:
-    branches: [main, phase3-6-premium-experience]
+    branches: [main, phase3-7-cinematic-experience]
   pull_request:
     branches: [main]
 
@@ -25,5 +25,6 @@ jobs:
           node --check story.core.v3.5.js
           node --check navigation.v3.6.js
           node --check experience.v3.6.js
+          node --check experience.v3.7.js
       - name: Validate site structure and local references
         run: node tools/quality-check.mjs
