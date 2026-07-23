@@ -38,7 +38,9 @@ const modules = [
   "navigation.v3.6.js",
   "experience.v3.6.js",
   "app.v3.5.js",
-  "story.v3.5.js"
+  "app.js",
+  "story.v3.5.js",
+  "story.core.v3.5.js"
 ];
 for (const module of modules) assert(fs.existsSync(path.join(root, module)), `${module}: module exists`);
 
@@ -48,8 +50,11 @@ for (const [name, loader] of [["app.v3.5.js", appLoader], ["story.v3.5.js", stor
   assert(/styles\.v3\.6\.css/.test(loader), `${name}: loads the Phase 3.6 style layer`);
   assert(/navigation\.v3\.6\.js/.test(loader), `${name}: loads shared navigation`);
   assert(/experience\.v3\.6\.js/.test(loader), `${name}: loads premium experience`);
-  assert(/5b6528716a87d8b6e5b1d61adf4f8d79e2383fbf/.test(loader), `${name}: core dependency is immutable and commit-pinned`);
 }
+assert(/coreModule\s*=\s*["']app\.js["']/.test(appLoader), "app.v3.5.js: loads the homepage core locally");
+assert(/coreModule\s*=\s*["']story\.core\.v3\.5\.js["']/.test(storyLoader), "story.v3.5.js: loads the Story core locally");
+assert(!/https?:\/\//.test(appLoader), "app.v3.5.js: has no external core dependency");
+assert(!/https?:\/\//.test(storyLoader), "story.v3.5.js: has no external core dependency");
 
 const navigation = fs.readFileSync(path.join(root, "navigation.v3.6.js"), "utf8");
 const styles = fs.readFileSync(path.join(root, "styles.v3.6.css"), "utf8");
