@@ -1,7 +1,7 @@
 (() => {
   "use strict";
   const build = "3.6.0";
-  const pinnedCore = "https://cdn.jsdelivr.net/gh/AhmedYYYA/SAMT4@5b6528716a87d8b6e5b1d61adf4f8d79e2383fbf/story.v3.5.js";
+  const coreModule = "story.core.v3.5.js";
 
   function addStyle(href) {
     if (document.querySelector(`link[href="${href}"]`)) return;
@@ -27,8 +27,11 @@
   window.SAMT_BUILD = build;
   addStyle("styles.v3.6.css");
 
-  addScript(pinnedCore)
-    .then(() => addScript("navigation.v3.6.js"))
+  addScript(coreModule)
+    .then(() => {
+      window.SAMT_BUILD = build;
+      return addScript("navigation.v3.6.js");
+    })
     .then(() => addScript("experience.v3.6.js"))
     .catch((error) => console.error("SAMT Story Phase 3.6 failed to initialise", error));
 })();
