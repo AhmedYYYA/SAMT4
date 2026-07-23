@@ -1,0 +1,27 @@
+name: SAMT quality gate
+
+on:
+  push:
+    branches: [main, phase3-6-premium-experience]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  static-quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate JavaScript syntax
+        run: |
+          node --check app.v3.5.js
+          node --check story.v3.5.js
+          node --check navigation.v3.6.js
+          node --check experience.v3.6.js
+      - name: Validate site structure and local references
+        run: node tools/quality-check.mjs
