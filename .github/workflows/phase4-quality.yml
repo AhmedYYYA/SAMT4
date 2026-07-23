@@ -1,0 +1,40 @@
+name: Phase 4 Quality Gate
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [phase4-world-class-enhancement]
+
+permissions:
+  contents: read
+
+jobs:
+  static-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate JavaScript syntax
+        run: node --check app.v4.js
+      - name: Run Phase 4 static audit
+        run: node scripts/phase4-audit.mjs
+
+  lighthouse:
+    runs-on: ubuntu-latest
+    needs: static-audit
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Lighthouse CI
+        run: npm install --global @lhci/cli@0.14.0
+      - name: Run Lighthouse quality budgets
+        run: lhci autorun --config=./lighthouserc.json
