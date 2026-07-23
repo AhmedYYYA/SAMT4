@@ -5,8 +5,8 @@
 - Repository: `AhmedYYYA/SAMT4`
 - Branch: `phase4-world-class-enhancement`
 - Pull request: `#3`
-- Tested code commit: `95c12eb8512dbd55323c028938120025dec21a5e`
-- GitHub Actions run: `30043805215`
+- Tested release commit: `af78fe22a4e50cce60c552cd4e891f68ac148d97`
+- GitHub Actions run: `30044573719`
 
 ## Automated gate results
 
@@ -14,8 +14,8 @@
 |---|---|
 | JavaScript syntax validation | Passed |
 | Phase 4 deterministic static audit | Passed |
-| Mobile Lighthouse quality gate | Passed |
-| Desktop Lighthouse quality gate | Passed |
+| Three-run mobile Lighthouse quality gate | Passed |
+| Two-run desktop Lighthouse quality gate | Passed |
 | English home runtime | Passed |
 | Arabic home runtime | Passed |
 | English Story page | Passed |
@@ -29,34 +29,32 @@
 
 ## Lighthouse results
 
-### Mobile
+### Mobile — three-run median
 
-| Page/state | Performance | Accessibility | Best Practices | SEO | LCP | CLS | TBT |
+| Page/state | Performance | Accessibility | Best Practices | SEO | Median LCP | Median CLS | Median TBT |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| English home — `index.html` | 100 | 100 | 100 | 100 | 1,383 ms | 0.000 | 0 ms |
-| Arabic home — `index.html?lang=ar` | 100 | 100 | 100 | 100 | 1,381 ms | 0.000 | 0 ms |
-| English Story — `story-of-samt.html` | 100 | 100 | 100 | 100 | 1,380 ms | 0.000 | 0 ms |
-| Arabic Story — `story-of-samt-ar.html` | 100 | 100 | 100 | 100 | 1,384 ms | 0.000 | 0 ms |
+| English home — `index.html` | 100 | 100 | 100 | 100 | 1,436 ms | 0.000 | 0 ms |
+| Arabic home — `index.html?lang=ar` | 100 | 100 | 100 | 100 | 1,423 ms | 0.000 | 0 ms |
+| English Story — `story-of-samt.html` | 100 | 100 | 100 | 100 | 1,413 ms | 0.000 | 0 ms |
+| Arabic Story — `story-of-samt-ar.html` | 100 | 100 | 100 | 100 | 1,415 ms | 0.000 | 0 ms |
 
-### Desktop
+### Desktop — two runs
 
-Two runs were collected for each page/state.
-
-| Page/state | Performance | Accessibility | Best Practices | SEO | LCP range | CLS | TBT range |
+| Page/state | Performance | Accessibility | Best Practices | SEO | LCP range | CLS | TBT |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| English home — `index.html` | 99 | 100 | 100 | 100 | 703–710 ms | 0.007 | 0–36 ms |
-| Arabic home — `index.html?lang=ar` | 99 | 100 | 100 | 100 | 779–781 ms | 0.000 | 0 ms |
-| English Story — `story-of-samt.html` | 99–100 | 100 | 100 | 100 | 693–697 ms | 0.009 | 0 ms |
-| Arabic Story — `story-of-samt-ar.html` | 99 | 100 | 100 | 100 | 737–746 ms | 0.003 | 0 ms |
+| English home — `index.html` | 99 | 100 | 100 | 100 | 713–715 ms | 0.007 | 0 ms |
+| Arabic home — `index.html?lang=ar` | 99 | 100 | 100 | 100 | 796–799 ms | 0.000 | 0 ms |
+| English Story — `story-of-samt.html` | 99 | 100 | 100 | 100 | 717 ms | 0.009 | 0 ms |
+| Arabic Story — `story-of-samt-ar.html` | 99 | 100 | 100 | 100 | 757–762 ms | 0.003 | 0 ms |
 
 ## Retained workflow artifacts
 
 - `phase4-lighthouse-mobile`
-  - Artifact ID: `8578308585`
-  - Digest: `sha256:ca7aa1c7ddac5fefc419d878f4d4f8f7c803856d10491fe7592f0ed0d404c520`
+  - Artifact ID: `8578656530`
+  - Digest: `sha256:b9ea94ea46e5f075a4cada1b71bdd151d80ce1ae82bde7fffa4c58b807c1b55c`
 - `phase4-lighthouse-desktop`
-  - Artifact ID: `8578340530`
-  - Digest: `sha256:d8bf2a315374ddc1ef44dec52a677fa87532cf039cd4d7f982b7dce7312c0dd4`
+  - Artifact ID: `8578635176`
+  - Digest: `sha256:eb51e401d959995687760f284c3cfd2732ef03f90572e10e1b71c71a78bb9b4d`
 
 Artifacts are retained by GitHub Actions for 14 days from the evidence run.
 
@@ -88,7 +86,8 @@ The reviewed frames confirm:
 - Arabic translations are loaded only when Arabic is requested.
 - Preparation-station datasets are loaded on demand by language.
 - Journey and station controllers initialise only when their sections approach the viewport.
-- The progress indicator uses a CSS scroll timeline rather than forcing full-document measurement.
+- The full-document JavaScript progress measurement was removed.
+- The scroll-linked progress line is retained on desktop and excluded from the mobile critical rendering path.
 - Offscreen homepage sections use rendering containment on mobile.
 - Station artwork is lazy-loaded and always rendered with `object-fit: contain`.
 
