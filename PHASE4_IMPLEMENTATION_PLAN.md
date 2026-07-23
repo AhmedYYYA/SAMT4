@@ -6,8 +6,8 @@
 
 Branch: `phase4-world-class-enhancement`  
 Pull request: `#3`  
-Tested code commit: `95c12eb8512dbd55323c028938120025dec21a5e`  
-Current release evidence run: GitHub Actions `30043805215`
+Tested release commit: `af78fe22a4e50cce60c552cd4e891f68ac148d97`  
+Current release evidence run: GitHub Actions `30044573719`
 
 The release remains unmerged until final manual acceptance and explicit approval.
 
@@ -44,7 +44,7 @@ Implement every validated audit finding through a controlled enhancement program
 
 - `scripts/phase4-audit.mjs` — deterministic static release audit.
 - `lighthouserc.json` — desktop Lighthouse budgets for four language/page states.
-- `lighthouserc.mobile.json` — mobile Lighthouse budgets for four language/page states.
+- `lighthouserc.mobile.json` — three-run mobile Lighthouse budgets for four language/page states.
 - `.github/workflows/phase4-quality.yml` — mandatory CI quality gate.
 - `CONTENT_LINGUISTIC_VALIDATION.md` — controlled linguistic basis for the SAMT name.
 - `PHASE4_RELEASE_EVIDENCE.md` — measured release evidence.
@@ -68,7 +68,7 @@ The previous Phase 3.5/3.7 production files remain in repository history for tra
 - Separated accessibility-critical refinements from the core design bundle.
 - Externalised Arabic interface translations and station datasets from the critical JavaScript path.
 - Added proximity-triggered journey and station controllers.
-- Replaced JavaScript full-page progress measurement with a CSS scroll timeline.
+- Removed JavaScript full-page progress measurement; the visual progress line is desktop-only and excluded from the mobile critical path.
 - Added deterministic build validation and CI enforcement.
 
 ### 4.3 Bilingual and RTL architecture — Complete
@@ -116,19 +116,20 @@ Manual assistive-technology smoke testing remains a final acceptance activity ra
 - Added mobile offscreen rendering containment.
 - Removed full-document JavaScript layout measurement.
 - Lazy-loaded Arabic translations and station data.
+- Adopted three-run mobile medians to control throttled-lab variance.
 
 Final lab results:
 
 | Viewport | Page/state | Performance | LCP | CLS | TBT |
 |---|---|---:|---:|---:|---:|
-| Mobile | English home | 100 | 1,383 ms | 0.000 | 0 ms |
-| Mobile | Arabic home | 100 | 1,381 ms | 0.000 | 0 ms |
-| Mobile | English Story | 100 | 1,380 ms | 0.000 | 0 ms |
-| Mobile | Arabic Story | 100 | 1,384 ms | 0.000 | 0 ms |
-| Desktop | English home | 99 | 703–710 ms | 0.007 | 0–36 ms |
-| Desktop | Arabic home | 99 | 779–781 ms | 0.000 | 0 ms |
-| Desktop | English Story | 99–100 | 693–697 ms | 0.009 | 0 ms |
-| Desktop | Arabic Story | 99 | 737–746 ms | 0.003 | 0 ms |
+| Mobile median | English home | 100 | 1,436 ms | 0.000 | 0 ms |
+| Mobile median | Arabic home | 100 | 1,423 ms | 0.000 | 0 ms |
+| Mobile median | English Story | 100 | 1,413 ms | 0.000 | 0 ms |
+| Mobile median | Arabic Story | 100 | 1,415 ms | 0.000 | 0 ms |
+| Desktop | English home | 99 | 713–715 ms | 0.007 | 0 ms |
+| Desktop | Arabic home | 99 | 796–799 ms | 0.000 | 0 ms |
+| Desktop | English Story | 99 | 717 ms | 0.009 | 0 ms |
+| Desktop | Arabic Story | 99 | 757–762 ms | 0.003 | 0 ms |
 
 All configured LCP, CLS and total-blocking-time budgets passed.
 
@@ -167,8 +168,8 @@ Final real-device review at 360, 390 and 430 px remains part of user acceptance 
 ### 4.10 Final independent re-audit and release — Ready for approval
 
 - Static audit: passed.
-- Mobile Lighthouse gate: passed.
-- Desktop Lighthouse gate: passed.
+- Three-run mobile Lighthouse gate: passed.
+- Two-run desktop Lighthouse gate: passed.
 - Automated accessibility, best-practice and SEO scores: 100.
 - Visual screenshots reviewed for English home, Arabic home, English Story and Arabic Story.
 
@@ -188,7 +189,7 @@ The only remaining controls are manual acceptance, explicit merge approval and p
 | F-08 | Social-sharing metadata was incomplete | Closed | OG, Twitter/X, locale and image metadata |
 | F-09 | Dependency security hardening was incomplete | Closed | Dependency-free controller and practical CSP |
 | F-10 | Front-end structure was monolithic | Closed for release | Versioned assets, isolated accessibility layer and externalised language/data payloads |
-| F-11 | Measured performance and browser evidence was absent | Closed | CI run `30043805215` and retained Lighthouse artifacts |
+| F-11 | Measured performance and browser evidence was absent | Closed | CI run `30044573719` and retained Lighthouse artifacts |
 | F-12 | Final score required evidence-based re-audit | Ready for final approval | All automated gates green; manual acceptance and deployment verification remain |
 
 ## Final release gate
