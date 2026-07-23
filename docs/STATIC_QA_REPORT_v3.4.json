@@ -1,0 +1,62 @@
+{
+  "release": "3.4.0",
+  "duplicate_ids": [],
+  "missing_html_refs": [],
+  "missing_css_refs": [],
+  "css_braces_balanced": true,
+  "css_parse_errors": [],
+  "javascript_syntax": "passed",
+  "orbit_item_count": 7,
+  "orbit_carrier_count": 7,
+  "critical_thinking_en": true,
+  "critical_thinking_ar": true,
+  "durations": {
+    "uae": true,
+    "uk": true,
+    "france": true,
+    "usa": true
+  },
+  "total_16_weeks": true,
+  "old_3_plus_weeks_found": [],
+  "versioned_css": true,
+  "versioned_js": true,
+  "versioned_hero": true,
+  "versioned_station_refs": true,
+  "desktop_station_full_artwork": true,
+  "mobile_station_caption": true,
+  "desktop_identity_single_panel": true,
+  "mobile_identity_visible": true,
+  "reduced_motion_orbit": true,
+  "svg_parse_errors": [],
+  "station_files": {
+    "uae-animated-v3.4.svg": {
+      "exists": true,
+      "no_hard_rect": true,
+      "transparent_horizontal_identity": true,
+      "mobile_logo_hidden": true,
+      "animated": true
+    },
+    "uk-animated-v3.4.svg": {
+      "exists": true,
+      "no_hard_rect": true,
+      "transparent_horizontal_identity": true,
+      "mobile_logo_hidden": true,
+      "animated": true
+    },
+    "france-animated-v3.4.svg": {
+      "exists": true,
+      "no_hard_rect": true,
+      "transparent_horizontal_identity": true,
+      "mobile_logo_hidden": true,
+      "animated": true
+    },
+    "usa-animated-v3.4.svg": {
+      "exists": true,
+      "no_hard_rect": true,
+      "transparent_horizontal_identity": true,
+      "mobile_logo_hidden": true,
+      "animated": true
+    }
+  },
+  "pass": true
+}

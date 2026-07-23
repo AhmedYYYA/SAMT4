@@ -1,48 +1,51 @@
-# SAMT Phase 3 Final QA Report
+# SAMT Website Phase 3.4 — Final QA Report
 
-## Automated checks completed
+## Build assessed
 
-- JavaScript syntax validation: **Passed**
-- Duplicate HTML IDs: **None found**
-- Local asset references: **All resolved**
-- SVG XML parsing: **Passed for all SVG assets**
-- English/Arabic translation key parity: **Passed**
-- Dialog count and semantic section structure: **Validated**
+- Build: `phase3-v3.4`
+- Version: `3.4.0`
+- Production HTML: `index.html`
+- Production CSS: `styles.v3.4.css`
+- Production JavaScript: `app.v3.4.js`
 
-## Visual corrections confirmed in source
+## Static validation result
 
-- Missing Strategic Ascent symbol restored
-- Icon sprite restored
-- Station SVG container ratio aligned to 1672:941
-- Station images use `object-fit: contain`
-- Text-size overrides applied after all responsive rules
-- Modal body and list text increased
-- Mobile station labels raised above the previous compressed values
+**PASS**
 
-## Validation limitation
+The following checks passed:
 
-A full cross-browser visual test cannot be claimed from static analysis alone. The release should be validated on the live GitHub Pages deployment in Safari, Chrome, Edge and Firefox, including at least one iOS and one Android device.
+- JavaScript syntax validation
+- CSS parsing and brace balance
+- HTML duplicate-ID scan
+- Local HTML and CSS asset resolution
+- Four station SVG XML parses
+- Four station animation definitions
+- Seven orbit items and seven counter-rotating carriers
+- English and Arabic Critical Thinking translation keys
+- UAE / UK / France / USA durations of 3 / 6 / 3 / 4 weeks
+- Sixteen-week programme total
+- No obsolete duration placeholder in production files
+- Versioned CSS, JavaScript, hero and station references
+- Full-width desktop station composition using `object-fit: contain`
+- Approved mobile station caption and card arrangement
+- Transparent horizontal SAMT station signature with no hard logo rectangle
+- Mobile station SVG rule that hides the desktop signature to preserve the approved mobile artwork
+- One hero identity panel on desktop and restored live semantic panel on stacked layouts
+- Reduced-motion orbit fallback
 
-## Phase 3.1 Hero Upgrade QA
+Machine-readable evidence is available in `STATIC_QA_REPORT_v3.4.json`.
 
-Completed static validation:
+## Visual proofs generated
 
-- JavaScript syntax: passed (`node --check`).
-- Duplicate HTML IDs: none detected.
-- Referenced local assets: present.
-- SVG XML parsing: passed for all brand, station, icon and hero SVG files.
-- CSS brace and parenthesis balance: passed.
-- Release ZIP extraction: passed.
-- SHA-256 checksum verification: passed.
+- `preview/v3.4/hero-desktop-final.png`
+- `preview/v3.4/hero-mobile-final.png`
+- `preview/v3.4/desktop-station-final.png`
+- `preview/v3.4/mobile-station-approved-layout.png`
+- `preview/v3.4/selection-orbit-desktop-final.png`
+- `preview/v3.4/selection-orbit-mobile-final.png`
 
-Live visual acceptance remains required after GitHub Pages deployment, particularly for Safari SVG masking, AVIF/WebP selection, mobile viewport composition and reduced-motion behaviour.
+The proofs confirm that the desktop station artwork is no longer covered by a vertical information panel, the approved mobile card remains intact, the station signature has no blank rectangular background, the hero identity is not duplicated, and the seven dimensions orbit the fixed `10 Future Leaders` core.
 
-## Phase 3.3 station-content validation
+## Deployment limitation
 
-- JavaScript syntax: PASS
-- English station durations: 3 / 6 / 3 / 4 weeks
-- Arabic station durations: 3 / 6 / 3 / 4 weeks
-- Total programme duration represented by the four stations: 16 weeks
-- Named host and programme categories integrated in English and Arabic
-- Duplicate HTML IDs: none
-- Referenced local assets: present
+Local validation cannot certify the final GitHub Pages rendering in every browser. After deployment, complete the documented Safari, Chrome, Edge, iOS Safari, Android Chrome, English LTR and Arabic RTL checks before locking v3.4 as the production baseline.

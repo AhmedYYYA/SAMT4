@@ -1,161 +1,127 @@
 {
-  "release": "SAMT Website Phase 3 v3.0",
+  "build": "phase3-v3.4",
+  "version": "3.4.0",
   "generated": "2026-07-22",
   "files": [
     {
-      "path": ".nojekyll",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "404.html",
-      "bytes": 1625,
-      "sha256": "8766a5b283074ff4eac7a2df09b484fbd67b2b9d9bc8b63c134b25149dd6b360"
-    },
-    {
-      "path": "IMPLEMENTATION_STATUS.md",
-      "bytes": 1034,
-      "sha256": "06fec79c4d54c724823cd1663d2ef235fdff31b57723698d2d4e41993025d3cc"
-    },
-    {
-      "path": "README.md",
-      "bytes": 2147,
-      "sha256": "91197aca8165c3fcc307116afa5ff61f00ad143f4b7de345dc75cffc8bd83bba"
-    },
-    {
-      "path": "acceptance-matrix.json",
-      "bytes": 619,
-      "sha256": "a5929a7aee1091fbac285bac53ba2d410e398f668dcd64507efe36fe2ba53a70"
-    },
-    {
-      "path": "app.js",
-      "bytes": 72317,
-      "sha256": "a169d736d8096d44832de7db29eef7aee27a125d600666629858929e4ce156e6"
-    },
-    {
       "path": "assets/brand/favicon.svg",
-      "bytes": 3411,
+      "size_bytes": 3411,
       "sha256": "3db4e0eefbd6af17eb5e6f775026302821bf81511079d8dc611eea155bf6ca67"
     },
     {
       "path": "assets/brand/samt-arabic-wordmark.svg",
-      "bytes": 4403,
+      "size_bytes": 4403,
       "sha256": "c0245f4ec53bda5e35941c0708bb26584245599aa245624b132ccf118288a9ef"
     },
     {
+      "path": "assets/brand/samt-horizontal-reversed.svg",
+      "size_bytes": 21053,
+      "sha256": "7e4a2f603b1494fd945d30635f1fa54499ef82725eaaef89ed756173a95a33fb"
+    },
+    {
       "path": "assets/brand/samt-monogram.svg",
-      "bytes": 8355,
+      "size_bytes": 8355,
       "sha256": "3d828ff49a33a19e66b96bca15f2d7fe546ec33e36141e91d08eea9fb6996898"
     },
     {
+      "path": "assets/brand/samt-primary-bilingual-reversed.svg",
+      "size_bytes": 64937,
+      "sha256": "fdb9b26a2ba0aba29840be7fb9a0e238933f44fe4392dad77dc4a4da838aed7c"
+    },
+    {
       "path": "assets/brand/samt-primary-bilingual.svg",
-      "bytes": 64937,
+      "size_bytes": 64937,
       "sha256": "3b6c2d6599b6b24c253eabc716276b49e72ab841c78364b5fd652d8d16cd2e99"
     },
     {
       "path": "assets/brand/samt-symbol.svg",
-      "bytes": 3411,
+      "size_bytes": 3411,
       "sha256": "3db4e0eefbd6af17eb5e6f775026302821bf81511079d8dc611eea155bf6ca67"
     },
     {
+      "path": "assets/hero/hero-earth-approved-v3.4.jpg",
+      "size_bytes": 274705,
+      "sha256": "bad72f72c387c67baeb7d51aae12a1703fa83a35c92988fd9cf9526a65e4078a"
+    },
+    {
+      "path": "assets/hero/hero-earth-approved-v3.4.webp",
+      "size_bytes": 139444,
+      "sha256": "42768fb71774d37d0a3ed7aeb9b7566111850b8f3a3a015c042bcf81fd3c6669"
+    },
+    {
+      "path": "assets/hero/hero-earth-approved.jpg",
+      "size_bytes": 274705,
+      "sha256": "bad72f72c387c67baeb7d51aae12a1703fa83a35c92988fd9cf9526a65e4078a"
+    },
+    {
+      "path": "assets/hero/hero-earth-approved.webp",
+      "size_bytes": 139444,
+      "sha256": "42768fb71774d37d0a3ed7aeb9b7566111850b8f3a3a015c042bcf81fd3c6669"
+    },
+    {
+      "path": "assets/hero/hero-earth-base.avif",
+      "size_bytes": 13495,
+      "sha256": "67ff7e58e368ef9e0ece01802f5fb4aa4095e3fb22d53022abb19a57e488e9a3"
+    },
+    {
+      "path": "assets/hero/hero-earth-base.svg",
+      "size_bytes": 33415,
+      "sha256": "cfaa707112114dd5cf9a00661b8bf2ed290f3e450858ef9f99220b0f6a17fe49"
+    },
+    {
+      "path": "assets/hero/hero-earth-base.webp",
+      "size_bytes": 18000,
+      "sha256": "7ca403e687ef5f64ed7ed43a91105a18ace24c69186a29e5e55416ffc8c14295"
+    },
+    {
+      "path": "assets/hero/hero-network-overlay.svg",
+      "size_bytes": 29544,
+      "sha256": "05489563f17068ff3930876698a7e7538b533428b0bdae788e261b508fe3b2d2"
+    },
+    {
       "path": "assets/icons/samt-icons.svg",
-      "bytes": 2502,
+      "size_bytes": 2502,
       "sha256": "f8abf09883a5d9802ac12f8ff83239d6105fe3905f6a9a60809a3ef1c6f49d77"
     },
     {
+      "path": "assets/stations/france-animated-v3.4.svg",
+      "size_bytes": 2041755,
+      "sha256": "d9556807d01b97710abd38b651b1d542586e7f2bf381c4f22f8b3e3a1dd0e91c"
+    },
+    {
       "path": "assets/stations/france-animated.svg",
-      "bytes": 2353985,
-      "sha256": "a4ba1ba0ea9408bb955702a6768bdb4ce586aa6e8400f372683eca1d78948ebc"
+      "size_bytes": 2041755,
+      "sha256": "d9556807d01b97710abd38b651b1d542586e7f2bf381c4f22f8b3e3a1dd0e91c"
+    },
+    {
+      "path": "assets/stations/uae-animated-v3.4.svg",
+      "size_bytes": 1837718,
+      "sha256": "5bb690170627ead2ce4b00340354ba0129eecf616d3ade1b5ef8326515601e3f"
     },
     {
       "path": "assets/stations/uae-animated.svg",
-      "bytes": 2163496,
-      "sha256": "8759769eb8839b3be4eadef4bd90ad80243e903aec65cd12d96573b2601bb73e"
+      "size_bytes": 1837718,
+      "sha256": "5bb690170627ead2ce4b00340354ba0129eecf616d3ade1b5ef8326515601e3f"
+    },
+    {
+      "path": "assets/stations/uk-animated-v3.4.svg",
+      "size_bytes": 2065152,
+      "sha256": "26d8cb84bcb330ca66fcc8940c167bbbb964707c1d84dda53fa655d927addf09"
     },
     {
       "path": "assets/stations/uk-animated.svg",
-      "bytes": 2375610,
-      "sha256": "9959c475c41d15ba800f616d72c2af14966c54970d22657beccf7e0010ba8227"
+      "size_bytes": 2065152,
+      "sha256": "26d8cb84bcb330ca66fcc8940c167bbbb964707c1d84dda53fa655d927addf09"
+    },
+    {
+      "path": "assets/stations/usa-animated-v3.4.svg",
+      "size_bytes": 1985117,
+      "sha256": "90accee8a9af52b59051cc9aac44238d4fc72a8e678b9f5a9a5db1a5a241ee0f"
     },
     {
       "path": "assets/stations/usa-animated.svg",
-      "bytes": 2318707,
-      "sha256": "90959d868ab1756dbd9502ace369690f877b17124f17ddbb81cf1735c0d36fc0"
-    },
-    {
-      "path": "docs/ACCEPTANCE_CHECKLIST.md",
-      "bytes": 1313,
-      "sha256": "b8372e79b5e7f2ca6de4b87eca65f82860eec8e4b526580022f630f99be33df2"
-    },
-    {
-      "path": "docs/CONTENT_AND_BILINGUAL_QA.md",
-      "bytes": 1862,
-      "sha256": "a3cb096d9f4f19ae2ffb98c24005137b34ee456b7dbb7de1d91b8864bc1b0133"
-    },
-    {
-      "path": "docs/DEPLOYMENT_GUIDE.md",
-      "bytes": 891,
-      "sha256": "7352ebe2f59872a3a8d85c69e5136c96e26053e6f264476df94f9cd29f198c08"
-    },
-    {
-      "path": "docs/DESIGN_AND_MOTION_SYSTEM.md",
-      "bytes": 2876,
-      "sha256": "9291ac2b4efe492d7af80fe88fe5df35300dd5680b8e052743e8cd968eab5f49"
-    },
-    {
-      "path": "docs/FINAL_QA_REPORT.md",
-      "bytes": 975,
-      "sha256": "43eed06438f15c972396150af3141552fc712d31340c1e740a78ad2cc9095acf"
-    },
-    {
-      "path": "docs/PHASE3_RELEASE_NOTES.md",
-      "bytes": 1372,
-      "sha256": "e98a78d0739da344afcb6ba990a29739581aa9fdc87050ef9f1e70601430895c"
-    },
-    {
-      "path": "docs/SAMT_Phase3_changes.patch",
-      "bytes": 134970,
-      "sha256": "92dc6e3febb4962c56191b69f85c992ca116098559c1aaae8f0bf5a1e937f630"
-    },
-    {
-      "path": "docs/STATIC_QA_REPORT.json",
-      "bytes": 253,
-      "sha256": "b9573fa16ba35296cbc7344b21f85a3a52ce8223d173a2248c6f75feb2cbf0dc"
-    },
-    {
-      "path": "index.html",
-      "bytes": 43468,
-      "sha256": "6b8647f392c0473f57a42db82132a8eacdb3c7c194c4734833a43e8bd654a789"
-    },
-    {
-      "path": "manifest.webmanifest",
-      "bytes": 513,
-      "sha256": "49d039e2e2ec47420f091555bdf19a4511ed657be559f74eb4027819ff58a5a6"
-    },
-    {
-      "path": "preview/approved-creative-reference.png",
-      "bytes": 1837740,
-      "sha256": "9edf4eaac5aa5f08489c294e1ad1ac4033fac4e894a0c7b2e34ddfb5b136218a"
-    },
-    {
-      "path": "robots.txt",
-      "bytes": 79,
-      "sha256": "77e0f6afb25921ed2ffef6ba5c5d5ae5ab57937274f3f1d4f39e25d6a28c3b34"
-    },
-    {
-      "path": "sitemap.xml",
-      "bytes": 243,
-      "sha256": "9006e8ccb37036cc2a7876ab532c4ef73b1c0bf191e7ed15ff86cec4f738f818"
-    },
-    {
-      "path": "station-assets-test.html",
-      "bytes": 1151,
-      "sha256": "669be192e405a5ac6e2f894e02cb2d514d43aab76774042c4ed5c5b34734c0fd"
-    },
-    {
-      "path": "styles.css",
-      "bytes": 69310,
-      "sha256": "fe1db0e1c7b8785f4287e8778faab9ed61d99f5f67a5b2ff262d9925a0087de8"
+      "size_bytes": 1985117,
+      "sha256": "90accee8a9af52b59051cc9aac44238d4fc72a8e678b9f5a9a5db1a5a241ee0f"
     }
   ]
 }

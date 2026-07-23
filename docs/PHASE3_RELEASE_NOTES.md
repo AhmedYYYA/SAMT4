@@ -45,7 +45,7 @@ The package includes a web manifest, branded 404 page, robots.txt, sitemap.xml a
 
 ## Phase 3.3 — Preparation station schedule
 
-- Replaced generic `3+ weeks` values with the approved 3 / 6 / 3 / 4-week station structure.
+- Replaced generic duration placeholders with the approved 3 / 6 / 3 / 4-week station structure.
 - Added the named proposed UAE, UK, France and U.S. host organisations and programme categories.
 - Updated English and Arabic station summaries, focus areas, learning content, outcomes and highlights.
 - Total full-time international and national station duration remains 16 weeks.

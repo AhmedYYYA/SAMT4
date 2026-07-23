@@ -1,0 +1,27 @@
+{
+  "release": "3.4.0",
+  "build": "phase3-v3.4",
+  "entry": "index.html",
+  "css": "styles.v3.4.css",
+  "javascript": "app.v3.4.js",
+  "hero": [
+    "assets/hero/hero-earth-approved-v3.4.webp",
+    "assets/hero/hero-earth-approved-v3.4.jpg"
+  ],
+  "stations": [
+    "assets/stations/uae-animated-v3.4.svg",
+    "assets/stations/uk-animated-v3.4.svg",
+    "assets/stations/france-animated-v3.4.svg",
+    "assets/stations/usa-animated-v3.4.svg"
+  ],
+  "station_signature": "assets/brand/samt-horizontal-reversed.svg",
+  "preview_proofs": [
+    "preview/v3.4/hero-desktop-final.png",
+    "preview/v3.4/hero-mobile-final.png",
+    "preview/v3.4/desktop-station-final.png",
+    "preview/v3.4/mobile-station-approved-layout.png",
+    "preview/v3.4/selection-orbit-desktop-final.png",
+    "preview/v3.4/selection-orbit-mobile-final.png"
+  ],
+  "qa": "docs/STATIC_QA_REPORT_v3.4.json"
+}

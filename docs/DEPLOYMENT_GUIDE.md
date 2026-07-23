@@ -1,26 +1,37 @@
-# Phase 3 Deployment Guide
+# SAMT Phase 3.4 Deployment Guide
 
-1. Back up the current `SAMT4` repository.
-2. Upload every file and folder from the Phase 3 package to the repository root.
-3. Confirm that GitHub Pages publishes from the `main` branch and `/root`.
-4. Wait for the Pages workflow to complete successfully.
-5. Open `https://ahmedyyya.github.io/SAMT4/` in a private browser window.
-6. Hard-refresh once to clear cached CSS and JavaScript.
+## Upload target
 
-## Required paths
+Repository: `AhmedYYYA/SAMT4`  
+Branch: `main` or a review branch merged into `main`  
+GitHub Pages path: repository root
+
+## Mandatory files
 
 ```text
-assets/brand/samt-symbol.svg
-assets/brand/samt-arabic-wordmark.svg
-assets/icons/samt-icons.svg
-assets/stations/uae-animated.svg
-assets/stations/uk-animated.svg
-assets/stations/france-animated.svg
-assets/stations/usa-animated.svg
+index.html
+styles.v3.4.css
+app.v3.4.js
+assets/hero/hero-earth-approved-v3.4.webp
+assets/hero/hero-earth-approved-v3.4.jpg
+assets/stations/uae-animated-v3.4.svg
+assets/stations/uk-animated-v3.4.svg
+assets/stations/france-animated-v3.4.svg
+assets/stations/usa-animated-v3.4.svg
 ```
 
-GitHub Pages is case-sensitive. Do not change capitalization or add `(1)` to filenames.
+Upload the entire package contents so all brand, icon, manifest, modal and support assets remain available.
 
-## Cache troubleshooting
+## Deployment sequence
 
-If an older version appears, use a hard refresh or append a temporary query string such as `?v=3`.
+1. Remove or overwrite the previous release files.
+2. Upload all Phase 3.4 contents to the repository root.
+3. Confirm `index.html` loads `styles.v3.4.css` and `app.v3.4.js`.
+4. Confirm the four v3.4 station SVG files exist under `assets/stations/`.
+5. Wait for the GitHub Pages deployment to finish.
+6. Open the website in a private window.
+7. Perform the live visual checklist in `PHASE3_4_QA_CHECKLIST.md`.
+
+## Cache control
+
+The production filenames are versioned, so normal refresh should load Phase 3.4. Safari users may also use `Command + Shift + R` after deployment.
