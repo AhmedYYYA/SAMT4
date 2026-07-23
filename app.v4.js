@@ -23,7 +23,36 @@
     else setTimeout(callback, 120);
   };
 
+  let initialHomeLanguage = "en";
+  if (!isStoryPage) {
+    const requested = new URLSearchParams(location.search).get("lang");
+    let stored = null;
+    try { stored = localStorage.getItem("samt-language"); } catch (_) {}
+    initialHomeLanguage = requested === "ar" || stored === "ar" ? "ar" : "en";
+    if (initialHomeLanguage === "ar") {
+      document.documentElement.lang = "ar";
+      document.documentElement.dir = "rtl";
+      document.documentElement.classList.add("i18n-pending");
+      state.language = "ar";
+    }
+  }
+
   if (lowPower) document.body.dataset.performance = "reduced";
+
+  function initWhenNear(selector, callback, rootMargin = "45% 0px") {
+    const target = q(selector);
+    if (!target) return;
+    if (!("IntersectionObserver" in window)) {
+      setTimeout(callback, 1800);
+      return;
+    }
+    const observer = new IntersectionObserver(entries => {
+      if (!entries.some(entry => entry.isIntersecting)) return;
+      observer.disconnect();
+      setTimeout(callback, 0);
+    }, { rootMargin, threshold: 0 });
+    observer.observe(target);
+  }
 
   function initHeader() {
     const header = q(".site-header");
@@ -195,9 +224,12 @@
       if (q("[data-station]")) await updateStation(currentStation, false);
     } catch (error) {
       console.error(error);
-      q("#live-region").textContent = language === "ar"
+      const region = q("#live-region");
+      if (region) region.textContent = language === "ar"
         ? "تعذر تحميل الترجمة العربية مؤقتاً."
         : "The requested language could not be loaded temporarily.";
+    } finally {
+      document.documentElement.classList.remove("i18n-pending");
     }
 
     if (persist) {
@@ -211,13 +243,9 @@
 
   function initLanguage() {
     if (isStoryPage) return;
-    const requested = new URLSearchParams(location.search).get("lang");
-    let stored = null;
-    try { stored = localStorage.getItem("samt-language"); } catch (_) {}
-    const initial = requested === "ar" || stored === "ar" ? "ar" : "en";
-    updateLanguageControls(initial);
+    updateLanguageControls(initialHomeLanguage);
     q(".language-toggle")?.addEventListener("click", () => setLanguage(state.language === "ar" ? "en" : "ar"));
-    if (initial === "ar") setLanguage("ar", false);
+    if (initialHomeLanguage === "ar") setLanguage("ar", false);
   }
 
   function initReveal() {
@@ -507,10 +535,8 @@
   } else {
     initLanguage();
     initStoryTransition();
-    idle(() => {
-      initReveal();
-      initStations();
-      initJourney();
-    });
+    idle(initReveal);
+    initWhenNear("#journey", initJourney);
+    initWhenNear("#stations", initStations);
   }
 })();
