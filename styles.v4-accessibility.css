@@ -1,0 +1,7 @@
+.story-progress{gap:0}
+.story-progress a{width:2.25rem;height:2.25rem;display:grid;place-items:center;border:0;border-radius:50%;background:transparent}
+.story-progress a::before{content:"";width:.58rem;height:.58rem;border:1px solid rgba(241,217,154,.52);border-radius:50%;background:transparent;transition:transform .25s,background .25s,box-shadow .25s}
+.story-progress a:hover::before,.story-progress a:focus-visible::before{transform:scale(1.35);border-color:var(--gold-light)}
+.story-progress a[aria-current=true]::before{background:var(--gold-light);box-shadow:0 0 18px rgba(241,217,154,.5)}
+.story-progress a:focus-visible{outline-offset:0}
+@media(max-width:1180px){.story-progress{display:none}}
