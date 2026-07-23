@@ -19,7 +19,7 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="preload" href="assets/brand/samt-symbol.svg" as="image" type="image/svg+xml" />
   <link rel="preload" href="assets/brand/samt-arabic-wordmark.svg" as="image" type="image/svg+xml" />
-  <link rel="preload" href="assets/stations/uae-animated.svg" as="image" type="image/svg+xml" />
+  <link rel="preload" href="assets/stations/uae-animated-v3.4.svg" as="image" type="image/svg+xml" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,9 +30,9 @@
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
   <script>document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.v3.4.css" />
 </head>
-<body class="is-loading" data-build="phase3-v3.0">
+<body class="is-loading" data-build="phase3-v3.4">
   <a class="skip-link" href="#main-scroll-container">Skip to content</a>
   <noscript><div class="noscript">JavaScript is required to view the SAMT motion experience.</div></noscript>
 
@@ -257,12 +257,13 @@
           <div class="selection-orbit__ring selection-orbit__ring--outer"></div>
           <div class="selection-orbit__ring selection-orbit__ring--inner"></div>
           <div class="selection-orbit__core"><strong>10</strong><span data-i18n="selection.core">future leaders</span></div>
-          <span class="selection-orbit__item item-1" data-i18n="selection.d1">Judgement</span>
-          <span class="selection-orbit__item item-2" data-i18n="selection.d2">Character</span>
-          <span class="selection-orbit__item item-3" data-i18n="selection.d3">Learning agility</span>
-          <span class="selection-orbit__item item-4" data-i18n="selection.d4">Command presence</span>
-          <span class="selection-orbit__item item-5" data-i18n="selection.d5">Institutional impact</span>
-          <span class="selection-orbit__item item-6" data-i18n="selection.d6">Strategic thinking</span>
+          <span class="selection-orbit__item item-1" style="--start:0deg;--end:360deg;--counter-start:0deg;--counter-end:-360deg"><span class="selection-orbit__carrier"><span data-i18n="selection.d1">Judgement</span></span></span>
+          <span class="selection-orbit__item item-2" style="--start:51.4286deg;--end:411.4286deg;--counter-start:-51.4286deg;--counter-end:-411.4286deg"><span class="selection-orbit__carrier"><span data-i18n="selection.d2">Character</span></span></span>
+          <span class="selection-orbit__item item-3" style="--start:102.8571deg;--end:462.8571deg;--counter-start:-102.8571deg;--counter-end:-462.8571deg"><span class="selection-orbit__carrier"><span data-i18n="selection.d3">Learning agility</span></span></span>
+          <span class="selection-orbit__item item-4" style="--start:154.2857deg;--end:514.2857deg;--counter-start:-154.2857deg;--counter-end:-514.2857deg"><span class="selection-orbit__carrier"><span data-i18n="selection.d4">Command presence</span></span></span>
+          <span class="selection-orbit__item item-5" style="--start:205.7143deg;--end:565.7143deg;--counter-start:-205.7143deg;--counter-end:-565.7143deg"><span class="selection-orbit__carrier"><span data-i18n="selection.d5">Institutional impact</span></span></span>
+          <span class="selection-orbit__item item-6" style="--start:257.1429deg;--end:617.1429deg;--counter-start:-257.1429deg;--counter-end:-617.1429deg"><span class="selection-orbit__carrier"><span data-i18n="selection.d6">Strategic thinking</span></span></span>
+          <span class="selection-orbit__item item-7" style="--start:308.5714deg;--end:668.5714deg;--counter-start:-308.5714deg;--counter-end:-668.5714deg"><span class="selection-orbit__carrier"><span data-i18n="selection.d7">Critical thinking</span></span></span>
         </div>
       </div>
 
@@ -299,7 +300,7 @@
 
         <div class="station-stage" aria-live="polite">
           <div class="station-stage__visual" data-cursor="view">
-            <img id="station-image" src="assets/stations/uae-animated.svg" width="1672" height="941" alt="Animated United Arab Emirates preparation station" decoding="async" fetchpriority="high" draggable="false" />
+            <img id="station-image" src="assets/stations/uae-animated-v3.4.svg" width="1672" height="941" alt="Animated United Arab Emirates preparation station" decoding="async" fetchpriority="high" draggable="false" />
             <div class="station-stage__fallback" id="station-fallback" role="status" hidden>Station artwork is temporarily unavailable.</div>
             <div class="station-stage__visual-overlay"></div>
             <span class="station-stage__caption">STATION 01 / UAE</span>
@@ -587,7 +588,7 @@
     </div>
   </dialog>
 
-  <!-- SAMT Website Phase 3 — Final Production Release -->
-  <script src="app.js" defer></script>
+  <!-- SAMT Website Phase 3.4 — Responsive Composition & Orbital Motion Release -->
+  <script src="app.v3.4.js" defer></script>
 </body>
 </html>

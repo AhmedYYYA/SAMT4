@@ -1,24 +1,28 @@
 {
-  "release": "SAMT Website Phase 3 — Final Production Release",
-  "version": "3.0",
+  "release": "SAMT Website Phase 3.4 — Responsive Composition, Transparent Branding and Orbital Motion",
+  "version": "3.4.0",
   "status": "production-candidate",
   "mandatory_fixes": {
-    "missing_brand_assets": "completed",
-    "typography_readability": "completed",
-    "station_svg_scaling": "completed",
-    "station_assets": "completed",
-    "rtl_ltr": "completed",
-    "modal_readability": "completed",
-    "keyboard_access": "completed",
-    "autoplay_control": "completed",
-    "github_pages_support": "completed"
+    "desktop_station_full_artwork": "completed",
+    "mobile_station_approved_baseline": "preserved",
+    "station_placeholder_logo_removal": "completed",
+    "validated_station_signature": "completed",
+    "hero_identity_deduplication": "completed",
+    "seven_dimension_orbit": "completed",
+    "critical_thinking_bilingual": "completed",
+    "reduced_motion_fallback": "completed",
+    "duration_3_6_3_4": "completed",
+    "versioned_cache_control": "completed",
+    "static_qa": "passed"
   },
   "post_deployment_checks": [
-    "Safari",
-    "Chrome",
-    "Edge",
-    "Firefox",
+    "Safari desktop",
+    "Chrome desktop",
+    "Edge desktop",
+    "Firefox desktop",
     "iOS Safari",
-    "Android Chrome"
+    "Android Chrome",
+    "English LTR",
+    "Arabic RTL"
   ]
 }

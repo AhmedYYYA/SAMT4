@@ -1,81 +1,53 @@
-# SAMT Website Phase 3.3 — Final Production Release
+# SAMT Website Phase 3.4
 
 **SAMT — Strategic Advancement, Management & Transformation**  
 **برنامج سَمْت للتقدم الاستراتيجي والإدارة والتحول**  
 **From Potential to Command | من الإمكانات إلى القيادة**
 
-## Purpose
+## Release purpose
 
-This release consolidates the approved SAMT brand identity, programme narrative, animated preparation stations and premium motion system into a GitHub Pages-ready bilingual website.
+Phase 3.4 corrects the published desktop composition while preserving the approved mobile preparation-station design and the approved SAMT visual direction.
 
-## Main improvements in Phase 3
-
-- Restored the validated Strategic Ascent symbol, Arabic wordmark, favicon and icon sprite.
-- Integrated the four approved animated SVG preparation stations.
-- Corrected station artwork scaling to preserve the complete SVG composition without cropping.
-- Raised typography sizes across navigation, cards, station panels, modals, pop-ups and footers.
-- Added Arabic-specific readability refinements and complete RTL behavior.
-- Added station autoplay pause/resume, keyboard navigation and resilient asset fallbacks.
-- Added asset preloading and smoother station transitions.
-- Added deployment support files: manifest, 404 page, robots.txt, sitemap.xml and .nojekyll.
-- Preserved GSAP, ScrollTrigger and Lenis integration with reduced-motion fallbacks.
-
-## Deployment
-
-Upload the **contents** of this folder to the repository root. Keep the folder structure unchanged.
+## Authoritative production files
 
 ```text
 index.html
-styles.css
-app.js
-manifest.webmanifest
-404.html
-robots.txt
-sitemap.xml
-.nojekyll
+styles.v3.4.css
+app.v3.4.js
 assets/
   brand/
+  hero/
+    hero-earth-approved-v3.4.webp
+    hero-earth-approved-v3.4.jpg
   icons/
   stations/
-preview/
-docs/
+    uae-animated-v3.4.svg
+    uk-animated-v3.4.svg
+    france-animated-v3.4.svg
+    usa-animated-v3.4.svg
 ```
 
-The production URL is configured as:
+`styles.css` and `app.js` are retained as synchronized compatibility copies, but `index.html` intentionally loads the versioned v3.4 files to prevent mixed browser caches.
 
-```text
-https://ahmedyyya.github.io/SAMT4/
-```
+## Phase 3.4 corrections
 
-## External libraries
+- Desktop and laptop station artwork is displayed at full width above the information panel; it is no longer cropped behind a vertical content column.
+- The approved mobile station arrangement is preserved.
+- The original placeholder logo is removed from each station scene and the validated SAMT signature is printed directly over the cleaned artwork without a hard rectangular panel.
+- Desktop hero rendering displays one identity panel only. On stacked tablet/mobile layouts, the live semantic identity panel is restored and the background crop excludes the baked reference panel.
+- Seven selection dimensions orbit the fixed “10 Future Leaders” centre while remaining upright and readable.
+- Reduced-motion mode stops orbital and decorative animation.
+- Versioned CSS, JavaScript, station SVGs and hero assets prevent stale mixed releases.
+- Station durations remain UAE 3 weeks, UK 6 weeks, France 3 weeks and USA 4 weeks, for a 16-week total.
 
-The page loads these exact versions from jsDelivr:
+## Deployment
 
-- GSAP 3.12.5
-- GSAP ScrollTrigger 3.12.5
-- Lenis 1.0.42
+Upload the **contents of this folder** to the root of `AhmedYYYA/SAMT4`, replacing the previous release. Do not upload the outer folder itself.
 
-## Browser support
+After GitHub Pages finishes publishing, test in a private browser window first. Safari users should also use `Command + Shift + R` once.
 
-Designed for current versions of Safari, Chrome, Edge and Firefox. Real-device validation is still recommended after deployment, particularly on iOS Safari.
+## Validation status
 
-## Governance note
+Static validation passed for JavaScript syntax, duplicate HTML IDs, local asset references, SVG parsing, translation keys, duration data, CSS structure and versioned production paths.
 
-The website is a programme concept and brand implementation. Proposed partners, dates, host categories and programme arrangements remain subject to formal approval and agreement.
-
-
-## Phase 3.3 hero upgrade
-
-The approved cinematic Earth-horizon hero is implemented as layered AVIF/WebP/SVG assets with animated ascent trajectories, atmospheric motion, responsive layouts and a reduced-motion fallback. See `docs/HERO_IMPLEMENTATION_v3.3.md`.
-
-
-## Phase 3.3 station programme update
-
-The preparation-station schedule is now 16 weeks in total:
-
-- UAE — 3 weeks: Tawazun, EDGE, GAL, TII and Masdar.
-- United Kingdom — 6 weeks: RAF Cosford, Royal Military Academy Sandhurst and leading companies associated with UK MOD programmes.
-- France — 3 weeks: EDGE Europe, relevant offices and companies connected through approved MoUs or contracts.
-- United States — 4 weeks: DoD, G-to-G and FMS programmes, NPS, War College institutions and related strategic-education organisations.
-
-All host references remain proposed and subject to formal coordination, approval and agreement.
+Live Safari, Chrome, Edge, iOS and Android visual acceptance must be completed after deployment because the final GitHub Pages rendering cannot be fully certified from the local static checks alone.
