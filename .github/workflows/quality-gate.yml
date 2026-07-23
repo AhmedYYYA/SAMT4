@@ -20,7 +20,9 @@ jobs:
       - name: Validate JavaScript syntax
         run: |
           node --check app.v3.5.js
+          node --check app.js
           node --check story.v3.5.js
+          node --check story.core.v3.5.js
           node --check navigation.v3.6.js
           node --check experience.v3.6.js
       - name: Validate site structure and local references
