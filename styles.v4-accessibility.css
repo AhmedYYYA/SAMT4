@@ -8,6 +8,9 @@
 /* The first viewport must render immediately; progressive reveal begins below it. */
 .hero__copy.reveal,.hero__identity.reveal{opacity:1;transform:none}
 
+/* Prevent the English source layout from becoming visible before an initial Arabic state is hydrated. */
+.i18n-pending body{visibility:hidden}
+
 @media(max-width:1180px){.story-progress{display:none}}
 
 /* Mobile uses local system faces on the critical rendering path. The premium web faces remain on desktop. */
