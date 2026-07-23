@@ -38,3 +38,11 @@ jobs:
         run: npm install --global @lhci/cli@0.14.0
       - name: Run Lighthouse quality budgets
         run: lhci autorun --config=./lighthouserc.json
+      - name: Upload Lighthouse evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase4-lighthouse-reports
+          path: .lighthouseci
+          if-no-files-found: warn
+          retention-days: 14
